@@ -186,10 +186,8 @@ public class Beta {
 	public void testBeta() throws Exception {
 
 		// REAL Beta
-		leftNumOfSubmittionWhileLoopsChances = 0;
-		leftNumOfLoginWhileLoopsChances =0;
+
 		log('a');
-		leftNumOfLoginWhileLoopsChances = 0;
 		while ((leftNumOfLoginWhileLoopsChances++) < 3) {
 			log('b');
 			driver.get(cnBaseUrl + "/");
