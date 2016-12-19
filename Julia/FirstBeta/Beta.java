@@ -27,7 +27,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
 
-	private WebDriver driver;
+	private static WebDriver driver;
 	private String cnBaseUrl;
 	private String aaBaseUrl;
 	private boolean acceptNextAlert = true;
@@ -83,9 +83,12 @@ public class Beta {
 			
 			 
 			gecko_driver +=  "geckodriver.exe";
-			
+			System.setProperty("webdriver.gecko.driver", gecko_driver);
+					
 			
 			JUnitCore jCore;
+			
+			driver = new FirefoxDriver();
 			while (networkWorking()) {
 				 jCore = new JUnitCore();
 				jCore.run(Beta.class);
@@ -187,8 +190,7 @@ public class Beta {
 
 		//SETUP
 		
-		System.setProperty("webdriver.gecko.driver", gecko_driver);
-		driver = new FirefoxDriver();
+	
 		cnBaseUrl = "http://home.castingnetworks.com";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
