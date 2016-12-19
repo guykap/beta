@@ -13,6 +13,7 @@ import org.apache.log4j.Appender;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.SimpleLayout;
+import org.apache.log4j.varia.NullAppender;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -72,7 +73,15 @@ public class Beta {
 		}
 		String appendixFileName = (new String((new Long(System.currentTimeMillis())).toString())).concat(".txt");
 		logStateFull = true;
-
+		try {
+			org.apache.log4j.BasicConfigurator.configure(new NullAppender());
+			fh = new FileAppender(new SimpleLayout(), (new String(fileOut).concat(appendixFileName)));
+			logger.addAppender(fh);
+			fh.setLayout(new SimpleLayout());
+		} catch (Exception e) {
+			log("File Appender error. Farewell");
+			return;
+		}
 		// SETUP GECKO DRIVER
 		if (args.length > 1) {
 			gecko_driver_path = (new String(args[1])).concat("\\\\");
@@ -81,12 +90,7 @@ public class Beta {
 		}
 		System.setProperty("webdriver.gecko.driver", (new String(gecko_driver_path)).concat("geckodriver.exe"));
 
-		try {
-			fh = new FileAppender(new SimpleLayout(), (new String(fileOut).concat(appendixFileName)));
-		} catch (Exception e) {
-			log("File Appender error. Farewell");
-			return;
-		}
+		
 		 
 //START
 		jCore = new JUnitCore(); 
@@ -131,18 +135,18 @@ public class Beta {
 	public void testBetaB() throws Exception {
 		log("beta better");
 		
-		// PLAN
-				// 0:RUN FOREVER
+	
 		driver = new FirefoxDriver();
 		loginCounter = 0;
 		while (networkWorking()){
+			Log("Login number " + loginCounter );
 			loginCN();
 				 
 			if(loginCounter>2){
 				 log("THIS IS 4TH LOGIN - THEN CLOSE WINDOW AND GOTO 10 ");
-				driver.close();
-				driver = new FirefoxDriver();
-				windowStatus();
+				killFirefoxAndOpenNew();
+			
+				//windowStatus();
 				//in future add here a reset to the loginCoutner
 			}
 			try{coreLoop();}catch(Exception e){	
@@ -151,6 +155,31 @@ public class Beta {
 		}
 		 
 	}
+	
+	
+	public void loginCN(){
+		log("LOGIN");
+	}
+	
+	public void coreLoop(){
+		log("core loop");
+		int x = 1; 
+		x = x/0;
+	}
+	
+	public void killFirefoxAndOpenNew(){
+		WebDriver tempDriver = driver;
+		driver = new FirefoxDriver();
+		tempDriver.quit();
+	 }
+	
+	
+	
+	// PLAN
+	// 0:RUN FOREVER
+	//new Driver
+	//login
+			//	THIS IS 4TH LOGIN - THEN CLOSE WINDOW AND GOTO 10
 			// HEART WHILE LOOP:
 				// OPEN CHART
 				// DO:
@@ -709,8 +738,7 @@ public class Beta {
 		}
 		System.out.println(newLog);
 		try {
-			logger.addAppender(fh);
-			fh.setLayout(new SimpleLayout());
+			
 			logger.info(newLog);
 		} catch (SecurityException e) {
 			e.printStackTrace();
@@ -827,7 +855,6 @@ public class Beta {
 	private boolean killSubWindowAndMoveToParentWindow() {
 		// returns true onlyon a succesfull kill the sub window and return back
 		// to parent window.
-		windowStatus();
 		driver.close();
 		driver.switchTo().window(parentWindowHandler);
 		String newWindowHandler = driver.getWindowHandle();
