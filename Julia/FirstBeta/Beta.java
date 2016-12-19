@@ -48,6 +48,7 @@ public class Beta {
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\bork\\logs\\logHandler_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 	
+	
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\bork\\env\\libs\\";
 	
 	
