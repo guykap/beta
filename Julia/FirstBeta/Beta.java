@@ -224,9 +224,26 @@ public class Beta {
 			int trStarRow =(3*rowNum);
 			trStarRow += 4;	
 			String starPos = ((new String ("//div[@id='DirectCastMainDiv']/table/tbody/tr[")).concat(String.valueOf(trStarRow))).concat("]/td/span/img");
-			assertTrue(isElementPresent(By.xpath(starPos)));
-			log("Found star on the offer "+ rowNum +" from top");
+			String srcOfImg = "";
+			//	assertTrue(isElementPresent(By.xpath(starPos)));
+			 
+			 try {
+			//      assertEquals("", driver.findElement(By.xpath(starPos)).getAttribute("src"));
+			  //    driver.findElement(By.xpath(starPos)).getCssValue("src");
+				 srcOfImg = new String( driver.findElement(By.xpath(starPos)).getAttribute("src"));
 				
+			    } catch (Error e) {
+			      verificationErrors.append(e.toString());
+			    }
+			 	if(srcOfImg.contains("spacer.gif")){
+			 		log("No star on offer"  + rowNum + " So going to forward with it.");
+			 		//CONTINUE HERE
+			 		
+			 		
+			 		
+			 	}else{
+			 		log("Found star on the offer "+ rowNum +" from top");
+			 	}
 			
 		} 
 		
