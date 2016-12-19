@@ -26,7 +26,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-	//THIS IS BETA
+	// THIS IS BETA1.5
 	private static WebDriver driver;
 	private String cnBaseUrl;
 	private String aaBaseUrl;
@@ -47,72 +47,121 @@ public class Beta {
 	Set<String> handles;
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\bork\\logs\\logHandler_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
-	
-	
+
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\bork\\env\\libs\\";
-	
-	
-	
+
 	static private boolean logStateFull;
 	public static Appender fh = null;
 	public static Logger logger = Logger.getLogger("MyLog");
 	static public boolean seekBackgroundWork;
 
-	static String gecko_driver;
+	static String gecko_driver_path;
+	static int loginCounter;
+
 	public static void main(String[] args) {
+		// SETUP BASIC
+		seekBackgroundWork = true;
+		useSleep = true;
+		JUnitCore jCore;
+		// SETUP LOG
+		String fileOut;
+		if (args.length > 0) {
+			fileOut = new String(args[0]);
+		} else {
+			fileOut = new String(DEFAULT_OUTPUT_FILE_WINDOWS);
+		}
+		String appendixFileName = (new String((new Long(System.currentTimeMillis())).toString())).concat(".txt");
+		logStateFull = true;
+
+		// SETUP GECKO DRIVER
+		if (args.length > 1) {
+			gecko_driver_path = (new String(args[1])).concat("\\\\");
+		} else {
+			gecko_driver_path = new String(DEFAULT_GECKO_DRIVER_LIBRARY);
+		}
+		System.setProperty("webdriver.gecko.driver", (new String(gecko_driver_path)).concat("geckodriver.exe"));
 
 		try {
-			String fileOut;
-			if (args.length>0){
-				fileOut = new String (args[0]);
-			}else{
-				fileOut = new String (DEFAULT_OUTPUT_FILE_WINDOWS);
-			}
-			
-			if(args.length>1){
-				gecko_driver = (new String(args[1])).concat("\\\\");
-			}else{
-				gecko_driver = new String(DEFAULT_GECKO_DRIVER_LIBRARY);
-			}
-			String appendixFileName = (new String((new Long(System.currentTimeMillis())).toString())).concat(".txt");
-			useSleep = true;
-			logStateFull = true;
-			//fh = new FileAppender(new SimpleLayout(), (new String(OUTPUT_FILE).concat(appendixFileName)));
 			fh = new FileAppender(new SimpleLayout(), (new String(fileOut).concat(appendixFileName)));
-			seekBackgroundWork = true;
-			
-			 
-			gecko_driver +=  "geckodriver.exe";
-			System.setProperty("webdriver.gecko.driver", gecko_driver);
-					
-			
-			JUnitCore jCore;
-			
-			driver = new FirefoxDriver();
-			while (networkWorking()) {
-				 jCore = new JUnitCore();
-				jCore.run(Beta.class);
-				TimeUnit.SECONDS.sleep(60);
-				seekBackgroundWork ^= true;
-				if (seekBackgroundWork) {
-					full_log("ALTERNATE  to BACKGROUND work");
-				} else {
-					full_log("ALTERNATE  to PRINCIPLE work");
-				}
-
-			}
 		} catch (Exception e) {
+			log("File Appender error. Farewell");
+			return;
 		}
+		 
+//START
+		jCore = new JUnitCore(); 
+		jCore.run(Beta.class); 
+		log("Program ENDED - THANK YOU!");
+		
 	}
+		
+		
+	
+		
+		
+		/*
+		 * 
+		 * 
+		 * driver = new FirefoxDriver(); 
+		 * while (networkWorking()) 
+		 * {
+		 *  jCore = new
+		 * JUnitCore(); 
+		 * jCore.run(Beta.class); 
+		 * TimeUnit.SECONDS.sleep(60);
+		 * seekBackgroundWork ^= true; 
+		 * if (seekBackgroundWork) {
+		 * log("ALTERNATE  to BACKGROUND work"); }
+		 *  else {
+		 * log("ALTERNATE  to PRINCIPLE work"); }
+		 * 
+		 * }
+		 */
+
+	
+	
 
 	@Before
 	public void setUp() throws Exception {
-		 
-	
 
 	}
 
- 
+	
+	@Test	
+	public void testBetaB() throws Exception {
+		log("beta better");
+		
+		// PLAN
+				// 0:RUN FOREVER
+		driver = new FirefoxDriver();
+		loginCounter = 0;
+		while (networkWorking()){
+			loginCN();
+				 
+			if(loginCounter>2){
+				 log("THIS IS 4TH LOGIN - THEN CLOSE WINDOW AND GOTO 10 ");
+				driver.close();
+				driver = new FirefoxDriver();
+				windowStatus();
+				//in future add here a reset to the loginCoutner
+			}
+			try{coreLoop();}catch(Exception e){	
+				log("Something went wrong -> Back to Login");
+				loginCounter++;}
+		}
+		 
+	}
+			// HEART WHILE LOOP:
+				// OPEN CHART
+				// DO:
+				// ALTERNATE PRINCIPLE<->EXTRA
+				// NAP
+
+				// ANY EXCEPTION - LOG IT, GO BACK TO LOGIN
+		
+	
+	
+	
 	public void aaRachel() throws Exception {
 
 		log("ACTORS ACCESS");
@@ -160,12 +209,16 @@ public class Beta {
 				assertTrue(isElementPresent(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td/img")));
 				// the green button is there SO :
 				log("This project saved as  " + offer.getOfferId() + " has been submitted before.");
-				//offer = null;
+				// offer = null;
 
 				// refresh page to allow new offers to be displayed
 				nap();
 				log("Refresh page");
-				try{	driver.navigate().refresh();}catch(Exception e){log("Refresh failed");}
+				try {
+					driver.navigate().refresh();
+				} catch (Exception e) {
+					log("Refresh failed");
+				}
 				log("testing 1,2,3 will it die here?");
 				continue;
 
@@ -188,18 +241,16 @@ public class Beta {
 	@Test
 	public void testBeta() throws Exception {
 
-		//SETUP
-		
-	
+		// SETUP
+
 		cnBaseUrl = "http://home.castingnetworks.com";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
 		BetaLog = new String("New Beta");
-		
-		
+
 		// REAL Beta
 		leftNumOfSubmittionWhileLoopsChances = 0;
-		leftNumOfLoginWhileLoopsChances =0;
+		leftNumOfLoginWhileLoopsChances = 0;
 		log('a');
 		leftNumOfLoginWhileLoopsChances = 0;
 		while ((leftNumOfLoginWhileLoopsChances++) < 3) {
@@ -276,7 +327,10 @@ public class Beta {
 			// Choose from drop down list 'all roles':
 			try {
 				log("Refresh page");
-				try{		driver.navigate().refresh();}catch(Exception e){}
+				try {
+					driver.navigate().refresh();
+				} catch (Exception e) {
+				}
 				offer = new Job();
 				// offer.setIsBackgroundWork(seekBackgroundWork);
 				new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
@@ -284,7 +338,7 @@ public class Beta {
 				handleBackgroundWorkOffer(seekBackgroundWork);
 				Jobs.add(offer);
 				log('h');
-			//	offer.readNotice();
+				// offer.readNotice();
 				offer.makeDecision();
 				log("Decision: " + offer.getDecisionSubmit());
 				if ((!offer.getDecisionSubmit()) || (offer.getHasBeenSubmitted())) {
@@ -383,7 +437,7 @@ public class Beta {
 			}
 		}
 		log('z');
-		
+
 	}
 
 	private void handleAAWorkOffer() {
@@ -649,7 +703,7 @@ public class Beta {
 		}
 	}
 
-	static private void full_log(String newLog) {
+	static public void log(String newLog) {
 		if (newLog.length() < 1) {
 			return;
 		}
@@ -663,12 +717,7 @@ public class Beta {
 		}
 	}
 
-	private void log(String newLog) {
-		full_log(newLog);
-
-	}
-
-	private void log(char stage) {
+	public void log(char stage) {
 		// each char is assigned a stage in the process - so the log will write
 		// the whole string out
 		// state - Full log - outputs the whole string
@@ -676,68 +725,68 @@ public class Beta {
 		if (logStateFull) {
 			switch (stage) {
 			case 'a':
-				Beta.full_log("A: Window handle Parent " + parentWindowHandler);
+				Beta.log("A: Window handle Parent " + parentWindowHandler);
 				break;
 			case 'b':
-				Beta.full_log("B: Start Login num " + leftNumOfLoginWhileLoopsChances);
+				Beta.log("B: Start Login num " + leftNumOfLoginWhileLoopsChances);
 				break;
 			case 'c':
-				Beta.full_log("C: Location->Home Page");
+				Beta.log("C: Location->Home Page");
 				break;
 			case 'd':
 				if (seekBackgroundWork) {
-					Beta.full_log("D: First BG triel worked on " + passedOnOptionArray[0]);
+					Beta.log("D: First BG triel worked on " + passedOnOptionArray[0]);
 				} else {
-					Beta.full_log("D: First PRINCIPLE triel worked on " + passedOnOptionArray[0]);
+					Beta.log("D: First PRINCIPLE triel worked on " + passedOnOptionArray[0]);
 				}
 				break;
 			case 'e':
-				Beta.full_log("E: Location->Casting Billboard");
+				Beta.log("E: Location->Casting Billboard");
 				break;
 			case 'f':
-				Beta.full_log("F: Succ opening Casing Billboards and Extras link");
+				Beta.log("F: Succ opening Casing Billboards and Extras link");
 				break;
 			case 'g':
 				if (seekBackgroundWork) {
-					Beta.full_log("G: BACKGROUND work Start submittion while loop num "
+					Beta.log("G: BACKGROUND work Start submittion while loop num "
 							+ leftNumOfSubmittionWhileLoopsChances);
 				} else {
-					Beta.full_log("G: PRINCIPLE work Start submittion while loop num "
+					Beta.log("G: PRINCIPLE work Start submittion while loop num "
 							+ leftNumOfSubmittionWhileLoopsChances);
 				}
 
 				break;
 			case 'h':
-				Beta.full_log("H: Succ adding offer to Jobs list");
+				Beta.log("H: Succ adding offer to Jobs list");
 				break;
 			case 'i':
-				Beta.full_log(
-						"I: Begin submittion for top offer id " + offer.getOfferId() + " : " + offer.getOfferRole());
+				Beta.log("I: Begin submittion for top offer id " + offer.getOfferId() + " : " + offer.getOfferRole());
 				break;
 			case 'j':
-				Beta.full_log("J: Making sure there is no GREEN STAR");
+				Beta.log("J: Making sure there is no GREEN STAR");
 				break;
 			case 'k':
-				Beta.full_log("K: Second triel worked on " + passedOnOptionArray[1]);
+				Beta.log("K: Second triel worked on " + passedOnOptionArray[1]);
 				break;
 			case 'l':
-				Beta.full_log("L: Succ on openning window to choose photo and fill talent notes.");
+				Beta.log("L: Succ on openning window to choose photo and fill talent notes.");
 				break;
 			case 'm':
 				log("*******SUBMITTED:");
-				Beta.full_log("M: Succ Submitted: " +offer.getOfferProjectName() + " | " + offer.getOfferSubmittionDateTime() + " | "
-						+ offer.getOffertRate() + " | " + offer.getOfferTypeProject() + " | "
-						+ offer.getHasBeenSubmitted() + " | " + offer.getOfferListing() + "Talent Notes :" + offer.getMessage());		 
+				Beta.log("M: Succ Submitted: " + offer.getOfferProjectName() + " | "
+						+ offer.getOfferSubmittionDateTime() + " | " + offer.getOffertRate() + " | "
+						+ offer.getOfferTypeProject() + " | " + offer.getHasBeenSubmitted() + " | "
+						+ offer.getOfferListing() + "Talent Notes :" + offer.getMessage());
 				break;
 			case 'y':
-				Beta.full_log("Parent: " + getParentWindowHandler() + " Son: " + getSonWindowHandler());
+				Beta.log("Parent: " + getParentWindowHandler() + " Son: " + getSonWindowHandler());
 				break;
 			case 'z':
-				Beta.full_log("Z: Stopping");	
+				Beta.log("Z: Stopping");
 				break;
 			}
 		} else {
-			Beta.full_log(Character.toString(stage));
+			Beta.log(Character.toString(stage));
 		}
 	}
 
