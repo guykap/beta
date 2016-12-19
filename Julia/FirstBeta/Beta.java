@@ -29,8 +29,8 @@ import org.openqa.selenium.support.ui.Select;
 public class Beta {
 	// THIS IS BETA1.5
 	private static WebDriver driver;
-	private String cnBaseUrl;
-	private String aaBaseUrl;
+	static public String cnBaseUrl;
+	static public String aaBaseUrl;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 	static private List<Job> Jobs = new ArrayList<Job>();
@@ -132,38 +132,55 @@ public class Beta {
 
 	
 	@Test	
-	public void testBetaB() throws Exception {
+	public void testBetaB() throws Throwable {
 		log("beta better");	
 		driver = new FirefoxDriver();
 		loginCounter = 0;
 		while (networkWorking()){
 			log("Login number " + loginCounter );
 			if(loginCounter>10){ log("THIS IS 10TH LOGIN - stopping Beta ");return;}
-			if(loginCounter>2){
-				 log("THIS IS 4TH LOGIN - THEN CLOSE WINDOW and start new Driver ");
-				killFirefoxAndOpenNew();
+			if((loginCounter % 3) == 0){
+				 log("THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver ");
+				 killFirefoxAndOpenNew();
 			}
-			try{loginCN();}catch(Exception e){
-				log("Something went during login -> So lets login again");
-				loginCounter++;
-				continue;}
-			}
-			
-			try{coreLoop();}catch(Exception e){	
+			try{loginCN();
+			}catch(Exception e){
+					log("Something went during login -> So lets login again");
+					loginCounter++;
+					continue;}
+						
+			try{coreLoop();
+			}catch(Exception e){	
 				log("Something went wrong -> Back to Login");
 				loginCounter++;}
-		}
-		 
+	}
+} 
 	
 	
 	
-	public void loginCN(){
+	public void loginCN() throws Throwable{
+		cnBaseUrl = "http://home.castingnetworks.com";
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		parentWindowHandler = driver.getWindowHandle();
 		log("LOGIN-CN");
-		int x = 1; 
-		x = x/0;
 		log('a');
 		driver.get(cnBaseUrl + "/");
-	//	breath();
+		breath();
+		driver.findElement(By.id("login")).click();
+		driver.findElement(By.id("login")).clear();
+		driver.findElement(By.id("login")).sendKeys("guykapulnik");
+		driver.findElement(By.id("password")).clear();
+		driver.findElement(By.id("password")).sendKeys("cGuy1234567");
+		driver.findElement(By.xpath("//input[@id='submit']")).click();
+		breath();
+		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
+		// check for welcome window:
+		if (!verifyLocation("//div[@id='maininfo']/h2", "Welcome")) {
+			log("Can't find Welcome ");
+			throw new Exception();
+		}
+		log('c');
+		breath();
 	}
 	
 	public void coreLoop(){
