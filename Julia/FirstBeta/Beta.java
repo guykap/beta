@@ -48,8 +48,8 @@ public class Beta {
 	Set<String> handles;
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\bork\\logs\\logHandler_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
-
-	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\bork\\env\\libs\\";
+ 
+	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\env\\libs\\";
 
 	static private boolean logStateFull;
 	public static Appender fh = null;
@@ -211,13 +211,11 @@ public class Beta {
 			log('j');
 
 			int trStarRow = -1;
-			
-			//debug 
-			seekBackgroundWork = false;
 			if (seekBackgroundWork) {
 				trStarRow = (3 * rowNum);
 				trStarRow += 4;
 			} else {
+				//FIX THIS to another rowNum for PRINCIPLE
 				trStarRow = (3 * rowNum);
 				trStarRow += 4;
 				// different numer for the principle rows
