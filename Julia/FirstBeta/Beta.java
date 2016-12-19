@@ -135,7 +135,7 @@ public class Beta {
 	public void testBetaB() throws Throwable {
 		log("beta better");	
 		driver = new FirefoxDriver();
-		loginCounter = 0;
+		loginCounter = 1;
 		while (networkWorking()){
 			log("Login number " + loginCounter );
 			if(loginCounter>10){ log("THIS IS 10TH LOGIN - stopping Beta ");return;}
@@ -149,7 +149,7 @@ public class Beta {
 					loginCounter++;
 					continue;}
 						
-			try{coreLoop();
+			try{core();
 			}catch(Exception e){	
 				log("Something went wrong -> Back to Login");
 				loginCounter++;}
@@ -183,10 +183,53 @@ public class Beta {
 		breath();
 	}
 	
-	public void coreLoop(){
-		log("core loop");
-		int x = 1; 
-		x = x/0;
+	public void core() throws Throwable{
+		log("Core");
+		//first time in coreLoop - always goes to begin with Extra chart
+		driver.findElement(By.xpath("//a[@id='_ctl0_cphBody_lnkExtrasRoles']")).click();
+		if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
+			log("Can't find Extras chart");
+			throw new Exception();
+		}
+		log("In Etras chart");
+		seekBackgroundWork = true;
+		while (true){
+			heartLoop();
+			seekBackgroundWork ^= true;
+			if (seekBackgroundWork) {
+				log("ALTERNATE  to BACKGROUND work");
+				} else {
+					log("ALTERNATE  to PRINCIPLE work");
+				}
+			deepBreath();
+			}	
+	}
+	
+	public void heartLoop()throws Throwable{
+		//For each of top X offers:
+			//if there is a green star -> next
+			//add offer to Jobs list
+			//read , decide about offer
+			//if decided not to submit ->next
+			//submit offer
+			//	if succeccfull submiti
+				//1)update Jobs->offer
+				//2)close the last window
+		
+		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
+		deepBreath();
+		for(int rowNum = 0; rowNum <3; rowNum++){
+			//check if rowNum offer has a green star
+			log('j');
+			int trStarRow =(3*rowNum);
+			trStarRow += 4;	
+			String starPos = ((new String ("//div[@id='DirectCastMainDiv']/table/tbody/tr[")).concat(String.valueOf(trStarRow))).concat("]/td/span/img");
+			assertTrue(isElementPresent(By.xpath(starPos)));
+			log("Found star on the offer "+ rowNum +" from top");
+				
+			
+		} 
+		
 	}
 	
 	public void killFirefoxAndOpenNew(){
