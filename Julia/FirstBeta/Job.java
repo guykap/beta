@@ -38,6 +38,7 @@ public class Job {
 	String offerListingEthnicity = "";
 	String offerListingNotes = "";
 	String offerListingAgesHint = "";
+	String offerTimeRoleAdded ="";
 	String offerSubmittionDateTime = "";
 	String log; // this logs all the process of this specific offer from login
 
@@ -151,7 +152,16 @@ public class Job {
 	public String getOfferListing() {
 		return offerListing;
 	};
+	
+	public void setOfferTimeRoleAdded(String newData) {
+		offerTimeRoleAdded = newData;
+	};
 
+	public String getOfferTimeRoleAdded() {
+		return offerTimeRoleAdded;
+	};
+
+	
 	public void setOfferSubmittionDateTime(String newData) {
 		offerSubmittionDateTime = newData;
 	};

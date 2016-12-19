@@ -90,75 +90,63 @@ public class Beta {
 		}
 		System.setProperty("webdriver.gecko.driver", (new String(gecko_driver_path)).concat("geckodriver.exe"));
 
-		
-		 
-//START
-		jCore = new JUnitCore(); 
-		jCore.run(Beta.class); 
+		// START
+		jCore = new JUnitCore();
+		jCore.run(Beta.class);
 		log("Program ENDED - THANK YOU!");
-		
-	}
-		
-		
-	
-		
-		
-		/*
-		 * 
-		 * 
-		 * driver = new FirefoxDriver(); 
-		 * while (networkWorking()) 
-		 * {
-		 *  jCore = new
-		 * JUnitCore(); 
-		 * jCore.run(Beta.class); 
-		 * TimeUnit.SECONDS.sleep(60);
-		 * seekBackgroundWork ^= true; 
-		 * if (seekBackgroundWork) {
-		 * log("ALTERNATE  to BACKGROUND work"); }
-		 *  else {
-		 * log("ALTERNATE  to PRINCIPLE work"); }
-		 * 
-		 * }
-		 */
 
-	
-	
+	}
+
+	/*
+	 * 
+	 * 
+	 * driver = new FirefoxDriver(); while (networkWorking()) { jCore = new
+	 * JUnitCore(); jCore.run(Beta.class); TimeUnit.SECONDS.sleep(60);
+	 * seekBackgroundWork ^= true; if (seekBackgroundWork) {
+	 * log("ALTERNATE  to BACKGROUND work"); } else {
+	 * log("ALTERNATE  to PRINCIPLE work"); }
+	 * 
+	 * }
+	 */
 
 	@Before
 	public void setUp() throws Exception {
 
 	}
 
-	
-	@Test	
+	@Test
 	public void testBetaB() throws Throwable {
-		log("beta better");	
+		log("beta better");
 		driver = new FirefoxDriver();
 		loginCounter = 1;
-		while (networkWorking()){
-			log("Login number " + loginCounter );
-			if(loginCounter>10){ log("THIS IS 10TH LOGIN - stopping Beta ");return;}
-			if((loginCounter % 3) == 0){
-				 log("THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver ");
-				 killFirefoxAndOpenNew();
+		while (networkWorking()) {
+			log("Login number " + loginCounter);
+			if (loginCounter > 10) {
+				log("THIS IS 10TH LOGIN - stopping Beta ");
+				return;
 			}
-			try{loginCN();
-			}catch(Exception e){
-					log("Something went during login -> So lets login again");
-					loginCounter++;
-					continue;}
-						
-			try{core();
-			}catch(Exception e){	
+			if ((loginCounter % 3) == 0) {
+				log("THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver ");
+				killFirefoxAndOpenNew();
+			}
+			try {
+				loginCN();
+			} catch (Exception e) {
+				log("Something went during login -> So lets login again");
+				loginCounter++;
+				continue;
+			}
+
+			try {
+				core();
+			} catch (Exception e) {
 				log("Something went wrong -> Back to Login");
-				loginCounter++;}
+				loginCounter++;
+			}
+		}
 	}
-} 
-	
-	
-	
-	public void loginCN() throws Throwable{
+
+	public void loginCN() throws Throwable {
 		cnBaseUrl = "http://home.castingnetworks.com";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
@@ -182,10 +170,10 @@ public class Beta {
 		log('c');
 		breath();
 	}
-	
-	public void core() throws Throwable{
+
+	public void core() throws Throwable {
 		log("Core");
-		//first time in coreLoop - always goes to begin with Extra chart
+		// first time in coreLoop - always goes to begin with Extra chart
 		driver.findElement(By.xpath("//a[@id='_ctl0_cphBody_lnkExtrasRoles']")).click();
 		if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 			log("Can't find Extras chart");
@@ -193,86 +181,131 @@ public class Beta {
 		}
 		log("In Etras chart");
 		seekBackgroundWork = true;
-		while (true){
+		while (true) {
 			heartLoop();
 			seekBackgroundWork ^= true;
 			if (seekBackgroundWork) {
 				log("ALTERNATE  to BACKGROUND work");
-				} else {
-					log("ALTERNATE  to PRINCIPLE work");
-				}
+			} else {
+				log("ALTERNATE  to PRINCIPLE work");
+			}
 			deepBreath();
-			}	
+		}
 	}
-	
-	public void heartLoop()throws Throwable{
-		//For each of top X offers:
-			//if there is a green star -> next
-			//add offer to Jobs list
-			//read , decide about offer
-			//if decided not to submit ->next
-			//submit offer
-			//	if succeccfull submiti
-				//1)update Jobs->offer
-				//2)close the last window
-		
+
+	public void heartLoop() throws Throwable {
+		// For each of top X offers:
+		// if there is a green star -> next
+		// add offer to Jobs list
+		// read , decide about offer
+		// if decided not to submit ->next
+		// submit offer
+		// if succeccfull submiti
+		// 1)update Jobs->offer
+		// 2)close the last window
+
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		deepBreath();
-		for(int rowNum = 0; rowNum <3; rowNum++){
-			//check if rowNum offer has a green star
+		for (int rowNum = 0; rowNum < 3; rowNum++) {
+			// check if rowNum offer has a green star
 			log('j');
-			int trStarRow =(3*rowNum);
-			trStarRow += 4;	
-			String starPos = ((new String ("//div[@id='DirectCastMainDiv']/table/tbody/tr[")).concat(String.valueOf(trStarRow))).concat("]/td/span/img");
+
+			int trStarRow = -1;
+			if (seekBackgroundWork) {
+				trStarRow = (3 * rowNum);
+				trStarRow += 4;
+			} else {
+				// different numer for the principle rows
+			}
+			String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
+					.concat(String.valueOf(trStarRow))).concat("]/td/span/img");
 			String srcOfImg = "";
-			//	assertTrue(isElementPresent(By.xpath(starPos)));
-			 
-			 try {
-			//      assertEquals("", driver.findElement(By.xpath(starPos)).getAttribute("src"));
-			  //    driver.findElement(By.xpath(starPos)).getCssValue("src");
-				 srcOfImg = new String( driver.findElement(By.xpath(starPos)).getAttribute("src"));
-				
-			    } catch (Error e) {
-			      verificationErrors.append(e.toString());
-			    }
-			 	if(srcOfImg.contains("spacer.gif")){
-			 		log("No star on offer"  + rowNum + " So going to forward with it.");
-			 		//CONTINUE HERE
-			 		
-			 		
-			 		
-			 	}else{
-			 		log("Found star on the offer "+ rowNum +" from top");
-			 	}
-			
-		} 
-		
+			try {srcOfImg = new String(driver.findElement(By.xpath(starPos)).getAttribute("src"));
+			} catch (Error e) {
+				verificationErrors.append(e.toString());
+			}
+			if (srcOfImg.contains("spacer.gif")) {
+				log("No star on offer " + rowNum + " from top.  So going to submit it.");
+				offer = new Job();
+				handleBackgroundWorkOffer(seekBackgroundWork,(trStarRow-1));
+				Jobs.add(offer);
+				log('h');
+				int trLinkToOfferRow =-1;
+				trLinkToOfferRow = trStarRow -1;
+				String linkOfferPos = ((new String("//tr[")).concat(String.valueOf(trLinkToOfferRow))).concat("]/td/a");
+				driver.findElement(By.xpath(linkOfferPos)).click();
+				deepBreath();				
+				driver.switchTo().window(getSonWindowHandler());
+				windowStatus();
+				//add time of apperance to offer
+				try {
+					offer.setOfferTimeRoleAdded(new String(driver.findElement(By.xpath("//table[6]/tbody/tr[3]/td")).getText()));
+				} catch (Exception e) {
+					offer.setOfferTimeRoleAdded (new String(""));
+				}
+//				offer.readNotice();
+				offer.makeDecision();
+				log("Decision: " + offer.getDecisionSubmit());
+				if ((!offer.getDecisionSubmit()) || (offer.getHasBeenSubmitted())) {
+
+					// DO NOT SUBMIT THIS OFFER
+
+					continue;
+
+				}
+				driver.findElement(By.xpath("//a[contains(text(),'submit')]" )).click();
+				deepBreath();
+				if (!verifyLocation("//span", "Customize your submission")) {
+					log("Error: You are on wrong window");
+					windowStatus();
+					throw new Exception();
+				}
+				log('l');
+				driver.findElement(By.id("TALENTNOTE")).clear();
+				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
+				log("filled talent notes with : " + offer.getMessage());
+				deepBreath();
+				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
+				deepBreath();
+				// verify that the confirmation window opened                                                                                
+				if (!verifyLocation("//span", "Submission Successful")) {
+					log("Did NOT recieve final submittion successful");
+					windowStatus();
+					throw new Exception();
+				}
+				if (!killSubWindowAndMoveToParentWindow()) {
+					log("Memory leak error: failed killing child window");
+					throw new Exception();}
+				offer.setHasBeenSubmitted(true);
+				offer.setLog("");
+				log('m');
+			} else {
+				log("Found star on the offer " + rowNum + " from top");
+			}
+
+		}
+
 	}
-	
-	public void killFirefoxAndOpenNew(){
+
+	public void killFirefoxAndOpenNew() {
 		WebDriver tempDriver = driver;
 		driver = new FirefoxDriver();
 		tempDriver.quit();
-	 }
-	
-	
-	
+	}
+
 	// PLAN
 	// 0:RUN FOREVER
-	//new Driver
-	//login
-			//	THIS IS 4TH LOGIN - THEN CLOSE WINDOW AND GOTO 10
-			// HEART WHILE LOOP:
-				// OPEN CHART
-				// DO:
-				// ALTERNATE PRINCIPLE<->EXTRA
-				// NAP
+	// new Driver
+	// login
+	// THIS IS 4TH LOGIN - THEN CLOSE WINDOW AND GOTO 10
+	// HEART WHILE LOOP:
+	// OPEN CHART
+	// DO:
+	// ALTERNATE PRINCIPLE<->EXTRA
+	// NAP
 
-				// ANY EXCEPTION - LOG IT, GO BACK TO LOGIN
-		
-	
-	
-	
+	// ANY EXCEPTION - LOG IT, GO BACK TO LOGIN
+
 	public void aaRachel() throws Exception {
 
 		log("ACTORS ACCESS");
@@ -446,7 +479,7 @@ public class Beta {
 				// offer.setIsBackgroundWork(seekBackgroundWork);
 				new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 				deepBreath();
-				handleBackgroundWorkOffer(seekBackgroundWork);
+//				handleBackgroundWorkOffer(seekBackgroundWork);
 				Jobs.add(offer);
 				log('h');
 				// offer.readNotice();
@@ -613,7 +646,7 @@ public class Beta {
 
 	}
 
-	private void handleBackgroundWorkOffer(boolean isBackgroundWork) {
+	private void handleBackgroundWorkOffer(boolean isBackgroundWork,int row) {
 
 		offer.setIsBackgroundWork(isBackgroundWork);
 		// the EXTRA table has the shooting date .
@@ -629,119 +662,133 @@ public class Beta {
 		String currentOfferUnionStatus;
 		String currentOfferPostedDate;
 		String currentOfferListing;
-
+		String leftPart = (new String ("//tr[")).concat(String.valueOf(row));
 		try {
-
+		 
 			try {
-				currentOffer = new String(driver.findElement(By.xpath("//tr[3]/td/a")).getText());
+			//	String localRow = String.valueOf(row); 
+				String path = new String(leftPart.concat("]/td/a"));
+				currentOffer = new String(driver.findElement(By.xpath(path)).getText());
 			} catch (Exception e) {
 				currentOffer = new String("");
 			}
-			;
+			
 			currentOfferRole = new String(currentOffer);
 
 			if (isBackgroundWork) {
 				// BACKGROUND WORK
 				try {
-					currentOfferProjectName = new String(driver.findElement(By.xpath("//tr[3]/td[2]/a")).getText());
+					String path = new String(leftPart.concat("]/td[2]/a"));
+					currentOfferProjectName = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferProjectName = new String("");
 				}
-				;
+				
 				try {
-					currentOfferShootDate = new String(driver.findElement(By.xpath("//tr[3]/td[3]/a")).getText());
+					String path = new String(leftPart.concat("]/td[3]/a"));
+					currentOfferShootDate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferShootDate = new String("");
 				}
-				;
+				
 				try {
-					currentOfferTypeProject = new String(driver.findElement(By.xpath("//tr[3]/td[4]/a")).getText());
+					String path = new String(leftPart.concat("]/td[4]/a"));
+					currentOfferTypeProject = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferTypeProject = new String("");
 				}
-				;
+				
 				try {
-					currentOffertRate = new String(driver.findElement(By.xpath("//tr[3]/td[5]/a")).getText());
+					String path = new String(leftPart.concat("]/td[5]/a"));
+					currentOffertRate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOffertRate = new String("");
 				}
-				;
+				
 				try {
-					currentOfferPaying = new String(driver.findElement(By.xpath("//tr[3]/td[6]/a")).getText());
+					String path = new String(leftPart.concat("]/td[6]/a"));
+					currentOfferPaying = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferPaying = new String("");
 				}
-				;
+				
 				try {
-					currentOfferUnionStatus = new String(driver.findElement(By.xpath("//tr[3]/td[7]/a")).getText());
+					String path = new String(leftPart.concat("]/td[7]/a"));
+					currentOfferUnionStatus = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferUnionStatus = new String("");
 				}
-				;
+				
 				try {
-					currentOfferPostedDate = new String(driver.findElement(By.xpath("//tr[3]/td[8]/a")).getText());
+					String path = new String(leftPart.concat("]/td[8]/a"));
+					currentOfferPostedDate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferPostedDate = new String("");
 				}
-				;
-				try {
-					currentOfferListing = new String(driver.findElement(By.xpath("//tr[4]/td")).getText());
-				} catch (Exception e) {
-					currentOfferListing = new String("");
-				}
-				;
+				
+				
+				
 			} else {
 				// PRINCIPLE WORK
 				try {
-					currentOfferProjectName = new String(driver.findElement(By.xpath("//tr[3]/td[2]/a")).getText());
+					String path = new String(leftPart.concat("]/td[2]/a"));
+					currentOfferProjectName = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferProjectName = new String("");
 				}
-				;
+				
 				try {
 					currentOfferShootDate = "";
 				} catch (Exception e) {
 					currentOfferShootDate = new String("");
 				}
-				;
+				
 				try {
-					currentOfferTypeProject = new String(driver.findElement(By.xpath("//tr[3]/td[3]/a")).getText());
+					String path = new String(leftPart.concat("]/td[3]/a"));
+					currentOfferTypeProject = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferTypeProject = new String("");
 				}
-				;
+				
 				try {
-					currentOffertRate = new String(driver.findElement(By.xpath("//tr[3]/td[4]/a")).getText());
+					String path = new String(leftPart.concat("]/td[4]/a"));
+					currentOffertRate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOffertRate = new String("");
 				}
-				;
+				
 				try {
-					currentOfferPaying = new String(driver.findElement(By.xpath("//tr[3]/td[5]/a")).getText());
+					String path = new String(leftPart.concat("]/td[5]/a"));
+					currentOfferPaying = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferPaying = new String("");
 				}
-				;
+				
 				try {
-					currentOfferUnionStatus = new String(driver.findElement(By.xpath("//tr[3]/td[6]/a")).getText());
+					String path = new String(leftPart.concat("]/td[6]/a"));
+					currentOfferUnionStatus = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferUnionStatus = new String("");
 				}
-				;
+				
 				try {
-					currentOfferPostedDate = new String(driver.findElement(By.xpath("//tr[3]/td[7]/a")).getText());
+					String path = new String(leftPart.concat("]/td[7]/a"));
+					currentOfferPostedDate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferPostedDate = new String("");
 				}
-				;
-				try {
-					currentOfferListing = new String(driver.findElement(By.xpath("//tr[4]/td")).getText());
-				} catch (Exception e) {
-					currentOfferListing = new String("");
-				}
-				;
+				
+				
+				
 
 			}
+			try {
+				String path = new String(leftPart.concat("]/td"));
+				currentOfferListing = new String(driver.findElement(By.xpath(path)).getText());
+			} catch (Exception e) {
+				currentOfferListing = new String("");
+			}
+			 
 			// enter into JOB class
 
 			offer.setOfferRole(currentOffer.toLowerCase());
@@ -820,7 +867,7 @@ public class Beta {
 		}
 		System.out.println(newLog);
 		try {
-			
+
 			logger.info(newLog);
 		} catch (SecurityException e) {
 			e.printStackTrace();
