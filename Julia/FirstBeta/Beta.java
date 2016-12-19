@@ -139,14 +139,14 @@ public class Beta {
 		driver = new FirefoxDriver();
 		loginCounter = 0;
 		while (networkWorking()){
-			Log("Login number " + loginCounter );
+			log("Login number " + loginCounter );
 			loginCN();
-				 
+				
+			if(loginCounter>10){ log("THIS IS 10TH LOGIN - stopping Beta ");return;}
 			if(loginCounter>2){
-				 log("THIS IS 4TH LOGIN - THEN CLOSE WINDOW AND GOTO 10 ");
+				 log("THIS IS 4TH LOGIN - THEN CLOSE WINDOW and start new Driver ");
 				killFirefoxAndOpenNew();
-			
-				//windowStatus();
+				
 				//in future add here a reset to the loginCoutner
 			}
 			try{coreLoop();}catch(Exception e){	
