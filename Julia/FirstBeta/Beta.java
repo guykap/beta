@@ -26,7 +26,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-
+	//THIS IS BETA
 	private static WebDriver driver;
 	private String cnBaseUrl;
 	private String aaBaseUrl;
