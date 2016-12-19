@@ -211,39 +211,48 @@ public class Beta {
 			log('j');
 
 			int trStarRow = -1;
+			
+			//debug 
+			seekBackgroundWork = false;
 			if (seekBackgroundWork) {
 				trStarRow = (3 * rowNum);
 				trStarRow += 4;
 			} else {
+				trStarRow = (3 * rowNum);
+				trStarRow += 4;
 				// different numer for the principle rows
+			//	div/table[3]/tbody/tr[4]/tr/span/img@src
 			}
 			String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
 					.concat(String.valueOf(trStarRow))).concat("]/td/span/img");
 			String srcOfImg = "";
-			try {srcOfImg = new String(driver.findElement(By.xpath(starPos)).getAttribute("src"));
+			try {
+				srcOfImg = new String(driver.findElement(By.xpath(starPos)).getAttribute("src"));
 			} catch (Error e) {
 				verificationErrors.append(e.toString());
 			}
 			if (srcOfImg.contains("spacer.gif")) {
 				log("No star on offer " + rowNum + " from top.  So going to submit it.");
 				offer = new Job();
-				handleBackgroundWorkOffer(seekBackgroundWork,(trStarRow-1));
+				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
 				Jobs.add(offer);
 				log('h');
-				int trLinkToOfferRow =-1;
-				trLinkToOfferRow = trStarRow -1;
+				int trLinkToOfferRow = -1;
+				trLinkToOfferRow = trStarRow - 1;
 				String linkOfferPos = ((new String("//tr[")).concat(String.valueOf(trLinkToOfferRow))).concat("]/td/a");
 				driver.findElement(By.xpath(linkOfferPos)).click();
-				deepBreath();				
+				deepBreath();
 				driver.switchTo().window(getSonWindowHandler());
 				windowStatus();
-				//add time of apperance to offer
+				// add time of apperance to offer
 				try {
-					offer.setOfferTimeRoleAdded(new String(driver.findElement(By.xpath("//table[6]/tbody/tr[3]/td")).getText()));
+					//FIX THIS
+					offer.setOfferTimeRoleAdded(
+							new String(driver.findElement(By.xpath("//table[6]/tbody/tr[3]/td")).getText()));
 				} catch (Exception e) {
-					offer.setOfferTimeRoleAdded (new String(""));
+					offer.setOfferTimeRoleAdded(new String(""));
 				}
-//				offer.readNotice();
+				// offer.readNotice();
 				offer.makeDecision();
 				log("Decision: " + offer.getDecisionSubmit());
 				if ((!offer.getDecisionSubmit()) || (offer.getHasBeenSubmitted())) {
@@ -253,7 +262,7 @@ public class Beta {
 					continue;
 
 				}
-				driver.findElement(By.xpath("//a[contains(text(),'submit')]" )).click();
+				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
 				deepBreath();
 				if (!verifyLocation("//span", "Customize your submission")) {
 					log("Error: You are on wrong window");
@@ -267,7 +276,7 @@ public class Beta {
 				deepBreath();
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
 				deepBreath();
-				// verify that the confirmation window opened                                                                                
+				// verify that the confirmation window opened
 				if (!verifyLocation("//span", "Submission Successful")) {
 					log("Did NOT recieve final submittion successful");
 					windowStatus();
@@ -275,7 +284,8 @@ public class Beta {
 				}
 				if (!killSubWindowAndMoveToParentWindow()) {
 					log("Memory leak error: failed killing child window");
-					throw new Exception();}
+					throw new Exception();
+				}
 				offer.setHasBeenSubmitted(true);
 				offer.setLog("");
 				log('m');
@@ -479,7 +489,7 @@ public class Beta {
 				// offer.setIsBackgroundWork(seekBackgroundWork);
 				new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 				deepBreath();
-//				handleBackgroundWorkOffer(seekBackgroundWork);
+				// handleBackgroundWorkOffer(seekBackgroundWork);
 				Jobs.add(offer);
 				log('h');
 				// offer.readNotice();
@@ -646,7 +656,7 @@ public class Beta {
 
 	}
 
-	private void handleBackgroundWorkOffer(boolean isBackgroundWork,int row) {
+	private void handleBackgroundWorkOffer(boolean isBackgroundWork, int row) {
 
 		offer.setIsBackgroundWork(isBackgroundWork);
 		// the EXTRA table has the shooting date .
@@ -662,17 +672,17 @@ public class Beta {
 		String currentOfferUnionStatus;
 		String currentOfferPostedDate;
 		String currentOfferListing;
-		String leftPart = (new String ("//tr[")).concat(String.valueOf(row));
+		String leftPart = (new String("//tr[")).concat(String.valueOf(row));
 		try {
-		 
+
 			try {
-			//	String localRow = String.valueOf(row); 
+				// String localRow = String.valueOf(row);
 				String path = new String(leftPart.concat("]/td/a"));
 				currentOffer = new String(driver.findElement(By.xpath(path)).getText());
 			} catch (Exception e) {
 				currentOffer = new String("");
 			}
-			
+
 			currentOfferRole = new String(currentOffer);
 
 			if (isBackgroundWork) {
@@ -683,51 +693,49 @@ public class Beta {
 				} catch (Exception e) {
 					currentOfferProjectName = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[3]/a"));
 					currentOfferShootDate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferShootDate = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[4]/a"));
 					currentOfferTypeProject = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferTypeProject = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[5]/a"));
 					currentOffertRate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOffertRate = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[6]/a"));
 					currentOfferPaying = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferPaying = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[7]/a"));
 					currentOfferUnionStatus = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferUnionStatus = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[8]/a"));
 					currentOfferPostedDate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferPostedDate = new String("");
 				}
-				
-				
-				
+
 			} else {
 				// PRINCIPLE WORK
 				try {
@@ -736,59 +744,57 @@ public class Beta {
 				} catch (Exception e) {
 					currentOfferProjectName = new String("");
 				}
-				
+
 				try {
 					currentOfferShootDate = "";
 				} catch (Exception e) {
 					currentOfferShootDate = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[3]/a"));
 					currentOfferTypeProject = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferTypeProject = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[4]/a"));
 					currentOffertRate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOffertRate = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[5]/a"));
 					currentOfferPaying = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferPaying = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[6]/a"));
 					currentOfferUnionStatus = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferUnionStatus = new String("");
 				}
-				
+
 				try {
 					String path = new String(leftPart.concat("]/td[7]/a"));
 					currentOfferPostedDate = new String(driver.findElement(By.xpath(path)).getText());
 				} catch (Exception e) {
 					currentOfferPostedDate = new String("");
 				}
-				
-				
-				
 
 			}
 			try {
-				String path = new String(leftPart.concat("]/td"));
-				currentOfferListing = new String(driver.findElement(By.xpath(path)).getText());
+			//	((new String("//tr[")).concat(String.valueOf(row+1)))
+				String pathOfferListing = new String(((new String("//tr[")).concat(String.valueOf(row+1))).concat("]/td"));
+				currentOfferListing = new String(driver.findElement(By.xpath(pathOfferListing)).getText());
 			} catch (Exception e) {
 				currentOfferListing = new String("");
 			}
-			 
+
 			// enter into JOB class
 
 			offer.setOfferRole(currentOffer.toLowerCase());
