@@ -409,7 +409,20 @@ public class Job {
 	}
 
 	public void makeDecision() {
+	//DEBUGGING
+		
+		System.out.println("DEBUG DECISION - ALL VALUES: " +this.getOfferProjectName() + " | " + this.getOfferSubmittionDateTime() + " | "
+				+ this.getOffertRate() + " | " + this.getOfferTypeProject() + " | "
+				+ this.getHasBeenSubmitted() + " | " + this.getOfferListing() + "Talent Notes :" + this.getMessage()
+				+ " |SAG: " + this.getIsSag()
+				+ " |AGE: " + this.getIsAge()
+				+ " |CAR: " + this.getIsCar()
+				+ " |PAying: " + this.getOfferPaying()
+				);
+		
+		
 		// if ((isSag)&&(isAge)&&(isMale)&&(!isCar)&&(isPayingEnough)){
+		 
 		this.setDecisionSubmit(true);
 		if ((isMale)&&(!isCar)&&(isPayingEnough)){
 		this.setDecisionSubmit(true);}

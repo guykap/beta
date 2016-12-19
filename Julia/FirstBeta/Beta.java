@@ -80,8 +80,14 @@ public class Beta {
 			//fh = new FileAppender(new SimpleLayout(), (new String(OUTPUT_FILE).concat(appendixFileName)));
 			fh = new FileAppender(new SimpleLayout(), (new String(fileOut).concat(appendixFileName)));
 			seekBackgroundWork = true;
+			
+			 
+			gecko_driver +=  "geckodriver.exe";
+			
+			
+			JUnitCore jCore;
 			while (networkWorking()) {
-				JUnitCore jCore = new JUnitCore();
+				 jCore = new JUnitCore();
 				jCore.run(Beta.class);
 				TimeUnit.SECONDS.sleep(60);
 				seekBackgroundWork ^= true;
@@ -99,14 +105,7 @@ public class Beta {
 	@Before
 	public void setUp() throws Exception {
 		 
-		gecko_driver +=  "geckodriver.exe";
-		
-		System.setProperty("webdriver.gecko.driver", gecko_driver);
-		driver = new FirefoxDriver();
-		cnBaseUrl = "http://home.castingnetworks.com";
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		parentWindowHandler = driver.getWindowHandle();
-		BetaLog = new String("New Beta");
+	
 
 	}
 
@@ -186,6 +185,16 @@ public class Beta {
 	@Test
 	public void testBeta() throws Exception {
 
+		//SETUP
+		
+		System.setProperty("webdriver.gecko.driver", gecko_driver);
+		driver = new FirefoxDriver();
+		cnBaseUrl = "http://home.castingnetworks.com";
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		parentWindowHandler = driver.getWindowHandle();
+		BetaLog = new String("New Beta");
+		
+		
 		// REAL Beta
 		leftNumOfSubmittionWhileLoopsChances = 0;
 		leftNumOfLoginWhileLoopsChances =0;
@@ -372,7 +381,7 @@ public class Beta {
 			}
 		}
 		log('z');
-		return;
+		
 	}
 
 	private void handleAAWorkOffer() {
