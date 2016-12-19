@@ -163,7 +163,7 @@ public class Beta {
 				// refresh page to allow new offers to be displayed
 				nap();
 				log("Refresh page");
-				//try{	driver.navigate().refresh();}catch(Exception e){log("refresh failed");}
+				try{	driver.navigate().refresh();}catch(Exception e){log("Refresh failed");}
 				log("testing 1,2,3 will it die here?");
 				continue;
 
@@ -265,7 +265,7 @@ public class Beta {
 			// Choose from drop down list 'all roles':
 			try {
 				log("Refresh page");
-				driver.navigate().refresh();
+				try{		driver.navigate().refresh();}catch(Exception e){}
 				offer = new Job();
 				// offer.setIsBackgroundWork(seekBackgroundWork);
 				new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
