@@ -133,32 +133,37 @@ public class Beta {
 	
 	@Test	
 	public void testBetaB() throws Exception {
-		log("beta better");
-		
-	
+		log("beta better");	
 		driver = new FirefoxDriver();
 		loginCounter = 0;
 		while (networkWorking()){
 			log("Login number " + loginCounter );
-			loginCN();
-				
 			if(loginCounter>10){ log("THIS IS 10TH LOGIN - stopping Beta ");return;}
 			if(loginCounter>2){
 				 log("THIS IS 4TH LOGIN - THEN CLOSE WINDOW and start new Driver ");
 				killFirefoxAndOpenNew();
-				
-				//in future add here a reset to the loginCoutner
 			}
+			try{loginCN();}catch(Exception e){
+				log("Something went during login -> So lets login again");
+				loginCounter++;
+				continue;}
+			}
+			
 			try{coreLoop();}catch(Exception e){	
 				log("Something went wrong -> Back to Login");
 				loginCounter++;}
 		}
 		 
-	}
+	
 	
 	
 	public void loginCN(){
-		log("LOGIN");
+		log("LOGIN-CN");
+		int x = 1; 
+		x = x/0;
+		log('a');
+		driver.get(cnBaseUrl + "/");
+	//	breath();
 	}
 	
 	public void coreLoop(){
