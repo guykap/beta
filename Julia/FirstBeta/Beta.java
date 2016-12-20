@@ -131,6 +131,7 @@ public class Beta {
 			}
 			try {
 				loginCN();
+				seekBackgroundWork = true;
 			} catch (Exception e) {
 				log("Something went during login -> So lets login again");
 				loginCounter++;
@@ -180,9 +181,6 @@ public class Beta {
 			throw new Exception();
 		}
 		log("In Etras chart");
-
-		// debug
-		seekBackgroundWork = false;
 		while (true) {
 			heartLoop();
 			seekBackgroundWork ^= true;
@@ -226,8 +224,8 @@ public class Beta {
 		for (int rowNum = 0; rowNum < 3; rowNum++) {
 			// check if rowNum offer has a green star
 			log('j');
-
-			int trStarRow = -1;
+			log("Checking for green star at row number: "+ rowNum);
+					int trStarRow = -1;
 			if (seekBackgroundWork) {
 				trStarRow = (3 * rowNum);
 				trStarRow += 4;
@@ -261,9 +259,9 @@ public class Beta {
 				windowStatus();
 				// add time of apperance to offer
 				try {
-					// FIX THIS
+					breath();
 					offer.setOfferTimeRoleAdded(
-							new String(driver.findElement(By.xpath("//table[6]/tbody/tr[3]/td")).getText()));
+							new String(driver.findElement(By.xpath("//table[5]/tbody/tr[3]/td")).getText()));
 				} catch (Exception e) {
 					offer.setOfferTimeRoleAdded(new String(""));
 				}

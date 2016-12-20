@@ -381,7 +381,7 @@ public class Job {
 			setNeedTuxedo(true);
 		}
 
-		if ((noticeLowerCase.contains(" cop uniform ")) || (noticeLowerCase.contains("own NYPD uni"))) {
+		if ((noticeLowerCase.contains("cop uniform ")) || (noticeLowerCase.contains("own NYPD uni"))) {
 			setNeedPoliceUniform(true);
 		}
 	}
