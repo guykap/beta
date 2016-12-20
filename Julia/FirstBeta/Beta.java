@@ -27,7 +27,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-	// THIS IS BETA1.6
+	// THIS IS BETA1.7
 	private static WebDriver driver;
 	static public String cnBaseUrl;
 	static public String aaBaseUrl;
@@ -42,6 +42,7 @@ public class Beta {
 	static boolean useSleep;
 	int leftNumOfLoginWhileLoopsChances = 0;
 	int leftNumOfSubmittionWhileLoopsChances = 0;
+	public static int silentCounter = 0;
 	String parentWindowHandler;
 	String newWindowHandler;
 	Iterator<String> windowHandlesIterator;
@@ -55,7 +56,7 @@ public class Beta {
 	public static Appender fh = null;
 	public static Logger logger = Logger.getLogger("MyLog");
 	static public boolean seekBackgroundWork;
-
+	static public boolean longNaps = false;
 	static String gecko_driver_path;
 	static int loginCounter;
 
@@ -96,18 +97,6 @@ public class Beta {
 		log("Program ENDED - THANK YOU!");
 
 	}
-
-	/*
-	 * 
-	 * 
-	 * driver = new FirefoxDriver(); while (networkWorking()) { jCore = new
-	 * JUnitCore(); jCore.run(Beta.class); TimeUnit.SECONDS.sleep(60);
-	 * seekBackgroundWork ^= true; if (seekBackgroundWork) {
-	 * log("ALTERNATE  to BACKGROUND work"); } else {
-	 * log("ALTERNATE  to PRINCIPLE work"); }
-	 * 
-	 * }
-	 */
 
 	@Before
 	public void setUp() throws Exception {
@@ -151,7 +140,9 @@ public class Beta {
 		cnBaseUrl = "http://home.castingnetworks.com";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
+		silentCounter = 0;
 		log("LOGIN-CN");
+		seekBackgroundWork = true;
 		log('a');
 		driver.get(cnBaseUrl + "/");
 		breath();
@@ -174,13 +165,13 @@ public class Beta {
 
 	public void core() throws Throwable {
 		log("Core");
-		// first time in coreLoop - always goes to begin with Extra chart
+		// first time in coreLoop - always begin with Extra chart
 		driver.findElement(By.xpath("//a[@id='_ctl0_cphBody_lnkExtrasRoles']")).click();
 		if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 			log("Can't find Extras chart");
 			throw new Exception();
 		}
-		log("In Etras chart");
+		log("In Extras chart");
 		while (true) {
 			heartLoop();
 			seekBackgroundWork ^= true;
@@ -194,48 +185,39 @@ public class Beta {
 	}
 
 	public void heartLoop() throws Throwable {
-		// For each of top X offers:
-		// if there is a green star -> next
-		// add offer to Jobs list
-		// read , decide about offer
-		// if decided not to submit ->next
-		// submit offer
-		// if succeccfull submiti
-		// 1)update Jobs->offer
-		// 2)close the last window
-
-		driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a")).click();
-		breath();
+	 		breath();
 		if (seekBackgroundWork) {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
-				log("Can't find Extras chart");
-				throw new Exception();
+				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
+						.click();
+				//debug
+				deepBreath();
+				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
+					log("Can't find Extras chart");
+					throw new Exception();
+				}
 			}
 		} else {
 			// We want to be in principle chart
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
-				log("Can't find principle chart");
-				throw new Exception();
+				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
+						.click();
+				//debug
+				deepBreath();
+				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
+					log("Can't find principle chart");
+					throw new Exception();
+				}
 
 			}
 		}
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		deepBreath();
 		for (int rowNum = 0; rowNum < 3; rowNum++) {
-			// check if rowNum offer has a green star
 			log('j');
-			log("Checking for green star at row number: "+ rowNum);
-					int trStarRow = -1;
-			if (seekBackgroundWork) {
-				trStarRow = (3 * rowNum);
+			log("Checking for green star at row number: " + rowNum);
+			int trStarRow = (3 * rowNum);
 				trStarRow += 4;
-			} else {
-				// FIX THIS to another rowNum for PRINCIPLE
-				trStarRow = (3 * rowNum);
-				trStarRow += 4;
-				// different numer for the principle rows
-				// div/table[3]/tbody/tr[4]/tr/span/img@src
-			}
 			String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
 					.concat(String.valueOf(trStarRow))).concat("]/td/span/img");
 			String srcOfImg = "";
@@ -244,11 +226,17 @@ public class Beta {
 			} catch (Error e) {
 				verificationErrors.append(e.toString());
 			}
+
+			
+
 			if (srcOfImg.contains("spacer.gif")) {
 				log("No star on offer " + rowNum + " from top.  So going to submit it.");
 				offer = new Job();
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
 				Jobs.add(offer);
+				// debug
+		 		staySilent();
+		 		
 				log('h');
 				int trLinkToOfferRow = -1;
 				trLinkToOfferRow = trStarRow - 1;
@@ -274,7 +262,7 @@ public class Beta {
 				}
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
 				deepBreath();
-				breathTomissleadThem();
+				breathToMissleadThem();
 				if (!verifyLocation("//span", "Customize your submission")) {
 					log("Error: You are on wrong window");
 					windowStatus();
@@ -289,7 +277,6 @@ public class Beta {
 				deepBreath();
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
 				deepBreath();
-				// verify that the confirmation window opened
 				if (!verifyLocation("//span", "Submission Successful")) {
 					log("Did NOT recieve final submittion successful");
 					windowStatus();
@@ -300,10 +287,14 @@ public class Beta {
 					throw new Exception();
 				}
 				offer.setHasBeenSubmitted(true);
+				silentCounter = 0;
 				offer.setLog("");
 				log('m');
 			} else {
 				log("Found star on the offer " + rowNum + " from top");
+				
+				// debug
+		 		staySilent();
 			}
 
 		}
@@ -325,19 +316,6 @@ public class Beta {
 		driver = new FirefoxDriver();
 		tempDriver.quit();
 	}
-
-	// PLAN
-	// 0:RUN FOREVER
-	// new Driver
-	// login
-	// THIS IS 4TH LOGIN - THEN CLOSE WINDOW AND GOTO 10
-	// HEART WHILE LOOP:
-	// OPEN CHART
-	// DO:
-	// ALTERNATE PRINCIPLE<->EXTRA
-	// NAP
-
-	// ANY EXCEPTION - LOG IT, GO BACK TO LOGIN
 
 	public void aaRachel() throws Exception {
 
@@ -1157,8 +1135,7 @@ public class Beta {
 
 	public void breath() throws InterruptedException {
 		// sleeps for the configured time + impro
-		int sleepTime;
-		sleepTime = randInt(4, 5);
+		int sleepTime = randInt(4, 5);
 		if (useSleep) {
 			TimeUnit.SECONDS.sleep(sleepTime);
 			if (logStateFull) {
@@ -1169,25 +1146,46 @@ public class Beta {
 	}
 
 	public void deepBreath() throws InterruptedException {
-	  
+
 		for (int i = 0; i < 3; i++) {
 			breath();
 		}
 	}
 
 	public void nap() throws InterruptedException {
-		log("Zzz ");
-		if (useSleep) {
-			TimeUnit.SECONDS.sleep(60);
+
+		
+		if(longNaps){
+			log("Zzzzzzzzzz");
+			int sleepTime = randInt(180, 300);
+			TimeUnit.SECONDS.sleep(sleepTime);
+		}else{
+			//short naps
+			log("Zzz");
+			if (useSleep) {
+				TimeUnit.SECONDS.sleep(60);
+			}
 		}
 	}
 
-	public void breathTomissleadThem() throws InterruptedException {
-		log("Ha Ha");
+	public void breathToMissleadThem() throws InterruptedException {
 		int sleepTime = randInt(30, 60);
+		log((new String("Ha Ha ")).concat(String.valueOf(sleepTime)));
 		TimeUnit.SECONDS.sleep(sleepTime);
 	}
-	
+
+	private void staySilent() throws InterruptedException {
+		log("Silent counter : " + silentCounter);
+		silentCounter++;
+		if (silentCounter > 30) {
+			log("Shshshshsh we are trying to sleep here");
+			//extend the nap time
+			longNaps = true;
+		}else{
+			longNaps = false;
+		}
+	}
+
 	static boolean networkWorking() {
 		// returns true if there is a network connection
 
