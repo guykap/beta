@@ -48,7 +48,7 @@ public class Beta {
 	Set<String> handles;
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\bork\\logs\\logHandler_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
- 
+
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\env\\libs\\";
 
 	static private boolean logStateFull;
@@ -180,14 +180,16 @@ public class Beta {
 			throw new Exception();
 		}
 		log("In Etras chart");
-		seekBackgroundWork = true;
+
+		// debug
+		seekBackgroundWork = false;
 		while (true) {
 			heartLoop();
 			seekBackgroundWork ^= true;
 			if (seekBackgroundWork) {
-				log("ALTERNATE  to BACKGROUND work");
+				log("ALTERNATE to BACKGROUND work");
 			} else {
-				log("ALTERNATE  to PRINCIPLE work");
+				log("ALTERNATE to PRINCIPLE work");
 			}
 			deepBreath();
 		}
@@ -203,7 +205,23 @@ public class Beta {
 		// if succeccfull submiti
 		// 1)update Jobs->offer
 		// 2)close the last window
-
+		
+		driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a")).click();
+		
+		if (seekBackgroundWork) {
+			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
+				log("Can't find Extras chart");
+				throw new Exception();
+			}
+		}else{
+			//We want to be in principle chart
+			if (verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
+				log("Can't find principle chart");
+				throw new Exception();
+			
+		}
+		
+		
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		deepBreath();
 		for (int rowNum = 0; rowNum < 3; rowNum++) {
@@ -215,11 +233,11 @@ public class Beta {
 				trStarRow = (3 * rowNum);
 				trStarRow += 4;
 			} else {
-				//FIX THIS to another rowNum for PRINCIPLE
+				// FIX THIS to another rowNum for PRINCIPLE
 				trStarRow = (3 * rowNum);
 				trStarRow += 4;
 				// different numer for the principle rows
-			//	div/table[3]/tbody/tr[4]/tr/span/img@src
+				// div/table[3]/tbody/tr[4]/tr/span/img@src
 			}
 			String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
 					.concat(String.valueOf(trStarRow))).concat("]/td/span/img");
@@ -244,7 +262,7 @@ public class Beta {
 				windowStatus();
 				// add time of apperance to offer
 				try {
-					//FIX THIS
+					// FIX THIS
 					offer.setOfferTimeRoleAdded(
 							new String(driver.findElement(By.xpath("//table[6]/tbody/tr[3]/td")).getText()));
 				} catch (Exception e) {
@@ -267,7 +285,7 @@ public class Beta {
 				log('l');
 				driver.findElement(By.id("TALENTNOTE")).clear();
 				choosePhoto();
-				
+
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
 				log("filled talent notes with : " + offer.getMessage());
 				deepBreath();
@@ -293,15 +311,14 @@ public class Beta {
 		}
 
 	}
-	 
-	public void choosePhoto(){
-		if (offer.getNeedTuxedo())
-		{
-			//choose tuxedo photo
-		}else if(offer.getIsGuard()){
-			//choose guard photo
-		} else{
-			//choose the default photo
+
+	public void choosePhoto() {
+		if (offer.getNeedTuxedo()) {
+			// choose tuxedo photo
+		} else if (offer.getIsGuard()) {
+			// choose guard photo
+		} else {
+			// choose the default photo
 		}
 	}
 
@@ -796,8 +813,9 @@ public class Beta {
 
 			}
 			try {
-			//	((new String("//tr[")).concat(String.valueOf(row+1)))
-				String pathOfferListing = new String(((new String("//tr[")).concat(String.valueOf(row+1))).concat("]/td"));
+				// ((new String("//tr[")).concat(String.valueOf(row+1)))
+				String pathOfferListing = new String(
+						((new String("//tr[")).concat(String.valueOf(row + 1))).concat("]/td"));
 				currentOfferListing = new String(driver.findElement(By.xpath(pathOfferListing)).getText());
 			} catch (Exception e) {
 				currentOfferListing = new String("");
