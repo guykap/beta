@@ -189,7 +189,7 @@ public class Beta {
 			} else {
 				log("ALTERNATE to PRINCIPLE work");
 			}
-			deepBreath();
+			nap();
 		}
 	}
 
