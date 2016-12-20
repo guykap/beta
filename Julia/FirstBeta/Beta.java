@@ -293,7 +293,7 @@ public class Beta {
 		}
 
 	}
-	
+	 
 	public void choosePhoto(){
 		if (offer.getNeedTuxedo())
 		{
