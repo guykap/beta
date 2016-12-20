@@ -205,23 +205,22 @@ public class Beta {
 		// if succeccfull submiti
 		// 1)update Jobs->offer
 		// 2)close the last window
-		
+
 		driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a")).click();
-		
+
 		if (seekBackgroundWork) {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 				log("Can't find Extras chart");
 				throw new Exception();
 			}
-		}else{
-			//We want to be in principle chart
+		} else {
+			// We want to be in principle chart
 			if (verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 				log("Can't find principle chart");
 				throw new Exception();
-			
+
+			}
 		}
-		
-		
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		deepBreath();
 		for (int rowNum = 0; rowNum < 3; rowNum++) {
