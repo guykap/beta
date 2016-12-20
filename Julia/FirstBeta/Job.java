@@ -50,6 +50,7 @@ public class Job {
 	boolean isPayingEnough;
 	boolean isMaleName;
 	boolean isCar;
+	boolean isGuard;
 	boolean isStandIn;
 	boolean reqSizes;
 	boolean needTuxedo;
@@ -170,8 +171,7 @@ public class Job {
 		return offerSubmittionDateTime;
 	};
 
-	
-	
+		
 	
 	public void setOfferListing(String newData) {
 		offerListing = newData;
@@ -256,6 +256,15 @@ public class Job {
 		isCar = newBit;
 	};
 
+	public boolean getIsGuard() {
+		return isGuard;
+	};
+
+	public void setIsGuard(boolean newBit) {
+		isGuard = newBit;
+	};
+
+	
 	public boolean getReqSizes() {
 		return reqSizes;
 	};

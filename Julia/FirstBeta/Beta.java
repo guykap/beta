@@ -254,11 +254,8 @@ public class Beta {
 				offer.makeDecision();
 				log("Decision: " + offer.getDecisionSubmit());
 				if ((!offer.getDecisionSubmit()) || (offer.getHasBeenSubmitted())) {
-
 					// DO NOT SUBMIT THIS OFFER
-
 					continue;
-
 				}
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
 				deepBreath();
@@ -269,6 +266,8 @@ public class Beta {
 				}
 				log('l');
 				driver.findElement(By.id("TALENTNOTE")).clear();
+				choosePhoto();
+				
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
 				log("filled talent notes with : " + offer.getMessage());
 				deepBreath();
@@ -293,6 +292,17 @@ public class Beta {
 
 		}
 
+	}
+	
+	public void choosePhoto(){
+		if (offer.getNeedTuxedo())
+		{
+			//choose tuxedo photo
+		}else if(offer.getIsGuard()){
+			//choose guard photo
+		} else{
+			//choose the default photo
+		}
 	}
 
 	public void killFirefoxAndOpenNew() {
