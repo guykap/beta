@@ -274,6 +274,7 @@ public class Beta {
 				}
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
 				deepBreath();
+				breathTomissleadThem();
 				if (!verifyLocation("//span", "Customize your submission")) {
 					log("Error: You are on wrong window");
 					windowStatus();
@@ -1175,12 +1176,18 @@ public class Beta {
 	}
 
 	public void nap() throws InterruptedException {
-		log("Zzz " + leftNumOfSubmittionWhileLoopsChances);
+		log("Zzz ");
 		if (useSleep) {
 			TimeUnit.SECONDS.sleep(60);
 		}
 	}
 
+	public void breathTomissleadThem() throws InterruptedException {
+		log("Ha Ha");
+		int sleepTime = randInt(30, 60);
+		TimeUnit.SECONDS.sleep(sleepTime);
+	}
+	
 	static boolean networkWorking() {
 		// returns true if there is a network connection
 
