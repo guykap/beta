@@ -205,7 +205,7 @@ public class Beta {
 		// 2)close the last window
 
 		driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a")).click();
-
+		breath();
 		if (seekBackgroundWork) {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 				log("Can't find Extras chart");
@@ -213,7 +213,7 @@ public class Beta {
 			}
 		} else {
 			// We want to be in principle chart
-			if (verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
+			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
 				log("Can't find principle chart");
 				throw new Exception();
 
@@ -1168,11 +1168,7 @@ public class Beta {
 	}
 
 	public void deepBreath() throws InterruptedException {
-		// the first breaths are small ones. After the second while loop - we
-		// take deep breaths.
-		if (leftNumOfSubmittionWhileLoopsChances < 2) {
-			breath();
-		}
+	  
 		for (int i = 0; i < 3; i++) {
 			breath();
 		}
