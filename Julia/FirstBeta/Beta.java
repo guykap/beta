@@ -1169,7 +1169,7 @@ public class Beta {
 	static public void printDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
 		log("Decision: " + offer.getHasBeenSubmitted() + "|isMale: " + offer.getIsMale() + "|isCar: " + offer.getIsCar()
-				+ "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge());
+				+ "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
 	}
 

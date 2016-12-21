@@ -1,0 +1,34 @@
+INFO - beta better
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - Silent counter : 0
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483704
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483704
+INFO - .
+INFO - Ha Ha 60
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .

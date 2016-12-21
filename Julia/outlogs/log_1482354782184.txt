@@ -1,0 +1,1337 @@
+INFO - beta better
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - Silent counter : 1
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483703
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483703
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Something went wrong -> Back to Login
+INFO - Login number 2
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483703
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - Silent counter : 1
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483703 Son: 2147483651
+INFO - Now on SON
+INFO - Parent: 2147483703 Son: 2147483651
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - Silent counter : 2
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483703 Son: 2147483651
+INFO - Now on SON
+INFO - Parent: 2147483703 Son: 2147483651
+INFO - .
+INFO - Something went wrong -> Back to Login
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - Silent counter : 2
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483704
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483704
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Something went wrong -> Back to Login
+INFO - Login number 4
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483704
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - Silent counter : 2
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483704 Son: 2147483651
+INFO - Now on SON
+INFO - Parent: 2147483704 Son: 2147483651
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 3
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 4
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 5
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 6
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 7
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 8
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - Silent counter : 9
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483704 Son: 2147483651
+INFO - Now on SON
+INFO - Parent: 2147483704 Son: 2147483651
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 10
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 11
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 12
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 13
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 14
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 15
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 16
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 17
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 18
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 19
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 20
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - Silent counter : 21
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483704 Son: 2147483651
+INFO - Now on SON
+INFO - Parent: 2147483704 Son: 2147483651
+INFO - .
+INFO - Something went wrong -> Back to Login
+INFO - Login number 5
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 2
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 3
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 4
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: feature film casting (ny)
+INFO - same role:triad women
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 5
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 6
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 7
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 8
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 9
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 10
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 11
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 12
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 13
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 14
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 15
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 16
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 17
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 18
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: feature film casting (ny)
+INFO - same role:triad women
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 19
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 20
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 21
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 22
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 23
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 24
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 25
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 26
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 27
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 28
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 29
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 30
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 31
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 32
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: feature film casting (ny)
+INFO - same role:triad women
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 33
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 34
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 35
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 36
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 37
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 38
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 39
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 40
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 41
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 42
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 43
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 44
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 45
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 46
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: feature film casting (ny)
+INFO - same role:triad women
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 47
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 48
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 49
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 50
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 51
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 52
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 53
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 54
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 55
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 56
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 57
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 58
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 59
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 60
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: feature film casting (ny)
+INFO - same role:triad women
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 61
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 62
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 63
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 64
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 65
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 66
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 67
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 68
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 69
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 70
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 71
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 72
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 73
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 74
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: feature film casting (ny)
+INFO - same role:triad women
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 75
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 76
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 77
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 78
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 79
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 80
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 81
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 82
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 83
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - Silent counter : 84
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483704
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483704
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Something went wrong -> Back to Login
+INFO - Login number 6
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483652
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: orange is the new black season 5
+INFO - same role:non-union to portray bus station goers w/ luggage. 7pm call time in manhattan. read details.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 2
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 3
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: feature film casting (ny)
+INFO - same role:triad women
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 4
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 5
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 6
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 7
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 8
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 9
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 10
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 11
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 12
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: orange is the new black season 5
+INFO - same role:non-union to portray bus station goers w/ luggage. 7pm call time in manhattan. read details.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 13
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  So going to submit it.
+INFO - same project name: untitled universal series
+INFO - same role:non union to portray bushwick bar patrons w/ cars, avail thurs 1/5 note make, model, year, color
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: true|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same role:bouncers - security types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:male and female model types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: true
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 14
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:fort greene hipster types - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same project name: a spike lee joint
+INFO - same role:afrocentric men and women - works two days
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 15
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 16
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
