@@ -251,7 +251,7 @@ public class Beta {
 				} catch (Exception e) {
 					offer.setOfferTimeRoleAdded(new String(""));
 				}
-				offer.readNotice();
+			//	offer.readNotice();
 				offer.makeDecision();
 				log("Decision: " + offer.getDecisionSubmit());
 				if ((!offer.getDecisionSubmit()) || (offer.getHasBeenSubmitted())) {
