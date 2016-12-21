@@ -27,7 +27,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-	// THIS IS BETA1.8
+	// THIS IS BETA1.7
 	private static WebDriver driver;
 	static public String cnBaseUrl;
 	static public String aaBaseUrl;
@@ -254,12 +254,12 @@ public class Beta {
 				offer.readNotice();
 				offer.makeDecision();
 			//	log("Decision: " + offer.getDecisionSubmit());
-				if (offer.getHasBeenSubmitted()) {
+				if ((offer.getHasBeenSubmitted())||(!offer.getDecisionSubmit())) {
 					// DO NOT SUBMIT THIS OFFER
 					continue;
 				}
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
-				deepBreath();
+			//	deepBreath();
 				breathToMissleadThem();
 				if (!verifyLocation("//span", "Customize your submission")) {
 					log("Error: You are on wrong window");
@@ -271,7 +271,7 @@ public class Beta {
 				choosePhoto();
 
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
-				log("filled talent notes with : " + offer.getMessage());
+		//		log("filled talent notes with : " + offer.getMessage());
 				deepBreath();
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
 				deepBreath();

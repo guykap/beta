@@ -110,3 +110,45 @@ INFO - Ha Ha 51
 INFO - L: Succ on openning window to choose photo and fill talent notes.
 INFO - filled talent notes with : 
 INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - M: Succ Submitted: historic jack the ripper recreations (ny/ct) |  | $100/day | television | true | featured / male / caucasian / 22 - 30 / media submission request
+please read all before applying! role type: featured / non-speaking role rate: $100/day shoot day: thursday 12/15, possibly late night and outside. please only apply if you are available and comfortable with late hours. description: laborer in the late 1800's london.Talent Notes :
+INFO - ********ALL SUBMITTIONS********
+INFO - Offer 1482338120320|Background:true|Role added:Role Added 12/6/2016 12:52 PM
+ |Submittion time:|Shoot date:12/15/2016|age:true|car:false|Eth:true|Male:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:$100/day|Name:historic jack the ripper recreations (ny/ct)|Role:pipe man|Offer Listing:featured / male / caucasian / 30 - 37 / media submission request
+please read all before applying! role type: featured / non-speaking role rate: $100/day shoot date: january 5th, 2017. possibility to shift to the day before or day after. please only apply if you are available on the 5th and specify if you have flexibility that week. thanks! description: this man is in his mid 30's (approx 35 years old), is 5 feet 11 inches, clean shaven and fresh face with light brown hair. he is seen by a potential witness smoking a pipe in a dark doorway as a ripper murder may have been taking place.
+INFO - Offer 1482338227200|Background:true|Role added:Role Added 12/6/2016 1:01 PM
+ |Submittion time:|Shoot date:12/15/2016|age:true|car:false|Eth:true|Male:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:$100/day|Name:historic jack the ripper recreations (ny/ct)|Role:louis d|Offer Listing:featured / male / caucasian / 23 - 33 / media submission request
+please read all before applying! role type: featured / non-speaking role rate: $100/day shoot day: thursday 12/15, possible late night shoot and outside. please only apply if you are available that day and comfortable with late hours. description: louis is in his late 20's to early 30's, average height, and dark, thinning hair. he was a street salesman of cheap jewelry who stumbled across a jack the ripper victim in the early morning.
+INFO - Offer 1482338332872|Background:true|Role added:Role Added 12/6/2016 1:02 PM
+ |Submittion time:|Shoot date:12/15/2016|age:true|car:false|Eth:true|Male:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:$100/day|Name:historic jack the ripper recreations (ny/ct)|Role:laborer|Offer Listing:featured / male / caucasian / 22 - 30 / media submission request
+please read all before applying! role type: featured / non-speaking role rate: $100/day shoot day: thursday 12/15, possibly late night and outside. please only apply if you are available and comfortable with late hours. description: laborer in the late 1800's london.
+INFO - ********END OF LIST - SUBMITTIONS********
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  So going to submit it.
+INFO - Silent counter : 0
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483730
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483730
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 40
