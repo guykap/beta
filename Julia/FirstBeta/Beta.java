@@ -318,7 +318,6 @@ public class Beta {
 		driver = new FirefoxDriver();
 		tempDriver.quit();
 	}
- 
 
 	public void aaDecideToSubmit() {
 
@@ -1157,7 +1156,8 @@ public class Beta {
 				log("same role:" + consideredOffer.getOfferRole());
 			}
 			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
-					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))&&(!offer.getHasBeenSubmitted())) {
+					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))
+					&& (!offer.getHasBeenSubmitted())) {
 				log("Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
 				printDecisionMakingVars(offer);
 				return true;
@@ -1165,11 +1165,12 @@ public class Beta {
 		}
 		return false;
 	}
-	
-	static public void printDecisionMakingVars(Job offer){
-		//this would print to log why the decision went down as it did
-		log("Decision: " + offer.getHasBeenSubmitted() + "|isMale: "+offer.getIsMale() + "|isCar: "+offer.getIsCar() + "|isEthnicity: "+offer.getIsEthnicity() +"|isAge: "+offer.getIsAge());
-	 
-		}
-	} 
+
+	static public void printDecisionMakingVars(Job offer) {
+		// this would print to log why the decision went down as it did
+		log("Decision: " + offer.getHasBeenSubmitted() + "|isMale: " + offer.getIsMale() + "|isCar: " + offer.getIsCar()
+				+ "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge());
+
+	}
+
 }
