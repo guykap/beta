@@ -7,5 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="FirstBeta.Beta"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="C:\\Users\\me\\work\\official\\Julia\\outlogs\\log_ C:\\Users\\me\\work\\official\\Julia\\gecko_driver"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Julia"/>
 </launchConfiguration>
