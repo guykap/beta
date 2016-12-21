@@ -1209,6 +1209,5 @@ public class Beta {
 				printOffer(offer);
 			}
 		}
-		log("********END OF LIST - SUBMITTIONS********");
 	}
 }

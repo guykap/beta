@@ -107,3 +107,6 @@ INFO - .
 INFO - .
 INFO - .
 INFO - Ha Ha 51
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - filled talent notes with : 
+INFO - .
