@@ -50,7 +50,7 @@ public class Beta {
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 
-	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\env\\libs\\";
+	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
 
 	static private boolean logStateFull;
 	public static Appender fh = null;
