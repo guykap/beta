@@ -379,6 +379,13 @@ public class Job {
 		if ((allData.contains("cop uniform ")) || (allData.contains("own NYPD uni"))) {
 			setNeedPoliceUniform(true);
 		}
+		
+		//Stand-in
+		if ((allData.contains(" stand-in ")) || (allData.contains("standing"))) {
+			this.isStandIn =true;
+			
+		}
+		
 	}
 
 	public void calcAgeRange(String ageData) {
