@@ -1,6 +1,7 @@
 *.class
 target/
 .metadata/
+.metadata/*
 bin/
 classes/
 
