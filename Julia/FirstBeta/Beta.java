@@ -231,6 +231,9 @@ public class Beta {
 				log("No star on offer " + rowNum + " from top.  So going to submit it.");
 				offer = new Job();
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
+				if (offerHasBeenConsideredBefore(offer)) {
+					continue;
+				}
 				Jobs.add(offer);
 				// debug
 				staySilent();
@@ -253,13 +256,13 @@ public class Beta {
 				}
 				offer.readNotice();
 				offer.makeDecision();
-			//	log("Decision: " + offer.getDecisionSubmit());
-				if ((offer.getHasBeenSubmitted())||(!offer.getDecisionSubmit())) {
+				// log("Decision: " + offer.getDecisionSubmit());
+				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
 					// DO NOT SUBMIT THIS OFFER
 					continue;
 				}
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
-			//	deepBreath();
+				// deepBreath();
 				breathToMissleadThem();
 				if (!verifyLocation("//span", "Customize your submission")) {
 					log("Error: You are on wrong window");
@@ -271,7 +274,7 @@ public class Beta {
 				choosePhoto();
 
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
-		//		log("filled talent notes with : " + offer.getMessage());
+				// log("filled talent notes with : " + offer.getMessage());
 				deepBreath();
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
 				deepBreath();
@@ -1192,13 +1195,15 @@ public class Beta {
 	static public void printOffer(Job offer) {
 		if (offer == null)
 			return;
-		log("Offer " + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() +  "|Role added:"
+		log("Offer " + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
 				+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
 				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
 				+ "|Eth:" + offer.getIsEthnicity() + "|Male:" + offer.getIsMale() + "|SAG:" + offer.getIsSag()
 				+ "|Guard:" + offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:"
-				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject()+ "|ReqSizes:" + offer.getReqSizes()+ "|Paying:" + offer.getOfferPaying() +"|Rate:" + offer.getOffertRate() +"|Name:"+offer.getOfferProjectName()
-				+ "|Role:" + offer.getOfferRole()+ "|Offer Listing:" + offer.getOfferListing());
+				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
+				+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
+				+ "|Name:" + offer.getOfferProjectName() + "|Role:" + offer.getOfferRole() + "|Offer Listing:"
+				+ offer.getOfferListing());
 
 	}
 
@@ -1209,5 +1214,25 @@ public class Beta {
 				printOffer(offer);
 			}
 		}
+		log("********END LIST OF SUBMITTIONS********");
+	}
+
+	static public boolean offerHasBeenConsideredBefore(Job consideredOffer) {
+		// checkcing in the list of Jobs for another offer with the same ROLE
+		// and same PROJECT NAME values.
+		for (Job offer : Jobs) {
+			if ((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName())) {
+				log("same project name: " + (consideredOffer.getOfferProjectName()));
+			}
+			if ((consideredOffer.getOfferRole()).equals(offer.getOfferRole())) {
+				log("same role" + consideredOffer.getOfferRole());
+			}
+			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
+					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))) {
+				log("found that this Project and role has already been considered ");
+				return true;
+			}
+		}
+		return false;
 	}
 }

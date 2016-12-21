@@ -1,0 +1,389 @@
+INFO - beta better
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 2
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 3
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 4
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  So going to submit it.
+INFO - Silent counter : 5
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483687
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483687
+INFO - .
+INFO - Ha Ha 48
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - M: Succ Submitted: historic jack the ripper recreations (ny/ct) |  | $200/day | television | true | featured / male / caucasian / 25 - 33
+role type: featured / non - speaking role rate: $200/day shoot date: wednesday 12/14, travel to pa and will be needed on set all day. please only apply if you are available all day. description: bearded man in his 20'sTalent Notes :
+INFO - ********ALL SUBMITTIONS********
+INFO - Offer 1482338754156|Background:true|Role added:Role Added 12/8/2016 10:43 AM
+ |Submittion time:|Shoot date:12/15/2016|age:true|car:false|Eth:true|Male:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:$200/day|Name:historic jack the ripper recreations (ny/ct)|Role:buckley|Offer Listing:featured / male / caucasian / 25 - 33
+role type: featured / non - speaking role rate: $200/day shoot date: wednesday 12/14, travel to pa and will be needed on set all day. please only apply if you are available all day. description: bearded man in his 20's
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - Silent counter : 0
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483698
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483698
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Something went wrong -> Back to Login
+INFO - Login number 2
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483698
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 2
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 3
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 4
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 5
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - Silent counter : 6
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483698 Son: 2147483651
+INFO - Now on SON
+INFO - Parent: 2147483698 Son: 2147483651
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  So going to submit it.
+INFO - Silent counter : 7
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483698 Son: 2147483651
+INFO - Now on SON
+INFO - Parent: 2147483698 Son: 2147483651
+INFO - .
+INFO - Something went wrong -> Back to Login
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 2
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 3
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 4
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 5
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  So going to submit it.
+INFO - Silent counter : 6
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483703
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483703
+INFO - .
+INFO - Ha Ha 38
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - M: Succ Submitted: historic jack the ripper recreations (ny/ct) |  | $100/day | television | true | featured / male / caucasian / 27 - 32
+please read before applying! role type: featured / non - speaking role rate: $100/day shoot date: january 5th, 2017 with the possibility of shifting to the 4th or 6th. please only apply if you have availability on the 5th and specify if you have flexibility that week. please note: this character will need to fit inside a steamer trunk for creative purposes. please only apply if you are comfortable with that action. role description: henry roberts was killed being gassed in a trunk by hh holmes in the late 1800's.Talent Notes :
+INFO - ********ALL SUBMITTIONS********
+INFO - Offer 1482338754156|Background:true|Role added:Role Added 12/8/2016 10:43 AM
+ |Submittion time:|Shoot date:12/15/2016|age:true|car:false|Eth:true|Male:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:$200/day|Name:historic jack the ripper recreations (ny/ct)|Role:buckley|Offer Listing:featured / male / caucasian / 25 - 33
+role type: featured / non - speaking role rate: $200/day shoot date: wednesday 12/14, travel to pa and will be needed on set all day. please only apply if you are available all day. description: bearded man in his 20's
+INFO - Offer 1482339295363|Background:true|Role added:Role Added 12/21/2016 8:21 AM
+ |Submittion time:|Shoot date:12/15/2016|age:true|car:false|Eth:true|Male:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:$100/day|Name:historic jack the ripper recreations (ny/ct)|Role:henry roberts|Offer Listing:featured / male / caucasian / 27 - 32
+please read before applying! role type: featured / non - speaking role rate: $100/day shoot date: january 5th, 2017 with the possibility of shifting to the 4th or 6th. please only apply if you have availability on the 5th and specify if you have flexibility that week. please note: this character will need to fit inside a steamer trunk for creative purposes. please only apply if you are comfortable with that action. role description: henry roberts was killed being gassed in a trunk by hh holmes in the late 1800's.
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  So going to submit it.
+INFO - Silent counter : 0
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483714
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483714
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Something went wrong -> Back to Login
+INFO - Login number 4
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483714
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 2
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 3
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 4
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 5
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 6
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 7
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 8
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  So going to submit it.
+INFO - Silent counter : 9
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483714 Son: 2147483651
+INFO - Now on SON
+INFO - Parent: 2147483714 Son: 2147483651
+INFO - .
+INFO - Something went wrong -> Back to Login
+INFO - Login number 5
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - Silent counter : 0
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 2
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 3
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 4
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 5
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 6
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 7
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 8
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  So going to submit it.
+INFO - Silent counter : 9
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483714
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483714
+INFO - .
+INFO - Ha Ha 35
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - M: Succ Submitted: time after time season 1 |  | /0 | television | true | background / male or female / all ethnicities /20 - 30
+union to portray waitstaff avail for fitting tue 1/3 work 1/5 *note experience, must have white shirt/black pants*Talent Notes :
+INFO - ********ALL SUBMITTIONS********
+INFO - Offer 1482338754156|Background:true|Role added:Role Added 12/8/2016 10:43 AM
+ |Submittion time:|Shoot date:12/15/2016|age:true|car:false|Eth:true|Male:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:$200/day|Name:historic jack the ripper recreations (ny/ct)|Role:buckley|Offer Listing:featured / male / caucasian / 25 - 33
+role type: featured / non - speaking role rate: $200/day shoot date: wednesday 12/14, travel to pa and will be needed on set all day. please only apply if you are available all day. description: bearded man in his 20's
+INFO - Offer 1482339295363|Background:true|Role added:Role Added 12/21/2016 8:21 AM
+ |Submittion time:|Shoot date:12/15/2016|age:true|car:false|Eth:true|Male:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:$100/day|Name:historic jack the ripper recreations (ny/ct)|Role:henry roberts|Offer Listing:featured / male / caucasian / 27 - 32
+please read before applying! role type: featured / non - speaking role rate: $100/day shoot date: january 5th, 2017 with the possibility of shifting to the 4th or 6th. please only apply if you have availability on the 5th and specify if you have flexibility that week. please note: this character will need to fit inside a steamer trunk for creative purposes. please only apply if you are comfortable with that action. role description: henry roberts was killed being gassed in a trunk by hh holmes in the late 1800's.
+INFO - Offer 1482339605205|Background:true|Role added:|Submittion time:|Shoot date:1/3/2017|age:true|car:false|Eth:true|Male:true|SAG:true|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:time after time season 1|Role:union to portray waitstaff avail for fitting tue 1/3 work 1/5 *note experience, must have white shirt/black pants*|Offer Listing:background / male or female / all ethnicities /20 - 30
+union to portray waitstaff avail for fitting tue 1/3 work 1/5 *note experience, must have white shirt/black pants*
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
