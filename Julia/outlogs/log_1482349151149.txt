@@ -1,0 +1,95 @@
+INFO - beta better
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483652
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - Silent counter : 0
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483652 Son: 2147483704
+INFO - Now on SON
+INFO - Parent: 2147483652 Son: 2147483704
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Something went wrong -> Back to Login
+INFO - Login number 2
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483704
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - same roleold guard jazz types
+INFO - found that this Project and role has already been considered 
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  So going to submit it.
+INFO - same project name: a spike lee joint
+INFO - Silent counter : 0
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483704 Son: 2147483652
+INFO - Now on SON
+INFO - Parent: 2147483704 Son: 2147483652
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - Silent counter : 1
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - Silent counter : 2
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - Silent counter : 3
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - Silent counter : 4
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Silent counter : 5
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Silent counter : 6
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Silent counter : 7
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - Silent counter : 8
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz

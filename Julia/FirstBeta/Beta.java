@@ -318,78 +318,7 @@ public class Beta {
 		driver = new FirefoxDriver();
 		tempDriver.quit();
 	}
-
-	public void aaRachel() throws Exception {
-
-		log("ACTORS ACCESS");
-		log('a');
-		int aaleftNumOfLoginWhileLoopsChances = 0;
-		while (true) {
-			try {
-				if ((aaleftNumOfLoginWhileLoopsChances++) > 2) {
-					log("Error : reached 3 failed logins. ");
-					return;
-				}
-				log('b');
-
-				driver.get("http://www.actorsaccess.com/");
-				deepBreath();
-				driver.findElement(By.id("username_mobile")).clear();
-				driver.findElement(By.id("username_mobile")).sendKeys("guykapulnik");
-				driver.findElement(By.id("password_mobile")).clear();
-				driver.findElement(By.id("password_mobile")).sendKeys("aGuy1234567");
-				driver.findElement(By.id("login-btn_mobile")).click();
-				log('c');
-				deepBreath();
-				driver.get(" http://www.actorsaccess.com/projects/?view=breakdowns&region=2");
-				log("NEW YORK - region");
-				// check to make sure we reached region New York
-				String bread = new String(driver.findElement(By.xpath("//p[@id='breadcrumb']")).getText());
-				if (verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h2", "Casting Billboard")) {
-					log('e');
-					break;
-				}
-			} catch (Exception e) {
-				log("Error: failed login.");
-				log(e.toString());
-			}
-		}
-		while (leftNumOfSubmittionWhileLoopsChances++ < 10) {
-			log('g');
-			try {
-				// read top offer:
-				offer = new Job();
-				handleAAWorkOffer();
-				Jobs.add(offer);
-				log('h');
-				// lookForSubmissionCheckOnLeft();
-				assertTrue(isElementPresent(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td/img")));
-				// the green button is there SO :
-				log("This project saved as  " + offer.getOfferId() + " has been submitted before.");
-				// offer = null;
-
-				// refresh page to allow new offers to be displayed
-				nap();
-				log("Refresh page");
-				try {
-					driver.navigate().refresh();
-				} catch (Exception e) {
-					log("Refresh failed");
-				}
-				log("testing 1,2,3 will it die here?");
-				continue;
-
-				// driver.findElement(By.linkText("PRETTY")).click();
-
-				// driver.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[3]/a")).click();
-
-			} catch (Exception e) {
-				log("Didn't work");
-				// go back
-				return;
-			}
-		}
-	}
+ 
 
 	public void aaDecideToSubmit() {
 
@@ -1225,14 +1154,22 @@ public class Beta {
 				log("same project name: " + (consideredOffer.getOfferProjectName()));
 			}
 			if ((consideredOffer.getOfferRole()).equals(offer.getOfferRole())) {
-				log("same role" + consideredOffer.getOfferRole());
+				log("same role:" + consideredOffer.getOfferRole());
 			}
 			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
-					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))) {
-				log("found that this Project and role has already been considered ");
+					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))&&(!offer.getHasBeenSubmitted())) {
+				log("Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
+				printDecisionMakingVars(offer);
 				return true;
 			}
 		}
 		return false;
 	}
+	
+	static public void printDecisionMakingVars(Job offer){
+		//this would print to log why the decision went down as it did
+		log("Decision: " + offer.getHasBeenSubmitted() + "|isMale: "+offer.getIsMale() + "|isCar: "+offer.getIsCar() + "|isEthnicity: "+offer.getIsEthnicity() +"|isAge: "+offer.getIsAge());
+	 
+		}
+	} 
 }
