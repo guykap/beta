@@ -185,12 +185,12 @@ public class Beta {
 	}
 
 	public void heartLoop() throws Throwable {
-	 		breath();
+		breath();
 		if (seekBackgroundWork) {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
 						.click();
-				//debug
+				// debug
 				deepBreath();
 				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 					log("Can't find Extras chart");
@@ -202,7 +202,7 @@ public class Beta {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
 				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
 						.click();
-				//debug
+				// debug
 				deepBreath();
 				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
 					log("Can't find principle chart");
@@ -213,11 +213,11 @@ public class Beta {
 		}
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		deepBreath();
-		for (int rowNum = 0; rowNum < 3; rowNum++) {
+		for (int rowNum = 0; rowNum < 10; rowNum++) {
 			log('j');
 			log("Checking for green star at row number: " + rowNum);
 			int trStarRow = (3 * rowNum);
-				trStarRow += 4;
+			trStarRow += 4;
 			String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
 					.concat(String.valueOf(trStarRow))).concat("]/td/span/img");
 			String srcOfImg = "";
@@ -227,16 +227,14 @@ public class Beta {
 				verificationErrors.append(e.toString());
 			}
 
-			
-
 			if (srcOfImg.contains("spacer.gif")) {
 				log("No star on offer " + rowNum + " from top.  So going to submit it.");
 				offer = new Job();
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
 				Jobs.add(offer);
 				// debug
-		 		staySilent();
-		 		
+				staySilent();
+
 				log('h');
 				int trLinkToOfferRow = -1;
 				trLinkToOfferRow = trStarRow - 1;
@@ -253,7 +251,7 @@ public class Beta {
 				} catch (Exception e) {
 					offer.setOfferTimeRoleAdded(new String(""));
 				}
-				// offer.readNotice();
+				offer.readNotice();
 				offer.makeDecision();
 				log("Decision: " + offer.getDecisionSubmit());
 				if ((!offer.getDecisionSubmit()) || (offer.getHasBeenSubmitted())) {
@@ -290,11 +288,12 @@ public class Beta {
 				silentCounter = 0;
 				offer.setLog("");
 				log('m');
+				printSubmittions();
 			} else {
 				log("Found star on the offer " + rowNum + " from top");
-				
+
 				// debug
-		 		staySilent();
+				staySilent();
 			}
 
 		}
@@ -1154,13 +1153,12 @@ public class Beta {
 
 	public void nap() throws InterruptedException {
 
-		
-		if(longNaps){
+		if (longNaps) {
 			log("Zzzzzzzzzz");
 			int sleepTime = randInt(180, 300);
 			TimeUnit.SECONDS.sleep(sleepTime);
-		}else{
-			//short naps
+		} else {
+			// short naps
 			log("Zzz");
 			if (useSleep) {
 				TimeUnit.SECONDS.sleep(60);
@@ -1179,16 +1177,38 @@ public class Beta {
 		silentCounter++;
 		if (silentCounter > 30) {
 			log("Shshshshsh we are trying to sleep here");
-			//extend the nap time
+			// extend the nap time
 			longNaps = true;
-		}else{
+		} else {
 			longNaps = false;
 		}
 	}
 
-	static boolean networkWorking() {
+	static public boolean networkWorking() {
 		// returns true if there is a network connection
 
 		return true;
+	}
+
+	static public void printOffer(Job offer) {
+		if (offer == null)
+			return;
+		log("Offer " + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() +  "|Role added:"
+				+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
+				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
+				+ "|Eth:" + offer.getIsEthnicity() + "|Male:" + offer.getIsMale() + "|SAG:" + offer.getIsSag()
+				+ "|Guard:" + offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:"
+				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject()+ "|Paying:" + offer.getOfferPaying() +"|Rate:" + offer.getOffertRate() +"|Name:"+offer.getOfferProjectName()
+				+ "|Notice:" + offer.getNotice()+ "|Offer Listing:" + offer.getOfferListing());
+
+	}
+
+	static public void printSubmittions() {
+		log("********ALL SUBMITTIONS********");
+		for (Job offer : Jobs) {
+			if (offer.getHasBeenSubmitted()) {
+				printOffer(offer);
+			}
+		}
 	}
 }

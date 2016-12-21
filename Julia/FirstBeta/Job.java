@@ -40,6 +40,7 @@ public class Job {
 	String offerListingAgesHint = "";
 	String offerTimeRoleAdded ="";
 	String offerSubmittionDateTime = "";
+	String message="";
 	String log; // this logs all the process of this specific offer from login
 
 	boolean isSag;
@@ -56,7 +57,7 @@ public class Job {
 	boolean needTuxedo;
 	boolean needPoliceUniform;
 	int grade;
-	String message;
+	
 	boolean decisionSubmit;
 
 	public Job() {
