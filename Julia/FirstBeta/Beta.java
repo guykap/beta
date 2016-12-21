@@ -47,7 +47,7 @@ public class Beta {
 	String newWindowHandler;
 	Iterator<String> windowHandlesIterator;
 	Set<String> handles;
-	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\bork\\logs\\logHandler_";
+	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\env\\libs\\";
@@ -251,10 +251,10 @@ public class Beta {
 				} catch (Exception e) {
 					offer.setOfferTimeRoleAdded(new String(""));
 				}
-			//	offer.readNotice();
+				offer.readNotice();
 				offer.makeDecision();
-				log("Decision: " + offer.getDecisionSubmit());
-				if ((!offer.getDecisionSubmit()) || (offer.getHasBeenSubmitted())) {
+			//	log("Decision: " + offer.getDecisionSubmit());
+				if (offer.getHasBeenSubmitted()) {
 					// DO NOT SUBMIT THIS OFFER
 					continue;
 				}
@@ -799,7 +799,6 @@ public class Beta {
 			// enter into JOB class
 
 			offer.setOfferRole(currentOffer.toLowerCase());
-
 			offer.setOfferProjectName(currentOfferProjectName.toLowerCase());
 			offer.setOfferShootDate(currentOfferShootDate.toLowerCase());
 			offer.setOfferTypeProject(currentOfferTypeProject.toLowerCase());
@@ -1175,7 +1174,7 @@ public class Beta {
 	private void staySilent() throws InterruptedException {
 		log("Silent counter : " + silentCounter);
 		silentCounter++;
-		if (silentCounter > 30) {
+		if (silentCounter > 100) {
 			log("Shshshshsh we are trying to sleep here");
 			// extend the nap time
 			longNaps = true;
@@ -1198,8 +1197,8 @@ public class Beta {
 				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
 				+ "|Eth:" + offer.getIsEthnicity() + "|Male:" + offer.getIsMale() + "|SAG:" + offer.getIsSag()
 				+ "|Guard:" + offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:"
-				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject()+ "|Paying:" + offer.getOfferPaying() +"|Rate:" + offer.getOffertRate() +"|Name:"+offer.getOfferProjectName()
-				+ "|Notice:" + offer.getNotice()+ "|Offer Listing:" + offer.getOfferListing());
+				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject()+ "|ReqSizes:" + offer.getReqSizes()+ "|Paying:" + offer.getOfferPaying() +"|Rate:" + offer.getOffertRate() +"|Name:"+offer.getOfferProjectName()
+				+ "|Role:" + offer.getOfferRole()+ "|Offer Listing:" + offer.getOfferListing());
 
 	}
 

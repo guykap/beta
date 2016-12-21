@@ -1,4 +1,5 @@
 package FirstBeta;
+
 import java.io.BufferedReader;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,7 +20,7 @@ public class Job {
 	// PRIVATE:
 	String offerId;
 	boolean offerHasBeenSubmitted;
-	String notice;
+	String notice = "";
 	String noticeLowerCase;
 	String currentOffer;
 
@@ -38,10 +39,11 @@ public class Job {
 	String offerListingEthnicity = "";
 	String offerListingNotes = "";
 	String offerListingAgesHint = "";
-	String offerTimeRoleAdded ="";
+	String offerTimeRoleAdded = "";
 	String offerSubmittionDateTime = "";
-	String message="";
-	String log; // this logs all the process of this specific offer from login
+	String message = "";
+	String log = ""; // this logs all the process of this specific offer from
+						// login
 
 	boolean isSag;
 	boolean isEthnicity;
@@ -57,7 +59,7 @@ public class Job {
 	boolean needTuxedo;
 	boolean needPoliceUniform;
 	int grade;
-	
+
 	boolean decisionSubmit;
 
 	public Job() {
@@ -126,7 +128,7 @@ public class Job {
 	public void setOfferPaying(String newData) {
 		offerPaying = newData;
 	};
-	
+
 	public String getOfferCastingDirector() {
 		return offerCastingDirector;
 	};
@@ -134,7 +136,7 @@ public class Job {
 	public void setOfferCastingDirector(String newData) {
 		offerCastingDirector = newData;
 	};
-	
+
 	public String getOfferUnionStatus() {
 		return offerUnionStatus;
 	};
@@ -154,7 +156,7 @@ public class Job {
 	public String getOfferListing() {
 		return offerListing;
 	};
-	
+
 	public void setOfferTimeRoleAdded(String newData) {
 		offerTimeRoleAdded = newData;
 	};
@@ -163,7 +165,6 @@ public class Job {
 		return offerTimeRoleAdded;
 	};
 
-	
 	public void setOfferSubmittionDateTime(String newData) {
 		offerSubmittionDateTime = newData;
 	};
@@ -172,8 +173,6 @@ public class Job {
 		return offerSubmittionDateTime;
 	};
 
-		
-	
 	public void setOfferListing(String newData) {
 		offerListing = newData;
 		String delims = "[/,\n]";
@@ -265,7 +264,6 @@ public class Job {
 		isGuard = newBit;
 	};
 
-	
 	public boolean getReqSizes() {
 		return reqSizes;
 	};
@@ -326,46 +324,36 @@ public class Job {
 		offerHasBeenSubmitted = newBit;
 	};
 
-	
-	
 	public void readNotice() {
 		// this reads the notice and sets all the Job params accordingly.
 
+		String notesLowerCase = (new String(offerListingNotes.toLowerCase())).concat(" ");
+		String allData = (this.getOfferRole()).concat(notesLowerCase);
+
 		// SAG
-		if((this.getOfferUnionStatus()).contains("SAG") || (this.getOfferUnionStatus()).contains("AFTRA")){
+		if ((this.getOfferUnionStatus()).contains("sag") || (this.getOfferUnionStatus()).contains("aftra")) {
 			setIsSag(true);
 		}
-		String noticeLowerCase = new String ((this.notice).toLowerCase());
-		noticeLowerCase += new String ((this.offerListingNotes).toLowerCase());
-		if ((noticeLowerCase.contains("\tsag")) || (noticeLowerCase.contains(" sag"))
-				|| (noticeLowerCase.startsWith("sag")) || (noticeLowerCase.contains("\tunion"))
-				|| (noticeLowerCase.contains(" union")) || (noticeLowerCase.startsWith("union"))) {
+
+		if ((allData.contains("\tsag")) || (allData.contains(" sag")) || (allData.startsWith("sag"))
+				|| (allData.contains("\tunion")) || (allData.contains(" union")) || (allData.startsWith("union"))) {
 			setIsSag(true);
 		}
 
 		// MALE
-		if((this.getOfferListing().contains("Male"))){
+
+		if ((this.offerListingSex).contains("male")) {
 			setIsMale(true);
 		}
-		if ((noticeLowerCase.contains(" male")) || (noticeLowerCase.startsWith("male"))
-				|| (noticeLowerCase.contains(" men")) || (noticeLowerCase.contains(" man "))
-				|| (noticeLowerCase.contains("actor ")) || (noticeLowerCase.startsWith("men"))
-				|| (offerListingSex.toLowerCase().contains(" male"))) {
+		if ((allData.contains(" male")) || (allData.startsWith("male")) || (allData.contains(" men"))
+				|| (allData.contains(" man ")) || (allData.contains("actor ")) || (allData.startsWith("men"))
+				|| (allData.toLowerCase().contains(" male"))) {
 			setIsMale(true);
 		}
 
 		// There is a male name here for the character
 
-		
-		// this is a paying job and is NOT a student project
-		if (((offerPaying.toLowerCase()).contains("yes"))&&(!getOfferTypeProject().contains("Student"))) {
-			isPayingEnough = true;
-
-			// check the daily rate and make sure it is above dailyMinPay
-			// find the rate by analyzing String offerRate
-		}
-		// setIsMaleName(true);
-
+ 
 		// ETHNICITY
 		if ((offerListingEthnicity.contains("all ethnicities")) || (offerListingEthnicity.contains("caucasian"))) {
 			setIsEthnicity(true);
@@ -373,10 +361,9 @@ public class Job {
 
 		// CAR
 
-		if ((noticeLowerCase.contains(" car ")) || (noticeLowerCase.startsWith("car "))
-				|| (noticeLowerCase.contains("w/cars")) || (noticeLowerCase.contains("mercedes"))
-				|| (noticeLowerCase.contains("vehicle")) || (noticeLowerCase.contains("bmw"))
-				|| (noticeLowerCase.startsWith("car ")) || (noticeLowerCase.contains("cars"))) {
+		if ((allData.contains(" car ")) || (allData.startsWith("car ")) || (allData.contains("w/cars"))
+				|| (allData.contains("mercedes")) || (allData.contains("vehicle")) || (allData.contains("bmw"))
+				|| (allData.startsWith("car ")) || (allData.contains("cars"))) {
 			setIsCar(true);
 		}
 
@@ -385,11 +372,11 @@ public class Job {
 		calcAgeRange(offerListingAgesHint);
 
 		// tuxedo
-		if ((noticeLowerCase.contains(" tuxido ")) || (noticeLowerCase.contains("own a tux"))) {
+		if ((allData.contains(" tuxido ")) || (allData.contains("own a tux"))) {
 			setNeedTuxedo(true);
 		}
 
-		if ((noticeLowerCase.contains("cop uniform ")) || (noticeLowerCase.contains("own NYPD uni"))) {
+		if ((allData.contains("cop uniform ")) || (allData.contains("own NYPD uni"))) {
 			setNeedPoliceUniform(true);
 		}
 	}
@@ -419,15 +406,20 @@ public class Job {
 			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
 			Double avgCharacterAgeTwice = new Double(avgCharacterAge * 2);
 			Double ageRange = new Double(10);
+			Double ageLookLike = new Double(5);
+			Double actorRealAge = new Double(36);
 
 			// check if actor's age is near the average
-			if (Math.abs((maybeAgeAverageTwice - avgCharacterAgeTwice)) <= ageRange) {
+			if ((Math.abs(maybeAgeAverageTwice - avgCharacterAgeTwice)) <= ageRange) {
 				// the actor is in the age range
 				setIsAge(true);
-			} else {
-				// age of actor out of range
-				setIsAge(false);
 			}
+			
+			if((Math.abs(actorRealAge -maybeAgeMin) <= ageLookLike)||(Math.abs(actorRealAge -maybeAgeMax) <= ageLookLike)){
+				setIsAge(true);
+			}
+			 
+			
 
 		} catch (Exception e) {
 			System.err.format("Age range - faliure in reading or calculating age");
@@ -436,24 +428,10 @@ public class Job {
 	}
 
 	public void makeDecision() {
-	//DEBUGGING
-		
-		System.out.println("DEBUG DECISION - ALL VALUES: " +this.getOfferProjectName() + " | " + this.getOfferSubmittionDateTime() + " | "
-				+ this.getOffertRate() + " | " + this.getOfferTypeProject() + " | "
-				+ this.getHasBeenSubmitted() + " | " + this.getOfferListing() + "Talent Notes :" + this.getMessage()
-				+ " |SAG: " + this.getIsSag()
-				+ " |AGE: " + this.getIsAge()
-				+ " |CAR: " + this.getIsCar()
-				+ " |PAying: " + this.getOfferPaying()
-				);
-		
-		
-		// if ((isSag)&&(isAge)&&(isMale)&&(!isCar)&&(isPayingEnough)){
-		 
-		this.setDecisionSubmit(true);
-		if ((isMale)&&(!isCar)&&(isPayingEnough)){
-		this.setDecisionSubmit(true);}
-		// }
+//		this.setDecisionSubmit(true);
+		if ((isMale) && (!isCar) && (isEthnicity)&& (isAge)) {
+			this.setDecisionSubmit(true);
+		}
 	}
 
 	public void fillTalentNote() {
@@ -471,14 +449,11 @@ public class Job {
 			this.addToMessage("height: 6'2\n weight:200\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11 ");
 		}
 
-		if ((noticeLowerCase.contains(" Please note if you can provide"))
-				|| (noticeLowerCase.contains("must own"))
+		if ((noticeLowerCase.contains(" Please note if you can provide")) || (noticeLowerCase.contains("must own"))
 				|| (noticeLowerCase.contains("own the wardrobe"))) {
 			this.addToMessage("I own the wardrobe.");
 		}
 
-		
-		 
 		// tuxedo
 		if ((noticeLowerCase.contains(" tuxido ")) || (noticeLowerCase.contains("own a tux"))) {
 			this.addToMessage("I own the tuxedo.");
