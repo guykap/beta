@@ -27,7 +27,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-	// THIS IS BETA1.7
+	// THIS IS BETA1.85
 	private static WebDriver driver;
 	static public String cnBaseUrl;
 	static public String aaBaseUrl;
@@ -106,7 +106,13 @@ public class Beta {
 	@Test
 	public void testBetaB() throws Throwable {
 		log("beta better");
-		driver = new FirefoxDriver();
+		try{
+			driver = new FirefoxDriver();
+		}catch(Exception e){
+			log("Error. Fire Fox driver not found.");
+			log(e.getMessage());
+			return;
+		}
 		loginCounter = 1;
 		while (networkWorking()) {
 			log("Login number " + loginCounter);
@@ -122,6 +128,7 @@ public class Beta {
 				loginCN();
 				seekBackgroundWork = true;
 			} catch (Exception e) {
+				log(e.getMessage());
 				log("Something went during login -> So lets login again");
 				loginCounter++;
 				continue;
@@ -130,6 +137,7 @@ public class Beta {
 			try {
 				core();
 			} catch (Exception e) {
+				log(e.getMessage());
 				log("Something went wrong -> Back to Login");
 				loginCounter++;
 			}
@@ -224,11 +232,12 @@ public class Beta {
 			try {
 				srcOfImg = new String(driver.findElement(By.xpath(starPos)).getAttribute("src"));
 			} catch (Error e) {
+				log(e.getMessage());
 				verificationErrors.append(e.toString());
 			}
 
 			if (srcOfImg.contains("spacer.gif")) {
-				log("No star on offer " + rowNum + " from top.  So going to submit it.");
+				log("No star on offer " + rowNum + " from top.  Let's try submitting.");
 				offer = new Job();
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
 				if (offerHasBeenConsideredBefore(offer)) {
@@ -238,6 +247,15 @@ public class Beta {
 				// debug
 				staySilent();
 
+				offer.readNotice();
+				offer.makeDecision();
+				
+				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
+					printDecisionMakingVars(offer);
+					continue;
+				}
+				
+				
 				log('h');
 				int trLinkToOfferRow = -1;
 				trLinkToOfferRow = trStarRow - 1;
@@ -254,13 +272,8 @@ public class Beta {
 				} catch (Exception e) {
 					offer.setOfferTimeRoleAdded(new String(""));
 				}
-				offer.readNotice();
-				offer.makeDecision();
-				// log("Decision: " + offer.getDecisionSubmit());
-				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
-					// DO NOT SUBMIT THIS OFFER
-					continue;
-				}
+				
+				
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
 				// deepBreath();
 				breathToMissleadThem();
@@ -397,8 +410,9 @@ public class Beta {
 					}
 
 				}
-			} catch (Exception e) {
+			} catch (Exception e) {			
 				log("Didn't work");
+				log(e.getMessage());
 				// go back to login page
 				continue;
 			}
@@ -1103,7 +1117,7 @@ public class Beta {
 	}
 
 	private void staySilent() throws InterruptedException {
-		log("Silent counter : " + silentCounter);
+		//log("Silent counter : " + silentCounter);
 		silentCounter++;
 		if (silentCounter > 100) {
 			log("Shshshshsh we are trying to sleep here");
@@ -1131,7 +1145,7 @@ public class Beta {
 				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
 				+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
 				+ "|Name:" + offer.getOfferProjectName() + "|Role:" + offer.getOfferRole() + "|Offer Listing:"
-				+ offer.getOfferListing());
+				+ offer.getOfferListing() + " |  Talent Notes I wrote:"	+ offer.getMessage());
 
 	}
 
@@ -1149,12 +1163,14 @@ public class Beta {
 		// checkcing in the list of Jobs for another offer with the same ROLE
 		// and same PROJECT NAME values.
 		for (Job offer : Jobs) {
+			/*
 			if ((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName())) {
 				log("same project name: " + (consideredOffer.getOfferProjectName()));
 			}
 			if ((consideredOffer.getOfferRole()).equals(offer.getOfferRole())) {
 				log("same role:" + consideredOffer.getOfferRole());
 			}
+			*/
 			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
 					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))
 					&& (!offer.getHasBeenSubmitted())) {
