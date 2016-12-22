@@ -51,6 +51,8 @@ public class Beta {
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
+	
+ 
 
 	static private boolean logStateFull;
 	public static Appender fh = null;
@@ -85,7 +87,7 @@ public class Beta {
 		}
 		// SETUP GECKO DRIVER
 		if (args.length > 1) {
-			gecko_driver_path = (new String(args[1])).concat("\\\\");
+			gecko_driver_path = (new String(args[1]));
 		} else {
 			gecko_driver_path = new String(DEFAULT_GECKO_DRIVER_LIBRARY);
 		}
