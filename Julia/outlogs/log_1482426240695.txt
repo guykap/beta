@@ -1,0 +1,30 @@
+INFO - beta better
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - Core
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - Parent: 2147483651 Son: 2147483687
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483687
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2

@@ -50,7 +50,7 @@ public class Beta {
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 
-	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\env\\libs\\";
+	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
 
 	static private boolean logStateFull;
 	public static Appender fh = null;
@@ -106,7 +106,13 @@ public class Beta {
 	@Test
 	public void testBetaB() throws Throwable {
 		log("beta better");
-		driver = new FirefoxDriver();
+		try{
+			driver = new FirefoxDriver();
+		}catch(Exception e){
+			log("Error. Fire Fox driver not found.");
+			log(e.getMessage());
+			return;
+		}
 		loginCounter = 1;
 		while (networkWorking()) {
 			log("Login number " + loginCounter);
@@ -122,6 +128,7 @@ public class Beta {
 				loginCN();
 				seekBackgroundWork = true;
 			} catch (Exception e) {
+				log(e.getMessage());
 				log("Something went during login -> So lets login again");
 				loginCounter++;
 				continue;
@@ -240,6 +247,15 @@ public class Beta {
 				// debug
 				staySilent();
 
+				offer.readNotice();
+				offer.makeDecision();
+				
+				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
+					printDecisionMakingVars(offer);
+					continue;
+				}
+				
+				
 				log('h');
 				int trLinkToOfferRow = -1;
 				trLinkToOfferRow = trStarRow - 1;
@@ -256,13 +272,8 @@ public class Beta {
 				} catch (Exception e) {
 					offer.setOfferTimeRoleAdded(new String(""));
 				}
-				offer.readNotice();
-				offer.makeDecision();
-				// log("Decision: " + offer.getDecisionSubmit());
-				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
-					// DO NOT SUBMIT THIS OFFER
-					continue;
-				}
+				
+				
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
 				// deepBreath();
 				breathToMissleadThem();
@@ -1134,7 +1145,7 @@ public class Beta {
 				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
 				+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
 				+ "|Name:" + offer.getOfferProjectName() + "|Role:" + offer.getOfferRole() + "|Offer Listing:"
-				+ offer.getOfferListing());
+				+ offer.getOfferListing() + " |  Talent Notes I wrote:"	+ offer.getMessage());
 
 	}
 
