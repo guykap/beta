@@ -130,6 +130,7 @@ public class Beta {
 			try {
 				core();
 			} catch (Exception e) {
+				log(e.getMessage());
 				log("Something went wrong -> Back to Login");
 				loginCounter++;
 			}
@@ -224,11 +225,12 @@ public class Beta {
 			try {
 				srcOfImg = new String(driver.findElement(By.xpath(starPos)).getAttribute("src"));
 			} catch (Error e) {
+				log(e.getMessage());
 				verificationErrors.append(e.toString());
 			}
 
 			if (srcOfImg.contains("spacer.gif")) {
-				log("No star on offer " + rowNum + " from top.  So going to submit it.");
+				log("No star on offer " + rowNum + " from top.  Let's try submitting.");
 				offer = new Job();
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
 				if (offerHasBeenConsideredBefore(offer)) {
@@ -397,8 +399,9 @@ public class Beta {
 					}
 
 				}
-			} catch (Exception e) {
+			} catch (Exception e) {			
 				log("Didn't work");
+				log(e.getMessage());
 				// go back to login page
 				continue;
 			}
@@ -1103,7 +1106,7 @@ public class Beta {
 	}
 
 	private void staySilent() throws InterruptedException {
-		log("Silent counter : " + silentCounter);
+		//log("Silent counter : " + silentCounter);
 		silentCounter++;
 		if (silentCounter > 100) {
 			log("Shshshshsh we are trying to sleep here");
@@ -1149,12 +1152,14 @@ public class Beta {
 		// checkcing in the list of Jobs for another offer with the same ROLE
 		// and same PROJECT NAME values.
 		for (Job offer : Jobs) {
+			/*
 			if ((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName())) {
 				log("same project name: " + (consideredOffer.getOfferProjectName()));
 			}
 			if ((consideredOffer.getOfferRole()).equals(offer.getOfferRole())) {
 				log("same role:" + consideredOffer.getOfferRole());
 			}
+			*/
 			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
 					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))
 					&& (!offer.getHasBeenSubmitted())) {
