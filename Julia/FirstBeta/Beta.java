@@ -27,7 +27,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-	// THIS IS BETA1.7
+	// THIS IS BETA1.8
 	private static WebDriver driver;
 	static public String cnBaseUrl;
 	static public String aaBaseUrl;
