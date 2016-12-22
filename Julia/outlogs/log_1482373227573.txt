@@ -1,7 +1,0 @@
-INFO - beta better
-INFO - Login number 1
-INFO - Something went during login -> So lets login again
-INFO - Login number 2
-INFO - Something went during login -> So lets login again
-INFO - Login number 3
-INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 

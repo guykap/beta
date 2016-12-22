@@ -305,7 +305,7 @@ public class Job {
 	};
 
 	public void addToMessage(String newMessage) {
-		message += new String(message.concat(" ").concat(newMessage));
+		message += newMessage;
 	};
 
 	public boolean getDecisionSubmit() {
@@ -327,9 +327,8 @@ public class Job {
 	public void readNotice() {
 		// this reads the notice and sets all the Job params accordingly.
 
-		//String notesLowerCase = (new String(offerListingNotes.toLowerCase())).concat(" ");
-	//	String allData = (this.getOfferRole()).concat(notesLowerCase);
-		String allData = (this.getOfferRole()).concat(" ").concat(offerListingNotes.toLowerCase());
+		String notesLowerCase = (new String(offerListingNotes.toLowerCase())).concat(" ");
+		String allData = (this.getOfferRole()).concat(notesLowerCase);
 
 		// SAG
 		if ((this.getOfferUnionStatus()).contains("sag") || (this.getOfferUnionStatus()).contains("aftra")) {
@@ -382,11 +381,8 @@ public class Job {
 		}
 		
 		//Stand-in
-		if ((allData.contains(" stand-in ")) || (allData.contains("standing"))|| (allData.contains("stand in experience"))) {
+		if ((allData.contains(" stand-in ")) || (allData.contains("standing"))) {
 			this.isStandIn =true;
-			
-			
-			
 			
 		}
 		
@@ -446,30 +442,27 @@ public class Job {
 	}
 
 	public void fillTalentNote() {
-		
-		String allData = (this.getOfferRole()).concat(" ").concat(offerListingNotes.toLowerCase());
-
 		// last time worked
-		if ((allData.contains(" note last ")) || (allData.contains("please note if you have worked"))
-				|| (allData.contains("worked on the"))
-				|| (allData.contains("must not have worked on this project"))
-				|| (allData.contains("last time that you worked"))
-				|| (allData.contains("do not submit if you have worked on this show"))) {
+		if ((noticeLowerCase.contains(" note last ")) || (noticeLowerCase.contains("please note if you have worked"))
+				|| (noticeLowerCase.contains("worked on the"))
+				|| (noticeLowerCase.contains("must not have worked on this project"))
+				|| (noticeLowerCase.contains("last time that you worked"))
+				|| (noticeLowerCase.contains("do not submit if you have worked on this show"))) {
 			this.addToMessage("I've never worked on the production.");
 		}
 
-		if ((allData.contains("note your sizes")) || (allData.contains("note all sizes"))
-				|| (allData.contains("note neck"))) {
+		if ((noticeLowerCase.contains("note your sizes")) || (noticeLowerCase.contains("note all sizes"))
+				|| (noticeLowerCase.contains("note neck"))) {
 			this.addToMessage("height: 6'2\n weight:200\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11 ");
 		}
 
-		if ((allData.contains(" Please note if you can provide")) || (allData.contains("must own"))
-				|| (allData.contains("own the wardrobe"))) {
+		if ((noticeLowerCase.contains(" Please note if you can provide")) || (noticeLowerCase.contains("must own"))
+				|| (noticeLowerCase.contains("own the wardrobe"))) {
 			this.addToMessage("I own the wardrobe.");
 		}
 
 		// tuxedo
-		if (this.needTuxedo){
+		if ((noticeLowerCase.contains(" tuxido ")) || (noticeLowerCase.contains("own a tux"))) {
 			this.addToMessage("I own the tuxedo.");
 		}
 
