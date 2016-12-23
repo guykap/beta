@@ -400,13 +400,9 @@ public class Beta {
 				bestLog.printSubmittions(Jobs);
 			} else {
 				bestLog.log("Found star on the offer " + rowNum + " from top");
-
-				// debug
 				Breath.silentCount();
 			}
-
 		}
-
 	}
 
 	public void choosePhoto() {
@@ -601,7 +597,6 @@ public class Beta {
 		} catch (Exception e) {
 			bestLog.log("Error parsing the current offer data into the Strings");
 			// go back to login page
-
 		}
 	}
 
@@ -656,24 +651,16 @@ public class Beta {
 	public void log(char stage) {
 		// state - Full log - outputs the whole string
 		// state - min log - outputs only the letter representing the stage
-		if (bestLog.getLogState()) {
+		if (!(bestLog.getLogState())) {
+			bestLog.log(Character.toString(stage));
+		} else {
 			switch (stage) {
 			case 'a':
 				bestLog.log("A: Window handle Parent " + parentWindowHandler);
 				break;
-			 
 			case 'c':
 				bestLog.log("C: Location->Home Page");
 				break;
-				/*
-			case 'd':
-				if (seekBackgroundWork) {
-					bestLog.log("D: First BG triel worked on " + passedOnOptionArray[0]);
-				} else {
-					bestLog.log("D: First PRINCIPLE triel worked on " + passedOnOptionArray[0]);
-				}
-				break;
-				*/
 			case 'e':
 				bestLog.log("E: Location->Casting Billboard");
 				break;
@@ -690,7 +677,7 @@ public class Beta {
 			case 'j':
 				bestLog.log("J: Making sure there is no GREEN STAR");
 				break;
-		 
+
 			case 'l':
 				bestLog.log("L: Succ on openning window to choose photo and fill talent notes.");
 				break;
@@ -708,8 +695,6 @@ public class Beta {
 				bestLog.log("Z: Stopping");
 				break;
 			}
-		} else {
-			bestLog.log(Character.toString(stage));
 		}
 	}
 
@@ -795,7 +780,6 @@ public class Beta {
 		}
 		bestLog.log("Error finding Parent holder");
 		return ("");
-
 	}
 
 	private String getSonWindowHandler() {
@@ -853,8 +837,8 @@ public class Beta {
 		}
 
 		return false;
-	} 
-	
+	}
+
 	static public boolean networkWorking() {
 		// returns true if there is a network connection
 
@@ -877,7 +861,6 @@ public class Beta {
 		return false;
 	}
 
-	 
 	static public String intToRegion(int intRegion) {
 		switch ((char) intRegion) {
 		case '1':
