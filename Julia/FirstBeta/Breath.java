@@ -4,19 +4,22 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class Breath {
-	private boolean useSleep;
-	private boolean logStateFull;
-	private boolean longNaps;
-	private int silentCounter;
-	
-	Breath(){}
-	
-	Breath(boolean currUseSleep, boolean currLogStateFull){
+	static private boolean useSleep = true;
+	static private boolean logStateFull = true;
+	static private boolean longNaps;
+	static private int silentCounter=0;
+
+	Breath() {
+		this.useSleep = true;;
+		this.logStateFull = true;
+	}
+
+	Breath(boolean currUseSleep, boolean currLogStateFull) {
 		this.useSleep = currUseSleep;
 		this.logStateFull = currLogStateFull;
 	}
-	
-	public void breath() throws InterruptedException {
+
+	static public void breath() throws InterruptedException {
 		// sleeps for the configured time + impro
 		int sleepTime = randInt(4, 5);
 		if (useSleep) {
@@ -28,14 +31,14 @@ public class Breath {
 		}
 	}
 
-	public void deepBreath() throws InterruptedException {
+	static public void deepBreath() throws InterruptedException {
 
 		for (int i = 0; i < 3; i++) {
 			breath();
 		}
 	}
 
-	public void nap() throws InterruptedException {
+	static public void nap() throws InterruptedException {
 
 		if (longNaps) {
 			Beta.log("Zzzzzzzzzz");
@@ -50,13 +53,13 @@ public class Breath {
 		}
 	}
 
-	public void breathToMissleadThem() throws InterruptedException {
+	static public void breathToMissleadThem() throws InterruptedException {
 		int sleepTime = randInt(30, 60);
 		Beta.log((new String("Ha Ha ")).concat(String.valueOf(sleepTime)));
 		TimeUnit.SECONDS.sleep(sleepTime);
 	}
 
-	private void staySilent() throws InterruptedException {
+	static public void staySilent() throws InterruptedException {
 		// log("Silent counter : " + silentCounter);
 		silentCounter++;
 		if (silentCounter > 100) {
@@ -67,8 +70,6 @@ public class Breath {
 			longNaps = false;
 		}
 	}
-
-	
 
 	public static int randInt(int min, int max) {
 		Random rand = new Random();

@@ -39,7 +39,7 @@ public class Beta {
 	private String BetaLog;
 	int[] passedOnOptionArray = new int[] { -1, -1 };
 	int[] currentOnOptionArray = new int[] { 0, 0 };
-	static boolean useSleep;
+	 
 	int leftNumOfLoginWhileLoopsChances = 0;
 	int leftNumOfSubmittionWhileLoopsChances = 0;
 	public static int silentCounter = 0;
@@ -60,11 +60,14 @@ public class Beta {
 	static public boolean longNaps = false;
 	static String gecko_driver_path;
 	static int loginCounter;
+	static Breath takeBreath;
 
 	public static void main(String[] args) {
 		// SETUP BASIC
 		seekBackgroundWork = true;
-		useSleep = true;
+		//takeBreath = new Breath(true,true);
+		takeBreath = new Breath();
+		
 		JUnitCore jCore;
 		// SETUP LOG
 		String fileOut;
@@ -172,7 +175,7 @@ public class Beta {
 		log("LOGIN-AA");
 		log('a');
 		driver.get(aaBaseUrl + "/");
-		deepBreath();
+		Breath.deepBreath();
 
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys("guykapulnik");
@@ -180,7 +183,7 @@ public class Beta {
 		driver.findElement(By.id("password")).sendKeys("aGuy1234567");
 		driver.findElement(By.id("login-btn")).click();
 
-		deepBreath();
+		Breath.deepBreath();
 		if (!verifyLocation("//p[@id='breadcrumb']", "breakdown services, ltd")) {
 			log("Can't login.");
 			throw new Exception();
@@ -200,7 +203,7 @@ public class Beta {
 			log("Can't find region ");
 			throw new Exception();
 		}
-		deepBreath();
+		Breath.deepBreath();
 		for (int rowNum = 0; rowNum < 3; rowNum++) {
 			log('j');
 			log("Checking for green star at row number: " + rowNum);
@@ -227,7 +230,7 @@ public class Beta {
 			}
 			Jobs.add(offer);
 			// debug
-			staySilent();
+			Breath.staySilent();
 
 			offer.readNotice();
 			offer.makeDecision();
@@ -246,7 +249,7 @@ public class Beta {
 		while (true) {
 			for (int regionNum = 8; regionNum < 10; regionNum++) {
 				handleRegion(regionNum);
-				nap();
+				Breath.nap();
 			}
 		}
 	}
@@ -260,14 +263,14 @@ public class Beta {
 		seekBackgroundWork = true;
 		log('a');
 		driver.get(cnBaseUrl + "/");
-		deepBreath();
+		Breath.deepBreath();
 		driver.findElement(By.id("login")).click();
 		driver.findElement(By.id("login")).clear();
 		driver.findElement(By.id("login")).sendKeys("guykapulnik");
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys("cGuy1234567");
 		driver.findElement(By.xpath("//input[@id='submit']")).click();
-		breath();
+		Breath.breath();
 		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
 		// check for welcome window:
 		if (!verifyLocation("//div[@id='maininfo']/h2", "Welcome")) {
@@ -275,7 +278,7 @@ public class Beta {
 			throw new Exception();
 		}
 		log('c');
-		breath();
+		Breath.breath();
 	}
 
 	public void coreCastingNetworks() throws Throwable {
@@ -295,18 +298,18 @@ public class Beta {
 			} else {
 				log("ALTERNATE to PRINCIPLE work");
 			}
-			nap();
+			Breath.nap();
 		}
 	}
 
 	public void heartLoop() throws Throwable {
-		breath();
+		Breath.breath();
 		if (seekBackgroundWork) {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
 						.click();
 				// debug
-				deepBreath();
+				Breath.deepBreath();
 				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 					log("Can't find Extras chart");
 					throw new Exception();
@@ -318,7 +321,7 @@ public class Beta {
 				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
 						.click();
 				// debug
-				deepBreath();
+				Breath.deepBreath();
 				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
 					log("Can't find principle chart");
 					throw new Exception();
@@ -327,7 +330,7 @@ public class Beta {
 			}
 		}
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
-		deepBreath();
+		Breath.deepBreath();
 		for (int rowNum = 0; rowNum < 10; rowNum++) {
 			log('j');
 			log("Checking for green star at row number: " + rowNum);
@@ -352,7 +355,7 @@ public class Beta {
 				}
 				Jobs.add(offer);
 				// debug
-				staySilent();
+				Breath.staySilent();
 
 				offer.readNotice();
 				offer.makeDecision();
@@ -367,12 +370,12 @@ public class Beta {
 				trLinkToOfferRow = trStarRow - 1;
 				String linkOfferPos = ((new String("//tr[")).concat(String.valueOf(trLinkToOfferRow))).concat("]/td/a");
 				driver.findElement(By.xpath(linkOfferPos)).click();
-				deepBreath();
+				Breath.deepBreath();
 				driver.switchTo().window(getSonWindowHandler());
 				windowStatus();
 				// add time of apperance to offer
 				try {
-					breath();
+					Breath.breath();
 					offer.setOfferTimeRoleAdded(
 							new String(driver.findElement(By.xpath("//table[5]/tbody/tr[3]/td")).getText()));
 				} catch (Exception e) {
@@ -381,7 +384,7 @@ public class Beta {
 
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
 				// deepBreath();
-				breathToMissleadThem();
+				Breath.breathToMissleadThem();
 				if (!verifyLocation("//span", "Customize your submission")) {
 					log("Error: You are on wrong window");
 					windowStatus();
@@ -392,9 +395,9 @@ public class Beta {
 				choosePhoto();
 
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
-				deepBreath();
+				Breath.deepBreath();
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
-				deepBreath();
+				Breath.deepBreath();
 				if (!verifyLocation("//span", "Submission Successful")) {
 					log("Did NOT recieve final submittion successful");
 					windowStatus();
@@ -412,7 +415,7 @@ public class Beta {
 				log("Found star on the offer " + rowNum + " from top");
 
 				// debug
-				staySilent();
+				Breath.staySilent();
 			}
 
 		}
@@ -456,14 +459,14 @@ public class Beta {
 		while ((leftNumOfLoginWhileLoopsChances++) < 3) {
 			log('b');
 			driver.get(cnBaseUrl + "/");
-			breath();
+			Breath.breath();
 			driver.findElement(By.id("login")).click();
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("guykapulnik");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("cGuy1234567");
 			driver.findElement(By.xpath("//input[@id='submit']")).click();
-			breath();
+			Breath.breath();
 			driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
 			// check for welcome window:
 			if (!verifyLocation("//div[@id='maininfo']/h2", "Welcome")) {
@@ -471,7 +474,7 @@ public class Beta {
 			}
 
 			log('c');
-			breath();
+			Breath.breath();
 
 			try {
 				if (seekBackgroundWork) {
@@ -534,7 +537,7 @@ public class Beta {
 				}
 				offer = new Job();
 				new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
-				deepBreath();
+				Breath.deepBreath();
 				// handleBackgroundWorkOffer(seekBackgroundWork);
 				Jobs.add(offer);
 				log('h');
@@ -546,9 +549,9 @@ public class Beta {
 					continue;
 				}
 				log('i');
-				deepBreath();
+				Breath.deepBreath();
 				driver.findElement(By.xpath("//tr[3]/td/a")).click();
-				deepBreath();
+				Breath.deepBreath();
 				windowStatus();
 				driver.switchTo().window(getSonWindowHandler());
 				windowStatus();
@@ -561,8 +564,7 @@ public class Beta {
 			}
 			try {
 				log('j');
-
-				deepBreath();
+				Breath.deepBreath();
 				try {
 					if (seekBackgroundWork) {
 						assertTrue(isElementPresent(By.xpath("//table[6]/tbody/tr/td/img")));
@@ -578,7 +580,7 @@ public class Beta {
 						break;
 					}
 					// refresh page to allow new offers to be displayed
-					nap();
+					Breath.nap();
 					log("REFRESH PAGE");
 					driver.navigate().refresh();
 
@@ -588,7 +590,7 @@ public class Beta {
 					// no green button
 				}
 
-				deepBreath();
+				Breath.deepBreath();
 				if (!assertiveClicking(1,
 						new String[] { "//a[contains(text(),'submit')]", "//table[6]/tbody/tr/td/a" })) {
 					break;
@@ -596,8 +598,8 @@ public class Beta {
 
 				log('k');
 				windowStatus();
-				// succece opening to photos page
-				deepBreath();
+			 
+				Breath.deepBreath();
 				if (!verifyLocation("//span", "Customize your submission")) {
 					log("Error: You are on wrong window");
 					windowStatus();
@@ -605,13 +607,13 @@ public class Beta {
 				}
 
 				log('l');
-				deepBreath();
+				Breath.deepBreath();
 				driver.findElement(By.id("TALENTNOTE")).clear();
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
 				log("filled talent notes with : " + offer.getMessage());
-				deepBreath();
+				Breath.deepBreath();
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
-				deepBreath();
+				Breath.deepBreath();
 				// verify that the confirmation window opened
 				windowStatus();
 				windowStatus2();
