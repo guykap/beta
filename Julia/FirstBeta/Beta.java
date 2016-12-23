@@ -36,7 +36,7 @@ public class Beta {
 	static private List<Job> Jobs = new ArrayList<Job>();
 	static Iterator<Job> jobIterator = Jobs.iterator();
 	private Job offer;
-	private String BetaLog;
+//	private String BetaLog;
 	int[] passedOnOptionArray = new int[] { -1, -1 };
 	int[] currentOnOptionArray = new int[] { 0, 0 };
 	 
@@ -53,14 +53,15 @@ public class Beta {
 
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
 
-	static private boolean logStateFull;
-	public static Appender fh = null;
-	public static Logger logger = Logger.getLogger("MyLog");
+	//static private boolean logStateFull;
+	//public static Appender fh = null;
+	//public static Logger logger = Logger.getLogger("MyLog");
 	static public boolean seekBackgroundWork;
 	static public boolean longNaps = false;
 	static String gecko_driver_path;
 	static int loginCounter;
 	static Breath takeBreath;
+	static Logging bestLog;
 
 	public static void main(String[] args) {
 		// SETUP BASIC
@@ -70,6 +71,7 @@ public class Beta {
 		
 		JUnitCore jCore;
 		// SETUP LOG
+		
 		String fileOut;
 		if (args.length > 0) {
 			fileOut = new String(args[0]);
@@ -77,14 +79,14 @@ public class Beta {
 			fileOut = new String(DEFAULT_OUTPUT_FILE_WINDOWS);
 		}
 		String appendixFileName = (new String((new Long(System.currentTimeMillis())).toString())).concat(".txt");
-		logStateFull = true;
+		 
+		
 		try {
-			org.apache.log4j.BasicConfigurator.configure(new NullAppender());
-			fh = new FileAppender(new SimpleLayout(), (new String(fileOut).concat(appendixFileName)));
-			logger.addAppender(fh);
-			fh.setLayout(new SimpleLayout());
+			 bestLog = new Logging(new String(fileOut).concat(appendixFileName));
+			
 		} catch (Exception e) {
-			log("File Appender error. Farewell");
+			
+			bestLog.log("File Appender error. Farewell");
 			return;
 		}
 		// SETUP GECKO DRIVER
@@ -98,7 +100,7 @@ public class Beta {
 		// START
 		jCore = new JUnitCore();
 		jCore.run(Beta.class);
-		log("Program ENDED - THANK YOU!");
+		bestLog.log("Program ENDED - THANK YOU!");
 
 	}
 
@@ -109,12 +111,12 @@ public class Beta {
 
 	@Test
 	public void testBetaAA() throws Throwable {
-		log("Actors Access");
+		bestLog.log("Actors Access");
 		testBetaB();
 	}
 
 	public void testBetaCN() throws Throwable {
-		log("Casting Networks");
+		bestLog.log("Casting Networks");
 		testBetaB();
 	}
 
@@ -123,19 +125,19 @@ public class Beta {
 		try {
 			driver = new FirefoxDriver();
 		} catch (Exception e) {
-			log("Error. Fire Fox driver not found.");
-			log(e.getMessage());
+			bestLog.log("Error. Fire Fox driver not found.");
+			bestLog.log(e.getMessage());
 			return;
 		}
 		loginCounter = 1;
 		while (networkWorking()) {
-			log("Login number " + loginCounter);
+			bestLog.log("Login number " + loginCounter);
 			if (loginCounter > 10) {
-				log("THIS IS 10TH LOGIN - stopping ");
+				bestLog.log("THIS IS 10TH LOGIN - stopping ");
 				return;
 			}
 			if ((loginCounter % 3) == 0) {
-				log("THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver ");
+				bestLog.log("THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver ");
 				killFirefoxAndOpenNew();
 			}
 			try {
@@ -147,8 +149,8 @@ public class Beta {
 					loginAA();
 				}
 			} catch (Exception e) {
-				log(e.getMessage());
-				log("Something went during login -> So lets login again");
+				bestLog.log(e.getMessage());
+				bestLog.log("Something went during login -> So lets login again");
 				loginCounter++;
 				continue;
 			}
@@ -160,8 +162,8 @@ public class Beta {
 					coreActorsAccess();
 				}
 			} catch (Exception e) {
-				log(e.getMessage());
-				log("Something went wrong -> Back to Login");
+				bestLog.log(e.getMessage());
+				bestLog.log("Something went wrong -> Back to Login");
 				loginCounter++;
 			}
 		}
@@ -172,7 +174,7 @@ public class Beta {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
 		silentCounter = 0;
-		log("LOGIN-AA");
+		bestLog.log("LOGIN-AA");
 		log('a');
 		driver.get(aaBaseUrl + "/");
 		Breath.deepBreath();
@@ -185,7 +187,7 @@ public class Beta {
 
 		Breath.deepBreath();
 		if (!verifyLocation("//p[@id='breadcrumb']", "breakdown services, ltd")) {
-			log("Can't login.");
+			bestLog.log("Can't login.");
 			throw new Exception();
 		}
 		log('c');
@@ -195,18 +197,18 @@ public class Beta {
 		String regionUrl = (new String("http://www.actorsaccess.com/projects/?view=breakdowns&region="))
 				.concat(String.valueOf(region));
 		driver.get(regionUrl);
-		log((new String("Region  ")).concat(intToRegion(region)));
+		bestLog.log((new String("Region  ")).concat(intToRegion(region)));
 		String tag = new String(driver.findElement(By.xpath("//p[@id='breadcrumb']")).getText());
 
 		if (!verifyLocation("//p[@id='breadcrumb']",
 				(new String("home / breakdowns / ").concat(intToRegion(region))))) {
-			log("Can't find region ");
+			bestLog.log("Can't find region ");
 			throw new Exception();
 		}
 		Breath.deepBreath();
 		for (int rowNum = 0; rowNum < 3; rowNum++) {
 			log('j');
-			log("Checking for green star at row number: " + rowNum);
+			bestLog.log("Checking for green star at row number: " + rowNum);
 			int trCheckRow = (2 + rowNum);
 
 			String checkPos = ((new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
@@ -215,13 +217,13 @@ public class Beta {
 			try {
 				srcOfImg = new String(driver.findElement(By.xpath(checkPos)).getAttribute("src"));
 				if (srcOfImg.contains("/gui/check.gif")) {
-					log("Check at " + rowNum + " from top.");
+					bestLog.log("Check at " + rowNum + " from top.");
 					continue;
 				}
-				log("Error.");
+				bestLog.log("Error.");
 				continue;
 			} catch (Error e) {
-				log("offer not submitted - lets try it.");
+				bestLog.log("offer not submitted - lets try it.");
 			}
 			offer = new Job();
 			handleAAOffer(rowNum);
@@ -234,9 +236,8 @@ public class Beta {
 
 			offer.readNotice();
 			offer.makeDecision();
-
 			if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
-				printDecisionMakingVars(offer);
+				bestLog.printDecisionMakingVars(offer);
 				continue;
 			}
 
@@ -259,7 +260,7 @@ public class Beta {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
 		silentCounter = 0;
-		log("LOGIN-CN");
+		bestLog.log("LOGIN-CN");
 		seekBackgroundWork = true;
 		log('a');
 		driver.get(cnBaseUrl + "/");
@@ -274,7 +275,7 @@ public class Beta {
 		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
 		// check for welcome window:
 		if (!verifyLocation("//div[@id='maininfo']/h2", "Welcome")) {
-			log("Can't find Welcome ");
+			bestLog.log("Can't find Welcome ");
 			throw new Exception();
 		}
 		log('c');
@@ -282,21 +283,21 @@ public class Beta {
 	}
 
 	public void coreCastingNetworks() throws Throwable {
-		log("coreCastingNetworks");
+		bestLog.log("coreCastingNetworks");
 		// first time in coreLoop - always begin with Extra chart
 		driver.findElement(By.xpath("//a[@id='_ctl0_cphBody_lnkExtrasRoles']")).click();
 		if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
-			log("Can't find Extras chart");
+			bestLog.log("Can't find Extras chart");
 			throw new Exception();
 		}
-		log("In Extras chart");
+		bestLog.log("In Extras chart");
 		while (true) {
 			heartLoop();
 			seekBackgroundWork ^= true;
 			if (seekBackgroundWork) {
-				log("ALTERNATE to BACKGROUND work");
+				bestLog.log("ALTERNATE to BACKGROUND work");
 			} else {
-				log("ALTERNATE to PRINCIPLE work");
+				bestLog.log("ALTERNATE to PRINCIPLE work");
 			}
 			Breath.nap();
 		}
@@ -311,7 +312,7 @@ public class Beta {
 				// debug
 				Breath.deepBreath();
 				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
-					log("Can't find Extras chart");
+					bestLog.log("Can't find Extras chart");
 					throw new Exception();
 				}
 			}
@@ -323,7 +324,7 @@ public class Beta {
 				// debug
 				Breath.deepBreath();
 				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
-					log("Can't find principle chart");
+					bestLog.log("Can't find principle chart");
 					throw new Exception();
 				}
 
@@ -333,7 +334,7 @@ public class Beta {
 		Breath.deepBreath();
 		for (int rowNum = 0; rowNum < 10; rowNum++) {
 			log('j');
-			log("Checking for green star at row number: " + rowNum);
+			bestLog.log("Checking for green star at row number: " + rowNum);
 			int trStarRow = (3 * rowNum);
 			trStarRow += 4;
 			String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
@@ -342,12 +343,12 @@ public class Beta {
 			try {
 				srcOfImg = new String(driver.findElement(By.xpath(starPos)).getAttribute("src"));
 			} catch (Error e) {
-				log(e.getMessage());
+				bestLog.log(e.getMessage());
 				verificationErrors.append(e.toString());
 			}
 
 			if (srcOfImg.contains("spacer.gif")) {
-				log("No star on offer " + rowNum + " from top.  Let's try submitting.");
+				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
 				offer = new Job();
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
 				if (offerHasBeenConsideredBefore(offer)) {
@@ -361,7 +362,7 @@ public class Beta {
 				offer.makeDecision();
 
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
-					printDecisionMakingVars(offer);
+					bestLog.printDecisionMakingVars(offer);
 					continue;
 				}
 
@@ -386,7 +387,7 @@ public class Beta {
 				// deepBreath();
 				Breath.breathToMissleadThem();
 				if (!verifyLocation("//span", "Customize your submission")) {
-					log("Error: You are on wrong window");
+					bestLog.log("Error: You are on wrong window");
 					windowStatus();
 					throw new Exception();
 				}
@@ -399,12 +400,12 @@ public class Beta {
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
 				Breath.deepBreath();
 				if (!verifyLocation("//span", "Submission Successful")) {
-					log("Did NOT recieve final submittion successful");
+					bestLog.log("Did NOT recieve final submittion successful");
 					windowStatus();
 					throw new Exception();
 				}
 				if (!killSubWindowAndMoveToParentWindow()) {
-					log("Memory leak error: failed killing child window");
+					bestLog.log("Memory leak error: failed killing child window");
 					throw new Exception();
 				}
 				offer.setHasBeenSubmitted(true);
@@ -412,7 +413,7 @@ public class Beta {
 				log('m');
 				printSubmittions();
 			} else {
-				log("Found star on the offer " + rowNum + " from top");
+				bestLog.log("Found star on the offer " + rowNum + " from top");
 
 				// debug
 				Breath.staySilent();
@@ -449,7 +450,7 @@ public class Beta {
 		cnBaseUrl = "http://home.castingnetworks.com";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
-		BetaLog = new String("New Beta");
+		//BetaLog = new String("New Beta");
 
 		// REAL Beta
 		leftNumOfSubmittionWhileLoopsChances = 0;
@@ -516,8 +517,8 @@ public class Beta {
 
 				}
 			} catch (Exception e) {
-				log("Didn't work");
-				log(e.getMessage());
+				bestLog.log("Didn't work");
+				bestLog.log(e.getMessage());
 				// go back to login page
 				continue;
 			}
@@ -530,7 +531,7 @@ public class Beta {
 			log('g');
 			// Choose from drop down list 'all roles':
 			try {
-				log("Refresh page");
+				bestLog.log("Refresh page");
 				try {
 					driver.navigate().refresh();
 				} catch (Exception e) {
@@ -543,7 +544,7 @@ public class Beta {
 				log('h');
 				// offer.readNotice();
 				offer.makeDecision();
-				log("Decision: " + offer.getDecisionSubmit());
+				bestLog.log("Decision: " + offer.getDecisionSubmit());
 				if ((!offer.getDecisionSubmit()) || (offer.getHasBeenSubmitted())) {
 					// DO NOT SUBMIT THIS OFFER
 					continue;
@@ -556,7 +557,7 @@ public class Beta {
 				driver.switchTo().window(getSonWindowHandler());
 				windowStatus();
 			} catch (Exception e) {
-				log("Didn't work");
+				bestLog.log("Didn't work");
 
 				// move back to parent and go back to G point
 				killSubWindowAndMoveToParentWindow();
@@ -573,15 +574,15 @@ public class Beta {
 						assertTrue(isElementPresent(By.xpath("//table[5]/tbody/tr/td/img")));
 					}
 					// the green button is there SO :
-					log("This project saved as  " + offer.getOfferId() + " has been submitted before.");
+					bestLog.log("This project saved as  " + offer.getOfferId() + " has been submitted before.");
 					offer = null;
 					if (!killSubWindowAndMoveToParentWindow()) {
-						log("Memory leak error: failed killing child window");
+						bestLog.log("Memory leak error: failed killing child window");
 						break;
 					}
 					// refresh page to allow new offers to be displayed
 					Breath.nap();
-					log("REFRESH PAGE");
+					bestLog.log("REFRESH PAGE");
 					driver.navigate().refresh();
 
 					continue;
@@ -601,7 +602,7 @@ public class Beta {
 			 
 				Breath.deepBreath();
 				if (!verifyLocation("//span", "Customize your submission")) {
-					log("Error: You are on wrong window");
+					bestLog.log("Error: You are on wrong window");
 					windowStatus();
 					continue;
 				}
@@ -610,7 +611,7 @@ public class Beta {
 				Breath.deepBreath();
 				driver.findElement(By.id("TALENTNOTE")).clear();
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
-				log("filled talent notes with : " + offer.getMessage());
+				bestLog.log("filled talent notes with : " + offer.getMessage());
 				Breath.deepBreath();
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
 				Breath.deepBreath();
@@ -618,19 +619,19 @@ public class Beta {
 				windowStatus();
 				windowStatus2();
 				if (!verifyLocation("//span", "Submission Successful")) {
-					log("Did NOT recieve final submittion successful");
+					bestLog.log("Did NOT recieve final submittion successful");
 					windowStatus();
 					continue;
 				}
 				if (!killSubWindowAndMoveToParentWindow()) {
-					log("Memory leak error: failed killing child window");
+					bestLog.log("Memory leak error: failed killing child window");
 					break;
 				}
 				offer.setHasBeenSubmitted(true);
 				log('m');
 
 			} catch (Exception e) {
-				log("Clicking submit failed on triel");
+				bestLog.log("Clicking submit failed on triel");
 			}
 		}
 		log('z');
@@ -807,7 +808,7 @@ public class Beta {
 			return;
 
 		} catch (Exception e) {
-			log("Error parsing the current offer data into the Strings");
+			bestLog.log("Error parsing the current offer data into the Strings");
 			// go back to login page
 
 		}
@@ -861,87 +862,75 @@ public class Beta {
 		}
 	}
 
-	static public void log(String newLog) {
-		if (newLog.length() < 1) {
-			return;
-		}
-		System.out.println(newLog);
-		try {
-
-			logger.info(newLog);
-		} catch (SecurityException e) {
-			e.printStackTrace();
-		}
-	}
-
+ 
 	public void log(char stage) {
 		// state - Full log - outputs the whole string
 		// state - min log - outputs only the letter representing the stage
-		if (logStateFull) {
+		if (bestLog.getLogState()) {
 			switch (stage) {
 			case 'a':
-				Beta.log("A: Window handle Parent " + parentWindowHandler);
+				bestLog.log("A: Window handle Parent " + parentWindowHandler);
 				break;
 			case 'b':
-				Beta.log("B: Start Login num " + leftNumOfLoginWhileLoopsChances);
+				bestLog.log("B: Start Login num " + leftNumOfLoginWhileLoopsChances);
 				break;
 			case 'c':
-				Beta.log("C: Location->Home Page");
+				bestLog.log("C: Location->Home Page");
 				break;
 			case 'd':
 				if (seekBackgroundWork) {
-					Beta.log("D: First BG triel worked on " + passedOnOptionArray[0]);
+					bestLog.log("D: First BG triel worked on " + passedOnOptionArray[0]);
 				} else {
-					Beta.log("D: First PRINCIPLE triel worked on " + passedOnOptionArray[0]);
+					bestLog.log("D: First PRINCIPLE triel worked on " + passedOnOptionArray[0]);
 				}
 				break;
 			case 'e':
-				Beta.log("E: Location->Casting Billboard");
+				bestLog.log("E: Location->Casting Billboard");
 				break;
 			case 'f':
-				Beta.log("F: Succ opening Casing Billboards and Extras link");
+				bestLog.log("F: Succ opening Casing Billboards and Extras link");
 				break;
 			case 'g':
 				if (seekBackgroundWork) {
-					Beta.log("G: BACKGROUND work Start submittion while loop num "
+					bestLog.log("G: BACKGROUND work Start submittion while loop num "
 							+ leftNumOfSubmittionWhileLoopsChances);
 				} else {
-					Beta.log("G: PRINCIPLE work Start submittion while loop num "
+					bestLog.log("G: PRINCIPLE work Start submittion while loop num "
 							+ leftNumOfSubmittionWhileLoopsChances);
 				}
 
 				break;
 			case 'h':
-				Beta.log("H: Succ adding offer to Jobs list");
+				bestLog.log("H: Succ adding offer to Jobs list");
 				break;
 			case 'i':
-				Beta.log("I: Begin submittion for top offer id " + offer.getOfferId() + " : " + offer.getOfferRole());
+				bestLog.log("I: Begin submittion for top offer id " + offer.getOfferId() + " : " + offer.getOfferRole());
 				break;
 			case 'j':
-				Beta.log("J: Making sure there is no GREEN STAR");
+				bestLog.log("J: Making sure there is no GREEN STAR");
 				break;
 			case 'k':
-				Beta.log("K: Second triel worked on " + passedOnOptionArray[1]);
+				bestLog.log("K: Second triel worked on " + passedOnOptionArray[1]);
 				break;
 			case 'l':
-				Beta.log("L: Succ on openning window to choose photo and fill talent notes.");
+				bestLog.log("L: Succ on openning window to choose photo and fill talent notes.");
 				break;
 			case 'm':
-				log("*******SUBMITTED:");
-				Beta.log("M: Succ Submitted: " + offer.getOfferProjectName() + " | "
+				bestLog.log("*******SUBMITTED:");
+				bestLog.log("M: Succ Submitted: " + offer.getOfferProjectName() + " | "
 						+ offer.getOfferSubmittionDateTime() + " | " + offer.getOffertRate() + " | "
 						+ offer.getOfferTypeProject() + " | " + offer.getHasBeenSubmitted() + " | "
 						+ offer.getOfferListing() + "Talent Notes :" + offer.getMessage());
 				break;
 			case 'y':
-				Beta.log("Parent: " + getParentWindowHandler() + " Son: " + getSonWindowHandler());
+				bestLog.log("Parent: " + getParentWindowHandler() + " Son: " + getSonWindowHandler());
 				break;
 			case 'z':
-				Beta.log("Z: Stopping");
+				bestLog.log("Z: Stopping");
 				break;
 			}
 		} else {
-			Beta.log(Character.toString(stage));
+			bestLog.log(Character.toString(stage));
 		}
 	}
 
@@ -950,7 +939,7 @@ public class Beta {
 		String currentWindowHandler = driver.getWindowHandle();
 		handles = driver.getWindowHandles(); // get all window handles
 		if (handles.size() < 2) {
-			log("Error: there is only one window : " + currentWindowHandler);
+			bestLog.log("Error: there is only one window : " + currentWindowHandler);
 			return false;
 		}
 		windowHandlesIterator = handles.iterator();
@@ -985,7 +974,7 @@ public class Beta {
 		driver.close();
 		driver.switchTo().window(parentWindowHandler);
 		String newWindowHandler = driver.getWindowHandle();
-		log("killed window and returned to  " + newWindowHandler);
+		bestLog.log("killed window and returned to  " + newWindowHandler);
 		windowStatus();
 		return true;
 	}
@@ -996,10 +985,10 @@ public class Beta {
 		String pointing;
 		if (getParentWindowHandler().equals(currentWindowHandler)) {
 			log('y');
-			log("Now on PARENT");
+			bestLog.log("Now on PARENT");
 		} else {
 			log('y');
-			log("Now on SON");
+			bestLog.log("Now on SON");
 		}
 		driver.getWindowHandle();
 		log('y');
@@ -1018,14 +1007,14 @@ public class Beta {
 		allHandles += new String(builder.toString());
 		allHandles += new String("] ");
 		String currentWindowHandler = driver.getWindowHandle();
-		log(allHandles + " on: " + currentWindowHandler);
+		bestLog.log(allHandles + " on: " + currentWindowHandler);
 	}
 
 	private String getParentWindowHandler() {
 		if (parentWindowHandler.length() > 1) {
 			return parentWindowHandler;
 		}
-		log("Error finding Parent holder");
+		bestLog.log("Error finding Parent holder");
 		return ("");
 
 	}
@@ -1061,12 +1050,12 @@ public class Beta {
 			}
 		}
 		case 3:
-			log("Error there are 3 windows!");
+			bestLog.log("Error there are 3 windows!");
 			windowStatus2();
 			return ("");
 		}
 
-		log("Error finding SON");
+		bestLog.log("Error finding SON");
 		return ("");
 	}
 
@@ -1080,7 +1069,7 @@ public class Beta {
 				return true;
 			}
 		} catch (Exception e) {
-			log("Verify text " + verifyText + " Does NOT appear");
+			bestLog.log("Verify text " + verifyText + " Does NOT appear");
 			return false;
 		}
 
@@ -1090,12 +1079,12 @@ public class Beta {
 	private boolean assertiveClicking(int numOfTriel, String[] optionStrings) {
 		{// works only with xPath links - sorry!
 			if (optionStrings.length < 1) {
-				log("No option strings");
+				bestLog.log("No option strings");
 				return false;
 			}
 
 			if (currentOnOptionArray[numOfTriel] > optionStrings.length) {
-				log("Fatal Error: Tried all the options! We might be on the wrong page");
+				bestLog.log("Fatal Error: Tried all the options! We might be on the wrong page");
 				windowStatus();
 				windowStatus2();
 				return false;
@@ -1114,67 +1103,14 @@ public class Beta {
 				}
 				return true;
 			} catch (Exception e) {
-				log("Option " + optionStrings[numOfTriel] + " didn't work.");
+				bestLog.log("Option " + optionStrings[numOfTriel] + " didn't work.");
 				currentOnOptionArray[numOfTriel] = currentOnOptionArray[numOfTriel] + 1;
-				log("Lets try option num " + currentOnOptionArray[numOfTriel]);
+				bestLog.log("Lets try option num " + currentOnOptionArray[numOfTriel]);
 				return false;
 			}
 		}
 
 	}
-/*
-	public void breath() throws InterruptedException {
-		// sleeps for the configured time + impro
-		int sleepTime = randInt(4, 5);
-		if (useSleep) {
-			TimeUnit.SECONDS.sleep(sleepTime);
-			if (logStateFull) {
-				log(".");
-
-			}
-		}
-	}
-
-	public void deepBreath() throws InterruptedException {
-
-		for (int i = 0; i < 3; i++) {
-			breath();
-		}
-	}
-
-	public void nap() throws InterruptedException {
-
-		if (longNaps) {
-			log("Zzzzzzzzzz");
-			int sleepTime = randInt(180, 300);
-			TimeUnit.SECONDS.sleep(sleepTime);
-		} else {
-			// short naps
-			log("Zzz");
-			if (useSleep) {
-				TimeUnit.SECONDS.sleep(60);
-			}
-		}
-	}
-
-	public void breathToMissleadThem() throws InterruptedException {
-		int sleepTime = randInt(30, 60);
-		log((new String("Ha Ha ")).concat(String.valueOf(sleepTime)));
-		TimeUnit.SECONDS.sleep(sleepTime);
-	}
-
-	private void staySilent() throws InterruptedException {
-		// log("Silent counter : " + silentCounter);
-		silentCounter++;
-		if (silentCounter > 100) {
-			log("Shshshshsh we are trying to sleep here");
-			// extend the nap time
-			longNaps = true;
-		} else {
-			longNaps = false;
-		}
-	}
-*/
 	static public boolean networkWorking() {
 		// returns true if there is a network connection
 
@@ -1184,7 +1120,7 @@ public class Beta {
 	static public void printOffer(Job offer) {
 		if (offer == null)
 			return;
-		log("Offer " + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
+		bestLog.log("Offer " + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
 				+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
 				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
 				+ "|Eth:" + offer.getIsEthnicity() + "|Male:" + offer.getIsMale() + "|SAG:" + offer.getIsSag()
@@ -1197,13 +1133,13 @@ public class Beta {
 	}
 
 	static public void printSubmittions() {
-		log("********ALL SUBMITTIONS********");
+		bestLog.log("********ALL SUBMITTIONS********");
 		for (Job offer : Jobs) {
 			if (offer.getHasBeenSubmitted()) {
 				printOffer(offer);
 			}
 		}
-		log("********END LIST OF SUBMITTIONS********");
+		bestLog.log("********END LIST OF SUBMITTIONS********");
 	}
 
 	static public boolean offerHasBeenConsideredBefore(Job consideredOffer) {
@@ -1220,22 +1156,22 @@ public class Beta {
 			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
 					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))
 					&& (!offer.getHasBeenSubmitted())) {
-				log("Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
-				printDecisionMakingVars(offer);
+				bestLog.log("Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
+				bestLog.printDecisionMakingVars(offer);
 				return true;
 			}
 		}
 		return false;
 	}
-
+/*
 	static public void printDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
-		log("Decision: " + offer.getHasBeenSubmitted() + "|isMale: " + offer.getIsMale() + "|isCar: " + offer.getIsCar()
+		bestLog.log("Decision: " + offer.getHasBeenSubmitted() + "|isMale: " + offer.getIsMale() + "|isCar: " + offer.getIsCar()
 				+ "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()
 				+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
 	}
-
+*/
 	static public String intToRegion(int intRegion) {
 		switch ((char) intRegion) {
 		case '1':
