@@ -1,5 +1,7 @@
 package FirstBeta;
 
+import java.util.List;
+
 import org.apache.log4j.Appender;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
@@ -54,5 +56,30 @@ public class Logging {
 
 	}
 
+		public void printSubmittions(List<Job> Jobs) {
+			this.log("********ALL SUBMITTIONS********");
+			for (Job offer : Jobs) {
+				if (offer.getHasBeenSubmitted()) {
+					this.printOffer(offer);
+				}
+			}
+			this.log("********END LIST OF SUBMITTIONS********");
+		}
+
+
+		 public void printOffer(Job offer) {
+			if (offer == null)
+				return;
+			this.log("Offer " + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
+					+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
+					+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
+					+ "|Eth:" + offer.getIsEthnicity() + "|Male:" + offer.getIsMale() + "|SAG:" + offer.getIsSag()
+					+ "|Guard:" + offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:"
+					+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
+					+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
+					+ "|Name:" + offer.getOfferProjectName() + "|Role:" + offer.getOfferRole() + "|Offer Listing:"
+					+ offer.getOfferListing() + " |  Talent Notes filled with:" + offer.getMessage());
+
+		}
 
 }

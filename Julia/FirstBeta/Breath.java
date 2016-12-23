@@ -8,24 +8,40 @@ public class Breath {
 	static private boolean logStateFull = true;
 	static private boolean longNaps;
 	static private int silentCounter=0;
-
+	static private Logging ourLogging;
+	
 	Breath() {
-		this.useSleep = true;;
-		this.logStateFull = true;
+		 
 	}
 
 	Breath(boolean currUseSleep, boolean currLogStateFull) {
-		this.useSleep = currUseSleep;
-		this.logStateFull = currLogStateFull;
+		 
 	}
+	
+	static private int getSilentCounter() {
+		return silentCounter;
+	};
 
+	static private void setSilentCounter(int count) {
+		silentCounter = count;
+	};
+
+	static public void makeZeroSilentCounter(){
+		setSilentCounter(0);
+	}
+	
+	
+	static public void init(Logging usedLogging){
+		ourLogging = usedLogging;
+	}
 	static public void breath() throws InterruptedException {
 		// sleeps for the configured time + impro
 		int sleepTime = randInt(4, 5);
 		if (useSleep) {
 			TimeUnit.SECONDS.sleep(sleepTime);
 			if (logStateFull) {
-				Beta.log(".");
+				
+				ourLogging.log(".");
 
 			}
 		}
@@ -41,12 +57,12 @@ public class Breath {
 	static public void nap() throws InterruptedException {
 
 		if (longNaps) {
-			Beta.log("Zzzzzzzzzz");
+			ourLogging.log("Zzzzzzzzzz");
 			int sleepTime = randInt(180, 300);
 			TimeUnit.SECONDS.sleep(sleepTime);
 		} else {
 			// short naps
-			Beta.log("Zzz");
+			ourLogging.log("Zzz");
 			if (useSleep) {
 				TimeUnit.SECONDS.sleep(60);
 			}
@@ -55,15 +71,14 @@ public class Breath {
 
 	static public void breathToMissleadThem() throws InterruptedException {
 		int sleepTime = randInt(30, 60);
-		Beta.log((new String("Ha Ha ")).concat(String.valueOf(sleepTime)));
+		ourLogging.log((new String("Ha Ha ")).concat(String.valueOf(sleepTime)));
 		TimeUnit.SECONDS.sleep(sleepTime);
 	}
 
-	static public void staySilent() throws InterruptedException {
-		// log("Silent counter : " + silentCounter);
+	static public void silentCount() throws InterruptedException {
 		silentCounter++;
 		if (silentCounter > 100) {
-			Beta.log("Shshshshsh we are trying to sleep here");
+			ourLogging.log("Shshshshsh we are trying to sleep here");
 			// extend the nap time
 			longNaps = true;
 		} else {

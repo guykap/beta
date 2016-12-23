@@ -36,10 +36,8 @@ public class Beta {
 	static private List<Job> Jobs = new ArrayList<Job>();
 	static Iterator<Job> jobIterator = Jobs.iterator();
 	private Job offer;
-//	private String BetaLog;
 	int[] passedOnOptionArray = new int[] { -1, -1 };
 	int[] currentOnOptionArray = new int[] { 0, 0 };
-	 
 	int leftNumOfLoginWhileLoopsChances = 0;
 	int leftNumOfSubmittionWhileLoopsChances = 0;
 	public static int silentCounter = 0;
@@ -47,15 +45,10 @@ public class Beta {
 	String newWindowHandler;
 	Iterator<String> windowHandlesIterator;
 	Set<String> handles;
-	public static boolean isCastingNetworks = false;
+	public static boolean isCastingNetworks = true;
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
-
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
-
-	//static private boolean logStateFull;
-	//public static Appender fh = null;
-	//public static Logger logger = Logger.getLogger("MyLog");
 	static public boolean seekBackgroundWork;
 	static public boolean longNaps = false;
 	static String gecko_driver_path;
@@ -64,14 +57,10 @@ public class Beta {
 	static Logging bestLog;
 
 	public static void main(String[] args) {
-		// SETUP BASIC
+
 		seekBackgroundWork = true;
-		//takeBreath = new Breath(true,true);
-		takeBreath = new Breath();
-		
 		JUnitCore jCore;
 		// SETUP LOG
-		
 		String fileOut;
 		if (args.length > 0) {
 			fileOut = new String(args[0]);
@@ -79,16 +68,18 @@ public class Beta {
 			fileOut = new String(DEFAULT_OUTPUT_FILE_WINDOWS);
 		}
 		String appendixFileName = (new String((new Long(System.currentTimeMillis())).toString())).concat(".txt");
-		 
-		
+
 		try {
+			//initialize log
 			 bestLog = new Logging(new String(fileOut).concat(appendixFileName));
-			
+			 Breath.init(bestLog);
+				
 		} catch (Exception e) {
 			
 			bestLog.log("File Appender error. Farewell");
 			return;
 		}
+		
 		// SETUP GECKO DRIVER
 		if (args.length > 1) {
 			gecko_driver_path = (new String(args[1]).concat("\\"));
@@ -109,12 +100,12 @@ public class Beta {
 
 	}
 
-	@Test
+	
 	public void testBetaAA() throws Throwable {
 		bestLog.log("Actors Access");
 		testBetaB();
 	}
-
+	@Test
 	public void testBetaCN() throws Throwable {
 		bestLog.log("Casting Networks");
 		testBetaB();
@@ -140,8 +131,9 @@ public class Beta {
 				bestLog.log("THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver ");
 				killFirefoxAndOpenNew();
 			}
+			
 			try {
-				if (isCastingNetworks) {
+				if (isCastingNetworks){
 					loginCN();
 					seekBackgroundWork = true;
 				} else {
@@ -173,8 +165,8 @@ public class Beta {
 		aaBaseUrl = "http://actorsaccess.com";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
-		silentCounter = 0;
 		bestLog.log("LOGIN-AA");
+		Breath.makeZeroSilentCounter();
 		log('a');
 		driver.get(aaBaseUrl + "/");
 		Breath.deepBreath();
@@ -232,7 +224,7 @@ public class Beta {
 			}
 			Jobs.add(offer);
 			// debug
-			Breath.staySilent();
+			Breath.silentCount();
 
 			offer.readNotice();
 			offer.makeDecision();
@@ -356,7 +348,7 @@ public class Beta {
 				}
 				Jobs.add(offer);
 				// debug
-				Breath.staySilent();
+				Breath.silentCount();
 
 				offer.readNotice();
 				offer.makeDecision();
@@ -411,12 +403,12 @@ public class Beta {
 				offer.setHasBeenSubmitted(true);
 				silentCounter = 0;
 				log('m');
-				printSubmittions();
+				bestLog.printSubmittions(Jobs); 
 			} else {
 				bestLog.log("Found star on the offer " + rowNum + " from top");
 
 				// debug
-				Breath.staySilent();
+				Breath.silentCount();
 			}
 
 		}
@@ -1116,32 +1108,7 @@ public class Beta {
 
 		return true;
 	}
-
-	static public void printOffer(Job offer) {
-		if (offer == null)
-			return;
-		bestLog.log("Offer " + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
-				+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
-				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
-				+ "|Eth:" + offer.getIsEthnicity() + "|Male:" + offer.getIsMale() + "|SAG:" + offer.getIsSag()
-				+ "|Guard:" + offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:"
-				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
-				+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
-				+ "|Name:" + offer.getOfferProjectName() + "|Role:" + offer.getOfferRole() + "|Offer Listing:"
-				+ offer.getOfferListing() + " |  Talent Notes filled with:" + offer.getMessage());
-
-	}
-
-	static public void printSubmittions() {
-		bestLog.log("********ALL SUBMITTIONS********");
-		for (Job offer : Jobs) {
-			if (offer.getHasBeenSubmitted()) {
-				printOffer(offer);
-			}
-		}
-		bestLog.log("********END LIST OF SUBMITTIONS********");
-	}
-
+ 
 	static public boolean offerHasBeenConsideredBefore(Job consideredOffer) {
 		// checkcing in the list of Jobs for another offer with the same ROLE
 		// and same PROJECT NAME values.
