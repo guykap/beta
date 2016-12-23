@@ -20,7 +20,8 @@ public class Actor {
 	private String standardTalentNote;
 	private String Ethnicity;
 	private int paymentMin;
-	private boolean GenderMale;
+	private boolean GenderIsMale;
+	private boolean confirmedBilling;
 
 	
 	public Actor(int actorId, Logging actorsLog, String cnUsername, String cnPassword, String aaUserName, String aaPassword){
