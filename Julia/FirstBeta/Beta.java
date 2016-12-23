@@ -181,7 +181,7 @@ public class Beta {
 		driver.findElement(By.id("login-btn")).click();
 
 		deepBreath();
-		if (!verifyLocation("//p[@id='breadcrumb']", "home / breakdowns")) {
+		if (!verifyLocation("//p[@id='breadcrumb']", "breakdown services, ltd")) {
 			log("Can't login.");
 			throw new Exception();
 		}
@@ -191,13 +191,53 @@ public class Beta {
 	public void handleRegion(int region) throws Throwable {
 		String regionUrl = ( new String ("http://www.actorsaccess.com/projects/?view=breakdowns&region=")).concat(String.valueOf(region));
 	driver.get(regionUrl);
-	log("Region number " + region);
+	log((new String ("Region  ")).concat(intToRegion(region)));
 	String tag = new String(driver.findElement(By.xpath("//p[@id='breadcrumb']")).getText());
 	
 	if (!verifyLocation("//p[@id='breadcrumb']", (new String ("home / breakdowns / ").concat(intToRegion(region))))) {
 		log("Can't find region ");
 		throw new Exception();
 	}
+	deepBreath();
+	for (int rowNum = 0; rowNum < 3; rowNum++) {
+		log('j');
+		log("Checking for green star at row number: " + rowNum);
+		int trCheckRow = (2 + rowNum);
+		 
+		String checkPos = ((new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
+				.concat(String.valueOf(trCheckRow))).concat("]/td/img");
+		String srcOfImg = "";
+		try {
+			srcOfImg = new String(driver.findElement(By.xpath(checkPos)).getAttribute("src"));
+			if (srcOfImg.contains("/gui/check.gif")) {
+				log("Check at " + rowNum + " from top.");
+				continue;}
+			log("Error.");continue;
+		} catch (Error e) {
+			log("offer not submitted - lets try it.");
+		}
+
+			offer = new Job();
+				
+			handleAAOffer(rowNum);
+			if (offerHasBeenConsideredBefore(offer)) {
+				continue;
+			}
+			Jobs.add(offer);
+			// debug
+			staySilent();
+
+			offer.readNotice();
+			offer.makeDecision();
+
+			if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
+				printDecisionMakingVars(offer);
+				continue;
+			}
+			
+			
+			
+		}
 	
 	}
 
@@ -603,7 +643,7 @@ public class Beta {
 
 	}
 
-	private void handleAAWorkOffer() {
+	private void handleAAOffer(int rowNum) {
 
 		String currentOffer;
 
@@ -620,13 +660,24 @@ public class Beta {
 		String currentOfferShootDate;
 		String currentOffertRate;
 		String currentOfferPaying;
-
+		
+		String leftPart = (new String("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[")).concat(String.valueOf(rowNum+1));
+		/*
 		try {
 			offer.setOfferPostedTime(new String(
 					driver.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[2]")).getText()));
 		} catch (Exception e) {
 			offer.setOfferPostedTime(new String(""));
 		}
+		*/
+		try {
+			String path = (new String(leftPart)).concat("]");
+			offer.setOfferPostedTime ( new String(driver.findElement(By.xpath(path)).getText()));
+		} catch (Exception e) {
+			offer.setOfferPostedTime(new String(""));
+		}
+		
+		
 
 		try {
 			offer.setOfferProjectName(new String(driver
