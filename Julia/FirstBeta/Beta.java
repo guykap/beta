@@ -55,6 +55,7 @@ public class Beta {
 	static int loginCounter;
 	static Breath takeBreath;
 	static Logging bestLog;
+	static Actor sam;
 
 	public static void main(String[] args) {
 
@@ -78,6 +79,13 @@ public class Beta {
 			
 			bestLog.log("File Appender error. Farewell");
 			return;
+		}
+		
+		try{
+			//initialize Actor Sam - Just here as a debug
+			sam = new Actor(1,bestLog,"guykapulnik","cPassword","guykapulnik","aPassword");
+		}catch(Exception e){
+			
 		}
 		
 		// SETUP GECKO DRIVER
@@ -105,6 +113,7 @@ public class Beta {
 		bestLog.log("Actors Access");
 		testBetaB();
 	}
+	
 	@Test
 	public void testBetaCN() throws Throwable {
 		bestLog.log("Casting Networks");
@@ -172,9 +181,9 @@ public class Beta {
 		Breath.deepBreath();
 
 		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys("guykapulnik");
+		driver.findElement(By.id("username")).sendKeys(sam.getAaUsername());
 		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("aGuy1234567");
+		driver.findElement(By.id("password")).sendKeys(sam.getAaPassword());
 		driver.findElement(By.id("login-btn")).click();
 
 		Breath.deepBreath();
@@ -259,9 +268,9 @@ public class Beta {
 		Breath.deepBreath();
 		driver.findElement(By.id("login")).click();
 		driver.findElement(By.id("login")).clear();
-		driver.findElement(By.id("login")).sendKeys("guykapulnik");
+		driver.findElement(By.id("login")).sendKeys(sam.getCnUsername());
 		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("cGuy1234567");
+		driver.findElement(By.id("password")).sendKeys(sam.getCnPassword());
 		driver.findElement(By.xpath("//input[@id='submit']")).click();
 		Breath.breath();
 		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();

@@ -1,0 +1,611 @@
+INFO - Casting Networks
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - A: Window handle Parent 2147483652
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - coreCastingNetworks
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMale: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
