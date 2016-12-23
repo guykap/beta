@@ -1,0 +1,4 @@
+INFO - Casting Networks
+INFO - Error. Fire Fox driver not found.
+INFO - The driver executable does not exist: C:\Users\me\work\official\Julia\gecko_drivergeckodriver.exe
+INFO - Program ENDED - THANK YOU!

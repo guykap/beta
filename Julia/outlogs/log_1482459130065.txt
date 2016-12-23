@@ -1,0 +1,12 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - A: Window handle Parent 2147483652
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Can't login.
+INFO - Program ENDED - THANK YOU!

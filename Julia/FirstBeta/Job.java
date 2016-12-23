@@ -343,7 +343,7 @@ public class Job {
 
 		// MALE
 
-		if ((this.offerListingSex).contains("male")) {
+		if ((this.offerListingSex).contains(" male")||(allData.startsWith("male"))) {
 			setIsMale(true);
 		}
 		if ((allData.contains(" male")) || (allData.startsWith("male")) || (allData.contains(" men"))

@@ -27,7 +27,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-	// THIS IS BETA1.85
+	// THIS IS BETA2.0a
 	private static WebDriver driver;
 	static public String cnBaseUrl;
 	static public String aaBaseUrl;
@@ -47,12 +47,11 @@ public class Beta {
 	String newWindowHandler;
 	Iterator<String> windowHandlesIterator;
 	Set<String> handles;
+	public static boolean isCastingNetworks = false;
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
-	
- 
 
 	static private boolean logStateFull;
 	public static Appender fh = null;
@@ -87,7 +86,7 @@ public class Beta {
 		}
 		// SETUP GECKO DRIVER
 		if (args.length > 1) {
-			gecko_driver_path = (new String(args[1]));
+			gecko_driver_path = (new String(args[1]).concat("\\"));
 		} else {
 			gecko_driver_path = new String(DEFAULT_GECKO_DRIVER_LIBRARY);
 		}
@@ -106,11 +105,21 @@ public class Beta {
 	}
 
 	@Test
+	public void testBetaAA() throws Throwable {
+		log("Actors Access");
+		testBetaB();
+	}
+
+	public void testBetaCN() throws Throwable {
+		log("Casting Networks");
+		testBetaB();
+	}
+
 	public void testBetaB() throws Throwable {
-		log("beta better");
-		try{
+
+		try {
 			driver = new FirefoxDriver();
-		}catch(Exception e){
+		} catch (Exception e) {
 			log("Error. Fire Fox driver not found.");
 			log(e.getMessage());
 			return;
@@ -119,7 +128,7 @@ public class Beta {
 		while (networkWorking()) {
 			log("Login number " + loginCounter);
 			if (loginCounter > 10) {
-				log("THIS IS 10TH LOGIN - stopping Beta ");
+				log("THIS IS 10TH LOGIN - stopping ");
 				return;
 			}
 			if ((loginCounter % 3) == 0) {
@@ -127,8 +136,13 @@ public class Beta {
 				killFirefoxAndOpenNew();
 			}
 			try {
-				loginCN();
-				seekBackgroundWork = true;
+				if (isCastingNetworks) {
+					loginCN();
+					seekBackgroundWork = true;
+				} else {
+					// Actors access
+					loginAA();
+				}
 			} catch (Exception e) {
 				log(e.getMessage());
 				log("Something went during login -> So lets login again");
@@ -137,11 +151,62 @@ public class Beta {
 			}
 
 			try {
-				core();
+				if (isCastingNetworks) {
+					coreCastingNetworks();
+				} else {
+					coreActorsAccess();
+				}
 			} catch (Exception e) {
 				log(e.getMessage());
 				log("Something went wrong -> Back to Login");
 				loginCounter++;
+			}
+		}
+	}
+
+	public void loginAA() throws Throwable {
+		aaBaseUrl = "http://actorsaccess.com";
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		parentWindowHandler = driver.getWindowHandle();
+		silentCounter = 0;
+		log("LOGIN-AA");
+		log('a');
+		driver.get(aaBaseUrl + "/");
+		deepBreath();
+
+		driver.findElement(By.id("username")).clear();
+		driver.findElement(By.id("username")).sendKeys("guykapulnik");
+		driver.findElement(By.id("password")).clear();
+		driver.findElement(By.id("password")).sendKeys("aGuy1234567");
+		driver.findElement(By.id("login-btn")).click();
+
+		deepBreath();
+		if (!verifyLocation("//p[@id='breadcrumb']", "home / breakdowns")) {
+			log("Can't login.");
+			throw new Exception();
+		}
+		log('c');
+	}
+
+	public void handleRegion(int region) throws Throwable {
+		String regionUrl = ( new String ("http://www.actorsaccess.com/projects/?view=breakdowns&region=")).concat(String.valueOf(region));
+	driver.get(regionUrl);
+	log("Region number " + region);
+	String tag = new String(driver.findElement(By.xpath("//p[@id='breadcrumb']")).getText());
+	
+	if (!verifyLocation("//p[@id='breadcrumb']", (new String ("home / breakdowns / ").concat(intToRegion(region))))) {
+		log("Can't find region ");
+		throw new Exception();
+	}
+	
+	}
+
+	public void coreActorsAccess() throws Throwable {
+		// go over the chosen regions and submit to each region
+		while (true) {
+			for (int regionNum = 8; regionNum < 10; regionNum++) {
+				handleRegion(regionNum);
+				nap();
 			}
 		}
 	}
@@ -155,7 +220,7 @@ public class Beta {
 		seekBackgroundWork = true;
 		log('a');
 		driver.get(cnBaseUrl + "/");
-		breath();
+		deepBreath();
 		driver.findElement(By.id("login")).click();
 		driver.findElement(By.id("login")).clear();
 		driver.findElement(By.id("login")).sendKeys("guykapulnik");
@@ -173,8 +238,8 @@ public class Beta {
 		breath();
 	}
 
-	public void core() throws Throwable {
-		log("Core");
+	public void coreCastingNetworks() throws Throwable {
+		log("coreCastingNetworks");
 		// first time in coreLoop - always begin with Extra chart
 		driver.findElement(By.xpath("//a[@id='_ctl0_cphBody_lnkExtrasRoles']")).click();
 		if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
@@ -251,13 +316,12 @@ public class Beta {
 
 				offer.readNotice();
 				offer.makeDecision();
-				
+
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
 					printDecisionMakingVars(offer);
 					continue;
 				}
-				
-				
+
 				log('h');
 				int trLinkToOfferRow = -1;
 				trLinkToOfferRow = trStarRow - 1;
@@ -274,8 +338,7 @@ public class Beta {
 				} catch (Exception e) {
 					offer.setOfferTimeRoleAdded(new String(""));
 				}
-				
-				
+
 				driver.findElement(By.xpath("//a[contains(text(),'submit')]")).click();
 				// deepBreath();
 				breathToMissleadThem();
@@ -338,7 +401,6 @@ public class Beta {
 
 	}
 
-	@Test
 	public void testBeta() throws Exception {
 
 		// SETUP
@@ -412,7 +474,7 @@ public class Beta {
 					}
 
 				}
-			} catch (Exception e) {			
+			} catch (Exception e) {
 				log("Didn't work");
 				log(e.getMessage());
 				// go back to login page
@@ -1119,7 +1181,7 @@ public class Beta {
 	}
 
 	private void staySilent() throws InterruptedException {
-		//log("Silent counter : " + silentCounter);
+		// log("Silent counter : " + silentCounter);
 		silentCounter++;
 		if (silentCounter > 100) {
 			log("Shshshshsh we are trying to sleep here");
@@ -1147,7 +1209,7 @@ public class Beta {
 				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
 				+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
 				+ "|Name:" + offer.getOfferProjectName() + "|Role:" + offer.getOfferRole() + "|Offer Listing:"
-				+ offer.getOfferListing() + " |  Talent Notes I wrote:"	+ offer.getMessage());
+				+ offer.getOfferListing() + " |  Talent Notes I wrote:" + offer.getMessage());
 
 	}
 
@@ -1166,13 +1228,12 @@ public class Beta {
 		// and same PROJECT NAME values.
 		for (Job offer : Jobs) {
 			/*
-			if ((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName())) {
-				log("same project name: " + (consideredOffer.getOfferProjectName()));
-			}
-			if ((consideredOffer.getOfferRole()).equals(offer.getOfferRole())) {
-				log("same role:" + consideredOffer.getOfferRole());
-			}
-			*/
+			 * if ((consideredOffer.getOfferProjectName()).equals(offer.
+			 * getOfferProjectName())) { log("same project name: " +
+			 * (consideredOffer.getOfferProjectName())); } if
+			 * ((consideredOffer.getOfferRole()).equals(offer.getOfferRole())) {
+			 * log("same role:" + consideredOffer.getOfferRole()); }
+			 */
 			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
 					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))
 					&& (!offer.getHasBeenSubmitted())) {
@@ -1187,8 +1248,33 @@ public class Beta {
 	static public void printDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
 		log("Decision: " + offer.getHasBeenSubmitted() + "|isMale: " + offer.getIsMale() + "|isCar: " + offer.getIsCar()
-				+ "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
+				+ "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()
+				+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
 	}
 
+	static public String intToRegion(int intRegion) {
+		switch ((char) intRegion) {
+		case '1':
+			return "los angeles";
+		case '2':
+			return "new york";
+		case '3':
+			return "vancouver";
+		case '4':
+			return "chicago";
+		case '5':
+			return "florida";
+		case '6':
+			return "toronto";
+		case '7':
+			return "texas";
+		case '8':
+			return "hawaii";
+		case '9':
+			return "southeast";
+		default:
+			return "";
+		}
+	}
 }
