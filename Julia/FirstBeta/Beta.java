@@ -216,9 +216,7 @@ public class Beta {
 		} catch (Error e) {
 			log("offer not submitted - lets try it.");
 		}
-
-			offer = new Job();
-				
+			offer = new Job();	
 			handleAAOffer(rowNum);
 			if (offerHasBeenConsideredBefore(offer)) {
 				continue;
@@ -392,7 +390,6 @@ public class Beta {
 				choosePhoto();
 
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
-				// log("filled talent notes with : " + offer.getMessage());
 				deepBreath();
 				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
 				deepBreath();
@@ -555,10 +552,6 @@ public class Beta {
 				windowStatus();
 				driver.switchTo().window(getSonWindowHandler());
 				windowStatus();
-				/*
-				 * if (!moveToOtherWindow()) { // restart continue; }
-				 */
-
 			} catch (Exception e) {
 				log("Didn't work");
 
@@ -644,7 +637,7 @@ public class Beta {
 	}
 
 	private void handleAAOffer(int rowNum) {
-
+/*
 		String currentOffer;
 
 		String currentOfferPostedTime;
@@ -655,13 +648,13 @@ public class Beta {
 		String currentOfferStartDate;
 		String currentOfferUnionStatus;
 		String currentOfferListing;
-		/******/
+		 
 		String currentOfferRole;
 		String currentOfferShootDate;
 		String currentOffertRate;
 		String currentOfferPaying;
-		
-		String leftPart = (new String("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[")).concat(String.valueOf(rowNum+1));
+		*/
+		String leftPart = (new String("//div[@id='mainContent']/div[5]/table/tbody/tr[")).concat(String.valueOf(rowNum+1));
 		/*
 		try {
 			offer.setOfferPostedTime(new String(
@@ -671,14 +664,49 @@ public class Beta {
 		}
 		*/
 		try {
-			String path = (new String(leftPart)).concat("]");
+			String path = (new String(leftPart)).concat("]/td[2]");
 			offer.setOfferPostedTime ( new String(driver.findElement(By.xpath(path)).getText()));
 		} catch (Exception e) {
 			offer.setOfferPostedTime(new String(""));
 		}
 		
+		try {
+			String path = (new String(leftPart)).concat("]/td[3]/a");
+			offer.setOfferProjectName( new String(driver.findElement(By.xpath(path)).getText()));
+		} catch (Exception e) {
+			offer.setOfferProjectName(new String(""));
+		}
 		
-
+		try {
+			String path = (new String(leftPart)).concat("]/td[4]");
+			offer.setOfferTypeProject ( new String(driver.findElement(By.xpath(path)).getText()));
+		} catch (Exception e) {
+			offer.setOfferTypeProject(new String(""));
+		}
+		
+		try {
+			String path = (new String(leftPart)).concat("]/td[5]");
+			offer.setOfferCastingDirector ( new String(driver.findElement(By.xpath(path)).getText()));
+		} catch (Exception e) {
+			offer.setOfferCastingDirector(new String(""));
+		}
+		
+		try {
+			String path = (new String(leftPart)).concat("]/td[6]");
+			offer.setOfferShootDate ( new String(driver.findElement(By.xpath(path)).getText()));
+		} catch (Exception e) {
+			offer.setOfferShootDate(new String(""));
+		}
+		
+		try {
+			String path = (new String(leftPart)).concat("]/td[7]");
+			offer.setOfferUnionStatus ( new String(driver.findElement(By.xpath(path)).getText()));
+		} catch (Exception e) {
+			offer.setOfferUnionStatus(new String(""));
+		}
+	}
+		/****************************/
+/*
 		try {
 			offer.setOfferProjectName(new String(driver
 					.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[3]/a")).getText()));
@@ -713,8 +741,8 @@ public class Beta {
 		}
 
 		// findout if there is a star on the left
-
-	}
+*/
+	 
 
 	private void handleBackgroundWorkOffer(boolean isBackgroundWork, int row) {
 
@@ -1260,7 +1288,7 @@ public class Beta {
 				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
 				+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
 				+ "|Name:" + offer.getOfferProjectName() + "|Role:" + offer.getOfferRole() + "|Offer Listing:"
-				+ offer.getOfferListing() + " |  Talent Notes I wrote:" + offer.getMessage());
+				+ offer.getOfferListing() + " |  Talent Notes filled with:" + offer.getMessage());
 
 	}
 
