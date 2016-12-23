@@ -1,0 +1,47 @@
+Class Job
+********************
+	String offerId;
+	boolean offerHasBeenSubmitted;
+	String notice = "";
+	String noticeLowerCase;
+	 
+
+	String offerRole;
+	String offerProjectName;
+	String offerShootDate;
+	String offerTypeProject;
+	String offerRate;
+	String offerPaying;
+	String offerCastingDirector;
+	String offerUnionStatus;
+	String offerPostedTime;
+	String offerListing;
+	String offerListingFirst;
+	String offerListingSex = "";
+	String offerListingEthnicity = "";
+	String offerListingNotes = "";
+	String offerListingAgesHint = "";
+	String offerTimeRoleAdded = "";
+	String offerSubmittionDateTime = "";
+	String message = "";
+	 
+	boolean isSag;
+	boolean isEthnicity;
+	boolean isAge;
+	boolean isMale;
+	boolean isBackgroundWork;
+	boolean isPayingEnough;
+	boolean isMaleName;
+	boolean isCar;
+	boolean isGuard;
+	boolean isStandIn;
+	boolean reqSizes;
+	boolean needTuxedo;
+	boolean needPoliceUniform;
+	int grade;
+	boolean decisionSubmit;
+	
+	
+	
+	
+Class Job::CN_Extra

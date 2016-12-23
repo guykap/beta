@@ -42,9 +42,7 @@ public class Job {
 	String offerTimeRoleAdded = "";
 	String offerSubmittionDateTime = "";
 	String message = "";
-	String log = ""; // this logs all the process of this specific offer from
-						// login
-
+	 
 	boolean isSag;
 	boolean isEthnicity;
 	boolean isAge;
@@ -58,9 +56,7 @@ public class Job {
 	boolean reqSizes;
 	boolean needTuxedo;
 	boolean needPoliceUniform;
-	int grade;
-
-	boolean decisionSubmit;
+ 	boolean decisionSubmit;
 
 	public Job() {
 		// String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
@@ -193,21 +189,7 @@ public class Job {
 	public void setNotice(String newNotice) {
 		notice = newNotice;
 	};
-
-	public String getLog() {
-		return log;
-	};
-
-	public void setLog(String newNotice) {
-		log = new String(newNotice);
-	};
-
-	public void addToLog(String newNotice) {
-		// log += DateTime();
-		// log += new Date();
-		log += (new String(newNotice)).concat("\n");
-	};
-
+ 
 	public boolean getIsSag() {
 		return isSag;
 	};
@@ -288,14 +270,7 @@ public class Job {
 		needPoliceUniform = newBit;
 	};
 
-	public int getGrade() {
-		return grade;
-	};
-
-	public void setGrade(int newBit) {
-		grade = newBit;
-	};
-
+ 
 	public String getMessage() {
 		return message;
 	};
@@ -517,6 +492,23 @@ public class Job {
 		if ((this.notice).contains(otherJob.getNotice().subSequence(1, 100))) {
 			return true;
 		}
+		return false;
+	}
+	
+	public boolean isSameOfferCN(Job otherJob){
+		if (((this.getOfferProjectName()).equals(otherJob.getOfferProjectName()))
+				&& ((this.getOfferRole()).equals(otherJob.getOfferRole()))){
+			return true;
+		} 
+		return false;
+	}
+	
+	public boolean isSameOfferAA(Job otherJob){
+		if (((this.getOfferPostedTime()).equals(otherJob.getOfferProjectName()))
+				&& ((this.getOfferPostedTime()).equals(otherJob.getOfferRole()))){
+			return true;	
+			} 
+			
 		return false;
 	}
 }

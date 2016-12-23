@@ -404,7 +404,6 @@ public class Beta {
 				}
 				offer.setHasBeenSubmitted(true);
 				silentCounter = 0;
-				offer.setLog("");
 				log('m');
 				printSubmittions();
 			} else {
@@ -532,7 +531,6 @@ public class Beta {
 				} catch (Exception e) {
 				}
 				offer = new Job();
-				// offer.setIsBackgroundWork(seekBackgroundWork);
 				new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 				deepBreath();
 				// handleBackgroundWorkOffer(seekBackgroundWork);
@@ -625,7 +623,6 @@ public class Beta {
 					break;
 				}
 				offer.setHasBeenSubmitted(true);
-				offer.setLog(BetaLog);
 				log('m');
 
 			} catch (Exception e) {
@@ -637,32 +634,9 @@ public class Beta {
 	}
 
 	private void handleAAOffer(int rowNum) {
-/*
-		String currentOffer;
-
-		String currentOfferPostedTime;
-		String currentOfferPostedHour;
-		String currentOfferProjectName;
-		String currentOfferTypeProject;
-		String currentOfferCastingDirector;
-		String currentOfferStartDate;
-		String currentOfferUnionStatus;
-		String currentOfferListing;
-		 
-		String currentOfferRole;
-		String currentOfferShootDate;
-		String currentOffertRate;
-		String currentOfferPaying;
-		*/
+ 
 		String leftPart = (new String("//div[@id='mainContent']/div[5]/table/tbody/tr[")).concat(String.valueOf(rowNum+1));
-		/*
-		try {
-			offer.setOfferPostedTime(new String(
-					driver.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[2]")).getText()));
-		} catch (Exception e) {
-			offer.setOfferPostedTime(new String(""));
-		}
-		*/
+	 
 		try {
 			String path = (new String(leftPart)).concat("]/td[2]");
 			offer.setOfferPostedTime ( new String(driver.findElement(By.xpath(path)).getText()));
@@ -705,121 +679,71 @@ public class Beta {
 			offer.setOfferUnionStatus(new String(""));
 		}
 	}
-		/****************************/
-/*
-		try {
-			offer.setOfferProjectName(new String(driver
-					.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[3]/a")).getText()));
-		} catch (Exception e) {
-			offer.setOfferProjectName(new String(""));
-		}
-
-		try {
-			offer.setOfferTypeProject(new String(
-					driver.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[4]")).getText()));
-		} catch (Exception e) {
-			offer.setOfferTypeProject(new String(""));
-		}
-
-		try {
-			offer.setOfferCastingDirector(new String(
-					driver.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[5]")).getText()));
-		} catch (Exception e) {
-			offer.setOfferCastingDirector(new String(""));
-		}
-		try {
-			offer.setOfferShootDate(new String(
-					driver.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[6]")).getText()));
-		} catch (Exception e) {
-			offer.setOfferShootDate(new String(""));
-		}
-		try {
-			offer.setOfferUnionStatus(new String(
-					driver.findElement(By.xpath("//div[@id='mainContent']/div[5]/table/tbody/tr[2]/td[7]")).getText()));
-		} catch (Exception e) {
-			offer.setOfferUnionStatus(new String(""));
-		}
-
-		// findout if there is a star on the left
-*/
-	 
-
+ 
+	
 	private void handleBackgroundWorkOffer(boolean isBackgroundWork, int row) {
 
 		offer.setIsBackgroundWork(isBackgroundWork);
 		// the EXTRA table has the shooting date .
 		// the PRINCIPLE table does not
-
-		String currentOffer;
-		String currentOfferRole;
-		String currentOfferProjectName;
-		String currentOfferShootDate;
-		String currentOfferTypeProject;
-		String currentOffertRate;
-		String currentOfferPaying;
-		String currentOfferUnionStatus;
-		String currentOfferPostedDate;
-		String currentOfferListing;
+ 
 		String leftPart = (new String("//tr[")).concat(String.valueOf(row));
 		try {
 
 			try {
-				// String localRow = String.valueOf(row);
 				String path = new String(leftPart.concat("]/td/a"));
-				currentOffer = new String(driver.findElement(By.xpath(path)).getText());
+				offer.setOfferRole( (new String(driver.findElement(By.xpath(path)).getText())).toLowerCase());
 			} catch (Exception e) {
-				currentOffer = new String("");
+				offer.setOfferRole(new String(""));
 			}
-
-			currentOfferRole = new String(currentOffer);
-
+ 
 			if (isBackgroundWork) {
 				// BACKGROUND WORK
 				try {
 					String path = new String(leftPart.concat("]/td[2]/a"));
-					currentOfferProjectName = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferProjectName((new String(driver.findElement(By.xpath(path)).getText())).toLowerCase());
 				} catch (Exception e) {
-					currentOfferProjectName = new String("");
+					offer.setOfferProjectName(new String(""));
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[3]/a"));
-					currentOfferShootDate = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferShootDate( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferShootDate = new String("");
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[4]/a"));
-					currentOfferTypeProject = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferTypeProject(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferTypeProject = new String("");
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[5]/a"));
-					currentOffertRate = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOffertRate( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOffertRate = new String("");
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[6]/a"));
-					currentOfferPaying = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferPaying( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferPaying = new String("");
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[7]/a"));
-					currentOfferUnionStatus = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferUnionStatus( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferUnionStatus = new String("");
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[8]/a"));
-					currentOfferPostedDate = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferPostedTime( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferPostedDate = new String("");
 				}
@@ -828,48 +752,43 @@ public class Beta {
 				// PRINCIPLE WORK
 				try {
 					String path = new String(leftPart.concat("]/td[2]/a"));
-					currentOfferProjectName = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferProjectName((new String(driver.findElement(By.xpath(path)).getText())).toLowerCase());
 				} catch (Exception e) {
-					currentOfferProjectName = new String("");
+					offer.setOfferProjectName(new String(""));
 				}
 
-				try {
-					currentOfferShootDate = "";
-				} catch (Exception e) {
-					currentOfferShootDate = new String("");
-				}
-
+				 
 				try {
 					String path = new String(leftPart.concat("]/td[3]/a"));
-					currentOfferTypeProject = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferTypeProject(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferTypeProject = new String("");
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[4]/a"));
-					currentOffertRate = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOffertRate( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOffertRate = new String("");
 				}
 
+
 				try {
 					String path = new String(leftPart.concat("]/td[5]/a"));
-					currentOfferPaying = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferPaying( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferPaying = new String("");
 				}
-
 				try {
 					String path = new String(leftPart.concat("]/td[6]/a"));
-					currentOfferUnionStatus = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferUnionStatus( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferUnionStatus = new String("");
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[7]/a"));
-					currentOfferPostedDate = new String(driver.findElement(By.xpath(path)).getText());
+					offer.setOfferPostedTime( new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					currentOfferPostedDate = new String("");
 				}
@@ -882,19 +801,7 @@ public class Beta {
 				currentOfferListing = new String(driver.findElement(By.xpath(pathOfferListing)).getText());
 			} catch (Exception e) {
 				currentOfferListing = new String("");
-			}
-
-			// enter into JOB class
-
-			offer.setOfferRole(currentOffer.toLowerCase());
-			offer.setOfferProjectName(currentOfferProjectName.toLowerCase());
-			offer.setOfferShootDate(currentOfferShootDate.toLowerCase());
-			offer.setOfferTypeProject(currentOfferTypeProject.toLowerCase());
-			offer.setOffertRate(currentOffertRate.toLowerCase());
-			offer.setOfferPaying(currentOfferPaying.toLowerCase());
-			offer.setOfferUnionStatus(currentOfferUnionStatus.toLowerCase());
-			offer.setOfferPostedTime(currentOfferPostedDate.toLowerCase());
-			offer.setOfferListing(currentOfferListing.toLowerCase());
+			}		  
 			return;
 
 		} catch (Exception e) {
@@ -902,10 +809,7 @@ public class Beta {
 			// go back to login page
 
 		}
-
-		// enter into MySQL
-
-	}
+ 	}
 
 	@After
 	public void tearDown() throws Exception {
@@ -1302,6 +1206,8 @@ public class Beta {
 		log("********END LIST OF SUBMITTIONS********");
 	}
 
+	
+	
 	static public boolean offerHasBeenConsideredBefore(Job consideredOffer) {
 		// checkcing in the list of Jobs for another offer with the same ROLE
 		// and same PROJECT NAME values.
