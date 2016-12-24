@@ -250,17 +250,17 @@ public class Beta {
 
 			scrapAllCharactersOnProduction();
 
-			Jobs.add(offer);
 			// debug
 			Breath.silentCount();
 			offer.readNoticeAA();
-		//	offer.makeDecision();
-			offer.makeDebugDecision();
+			// offer.makeDecision();
+
 			bestLog.printDecisionMakingVars(offer);
 			if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
 				bestLog.printDecisionMakingVars(offer);
 				continue;
 			}
+
 		}
 	}
 
@@ -504,62 +504,82 @@ public class Beta {
 		}
 	}
 
-	private void scrapAllCharactersOnProduction() {
+	private int scrapAllCharactersOnProduction() {
+		// returns the number of characters found and offers created
 		bestLog.log("entered character breakdown");
 		// for each character - we open a new offer
 		// CHARACTER #1
 		// timeDate
-		
-		String prodDetailsLeftWithTimeRoleAdded;
-		String prodDetailsLeft;
-		String prodDetialsRight;
-		String nameOfCharacter;
-		String nameOfCharacterAndDetailsUnder;
-		String detailsOfCharacter;
-		int numOfCharactersInProduction;
-		
-		
-		
-	
-			 
-				  
-				try {	
+
+			String prodDetailsLeftWithTimeRoleAdded;
+			String prodDetailsLeft;
+			String prodDetialsRight;
+			String nameOfCharacter;
+			String nameOfCharacterAndDetailsUnder;
+			String detailsOfCharacter;
+			int numOfCharactersInProduction;
+
+			try {
 				String tag2 = new String(
 						driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td")).getText());
-				
-				prodDetailsLeftWithTimeRoleAdded = new String (tag2);
-				bestLog.log("prodDetailsLeftWithTimeRoleAdded=");bestLog.log(tag2);
+
+				prodDetailsLeftWithTimeRoleAdded = new String(tag2);
+				bestLog.log("prodDetailsLeftWithTimeRoleAdded=");
+				bestLog.log(tag2);
 				parseProdDetailsLeftWithTimeRoleAdded(prodDetailsLeftWithTimeRoleAdded);
-				}catch(Exception e){}
-				try {String tag3 = new String(
-						driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td/p")).getText());
-				prodDetailsLeft = new String (tag3);bestLog.log("prodDetailsLeft=");bestLog.log(tag3);}catch(Exception e){}
-				try {String tag4 = new String(
+			} catch (Exception e) {
+			}
+
+			try {
+				String tag4 = new String(
 						driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
 				prodDetialsRight = new String(tag4);
 				parseProdDetialsRight(prodDetialsRight);
-				bestLog.log("prodDetailsRight = ");bestLog.log(tag4);}catch(Exception e){} try {String tag6 = new String(
+				bestLog.log("prodDetailsRight = ");
+				bestLog.log(tag4);
+			} catch (Exception e) {
+			}
+			
+			
+			int roleNum = 0;
+			boolean moreCharsAvil = true;
+			while (moreCharsAvil) {
+
+			try {
+				String tag6 = new String(
 						driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td")).getText());
 				parseNameOfCharacterAndDetailsUnder(tag6);
-				bestLog.log("6 - nameOfCharacterAndDetailsUnder = ");bestLog.log(tag6);}catch(Exception e){}
-				try {String tag11 = new String(
-					
-						driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a")).getAttribute("class"));
-				bestLog.log("11 - breakdown-open-add-role:");bestLog.log(tag11);}catch(Exception e){}
-				try {String tag12 = new String(
-						driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a")).getAttribute("name"));
-				bestLog.log("12 - AA_ROLE_NUMBER:");bestLog.log(tag12);}catch(Exception e){}
- 				try {
-					offer.setOfferCharacterName( new String(driver.findElement(By.xpath("/html/body/div[2]/table[2]/tbody/tr/td/a")).getText()));
-			bestLog.log("8");bestLog.log(offer.getOfferCharacterName());} catch (Exception e) {
-				bestLog.log("try again mother fucker.");
-				
-				
+				bestLog.log("6 - nameOfCharacterAndDetailsUnder = ");
+				bestLog.log(tag6);
+			} catch (Exception e) {
 			}
-		
+
+			try {
+				offer.setOfferCharacterName(
+						new String(driver.findElement(By.xpath("/html/body/div[2]/table[2]/tbody/tr/td/a")).getText()));
+				bestLog.log("8");
+				bestLog.log(offer.getOfferCharacterName());
+			} catch (Exception e) {
+				bestLog.log("try again mother fucker.");
+
+			}
+			}
 	}
 
-	private void parseProdDetailsLeftWithTimeRoleAdded(String data){
+	/*
+	 * try { String tag11 = new String(
+	 * 
+	 * driver.findElement(By.xpath(
+	 * "//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a"))
+	 * .getAttribute("class")); bestLog.log("11 - breakdown-open-add-role:");
+	 * bestLog.log(tag11); } catch (Exception e) { } try { String tag12 = new
+	 * String( driver.findElement(By.xpath(
+	 * "//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a"))
+	 * .getAttribute("name")); bestLog.log("12 - AA_ROLE_NUMBER:");
+	 * bestLog.log(tag12); } catch (Exception e) { }
+	 */
+
+	private void parseProdDetailsLeftWithTimeRoleAdded(String data) {
 		bestLog.log("parse it");
 		offer.addToProductionDetails(data);
 		String delims = "['\n']";
@@ -569,44 +589,42 @@ public class Beta {
 		offer.setOfferUnionStatus(tokens[3]);
 		String details = tokens[1];
 	}
-	
-	private void parseProdDetialsRight(String data){
-		 //ALL parsing should be done with REGEX , but right now only store in the DB all the production info as one long String
+
+	private void parseProdDetialsRight(String data) {
+		// ALL parsing should be done with REGEX , but right now only store in
+		// the DB all the production info as one long String
 		bestLog.log("parse it");
 		offer.addToProductionDetails(data);
 		/*
-		String delims = "[[,],\n]";
-		String[] tokens = data.split(delims);
-		String name= tokens[0];
-		String details = tokens[1];
-		String startDate = 
-		String location = tokens[5];
-		offer.setProductionDetails(data);
-		*/
+		 * String delims = "[[,],\n]"; String[] tokens = data.split(delims);
+		 * String name= tokens[0]; String details = tokens[1]; String startDate
+		 * = String location = tokens[5]; offer.setProductionDetails(data);
+		 */
 	}
-	private void parseprodDetailsLeft(String data){
+
+	private void parseprodDetailsLeft(String data) {
 		bestLog.log("parse it");
 		offer.addToProductionDetails(data);
 		String delims = "[[,],\n]";
 		String[] tokens = data.split(delims);
-		String name= tokens[0];
+		String name = tokens[0];
 		String details = tokens[1];
 	}
-	
-	private void nameOfCharacter(){}
-	private void parseNameOfCharacterAndDetailsUnder(String data){
+
+	private void nameOfCharacter() {
+	}
+
+	private void parseNameOfCharacterAndDetailsUnder(String data) {
 		bestLog.log("parse it");
-//		String delims = "['[',']','\n']";
-		String delims ="\\[|\\]";
+		// String delims = "['[',']','\n']";
+		String delims = "\\[|\\]";
 		String[] tokens = data.split(delims);
-		String name= new String (tokens[1]);
+		String name = new String(tokens[1]);
 		offer.setOfferCharacterName(name.trim());
-		String details = new String (tokens[2]);
+		String details = new String(tokens[2]);
 		offer.setOfferCharacterDetails(details);
-		}
-	
-	
-	
+	}
+
 	private void handleBackgroundWorkOffer(boolean isBackgroundWork, int row) {
 
 		offer.setIsBackgroundWork(isBackgroundWork);

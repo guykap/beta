@@ -511,16 +511,12 @@ public class Job {
 	}
 
 	public void makeDecision() {
-//		this.setDecisionSubmit(true);
+		this.setDecisionSubmit(true);
 		if ((isMale) && (!isCar) && (isEthnicity)&& (isAge)) {
 			this.setDecisionSubmit(true);
 		}
 	}
-	public void makeDecision() {
-		printDecisionMakingVars(this);
-		this.setDecisionSubmit(true);
-	 
-	}
+  
 	public void fillTalentNote() {
 		
 		String allData = (this.getOfferRole()).concat(" ").concat(offerListingNotes.toLowerCase());
