@@ -395,6 +395,11 @@ public class Job {
 			Double ageLookLike = new Double(5);
 			Double actorRealAge = new Double(36);
 
+			
+			//check if actor's age is in the range asked for:
+			
+			if((actorRealAge >= maybeAgeMin)&&(actorRealAge<= maybeAgeMax)){
+				setIsAge(true);			}
 			// check if actor's age is near the average
 			if ((Math.abs(maybeAgeAverageTwice - avgCharacterAgeTwice)) <= ageRange) {
 				// the actor is in the age range
