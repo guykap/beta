@@ -73,7 +73,7 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug
-			sam = new Actor(1, bestLog, "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+			sam = new Actor(1, "guykapulnik", "cPassword", "guykapulnik", "aPassword");
 		} catch (Exception e) {
 
 		}

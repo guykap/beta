@@ -24,13 +24,13 @@ public class Actor {
 	private boolean confirmedBilling;
 
 	
-	public Actor(int actorId, Logging actorsLog, String cnUsername, String cnPassword, String aaUserName, String aaPassword){
+	public Actor(int actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword){
 		id = actorId;
 		this.setCnUsername(cnUsername);
 		this.setCnPassword(cnPassword);
 		this.setAaUsername(aaUserName);
 		this.setAaPassword(aaPassword);
-		this.actorsLog = actorsLog;
+		 
 	}
 
 
