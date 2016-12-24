@@ -38,6 +38,7 @@ public class Logging {
 		if (newLog.length() < 1) {
 			return;
 		}
+		
 		System.out.println(newLog);
 		try {
 
