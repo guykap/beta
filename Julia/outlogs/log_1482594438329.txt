@@ -1,0 +1,135 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.60.11.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=5744, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 190b72a8-83ff-4aa3-98c4-ed35cd34e955
+INFO - Something went during login -> So lets login again
+INFO - Login number 2
+INFO - LOGIN-AA
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.60.11.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=5744, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 190b72a8-83ff-4aa3-98c4-ed35cd34e955
+INFO - Something went during login -> So lets login again
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region  
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for red check at row number: 7
+INFO - offer not submitted - lets try it.
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - entered character breakdown
+INFO - tag2:
+INFO - Tuesday, Nov. 29, 2016, 3:01 PM Pacific
+UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - tag3:
+INFO - UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - 4
+INFO - Casting Director: Sarah Finn
+Associate Casting Director: Nicholas A. Mudd
+Casting Assistant: Molly Doyle
+Start Date: Jan - May 2017
+Rate of Pay: SAG-AFTRA Theatrical
+Location: Atlanta
+INFO - tag2:
+INFO - Tuesday, Nov. 29, 2016, 3:01 PM Pacific
+UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - tag3:
+INFO - UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - 4
+INFO - Casting Director: Sarah Finn
+Associate Casting Director: Nicholas A. Mudd
+Casting Assistant: Molly Doyle
+Start Date: Jan - May 2017
+Rate of Pay: SAG-AFTRA Theatrical
+Location: Atlanta
+INFO - tag2:
+INFO - Tuesday, Nov. 29, 2016, 3:01 PM Pacific
+UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - tag3:
+INFO - UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - 4
+INFO - Casting Director: Sarah Finn
+Associate Casting Director: Nicholas A. Mudd
+Casting Assistant: Molly Doyle
+Start Date: Jan - May 2017
+Rate of Pay: SAG-AFTRA Theatrical
+Location: Atlanta
+INFO - tag2:
+INFO - Tuesday, Nov. 29, 2016, 3:01 PM Pacific
+UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - tag3:
+INFO - UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - 4
+INFO - Casting Director: Sarah Finn
+Associate Casting Director: Nicholas A. Mudd
+Casting Assistant: Molly Doyle
+Start Date: Jan - May 2017
+Rate of Pay: SAG-AFTRA Theatrical
+Location: Atlanta
+INFO - tag2:
+INFO - Tuesday, Nov. 29, 2016, 3:01 PM Pacific
+UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - tag3:
+INFO - UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - 4
+INFO - Casting Director: Sarah Finn
+Associate Casting Director: Nicholas A. Mudd
+Casting Assistant: Molly Doyle
+Start Date: Jan - May 2017
+Rate of Pay: SAG-AFTRA Theatrical
+Location: Atlanta

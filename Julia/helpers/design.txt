@@ -1,0 +1,50 @@
+Design:
+----------
+Option 1:
+------------
+second tread - Updating the SQL on Cloud from the memory Jobs List
+
+Option 2:
+---------
+not having any List of Jobs - only using the Cloud SQL
+
+
+Toughts on design
+
+String why Decision - explains why the decisiion was made
+-emailing the updates of the Submitted jobs only. So when CD calls me on the phone i know what to say
+Aklways know which page we are on.
+And if one type of click dooesn't-
+Should not restart every failure. 
+A difference if a pop up window doesn't open or the role has been submitted for - I whould map out all the options.
+
+add shootdate to decision making in the event i;m' already booked on a certain date.
+-behave like a human - so login would be in UNEVEN time spaces, pretend to sleep at night
+-do not have any constancy in online action
+-change the way behave in site - like go to the other options of links 
+-alternate the time sleep between action Randomized
+-alternate messages on the talent notes.
+
+-Build a site that has a blog.
+-Thsi Blog will be the GUI. The Pamela output will save to local file and also post every minute to the blog.
+I will be able to read from any browser the latest updates.
+-Also there will be a combo box  / text input  where i will assign the setup flags to change the logging, decision making 
+simple changes like : "SUBMIT TO ALL" / "SUBMIT ONLY TO MALE" / " ONLY TO SPECIFIC"/"ONLY UNION "
+-use parser (maybe perl ) to parse the logs and create a simple to look at chart of what whs asbmitted and how many errors were there.
+-add a function get_Time() - that returns the current time in NY.maybe via a json web api
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+DONE-right now only looking at top offer. We should look at the top 10 offers
+-list of banned productions.TODO
+
+right now if an offer is not submitted because it is only for Females for example, we keep checking it all night long and there is clicking on the link all night long!!
+The smart thing would be to look in our Jobs list if we already considered that role by comparing the Role String.
+
+-------------
+TODO -SQL DB on cloud.
+-Clean Code - functions , clear working 
+-Decision making - age, union issues, 
+-messaging 
+-error handeling:
+	 - what happened if network falls, 
+	 -what happens when role disappease from site
+	  - what happens in the prog gets stuck - after 2 min. of stuck - how to rebot itself

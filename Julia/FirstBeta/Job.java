@@ -26,13 +26,19 @@ public class Job {
 	String currentOffer;
 
 	String offerRole;
+	String offerCharacterName="";
+	String offerCharacterDetails = "";
 	String offerProjectName;
 	String offerShootDate;
 	String offerTypeProject;
 	String offerRate;
 	String offerPaying;
 	String offerCastingDirector;
+	String offerAssociateCastingDirector;
+	String offerAssistant;
+	String offerProductionStartDate;
 	String offerUnionStatus;
+	String offerLocation;
 	String offerPostedTime;
 	String offerListing;
 	String offerListingFirst;
@@ -43,6 +49,9 @@ public class Job {
 	String offerTimeRoleAdded = "";
 	String offerSubmittionDateTime = "";
 	String message = "";
+	String offerSubmittionElectronically;
+	String offerProductionDetails = "";
+	
 	 
 	boolean isSag;
 	boolean isEthnicity;
@@ -191,6 +200,26 @@ public class Job {
 		}
 	};
 
+	
+
+	public String getOfferCharacterName() {
+		return offerCharacterName;
+	};
+
+	public void setOfferCharacterName(String data) {
+		offerCharacterName = data;
+	};
+ 
+
+	public String getOfferCharacterDetails() {
+		return offerCharacterDetails;
+	};
+
+	public void setOfferCharacterDetails(String data) {
+		offerCharacterDetails = data;
+	};
+ 
+	
 	public String getNotice() {
 		return notice;
 	};
@@ -288,6 +317,16 @@ public class Job {
 		message = newMessage;
 	};
 
+	
+	public String getProductionDetails() {
+		return offerProductionDetails;
+	};
+
+ 
+	public void addToProductionDetails(String data) {
+		offerProductionDetails += (new String (data)).concat(" ");
+	}
+	
 	public void addToMessage(String newMessage) {
 		message += new String(message.concat(" ").concat(newMessage));
 	};
@@ -308,6 +347,47 @@ public class Job {
 		offerHasBeenSubmitted = newBit;
 	};
 
+
+	public void readNoticeAA() {
+		// this reads the notice and sets all the Job params accordingly.
+		String allData = new String(this.offerProductionDetails);
+		String allDataLowerCase = new String(allData).toLowerCase();
+		String allCharacterData = new String(this.offerCharacterDetails);
+		String allCharacterDataLowerCase = new String(allCharacterData).toLowerCase();
+		
+		// SAG
+				if ((this.getOfferUnionStatus()).contains("SAG") || (this.getOfferUnionStatus()).contains("sag")|| (this.getOfferUnionStatus()).startsWith("UNION")|| (this.getOfferUnionStatus()).startsWith("union")) {
+					setIsSag(true);
+				}
+
+				if ((allDataLowerCase.contains("\tsag")) || (allDataLowerCase.contains(" sag ")) || (allDataLowerCase.startsWith("union"))
+						|| (allDataLowerCase.contains("\tunion")) || (allDataLowerCase.contains(" union")) || (allDataLowerCase.startsWith("union"))) {
+					setIsSag(true);
+				}
+				
+		// MALE
+//check if first name of character is a male name  - API using
+				
+				if ((allCharacterDataLowerCase).contains(" male")||(allCharacterDataLowerCase.startsWith("male"))) {
+					setIsMale(true);
+				}
+				if ((allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("male")) || (allCharacterDataLowerCase.contains(" men"))
+						|| (allCharacterDataLowerCase.contains(" man ")) || (allCharacterDataLowerCase.contains("actor ")) || (allCharacterDataLowerCase.startsWith("men"))
+						|| (allCharacterDataLowerCase.toLowerCase().contains(" male"))) {
+					setIsMale(true);
+				}
+				
+				// ETHNICITY
+				if ((allCharacterDataLowerCase.contains("all ethnicities")) || (allCharacterDataLowerCase.contains("caucasian"))) {
+					setIsEthnicity(true);
+				}
+				
+				// AGE
+
+				calcAgeRange(allCharacterData);
+	}
+	
+	
 	public void readNotice() {
 		// this reads the notice and sets all the Job params accordingly.
 
@@ -394,8 +474,11 @@ public class Job {
 		String delims = "[-,'to']";
 		String[] tokens = offerListingAgesHint.split(delims);
 		try {
+			
 			ageMin = new String(tokens[0]);
 			ageMax = new String(tokens[1]);
+			if((ageMin.length() <1)&&(ageMax.length() <1))
+			{return;}
 			Double maybeAgeMin = new Double(Double.parseDouble(ageMin.trim()));
 			Double maybeAgeMax = new Double(Double.parseDouble(ageMax.trim()));
 			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
@@ -433,7 +516,11 @@ public class Job {
 			this.setDecisionSubmit(true);
 		}
 	}
-
+	public void makeDecision() {
+		printDecisionMakingVars(this);
+		this.setDecisionSubmit(true);
+	 
+	}
 	public void fillTalentNote() {
 		
 		String allData = (this.getOfferRole()).concat(" ").concat(offerListingNotes.toLowerCase());

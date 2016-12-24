@@ -1,0 +1,98 @@
+red check on left:
+
+SECOND row:
+xpath=(//img[@alt='Submitted On Project'])[2]
+//div[@id='mainContent']/div[3]/table/tbody/tr[1+ROW]/td/img
+//div[@id='mainContent']/div[3]/table/tbody/tr[2]/td/img
+//div[@id='mainContent']/div[3]/table/tbody/tr[2]/td/img
+//div[@id='mainContent']/div[3]/table/tbody/tr[2]/td/img
+
+includes:
+src="/gui/check.gif" alt="Submitted On Project" title="Submi
+
+
+verifyElementNotPresent
+
+xpath=(//img[@alt='Submitted On Project'])[2]
+//div[@id='mainContent']/div[3]/table/tbody/tr[3]/td/img
+
+//div[@id='mainContent']/div[5]/table/tbody/tr[1]/td[4]
+
+
+
+currently in code:
+LEFT:
+//div[@id='mainContent']/div[5]/table/tbody/tr[2
+
+
+
+CHARACTERS PAGE:
+
+THE NAME OF THE PROJECT
+div[@id=mainContent]/div[2]/table/tbody/tr/td/p     
+
+TimeDateRoleAdded:
+----------------
+//div[@id='mainContent']/table/tbody/tr/td
+
+PRODUCTION DATA LEFT
+//div[@id='mainContent']/table/tbody/tr/td/p
+
+PRODUCTION DATA RIGHT
+//div[@id='mainContent']/table/tbody/tr/td[3]/p
+
+SUBMIT ELECTORNICALLY
+//div[@id='mainContent']/table/tbody/tr/td[5]/td
+
+CASTING (second appearance)
+//div[@id='mainContent']/table/tbody/tr/td[5]/td[3]
+
+NAME OF CHAR
+//div[@id='mainContent']/table[2]/tbody/tr/td/span
+//div[@id='mainContent']/table[2]/tbody/tr/td/a
+
+
+IF SPAN HAS ATTRIBUTE "class="role_submitted"
+
+
+DETAIL OF CHAR
+//div[@id='mainContent']/table[2]/tbody/tr/td
+
+
+/html/body/div[2]/table[2]/tbody/tr/td/a
+//div[@id='mainContent']/table[2]/tbody/tr/td/a
+
+CHARACTER #2:
+//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+IF A HAS ATTRIBUTE CLASS="breakdown-open-add-role"
+
+AA_ROLE_NUMBER_ AS ATTRIBUTE 'NAME'
+ 
+/html/body/div[2]/table[2]/tbody/tr/td/p[2]/a
+
+
+
+TOP LINK TO ROLE
+/html/body/div[2]/table[2]/tbody/tr/td/a
+html body div#mainContent.container table.text tbody tr td a.breakdown-open-add-role
+SECOND ROLE:
+/html/body/div[2]/table[2]/tbody/tr/td/p[2]/a
+html body div#mainContent.container table.text tbody tr td p a.breakdown-open-add-role
+THIRD ROLE:
+/html/body/div[2]/table[2]/tbody/tr/td/p[4]/a
+html body div#mainContent.container table.text tbody tr td p a.breakdown-open-add-role
+
+FORTH ROLE:
+/html/body/div[2]/table[2]/tbody/tr/td/p[6]/a
+html body div#mainContent.container table.text tbody tr td p a.breakdown-open-add-role
+
+X'TH ROLE:
+/html/body/div[2]/table[2]/tbody/tr/td/p[ (2 * X) ]/a
+html body div#mainContent.container table.text tbody tr td p a.breakdown-open-add-role
+
+
+
+--- after submitting 2nd offer
+FORTH ROLE:
+/html/body/div[2]/table[2]/tbody/tr/td/p[6]/a
+html body div#mainContent.container table.text tbody tr td p a.breakdown-open-add-role

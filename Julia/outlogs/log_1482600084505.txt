@@ -1,0 +1,44 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region  
+INFO - .
+INFO - J: Making sure there is no GREEN STAR
+INFO - Checking for red check at row number: 8
+INFO - offer not submitted - lets try it.
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - entered character breakdown
+INFO - prodDetailsLeftWithTimeRoleAdded=
+INFO - Monday, Nov. 14, 2016, 1:01 PM Pacific
+HANDFUL OF KEYS: THE STORY OF THOMAS "FATS" WALLER
+Feature Film
+NON-UNION
+Pay rate: $125 per day minimum / negotiable
+Travel & accommodations provided if necessary
+INFO - parse it
+INFO - prodDetailsLeft=
+INFO - HANDFUL OF KEYS: THE STORY OF THOMAS "FATS" WALLER
+Feature Film
+NON-UNION
+Pay rate: $125 per day minimum / negotiable
+Travel & accommodations provided if necessary
+INFO - parse it
+INFO - parse it

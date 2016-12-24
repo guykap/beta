@@ -97,14 +97,13 @@ public class Beta {
 	public void setUp() throws Exception {
 
 	}
-	
+
 	@Test
 	public void testBetaAA() throws Throwable {
 		bestLog.log("Actors Access");
 		testBetaB();
 	}
 
-	
 	public void testBetaCN() throws Throwable {
 		bestLog.log("Casting Networks");
 		testBetaB();
@@ -176,7 +175,7 @@ public class Beta {
 		driver.findElement(By.id("password")).sendKeys(sam.getAaPassword());
 		driver.findElement(By.id("login-btn")).click();
 
-		//Breath.deepBreath();
+		// Breath.deepBreath();
 		Breath.breath();
 		if (!verifyLocation("//p[@id='breadcrumb']", "breakdown services, ltd")) {
 			bestLog.log("Can't login.");
@@ -198,54 +197,66 @@ public class Beta {
 			throw new Exception();
 		}
 		Breath.breath();
-		for (int rowNum = 0; rowNum < 3; rowNum++) {
+		for (int rowNum = 8; rowNum < 10; rowNum++) {
 			String srcOfImg = "";
 			log('j');
 			bestLog.log("Checking for red check at row number: " + rowNum);
 			int trCheckRow = (2 + rowNum);
-			
+
 			String checkPos = ((new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
 					.concat(String.valueOf(trCheckRow))).concat("]/td/img");
-			
-			
-				//verify that there is no red check on left of offer row
-				  try {
-				      assertFalse(isElementPresent(By.xpath("//div[@id='mainContent']/div[3]/table/tbody/tr[3]/td/img")));
-				      //true if the element is present, false otherwise
-				      bestLog.log("Check at " + rowNum + " from top.");
-						continue;
-				    } catch (Error e) {
-					      bestLog.log("offer not submitted - lets try it.");
-				    }
-				
+
+			// verify that there is no red check on left of offer row
+			try {
+				assertFalse(isElementPresent(By.xpath("//div[@id='mainContent']/div[3]/table/tbody/tr[3]/td/img")));
+				// true if the element is present, false otherwise
+				bestLog.log("Check at " + rowNum + " from top.");
+				continue;
+			} catch (Error e) {
+				bestLog.log("offer not submitted - lets try it.");
+			}
+
 			offer = new Job(sam.getActorId());
 			handleAAOffer(trCheckRow);
-			if (offerHasBeenConsideredBefore(offer)) {
+			if (offerHasBeenConsideredBeforeAA(offer)) {
 				continue;
 			}
-			
-			//in this production there might be several roles ( offers) - so we will open the page and read those character roles
-			//click the link
-			String leftPart = (new String ("//div[@id='mainContent']/div[3]/table/tbody/tr[")).concat(String.valueOf(trCheckRow));
+
+			// in this production there might be several roles ( offers) - so we
+			// will open the page and read those character roles
+			// click the link
+			String leftPart = (new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
+					.concat(String.valueOf(trCheckRow));
 			String path = (new String(leftPart)).concat("]/td[3]/a");
-			
-			
+
 			try {
 				driver.findElement(By.xpath(path)).click();
-				//offer.setOfferProjectName(new String(driver.findElement(By.xpath(path)).getText()));
-			}catch(Exception e){
-				//link hasn't openned.
+				// offer.setOfferProjectName(new
+				// String(driver.findElement(By.xpath(path)).getText()));
+			} catch (Exception e) {
+				// link hasn't openned.
 				continue;
 			}
-			 
-	//verirfy that the characters in production page opened 		
-			readAllCharactersOnProduction();
-			
+
+			windowStatus();
+			driver.switchTo().window(getSonWindowHandler());
+			windowStatus();
+			// verify that the characters in production page opened
+			if (!verifyLocation("//table/tbody/tr/td/p", offer.getOfferProjectName())) {
+				bestLog.log("Cannot find the production name on the new page");
+				killSubWindowAndMoveToParentWindow();
+				continue;
+			}
+
+			scrapAllCharactersOnProduction();
+
 			Jobs.add(offer);
 			// debug
 			Breath.silentCount();
-			offer.readNotice();
-			offer.makeDecision();
+			offer.readNoticeAA();
+		//	offer.makeDecision();
+			offer.makeDebugDecision();
+			bestLog.printDecisionMakingVars(offer);
 			if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
 				bestLog.printDecisionMakingVars(offer);
 				continue;
@@ -358,7 +369,7 @@ public class Beta {
 				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
 				offer = new Job(sam.getActorId());
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
-				if (offerHasBeenConsideredBefore(offer)) {
+				if (offerHasBeenConsideredBeforeCN(offer)) {
 					continue;
 				}
 				Jobs.add(offer);
@@ -458,46 +469,144 @@ public class Beta {
 		}
 
 		try {
-			  path = (new String(leftPart)).concat("]/td[3]/a");
+			path = (new String(leftPart)).concat("]/td[3]/a");
 			offer.setOfferProjectName(new String(driver.findElement(By.xpath(path)).getText()));
 		} catch (Exception e) {
 			offer.setOfferProjectName(new String(""));
 		}
 
 		try {
-			  path = (new String(leftPart)).concat("]/td[4]");
+			path = (new String(leftPart)).concat("]/td[4]");
 			offer.setOfferTypeProject(new String(driver.findElement(By.xpath(path)).getText()));
 		} catch (Exception e) {
 			offer.setOfferTypeProject(new String(""));
 		}
 
 		try {
-			  path = (new String(leftPart)).concat("]/td[5]");
+			path = (new String(leftPart)).concat("]/td[5]");
 			offer.setOfferCastingDirector(new String(driver.findElement(By.xpath(path)).getText()));
 		} catch (Exception e) {
 			offer.setOfferCastingDirector(new String(""));
 		}
 
 		try {
-			  path = (new String(leftPart)).concat("]/td[6]");
+			path = (new String(leftPart)).concat("]/td[6]");
 			offer.setOfferShootDate(new String(driver.findElement(By.xpath(path)).getText()));
 		} catch (Exception e) {
 			offer.setOfferShootDate(new String(""));
 		}
 
 		try {
-			  path = (new String(leftPart)).concat("]/td[7]");
+			path = (new String(leftPart)).concat("]/td[7]");
 			offer.setOfferUnionStatus(new String(driver.findElement(By.xpath(path)).getText()));
 		} catch (Exception e) {
 			offer.setOfferUnionStatus(new String(""));
 		}
 	}
+
+	private void scrapAllCharactersOnProduction() {
+		bestLog.log("entered character breakdown");
+		// for each character - we open a new offer
+		// CHARACTER #1
+		// timeDate
+		
+		String prodDetailsLeftWithTimeRoleAdded;
+		String prodDetailsLeft;
+		String prodDetialsRight;
+		String nameOfCharacter;
+		String nameOfCharacterAndDetailsUnder;
+		String detailsOfCharacter;
+		int numOfCharactersInProduction;
+		
+		
+		
 	
-	
-	private void readAllCharactersOnProduction(){
-		bestLog.log("entered");
+			 
+				  
+				try {	
+				String tag2 = new String(
+						driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td")).getText());
+				
+				prodDetailsLeftWithTimeRoleAdded = new String (tag2);
+				bestLog.log("prodDetailsLeftWithTimeRoleAdded=");bestLog.log(tag2);
+				parseProdDetailsLeftWithTimeRoleAdded(prodDetailsLeftWithTimeRoleAdded);
+				}catch(Exception e){}
+				try {String tag3 = new String(
+						driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td/p")).getText());
+				prodDetailsLeft = new String (tag3);bestLog.log("prodDetailsLeft=");bestLog.log(tag3);}catch(Exception e){}
+				try {String tag4 = new String(
+						driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
+				prodDetialsRight = new String(tag4);
+				parseProdDetialsRight(prodDetialsRight);
+				bestLog.log("prodDetailsRight = ");bestLog.log(tag4);}catch(Exception e){} try {String tag6 = new String(
+						driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td")).getText());
+				parseNameOfCharacterAndDetailsUnder(tag6);
+				bestLog.log("6 - nameOfCharacterAndDetailsUnder = ");bestLog.log(tag6);}catch(Exception e){}
+				try {String tag11 = new String(
+					
+						driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a")).getAttribute("class"));
+				bestLog.log("11 - breakdown-open-add-role:");bestLog.log(tag11);}catch(Exception e){}
+				try {String tag12 = new String(
+						driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a")).getAttribute("name"));
+				bestLog.log("12 - AA_ROLE_NUMBER:");bestLog.log(tag12);}catch(Exception e){}
+ 				try {
+					offer.setOfferCharacterName( new String(driver.findElement(By.xpath("/html/body/div[2]/table[2]/tbody/tr/td/a")).getText()));
+			bestLog.log("8");bestLog.log(offer.getOfferCharacterName());} catch (Exception e) {
+				bestLog.log("try again mother fucker.");
+				
+				
+			}
+		
 	}
 
+	private void parseProdDetailsLeftWithTimeRoleAdded(String data){
+		bestLog.log("parse it");
+		offer.addToProductionDetails(data);
+		String delims = "['\n']";
+		String[] tokens = data.split(delims);
+		offer.setOfferTimeRoleAdded(tokens[0]);
+		offer.setOfferTypeProject(tokens[2]);
+		offer.setOfferUnionStatus(tokens[3]);
+		String details = tokens[1];
+	}
+	
+	private void parseProdDetialsRight(String data){
+		 //ALL parsing should be done with REGEX , but right now only store in the DB all the production info as one long String
+		bestLog.log("parse it");
+		offer.addToProductionDetails(data);
+		/*
+		String delims = "[[,],\n]";
+		String[] tokens = data.split(delims);
+		String name= tokens[0];
+		String details = tokens[1];
+		String startDate = 
+		String location = tokens[5];
+		offer.setProductionDetails(data);
+		*/
+	}
+	private void parseprodDetailsLeft(String data){
+		bestLog.log("parse it");
+		offer.addToProductionDetails(data);
+		String delims = "[[,],\n]";
+		String[] tokens = data.split(delims);
+		String name= tokens[0];
+		String details = tokens[1];
+	}
+	
+	private void nameOfCharacter(){}
+	private void parseNameOfCharacterAndDetailsUnder(String data){
+		bestLog.log("parse it");
+//		String delims = "['[',']','\n']";
+		String delims ="\\[|\\]";
+		String[] tokens = data.split(delims);
+		String name= new String (tokens[1]);
+		offer.setOfferCharacterName(name.trim());
+		String details = new String (tokens[2]);
+		offer.setOfferCharacterDetails(details);
+		}
+	
+	
+	
 	private void handleBackgroundWorkOffer(boolean isBackgroundWork, int row) {
 
 		offer.setIsBackgroundWork(isBackgroundWork);
@@ -868,7 +977,7 @@ public class Beta {
 		return true;
 	}
 
-	static public boolean offerHasBeenConsideredBefore(Job consideredOffer) {
+	static public boolean offerHasBeenConsideredBeforeCN(Job consideredOffer) {
 		// checkcing in the list of Jobs for another offer with the same ROLE
 		// and same PROJECT NAME values.
 		for (Job offer : Jobs) {
@@ -884,25 +993,40 @@ public class Beta {
 		return false;
 	}
 
+	static public boolean offerHasBeenConsideredBeforeAA(Job consideredOffer) {
+		// checkcing in the list of Jobs for another offer with the same ROLE
+		// and same PROJECT NAME values.
+		for (Job offer : Jobs) {
+			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
+					&& (!offer.getHasBeenSubmitted())) {
+				bestLog.log(
+						"Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
+				bestLog.printDecisionMakingVars(offer);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	static public String intToRegion(int intRegion) {
 		switch ((char) intRegion) {
-		case (char)'1':
+		case (char) '1':
 			return "los angeles";
-		case (char)'2':
+		case (char) '2':
 			return "new york";
-		case (char)'3':
+		case (char) '3':
 			return "vancouver";
-		case (char)'4':
+		case (char) '4':
 			return "chicago";
-		case (char)'5':
+		case (char) '5':
 			return "florida";
-		case (char)'6':
+		case (char) '6':
 			return "toronto";
-		case (char)'7':
+		case (char) '7':
 			return "texas";
-		case (char)'8':
+		case (char) '8':
 			return "hawaii";
-		case (char)'9':
+		case (char) '9':
 			return "southeast";
 		default:
 			return "";
