@@ -19,6 +19,7 @@ public class Job {
 
 	// PRIVATE:
 	String offerId;
+	String actorIDSubmitted;
 	boolean offerHasBeenSubmitted;
 	String notice = "";
 	String noticeLowerCase;
@@ -64,8 +65,8 @@ public class Job {
 		this.offerId = new String((new Long(System.currentTimeMillis())).toString());
 	}
 
-	public Job(String newNotice) {
-		notice = new String(newNotice);
+	public Job(String actorIdSubmitted) {
+		this.actorIDSubmitted = new String(actorIdSubmitted);
 		// this age temp for this test version
 	}
 
@@ -75,6 +76,14 @@ public class Job {
 
 	public void setOfferId(String newData) {
 		offerId = newData;
+	};
+
+	public String getActorIDSubmitted() {
+		return actorIDSubmitted;
+	};
+
+	public void setActorIDSubmitted(String newData) {
+		actorIDSubmitted = newData;
 	};
 
 	public String getOfferRole() {

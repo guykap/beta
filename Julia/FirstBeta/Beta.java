@@ -73,7 +73,7 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug
-			sam = new Actor(1, "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+			sam = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
 		} catch (Exception e) {
 
 		}
@@ -97,13 +97,14 @@ public class Beta {
 	public void setUp() throws Exception {
 
 	}
-
+	
+	@Test
 	public void testBetaAA() throws Throwable {
 		bestLog.log("Actors Access");
 		testBetaB();
 	}
 
-	@Test
+	
 	public void testBetaCN() throws Throwable {
 		bestLog.log("Casting Networks");
 		testBetaB();
@@ -336,7 +337,7 @@ public class Beta {
 
 			if (srcOfImg.contains("spacer.gif")) {
 				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
-				offer = new Job();
+				offer = new Job(sam.getActorId());
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
 				if (offerHasBeenConsideredBefore(offer)) {
 					continue;

@@ -2,7 +2,7 @@ package FirstBeta;
 
 public class Actor {
 
-	private int id;
+	private String actorId;
 	private String cnUsername;
 	private String cnPassword;
 	private String aaUsername;
@@ -24,8 +24,8 @@ public class Actor {
 	private boolean confirmedBilling;
 
 	
-	public Actor(int actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword){
-		id = actorId;
+	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword){
+		this.actorId = actorId;
 		this.setCnUsername(cnUsername);
 		this.setCnPassword(cnPassword);
 		this.setAaUsername(aaUserName);
@@ -67,5 +67,15 @@ public class Actor {
 
 	public void setAaPassword(String aaPassword) {
 		this.aaPassword = aaPassword;
+	}
+
+
+	public String getActorId() {
+		return actorId;
+	}
+
+
+	public void setActorId(String actorId) {
+		this.actorId = actorId;
 	}
 }
