@@ -188,7 +188,7 @@ public class Beta {
 		String regionUrl = (new String("http://www.actorsaccess.com/projects/?view=breakdowns&region="))
 				.concat(String.valueOf(region));
 		driver.get(regionUrl);
-		bestLog.log((new String("Region  ").concat(intToRegion(region))));
+		bestLog.log((new String("Region ").concat(intToRegion(region))));
 		String tag = new String(driver.findElement(By.xpath("//p[@id='breadcrumb']")).getText());
 
 		if (!verifyLocation("//p[@id='breadcrumb']",
@@ -539,14 +539,15 @@ public class Beta {
 			return totalNumOfOffersInProduction;
 		}
 
+		//begin adding the characters
+		Job currentOffer = parentOffer;
 		int rowNum = 0;
-		int position = 0;
 		boolean moreCharsAvil = true;
 		while (moreCharsAvil) {
 
 			try {
 				String nameOfCharacter = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
-				parseNameOfCharacterAndDetailsUnder(offer, nameOfCharacter);
+				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacter);
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacter));
 			} catch (Exception e) {
 			}
@@ -556,9 +557,10 @@ public class Beta {
 				moreCharsAvil = true;
 				totalNumOfOffersInProduction ++;
 				//create another offer with the that will only differ in the name of character and character details.
-				Jobs.add(offer);
-				Job oldOffer = offer;
-				offer = new Job(oldOffer.getActorIDSubmitted());
+				Jobs.add(currentOffer);
+				Job oldOffer = currentOffer;
+				//calling the Copy C'or of Job
+				currentOffer = new Job(oldOffer);
 				
 				
 				/*
@@ -1050,27 +1052,26 @@ public class Beta {
 	}
 
 	static public String intToRegion(int intRegion) {
-		switch ((char) intRegion) {
-		case (char) '1':
+ 
+	 if(intRegion == 1)
 			return new String("los angeles");
-		case (char) '2':
+	 if(intRegion == 2)
 			return new String("new york");
-		case (char) '3':
+	 if(intRegion == 3)
 			return new String("vancouver");
-		case (char) '4':
+	 if(intRegion == 4)
 			return new String("chicago");
-		case (char) '5':
+	 if(intRegion == 5)
 			return new String("florida");
-		case (char) '6':
+	 if(intRegion == 6)
 			return new String("toronto");
-		case (char) '7':
+	 if(intRegion == 7)
 			return new String("texas");
-		case (char) '8':
+	 if(intRegion == 8)
 			return new String("hawaii");
-		case (char) '9':
+	 if(intRegion == 9)
 			return new String("southeast");
-		default:
+		//default 
 			return new String("");
-		}
 	}
 }
