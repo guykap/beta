@@ -41,6 +41,8 @@ The smart thing would be to look in our Jobs list if we already considered that 
 
 -Night watch - only one thead acts as a keep alive to check in any new offers appear. Once something new appears - wake all the Actors and they start submitting.
 -This same algorithem can be used throught the day as well. ONLY one robot actor thead checks for new offers, reads them into the DB and only the right actors for the role go aheasd and submit themselves.
+-Add findMyIp at the top of the log. So each process of browswer logs the ip used.
+
 -------------
 TODO -SQL DB on cloud.
 -Clean Code - functions , clear working 

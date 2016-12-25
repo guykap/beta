@@ -248,7 +248,7 @@ public class Beta {
 				continue;
 			}
 
-			scrapAllCharactersOnProduction();
+			createOfferForEachCharacteronProduction();
 
 			// debug
 			Breath.silentCount();
@@ -504,39 +504,31 @@ public class Beta {
 		}
 	}
 
-	private int scrapAllCharactersOnProduction() {
-		// returns the number of characters found and offers created
-		bestLog.log("entered character breakdown");
+	private int createOfferForEachCharacteronProduction() {
+		// returns the number of offers created and added to Jobs list from the
+		// found characters on the production
+		bestLog.log("Entered character breakdown");
 		// for each character - we open a new offer
 		// CHARACTER #1
-		// timeDate
-
-		String prodDetailsLeftWithTimeRoleAdded;
-		String prodDetailsLeft;
-		String prodDetialsRight;
-		String nameOfCharacter;
+		// timeDate	 
 		String nameOfCharacterAndDetailsUnder;
 		String detailsOfCharacter;
 		int numOfCharactersInProduction;
 
 		try {
-			String tag2 = new String(
+			String prodDetailsLeftWithTimeRoleAdded = new String(
 					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td")).getText());
-
-			prodDetailsLeftWithTimeRoleAdded = new String(tag2);
-			bestLog.log("prodDetailsLeftWithTimeRoleAdded=");
-			bestLog.log(tag2);
+			bestLog.log((new String("prodDetailsLeftWithTimeRoleAdded=")).concat(prodDetailsLeftWithTimeRoleAdded));
 			parseProdDetailsLeftWithTimeRoleAdded(prodDetailsLeftWithTimeRoleAdded);
 		} catch (Exception e) {
 		}
 
 		try {
-			String tag4 = new String(
+			String prodDetialsRight = new String(
 					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
-			prodDetialsRight = new String(tag4);
 			parseProdDetialsRight(prodDetialsRight);
-			bestLog.log("prodDetailsRight = ");
-			bestLog.log(tag4);
+	///		bestLog.log((new String("prodDetailsRight = ")).concat(prodDetialsRight));
+
 		} catch (Exception e) {
 		}
 
@@ -546,25 +538,22 @@ public class Beta {
 		while (moreCharsAvil) {
 
 			try {
-				String tag6 = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
-				parseNameOfCharacterAndDetailsUnder(tag6);
-				bestLog.log("6 - nameOfCharacterAndDetailsUnder = ");
-				bestLog.log(tag6);
+				String nameOfCharacter = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
+				parseNameOfCharacterAndDetailsUnder(offer, nameOfCharacter);
+				bestLog.log((new String("6 - nameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacter));
 			} catch (Exception e) {
 			}
 
-			
-			
-			if(verifyLocation(tabLocation(rowNum),"")){
-			rowNum++;
-			moreCharsAvil =true;
-			Job nextOffer = new Job(offer.getActorIDSubmitted());
-			nextOffer.addToProductionDetails( offer.getProductionDetails());
-			
-			
-			
-			}else{
-				moreCharsAvil =false;
+			if (verifyLocation(tabLocation(rowNum), "")) {
+				rowNum++;
+				moreCharsAvil = true;
+				
+				/*
+				Job nextOffer = new Job(offer.getActorIDSubmitted());
+				nextOffer.addToProductionDetails(offer.getProductionDetails());
+*/
+			} else {
+				moreCharsAvil = false;
 			}
 		}
 	}
@@ -578,8 +567,6 @@ public class Beta {
 		String leftPart = "//div[@id='mainContent']/table[2]/tbody/tr/td[";
 		String rightPart = "]/a";
 		return ((new String(leftPart)).concat(String.valueOf(row)).concat(rightPart));
-	
-	
 	}
 
 	/*
@@ -618,27 +605,31 @@ public class Beta {
 		 */
 	}
 
-	private void parseprodDetailsLeft(String data) {
+	private void parseprodDetailsLeft(Job char_offer, String data) {
 		bestLog.log("parse it");
-		offer.addToProductionDetails(data);
+		char_offer.addToProductionDetails(data);
+		
+		//Here we should parse the director name, casting dir, assistant and so on
+		/*
+		 * 
 		String delims = "[[,],\n]";
 		String[] tokens = data.split(delims);
 		String name = tokens[0];
 		String details = tokens[1];
+		*/
 	}
 
 	private void nameOfCharacter() {
 	}
 
-	private void parseNameOfCharacterAndDetailsUnder(String data) {
+	private void parseNameOfCharacterAndDetailsUnder(Job char_offer, String data) {
 		bestLog.log("parse it");
-		// String delims = "['[',']','\n']";
 		String delims = "\\[|\\]";
 		String[] tokens = data.split(delims);
 		String name = new String(tokens[1]);
-		offer.setOfferCharacterName(name.trim());
+		char_offer.setOfferCharacterName(name.trim());
 		String details = new String(tokens[2]);
-		offer.setOfferCharacterDetails(details);
+		char_offer.setOfferCharacterDetails(details);
 	}
 
 	private void handleBackgroundWorkOffer(boolean isBackgroundWork, int row) {
