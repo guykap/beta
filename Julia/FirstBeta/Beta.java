@@ -566,7 +566,7 @@ public class Beta {
 				nextOffer.addToProductionDetails(offer.getProductionDetails());
 */
 			} else {
-				moreCharsAvil =false;
+				moreCharsAvil =false; 
 			}
 		}
 		return totalNumOfOffersInProduction;
@@ -604,14 +604,14 @@ public class Beta {
 		char_offer.setOfferTimeRoleAdded(tokens[0]);
 		char_offer.setOfferTypeProject(tokens[2]);
 		char_offer.setOfferUnionStatus(tokens[3]);
-		String details = tokens[1];
+	//	String details = tokens[1];
 	}
 
 	private void parseProdDetialsRight(Job char_offer,String data) {
 		// ALL parsing should be done with REGEX , but right now only store in
 		// the DB all the production info as one long String
 		bestLog.log("parse it");
-		offer.addToProductionDetails(data);
+		char_offer.addToProductionDetails(data);
 		/*
 		 * String delims = "[[,],\n]"; String[] tokens = data.split(delims);
 		 * String name= tokens[0]; String details = tokens[1]; String startDate
@@ -645,7 +645,7 @@ public class Beta {
 		String name = new String(tokens[1]);
 		char_offer.setOfferCharacterName(name.trim());
 		String details = new String(tokens[2]);
-		char_offer.setOfferCharacterDetails(details);
+		char_offer.setOfferCharacterDetails(details.trim());
 	}
 
 	private void handleBackgroundWorkOffer(boolean isBackgroundWork, int row) {
@@ -1052,25 +1052,25 @@ public class Beta {
 	static public String intToRegion(int intRegion) {
 		switch ((char) intRegion) {
 		case (char) '1':
-			return "los angeles";
+			return new String("los angeles");
 		case (char) '2':
-			return "new york";
+			return new String("new york");
 		case (char) '3':
-			return "vancouver";
+			return new String("vancouver");
 		case (char) '4':
-			return "chicago";
+			return new String("chicago");
 		case (char) '5':
-			return "florida";
+			return new String("florida");
 		case (char) '6':
-			return "toronto";
+			return new String("toronto");
 		case (char) '7':
-			return "texas";
+			return new String("texas");
 		case (char) '8':
-			return "hawaii";
+			return new String("hawaii");
 		case (char) '9':
-			return "southeast";
+			return new String("southeast");
 		default:
-			return "";
+			return new String("");
 		}
 	}
 }

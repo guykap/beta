@@ -78,6 +78,21 @@ public class Job {
 		this.actorIDSubmitted = new String(actorIdSubmitted);
 		// this age temp for this test version
 	}
+	
+	public Job(Job sameProductionOffer){
+		//Copy Constructor .  That returns a Job with the same Production details left , Production Details right , and actor_Id
+		this.setActorIDSubmitted(sameProductionOffer.getActorIDSubmitted());
+		this.setOfferPostedTime(sameProductionOffer.getOfferPostedTime());
+		this.addToProductionDetails(sameProductionOffer.getProductionDetails());
+		this.setOfferUnionStatus(sameProductionOffer.getOfferUnionStatus());
+		this.setOfferTypeProject(sameProductionOffer.getOfferTypeProject());
+		this.setOfferTimeRoleAdded(sameProductionOffer.getOfferTimeRoleAdded());
+		this.setOfferShootDate(sameProductionOffer.getOfferShootDate());
+		this.setOfferTimeRoleAdded(sameProductionOffer.getOfferTimeRoleAdded());
+		this.setOfferPostedTime(sameProductionOffer.getOfferPostedTime());
+		this.setOfferCastingDirector(sameProductionOffer.getOfferCastingDirector());
+		
+	}
 
 	public String getOfferId() {
 		return offerId;
