@@ -248,7 +248,8 @@ public class Beta {
 				continue;
 			}
 
-			createOfferForEachCharacteronProduction();
+			bestLog.log("Number of Characters found in this production");
+			bestLog.log(String.valueOf(totalOffersInThisProd(offer)));
 
 			// debug
 			Breath.silentCount();
@@ -504,32 +505,38 @@ public class Beta {
 		}
 	}
 
-	private int createOfferForEachCharacteronProduction() {
+	private int totalOffersInThisProd(Job parentOffer) {
 		// returns the number of offers created and added to Jobs list from the
 		// found characters on the production
 		bestLog.log("Entered character breakdown");
 		// for each character - we open a new offer
 		// CHARACTER #1
 		// timeDate	 
+		
 		String nameOfCharacterAndDetailsUnder;
 		String detailsOfCharacter;
-		int numOfCharactersInProduction;
+		int totalNumOfOffersInProduction=1;
 
 		try {
 			String prodDetailsLeftWithTimeRoleAdded = new String(
 					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td")).getText());
 			bestLog.log((new String("prodDetailsLeftWithTimeRoleAdded=")).concat(prodDetailsLeftWithTimeRoleAdded));
-			parseProdDetailsLeftWithTimeRoleAdded(prodDetailsLeftWithTimeRoleAdded);
+			parseProdDetailsLeftWithTimeRoleAdded(parentOffer,prodDetailsLeftWithTimeRoleAdded);
 		} catch (Exception e) {
+			bestLog.log(e.getMessage());
+			return totalNumOfOffersInProduction;
 		}
 
 		try {
 			String prodDetialsRight = new String(
 					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
-			parseProdDetialsRight(prodDetialsRight);
+			parseProdDetialsRight(parentOffer,prodDetialsRight);
+			
 	///		bestLog.log((new String("prodDetailsRight = ")).concat(prodDetialsRight));
 
 		} catch (Exception e) {
+			bestLog.log(e.getMessage());
+			return totalNumOfOffersInProduction;
 		}
 
 		int rowNum = 0;
@@ -540,22 +547,29 @@ public class Beta {
 			try {
 				String nameOfCharacter = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(offer, nameOfCharacter);
-				bestLog.log((new String("6 - nameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacter));
+				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacter));
 			} catch (Exception e) {
 			}
 
 			if (verifyLocation(tabLocation(rowNum), "")) {
 				rowNum++;
 				moreCharsAvil = true;
+				totalNumOfOffersInProduction ++;
+				//create another offer with the that will only differ in the name of character and character details.
+				Jobs.add(offer);
+				Job oldOffer = offer;
+				offer = new Job(oldOffer.getActorIDSubmitted());
+				
 				
 				/*
 				Job nextOffer = new Job(offer.getActorIDSubmitted());
 				nextOffer.addToProductionDetails(offer.getProductionDetails());
 */
 			} else {
-				moreCharsAvil = false;
+				moreCharsAvil =false;
 			}
 		}
+		return totalNumOfOffersInProduction;
 	}
 
 	private String tabLocation(int row) {
@@ -582,18 +596,18 @@ public class Beta {
 	 * bestLog.log(tag12); } catch (Exception e) { }
 	 */
 
-	private void parseProdDetailsLeftWithTimeRoleAdded(String data) {
+	private void parseProdDetailsLeftWithTimeRoleAdded(Job char_offer, String data) {
 		bestLog.log("parse it");
-		offer.addToProductionDetails(data);
+		char_offer.addToProductionDetails(data);
 		String delims = "['\n']";
 		String[] tokens = data.split(delims);
-		offer.setOfferTimeRoleAdded(tokens[0]);
-		offer.setOfferTypeProject(tokens[2]);
-		offer.setOfferUnionStatus(tokens[3]);
+		char_offer.setOfferTimeRoleAdded(tokens[0]);
+		char_offer.setOfferTypeProject(tokens[2]);
+		char_offer.setOfferUnionStatus(tokens[3]);
 		String details = tokens[1];
 	}
 
-	private void parseProdDetialsRight(String data) {
+	private void parseProdDetialsRight(Job char_offer,String data) {
 		// ALL parsing should be done with REGEX , but right now only store in
 		// the DB all the production info as one long String
 		bestLog.log("parse it");
@@ -605,10 +619,11 @@ public class Beta {
 		 */
 	}
 
+	/*
 	private void parseprodDetailsLeft(Job char_offer, String data) {
 		bestLog.log("parse it");
 		char_offer.addToProductionDetails(data);
-		
+		*/
 		//Here we should parse the director name, casting dir, assistant and so on
 		/*
 		 * 
@@ -616,8 +631,9 @@ public class Beta {
 		String[] tokens = data.split(delims);
 		String name = tokens[0];
 		String details = tokens[1];
+		}
 		*/
-	}
+	
 
 	private void nameOfCharacter() {
 	}
