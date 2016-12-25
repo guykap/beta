@@ -511,39 +511,38 @@ public class Beta {
 		// CHARACTER #1
 		// timeDate
 
-			String prodDetailsLeftWithTimeRoleAdded;
-			String prodDetailsLeft;
-			String prodDetialsRight;
-			String nameOfCharacter;
-			String nameOfCharacterAndDetailsUnder;
-			String detailsOfCharacter;
-			int numOfCharactersInProduction;
+		String prodDetailsLeftWithTimeRoleAdded;
+		String prodDetailsLeft;
+		String prodDetialsRight;
+		String nameOfCharacter;
+		String nameOfCharacterAndDetailsUnder;
+		String detailsOfCharacter;
+		int numOfCharactersInProduction;
 
-			try {
-				String tag2 = new String(
-						driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td")).getText());
+		try {
+			String tag2 = new String(
+					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td")).getText());
 
-				prodDetailsLeftWithTimeRoleAdded = new String(tag2);
-				bestLog.log("prodDetailsLeftWithTimeRoleAdded=");
-				bestLog.log(tag2);
-				parseProdDetailsLeftWithTimeRoleAdded(prodDetailsLeftWithTimeRoleAdded);
-			} catch (Exception e) {
-			}
+			prodDetailsLeftWithTimeRoleAdded = new String(tag2);
+			bestLog.log("prodDetailsLeftWithTimeRoleAdded=");
+			bestLog.log(tag2);
+			parseProdDetailsLeftWithTimeRoleAdded(prodDetailsLeftWithTimeRoleAdded);
+		} catch (Exception e) {
+		}
 
-			try {
-				String tag4 = new String(
-						driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
-				prodDetialsRight = new String(tag4);
-				parseProdDetialsRight(prodDetialsRight);
-				bestLog.log("prodDetailsRight = ");
-				bestLog.log(tag4);
-			} catch (Exception e) {
-			}
-			
-			
-			int roleNum = 0;
-			boolean moreCharsAvil = true;
-			while (moreCharsAvil) {
+		try {
+			String tag4 = new String(
+					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
+			prodDetialsRight = new String(tag4);
+			parseProdDetialsRight(prodDetialsRight);
+			bestLog.log("prodDetailsRight = ");
+			bestLog.log(tag4);
+		} catch (Exception e) {
+		}
+
+		int roleNum = 0;
+		boolean moreCharsAvil = true;
+		while (moreCharsAvil) {
 
 			try {
 				String tag6 = new String(
@@ -563,7 +562,7 @@ public class Beta {
 				bestLog.log("try again mother fucker.");
 
 			}
-			}
+		}
 	}
 
 	/*

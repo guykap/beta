@@ -39,6 +39,8 @@ DONE-right now only looking at top offer. We should look at the top 10 offers
 right now if an offer is not submitted because it is only for Females for example, we keep checking it all night long and there is clicking on the link all night long!!
 The smart thing would be to look in our Jobs list if we already considered that role by comparing the Role String.
 
+-Night watch - only one thead acts as a keep alive to check in any new offers appear. Once something new appears - wake all the Actors and they start submitting.
+-This same algorithem can be used throught the day as well. ONLY one robot actor thead checks for new offers, reads them into the DB and only the right actors for the role go aheasd and submit themselves.
 -------------
 TODO -SQL DB on cloud.
 -Clean Code - functions , clear working 
