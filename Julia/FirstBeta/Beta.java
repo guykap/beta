@@ -540,29 +540,46 @@ public class Beta {
 		} catch (Exception e) {
 		}
 
-		int roleNum = 0;
+		int rowNum = 0;
+		int position = 0;
 		boolean moreCharsAvil = true;
 		while (moreCharsAvil) {
 
 			try {
-				String tag6 = new String(
-						driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td")).getText());
+				String tag6 = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(tag6);
 				bestLog.log("6 - nameOfCharacterAndDetailsUnder = ");
 				bestLog.log(tag6);
 			} catch (Exception e) {
 			}
 
-			try {
-				offer.setOfferCharacterName(
-						new String(driver.findElement(By.xpath("/html/body/div[2]/table[2]/tbody/tr/td/a")).getText()));
-				bestLog.log("8");
-				bestLog.log(offer.getOfferCharacterName());
-			} catch (Exception e) {
-				bestLog.log("try again mother fucker.");
-
+			
+			
+			if(verifyLocation(tabLocation(rowNum),"")){
+			rowNum++;
+			moreCharsAvil =true;
+			Job nextOffer = new Job(offer.getActorIDSubmitted());
+			nextOffer.addToProductionDetails( offer.getProductionDetails());
+			
+			
+			
+			}else{
+				moreCharsAvil =false;
 			}
 		}
+	}
+
+	private String tabLocation(int row) {
+		// /html/body/div[2]/table[2]/tbody/tr/td/p[ (2 * (X)) ]/a
+
+		if (row == 0) {
+			return (new String("//div[@id='mainContent']/table[2]/tbody/tr/td"));
+		}
+		String leftPart = "//div[@id='mainContent']/table[2]/tbody/tr/td[";
+		String rightPart = "]/a";
+		return ((new String(leftPart)).concat(String.valueOf(row)).concat(rightPart));
+	
+	
 	}
 
 	/*
