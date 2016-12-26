@@ -30,9 +30,7 @@ public class Actor {
 		this.setCnPassword(cnPassword);
 		this.setAaUsername(aaUserName);
 		this.setAaPassword(aaPassword);
-		 
-	}
-
+		 }
 
 	public String getCnUsername() {
 		return cnUsername;

@@ -67,7 +67,8 @@ public class Job {
 	boolean needTuxedo;
 	boolean needPoliceUniform;
  	boolean decisionSubmit;
-
+  	int numberOfCharactersOnThisProduction;
+ 	
 	public Job() {
 		// String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
 		// this.offerId = new String (Timestamp(System.currentTimeMillis()));
@@ -362,6 +363,17 @@ public class Job {
 		offerHasBeenSubmitted = newBit;
 	};
 
+	public int getNumberOfCharactersOnThisProduction() {
+		return numberOfCharactersOnThisProduction;
+	};
+
+	public void setNumberOfCharactersOnThisProduction(int newBit) {
+		numberOfCharactersOnThisProduction = newBit;
+	};
+
+	
+	
+	
 
 	public void readNoticeAA() {
 		// this reads the notice and sets all the Job params accordingly.

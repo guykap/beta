@@ -234,7 +234,7 @@ public class Beta {
 				// offer.setOfferProjectName(new
 				// String(driver.findElement(By.xpath(path)).getText()));
 			} catch (Exception e) {
-				// link hasn't openned.
+				// link hasn't opened.
 				continue;
 			}
 
@@ -248,20 +248,12 @@ public class Beta {
 				continue;
 			}
 
-			bestLog.log("Number of Characters found in this production");
-			bestLog.log(String.valueOf(totalOffersInThisProd(offer)));
+			totalOffersInThisProd(offer);
+			bestLog.log((new String("Number of Characters found in this production"))
+					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
 
 			// debug
 			Breath.silentCount();
-			offer.readNoticeAA();
-			// offer.makeDecision();
-
-			bestLog.printDecisionMakingVars(offer);
-			if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
-				bestLog.printDecisionMakingVars(offer);
-				continue;
-			}
-
 		}
 	}
 
@@ -532,7 +524,7 @@ public class Beta {
 					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
 			parseProdDetialsRight(parentOffer,prodDetialsRight);
 			
-	///		bestLog.log((new String("prodDetailsRight = ")).concat(prodDetialsRight));
+			bestLog.log((new String("prodDetailsRight = ")).concat(prodDetialsRight));
 
 		} catch (Exception e) {
 			bestLog.log(e.getMessage());
@@ -544,14 +536,37 @@ public class Beta {
 		int rowNum = 0;
 		boolean moreCharsAvil = true;
 		while (moreCharsAvil) {
-
 			try {
 				String nameOfCharacter = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacter);
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacter));
-			} catch (Exception e) {
+			
+			offer.readNoticeAA();
+			offer.makeDecision();
+			
+
+			if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
+				bestLog.printDecisionMakingVars(offer);
+				continue;
 			}
 
+			bestLog.log("lets submit!");
+			
+			driver.findElement(By.xpath(tabLocation(rowNum))).click();
+			Breath.deepBreath();
+			driver.switchTo().window(getSonWindowHandler());
+			windowStatus();
+			//choose photo
+			
+			//chose videos
+			
+			//write talent notes   with  currentOffer.getMessage()
+			
+			
+			//HIT SUBMIT
+			
+			
+			//check if there is another character in this production
 			if (verifyLocation(tabLocation(rowNum), "")) {
 				rowNum++;
 				moreCharsAvil = true;
@@ -562,16 +577,15 @@ public class Beta {
 				//calling the Copy C'or of Job
 				currentOffer = new Job(oldOffer);
 				
-				
-				/*
-				Job nextOffer = new Job(offer.getActorIDSubmitted());
-				nextOffer.addToProductionDetails(offer.getProductionDetails());
-*/
+				} 
+			}catch (Exception e) {
+					bestLog.log("Failed to submit it.");
+				}
 			} else {
 				moreCharsAvil =false; 
 			}
-		}
-		return totalNumOfOffersInProduction;
+		}return totalNumOfOffersInProduction;
+
 	}
 
 	private String tabLocation(int row) {
@@ -606,10 +620,10 @@ public class Beta {
 		char_offer.setOfferTimeRoleAdded(tokens[0]);
 		char_offer.setOfferTypeProject(tokens[2]);
 		char_offer.setOfferUnionStatus(tokens[3]);
-	//	String details = tokens[1];
+		// String details = tokens[1];
 	}
 
-	private void parseProdDetialsRight(Job char_offer,String data) {
+	private void parseProdDetialsRight(Job char_offer, String data) {
 		// ALL parsing should be done with REGEX , but right now only store in
 		// the DB all the production info as one long String
 		bestLog.log("parse it");
@@ -622,20 +636,15 @@ public class Beta {
 	}
 
 	/*
-	private void parseprodDetailsLeft(Job char_offer, String data) {
-		bestLog.log("parse it");
-		char_offer.addToProductionDetails(data);
-		*/
-		//Here we should parse the director name, casting dir, assistant and so on
-		/*
-		 * 
-		String delims = "[[,],\n]";
-		String[] tokens = data.split(delims);
-		String name = tokens[0];
-		String details = tokens[1];
-		}
-		*/
-	
+	 * private void parseprodDetailsLeft(Job char_offer, String data) {
+	 * bestLog.log("parse it"); char_offer.addToProductionDetails(data);
+	 */
+	// Here we should parse the director name, casting dir, assistant and so on
+	/*
+	 * 
+	 * String delims = "[[,],\n]"; String[] tokens = data.split(delims); String
+	 * name = tokens[0]; String details = tokens[1]; }
+	 */
 
 	private void nameOfCharacter() {
 	}
@@ -1052,26 +1061,26 @@ public class Beta {
 	}
 
 	static public String intToRegion(int intRegion) {
- 
-	 if(intRegion == 1)
+
+		if (intRegion == 1)
 			return new String("los angeles");
-	 if(intRegion == 2)
+		if (intRegion == 2)
 			return new String("new york");
-	 if(intRegion == 3)
+		if (intRegion == 3)
 			return new String("vancouver");
-	 if(intRegion == 4)
+		if (intRegion == 4)
 			return new String("chicago");
-	 if(intRegion == 5)
+		if (intRegion == 5)
 			return new String("florida");
-	 if(intRegion == 6)
+		if (intRegion == 6)
 			return new String("toronto");
-	 if(intRegion == 7)
+		if (intRegion == 7)
 			return new String("texas");
-	 if(intRegion == 8)
+		if (intRegion == 8)
 			return new String("hawaii");
-	 if(intRegion == 9)
+		if (intRegion == 9)
 			return new String("southeast");
-		//default 
-			return new String("");
+		// default
+		return new String("");
 	}
 }
