@@ -45,7 +45,7 @@ public class Beta {
 	static int loginCounter;
 	static Breath takeBreath;
 	static Logging bestLog;
-	static Actor sam;
+	static Actor dan;
 
 	public static void main(String[] args) {
 
@@ -64,7 +64,7 @@ public class Beta {
 			// initialize log
 			bestLog = new Logging(new String(fileOut).concat(appendixFileName));
 			Breath.init(bestLog);
-
+  
 		} catch (Exception e) {
 
 			bestLog.log("File Appender error. Farewell");
@@ -73,7 +73,10 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			sam = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+		//	sam = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+			dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "qvzbchsm");
+		//	mara = new Actor("10003", "mara", "abcd", "mara", "password");
+			 
 		} catch (Exception e) {
 
 		}
@@ -165,14 +168,15 @@ public class Beta {
 		parentWindowHandler = driver.getWindowHandle();
 		bestLog.log("LOGIN-AA");
 		Breath.makeZeroSilentCounter();
-		log('a');
+//		bestLog.log('a');
+		bestLog.log(new String("Logining in username: ").concat(dan.getAaUsername()));
 		driver.get(aaBaseUrl + "/");
 		Breath.deepBreath();
-
+		
 		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(sam.getAaUsername());
+		driver.findElement(By.id("username")).sendKeys(dan.getAaUsername());
 		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(sam.getAaPassword());
+		driver.findElement(By.id("password")).sendKeys(dan.getAaPassword());
 		driver.findElement(By.id("login-btn")).click();
 
 		// Breath.deepBreath();
@@ -216,7 +220,7 @@ public class Beta {
 				bestLog.log("offer not submitted - lets try it.");
 			}
 
-			offer = new Job(sam.getActorId());
+			offer = new Job(dan.getActorId());
 			handleAAOffer(trCheckRow);
 			if (offerHasBeenConsideredBeforeAA(offer)) {
 				continue;
@@ -279,9 +283,9 @@ public class Beta {
 		Breath.deepBreath();
 		driver.findElement(By.id("login")).click();
 		driver.findElement(By.id("login")).clear();
-		driver.findElement(By.id("login")).sendKeys(sam.getCnUsername());
+		driver.findElement(By.id("login")).sendKeys(dan.getCnUsername());
 		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(sam.getCnPassword());
+		driver.findElement(By.id("password")).sendKeys(dan.getCnPassword());
 		driver.findElement(By.xpath("//input[@id='submit']")).click();
 		Breath.breath();
 		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
@@ -360,7 +364,7 @@ public class Beta {
 
 			if (srcOfImg.contains("spacer.gif")) {
 				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
-				offer = new Job(sam.getActorId());
+				offer = new Job(dan.getActorId());
 				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
 				if (offerHasBeenConsideredBeforeCN(offer)) {
 					continue;
@@ -503,17 +507,17 @@ public class Beta {
 		bestLog.log("Entered character breakdown");
 		// for each character - we open a new offer
 		// CHARACTER #1
-		// timeDate	 
-		
+		// timeDate
+
 		String nameOfCharacterAndDetailsUnder;
 		String detailsOfCharacter;
-		int totalNumOfOffersInProduction=1;
+		int totalNumOfOffersInProduction = 1;
 
 		try {
 			String prodDetailsLeftWithTimeRoleAdded = new String(
 					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td")).getText());
 			bestLog.log((new String("prodDetailsLeftWithTimeRoleAdded=")).concat(prodDetailsLeftWithTimeRoleAdded));
-			parseProdDetailsLeftWithTimeRoleAdded(parentOffer,prodDetailsLeftWithTimeRoleAdded);
+			parseProdDetailsLeftWithTimeRoleAdded(parentOffer, prodDetailsLeftWithTimeRoleAdded);
 		} catch (Exception e) {
 			bestLog.log(e.getMessage());
 			return totalNumOfOffersInProduction;
@@ -522,8 +526,8 @@ public class Beta {
 		try {
 			String prodDetialsRight = new String(
 					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
-			parseProdDetialsRight(parentOffer,prodDetialsRight);
-			
+			parseProdDetialsRight(parentOffer, prodDetialsRight);
+
 			bestLog.log((new String("prodDetailsRight = ")).concat(prodDetialsRight));
 
 		} catch (Exception e) {
@@ -531,61 +535,62 @@ public class Beta {
 			return totalNumOfOffersInProduction;
 		}
 
-		//begin adding the characters
+		// begin adding the characters
 		Job currentOffer = parentOffer;
 		int rowNum = 0;
 		boolean moreCharsAvil = true;
+
 		while (moreCharsAvil) {
+
 			try {
 				String nameOfCharacter = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacter);
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacter));
-			
-			offer.readNoticeAA();
-			offer.makeDecision();
-			
-
-			if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
-				bestLog.printDecisionMakingVars(offer);
-				continue;
-			}
-
-			bestLog.log("lets submit!");
-			
-			driver.findElement(By.xpath(tabLocation(rowNum))).click();
-			Breath.deepBreath();
-			driver.switchTo().window(getSonWindowHandler());
-			windowStatus();
-			//choose photo
-			
-			//chose videos
-			
-			//write talent notes   with  currentOffer.getMessage()
-			
-			
-			//HIT SUBMIT
-			
-			
-			//check if there is another character in this production
-			if (verifyLocation(tabLocation(rowNum), "")) {
-				rowNum++;
-				moreCharsAvil = true;
-				totalNumOfOffersInProduction ++;
-				//create another offer with the that will only differ in the name of character and character details.
-				Jobs.add(currentOffer);
-				Job oldOffer = currentOffer;
-				//calling the Copy C'or of Job
-				currentOffer = new Job(oldOffer);
-				
-				} 
-			}catch (Exception e) {
-					bestLog.log("Failed to submit it.");
+				offer.readNoticeAA();
+				offer.makeDecision();
+				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
+					bestLog.printDecisionMakingVars(offer);
+					continue;
 				}
-			} else {
-				moreCharsAvil =false; 
-			}
-		}return totalNumOfOffersInProduction;
 
+				bestLog.log("lets submit!");
+String clickPath = tabLocation(rowNum);
+				//div[@id='mainContent']/table[2]/tbody/tr/td/a
+				driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
+			//	driver.findElement(By.xpath(tabLocation(rowNum))).click();
+				Breath.deepBreath();
+				driver.switchTo().window(getSonWindowHandler());
+				windowStatus();
+				// choose photo
+
+				// chose videos
+
+				// write talent notes with currentOffer.getMessage()
+
+				// HIT SUBMIT
+
+				// check if there is another character in this production
+				if (verifyLocation(tabLocation(rowNum), "")) {
+					rowNum++;
+					moreCharsAvil = true;
+					totalNumOfOffersInProduction++;
+					// create another offer with the that will only differ in
+					// the name of character and character details.
+					Jobs.add(currentOffer);
+					Job oldOffer = currentOffer;
+					// calling the Copy C'or of Job
+					currentOffer = new Job(oldOffer);
+
+				} else {
+					moreCharsAvil = false;
+				}
+
+			} catch (Exception e) {
+				bestLog.log("Failed to submit it.");
+				break;
+			}
+		}
+		return totalNumOfOffersInProduction;
 	}
 
 	private String tabLocation(int row) {
