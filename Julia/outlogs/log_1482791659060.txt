@@ -1,0 +1,17 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - offer not submitted - lets try it.
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[2]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[2]/td[3]/a
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[2]/td[4]

@@ -1,0 +1,2241 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[5]/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Checking for red check at row number: 1
+INFO - .//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[3]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - offer not submitted - lets try it.
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[3]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Entered character breakdown
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 16, 2016, 12:59 PM Pacific
+UNTITLED SHELDON PROJECT
+Pilot
+½ Hour Single Cam
+Warner Bros. Television for CBS
+SAG-AFTRA
+INFO - parse it
+INFO - parse it
+INFO - prodDetailsRight = Exec. Producers: Chuck Lorre, Steve Molaro, Jim Parsons
+Director: TBD
+Writer: Steve Molaro
+Casting Directors: Nikki Valko / Ken Miller /
+Peter Pappas    
+Start Date: March / April 2017
+Location: Los Angeles    
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[0]/a[@class='breakdown-open-add-role']/@class
+INFO - For Some erroer - this role isn't open for submittion

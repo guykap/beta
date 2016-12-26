@@ -48,6 +48,19 @@ public class Logging {
 		}
 	}
 	
+	static public void slog(String newLog) {
+		if (newLog.length() < 1) {
+			return;
+		}
+		
+		System.out.println(newLog);
+		try {
+
+			logger.info(newLog);
+		} catch (SecurityException e) {
+			e.printStackTrace();
+		}
+	}
 
 	 public void printDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did

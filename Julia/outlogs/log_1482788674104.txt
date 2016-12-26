@@ -1,0 +1,17 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[5]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Checking for red check at row number: 1
+INFO - .//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Checking for red check at row number: 2
+INFO - .//*[@id='mainContent']/div[5]/table/tbody/tr[4]/td[1][@class='submitted']/img[@src='/gui/check.gif']
