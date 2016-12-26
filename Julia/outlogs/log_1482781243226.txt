@@ -1,0 +1,13 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for red check at row number: 8

@@ -73,8 +73,8 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-		//	sam = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
-			dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
+			dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+		//	dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
 		//	mara = new Actor("10003", "mara", "abcd", "mara", "password");
 			 
 		} catch (Exception e) {
@@ -201,43 +201,57 @@ public class Beta {
 			throw new Exception();
 		}
 		Breath.breath();
-		for (int rowNum = 8; rowNum < 10; rowNum++) {
-			String srcOfImg = "";
-			log('j');
+		
+		//check that in this region there is at least one production
+		
+			 
+		 
+		
+	//	for (int rowNum = 8; rowNum < 10; rowNum++) {
+			int rowNum = 0;
+			boolean nextRowHasAnotherProd = true;
+			while(nextRowHasAnotherProd){
+		
+		//String srcOfImg = "";
+		//	log('j');
 			bestLog.log("Checking for red check at row number: " + rowNum);
-			int trCheckRow = (2 + rowNum);
-
-			String checkPos = ((new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
-					.concat(String.valueOf(trCheckRow))).concat("]/td/img");
-
+			//String checkPos = redcheckboxLocation(rowNum);
+			 
 			// verify that there is no red check on left of offer row
 			try {
-				assertFalse(isElementPresent(By.xpath("//div[@id='mainContent']/div[3]/table/tbody/tr[3]/td/img")));
+				
+				try{assertFalse(isElementPresent(By.xpath(tabProductionInRow(0))));
+				}catch (Exception e){
+					//there is no production here
+					nextRowHasAnotherProd = false;
+					break;
+				}
+				//so there is some production here. Lets see if there is a check box red 
+				
+				assertFalse(isElementPresent(By.xpath(tabRedCheckBoxPos(0))));
+				
 				//assertFalse(isElementPresent(By.xpath(checkPos)));
 				// true if the element is present, false otherwise
-				bestLog.log("Check at " + rowNum + " from top.");
 				continue;
 			} catch (Error e) {
 				bestLog.log("offer not submitted - lets try it.");
 			}
 
 			offer = new Job(dan.getActorId());
-			handleAAOffer(trCheckRow);
+			handleAAOffer((rowNum+2));
 			if (offerHasBeenConsideredBeforeAA(offer)) {
+				rowNum++;
 				continue;
 			}
 
 			// in this production there might be several roles ( offers) - so we
 			// will open the page and read those character roles
 			// click the link
-			String leftPart = (new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
-					.concat(String.valueOf(trCheckRow));
-			String path = (new String(leftPart)).concat("]/td[3]/a");
+			
 
+			
 			try {
-				driver.findElement(By.xpath(path)).click();
-				// offer.setOfferProjectName(new
-				// String(driver.findElement(By.xpath(path)).getText()));
+				driver.findElement(By.xpath(linkCharactersInProduction(rowNum))).click();
 			} catch (Exception e) {
 				// link hasn't opened.
 				continue;
@@ -657,7 +671,23 @@ public class Beta {
 		}
 		return totalNumOfOffersInProduction;
 	}
-
+	
+	private String redcheckboxLocation(int rowNum){
+		if (rowNum == 0) {
+			return (new String(".//*[@id='mainContent']/div[5]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']"));
+		}
+		
+//		.//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+		String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
+		String rightPart = "]/td[1][@class='submitted']/img[@src='/gui/check.gif']";
+		return ((new String(leftPart)).concat(String.valueOf(rowNum)).concat(rightPart));
+		
+		
+		/*
+	((new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
+	.concat(String.valueOf(trCheckRow))).concat("]/td/img");*/
+	}
+	
 	private String tabCharNameAndDetails(int row) {
 		// IMPORTANT :  FOR the top character NAME + DETAILS below ( ROW ==0 ) you must parse the tokens  and TAKE THE TOP TWO TOKENS   //[|//>|//<
 		// /html/body/div[2]/table[2]/tbody/tr/td/p[ (2 * (X)) ]/a
@@ -704,14 +734,38 @@ public class Beta {
 	
 	
 	private String tabAAclass(int row) {
-		if (row == 0) {
-			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@class"));
-		}
+	
 		int twiceRow = row *2;
 		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
 		String rightPart = "]/a[@class='breakdown-open-add-role']/@class";
 		return ((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
 	}
+	
+	
+	private String tabProductionInRow(int row) {
+	//    	ROW+2
+		int rowPlusTwo = row + 2;
+		String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
+		String rightPart = "]/td[1][@class='submitted']";
+		return ((new String(leftPart)).concat(String.valueOf(rowPlusTwo)).concat(rightPart));
+	}
+	
+	private String tabRedCheckBoxPos(int row) {
+		//    	ROW+2
+			int rowPlusTwo = row + 2;
+			String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
+			String rightPart = "]/td[1][@class='submitted']/img[@src='/gui/check.gif']";
+			return ((new String(leftPart)).concat(String.valueOf(rowPlusTwo)).concat(rightPart));
+		}
+	
+	private String linkCharactersInProduction(int row) {
+		//    	.//*[@id='mainContent']/div[5]/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
+			int rowPlusTwo = row + 2;
+			String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
+			String rightPart = "]/td[3]/a[starts-with(@href,'/projects/')]";
+			return ((new String(leftPart)).concat(String.valueOf(rowPlusTwo)).concat(rightPart));
+		}
+	
 	/*
 	  
 	String internalAAclass=tabAAclass(rowNum);

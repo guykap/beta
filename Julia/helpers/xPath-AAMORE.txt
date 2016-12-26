@@ -1,3 +1,41 @@
+PRODUCTIONS CHART:
+TOP PRODUCTION BOX FOR CHECK:
+EMPTY
+.//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']
+WITH RED CHECK
+.//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']/img[@src="/gui/check.gif"]
+
+
+
+2ND PRODUCTION BOX FOR CHECK
+.//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']
+
+3rd PRODUCTION BOX FOR CHECK
+.//*[@id='mainContent']/div[5]/table/tbody/tr[4]/td[1][@class='submitted']
+
+xth row PRODUCTION BOX FOR CHECK
+.//*[@id='mainContent']/div[5]/table/tbody/tr[ROW+1]/td[1][@class='submitted']
+
+<a href="/projects/?view=breakdowns&amp;breakdown=532399&amp;region=1">IRONHEART (IRON MAN FAN FILM)</a>
+
+
+.//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[3]/a
+
+href AT:
+.//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[3]/a/@href
+ 
+has structure of:
+"/projects/@view=breakdowns&breakdown="    + BID+   "&region=" +REGION+"/""
+
+
+
+
+
+
+
+
+
+
 //table[@id='SelCourseChapTable' and @class='CoursePG']/tbody/tr[3]/td[2]
 
 
@@ -9,6 +47,8 @@
 
 //EMPTY box
 //div[@id='mainContent']/div[3]/table/tbody/tr[3]/td[@class='submitted']
+
+.//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']
 
 
 
