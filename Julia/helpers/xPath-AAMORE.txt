@@ -1,0 +1,72 @@
+//table[@id='SelCourseChapTable' and @class='CoursePG']/tbody/tr[3]/td[2]
+
+
+//*[@id="mainContent"]/div[3]/table/tbody/tr[7]/td[3]/a
+
+//*[@id="mainContent"]/div[3]/table/tbody/tr/td[@class=submitted]
+
+
+
+//EMPTY box
+//div[@id='mainContent']/div[3]/table/tbody/tr[3]/td[@class='submitted']
+
+
+
+TOP CHARACTER:
+=====================
+.//*[@id='mainContent']/table[2]/tbody/tr/td/span
+
+.//*[@id='mainContent']/table[2]/tbody/tr/td/span[@class='role_submitted']
+.//*[@id='mainContent']/table[2]/tbody/tr/td/span[@class='breakdown-open-add-role']
+
+
+<a href="javascript: selectPhoto(3320573,530211);" name="role_3320573" class="breakdown-open-add-role">MALE ELDER</a>
+.//*[@id='mainContent']/table[2]/tbody/tr/td/a[class='breakdown-open-add-role']
+
+
+ROW = 0 TOP CHARACTER
+.//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role'] 
+ 
+
+IN ORDER TO FIND THE TOP CHAR NAME AND THE DETAILS WE MUST FIND:
+.//*[@id='mainContent']/table[2]/tbody/tr/td
+
+AND THEN PARSE IT SO WE TAKE THE TOP TWO TOKENS   //[|//>|//<
+
+ROW = 1
+.//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role'] 
+
+ROW =1 SECOND _ CHAR NAME + ALL DETAILS
+.//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+
+ROW =2 THIRD
+.//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]/a[@class='breakdown-open-add-role'] 
+
+ROW =2THIRD_CHAR NAME + DETAIL
+.//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+
+ROW =3 FORTH
+.//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]/a[@class='breakdown-open-add-role'] 
+
+ROW = 3 FORTH_CHAR NAME + DETAIL
+.//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]
+
+
+Xth CHARACTER NAME
+.//*[@id='mainContent']/table[2]/tbody/tr/td/p[2*ROW]/a[@class='breakdown-open-add-role']
+
+Xth Char name + details:
+.//*[@id='mainContent']/table[2]/tbody/tr/td/p[2*ROW]
+
+
+<a href="javascript: selectPhoto(3328534,531436);" name="role_3328534" class="breakdown-open-add-role">XO</a>
+http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=3&iid=3328534&bid=531436
+
+.//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@name
+.//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@href
+
+
+
+CLICK THE LINK
+------------------
+.//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, "javascript:")]

@@ -501,6 +501,35 @@ public class Beta {
 			offer.setOfferUnionStatus(new String(""));
 		}
 	}
+	
+	
+	private String clickCharacterName(String charInternalNameRole, String bid,int regionNum){
+		/* THIS IS THE JAVASCRIPT VERSION
+		 * to create:
+		 * http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=3&iid=3328530&bid=531436
+		function selectPhoto(iid, bid, el) {
+			var editcart = "";
+			var winl = (screen.width - 800) / 2;
+			var wint = (screen.height - 600) / 2;
+			winprops = 'top='+wint+',left='+winl;
+			if (typeof el !== 'undefined' && el.tagName == 'A' && el.text.indexOf('CHANGE PHOTO') > -1){
+			editcart = "&editcart=1";
+			}
+			window.open('/projects/?view=selectphoto&from=breakdowns&region=3&iid=' + iid + '&bid=' + bid + editcart, 'select_photo', 'scrollbars,resizable,width=800,height=600,' + winprops);
+			}
+		*/
+		
+		String url="";
+		url += new String("/projects/?view=selectphoto&from=breakdowns&region=");
+		url += new String(intToRegion(regionNum));
+		url += new String("&iid=");
+		url += new String(charInternalNameRole);
+		url += new String("&bid=");
+		url += new String(bid);
+		url += new String(", 'select_photo', 'scrollbars,resizable,width=800,height=600,' + winprops");
+		return new String(url);
+		
+	}
 
 	private int totalOffersInThisProd(Job parentOffer) {
 		// returns the number of offers created and added to Jobs list from the
@@ -544,15 +573,40 @@ public class Beta {
 		while (moreCharsAvil) {
 
 			try {
+				String internalAAname;
+				String internalAAhref;
+				String internalAAclass;
+				//tabLocation(rowNum);
+				/*
+				Once clicked on the name of char.class the jacascript does:
+					function selectPhoto(iid, bid, el) {
+					var editcart = "";
+					var winl = (screen.width - 800) / 2;
+					var wint = (screen.height - 600) / 2;
+					winprops = 'top='+wint+',left='+winl;
+					if (typeof el !== 'undefined' && el.tagName == 'A' && el.text.indexOf('CHANGE PHOTO') > -1){
+					editcart = "&editcart=1";
+					}
+					window.open('/projects/?view=selectphoto&from=breakdowns&region=3&iid=' + iid + '&bid=' + bid + editcart, 'select_photo', 'scrollbars,resizable,width=800,height=600,' + winprops);
+					}
+				*/
 				
-				String internalAAname= tabAAname(rowNum);
-				String internalAAhref=tabAAhref(rowNum);
-				String internalAAclass=tabAAclass(rowNum);
-				tabLocation(rowNum);
+				String nameOfCharacterandDetails = new String(driver.findElement(By.xpath(tabCharNameAndDetails(rowNum))).getText());
+				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
+				internalAAname= tabAAname(rowNum);
+					currentOffer.setInternalAAname(internalAAname);
+				internalAAhref=internalAAhref(rowNum);
+					currentOffer.setInternalAAhref(internalAAhref);
+				internalAAclass=tabAAclass(rowNum);
+					if(internalAAclass!="breakdown-open-add-role"){
+						bestLog.log("For Some erroer - this role isn't open for submittion");
+						continue;
+					}
+					
 				
-				String nameOfCharacter = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
-				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacter);
-				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacter));
+				
+				
+				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
 				offer.readNoticeAA();
 				offer.makeDecision();
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
@@ -561,7 +615,10 @@ public class Beta {
 				}
 
 				bestLog.log("lets submit!");
-String clickPath = tabLocation(rowNum);
+				driver.findElement(By.xpath(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]")).click();
+				
+
+
   //*[@id="mainContent"]/table[2]/tbody/tr/td/a
   //div[@id='mainContent']/table[2]/tbody/tr/td/a
 				driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
@@ -577,8 +634,8 @@ String clickPath = tabLocation(rowNum);
 
 				// HIT SUBMIT
 
-				// check if there is another character in this production
-				if (verifyLocation(tabLocation(rowNum), "")) {
+				// check if there is another character to be considered in the next row
+				if (verifyLocation( betaCharacterName(rowNum+1), "")) {
 					rowNum++;
 					moreCharsAvil = true;
 					totalNumOfOffersInProduction++;
@@ -602,6 +659,7 @@ String clickPath = tabLocation(rowNum);
 	}
 
 	private String tabCharNameAndDetails(int row) {
+		// IMPORTANT :  FOR the top character NAME + DETAILS below ( ROW ==0 ) you must parse the tokens  and TAKE THE TOP TWO TOKENS   //[|//>|//<
 		// /html/body/div[2]/table[2]/tbody/tr/td/p[ (2 * (X)) ]/a
 		int twiceRow = row *2;
 		if (row == 0) {
@@ -624,6 +682,7 @@ String clickPath = tabLocation(rowNum);
 	}
 	
 	private String tabAAname(int row) {
+	//returns the internal int key value assigned to the role in Actors Access.	
 		if (row == 0) {
 			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@name"));
 		}
@@ -639,16 +698,26 @@ String clickPath = tabLocation(rowNum);
 		}
 		int twiceRow = row *2;
 		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
-		String rightPart = "]/a[@class='breakdown-open-add-role']/@name";
+		String rightPart = "]/a[@class='breakdown-open-add-role']/@href";
 		return ((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
 	}
 	
 	
+	private String tabAAclass(int row) {
+		if (row == 0) {
+			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@class"));
+		}
+		int twiceRow = row *2;
+		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
+		String rightPart = "]/a[@class='breakdown-open-add-role']/@class";
+		return ((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
+	}
+	/*
 	  
 	String internalAAclass=tabAAclass(rowNum);
 	tabLocation(rowNum);
-	
-	
+	*/
+ 
 	/*
 	 * try { String tag11 = new String(
 	 * 
@@ -1067,7 +1136,9 @@ String clickPath = tabLocation(rowNum);
 				return true;
 			}
 		} catch (Exception e) {
-			bestLog.log("Verify text " + verifyText + " Does NOT appear.");
+			if(verifyText.length()>1){
+				//this is an acutal text to be found. more than ""
+			bestLog.log("Verify text " + verifyText + " Does NOT appear.");}
 			return false;
 		}
 		return false;

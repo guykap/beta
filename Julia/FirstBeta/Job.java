@@ -51,6 +51,8 @@ public class Job {
 	String message = "";
 	String offerSubmittionElectronically;
 	String offerProductionDetails = "";
+	String internalAAname;
+	String internalAAhref;
 	
 	 
 	boolean isSag;
@@ -343,6 +345,23 @@ public class Job {
 		offerProductionDetails += (new String (data)).concat(" ");
 	}
 	
+	
+	public String getInternalAAhref() {
+		return message;
+	};
+
+	public void setInternalAAhref(String newMessage) {
+		internalAAhref = newMessage;
+	};
+	
+	public String getInternalAAname() {
+		return internalAAname;
+	};
+
+	public void setInternalAAname(String newMessage) {
+		internalAAname = newMessage;
+	};
+ 
 	public void addToMessage(String newMessage) {
 		message += new String(message.concat(" ").concat(newMessage));
 	};
