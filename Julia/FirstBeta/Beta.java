@@ -74,7 +74,7 @@ public class Beta {
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
 		//	sam = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
-			dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "qvzbchsm");
+			dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
 		//	mara = new Actor("10003", "mara", "abcd", "mara", "password");
 			 
 		} catch (Exception e) {
@@ -213,6 +213,7 @@ public class Beta {
 			// verify that there is no red check on left of offer row
 			try {
 				assertFalse(isElementPresent(By.xpath("//div[@id='mainContent']/div[3]/table/tbody/tr[3]/td/img")));
+				//assertFalse(isElementPresent(By.xpath(checkPos)));
 				// true if the element is present, false otherwise
 				bestLog.log("Check at " + rowNum + " from top.");
 				continue;
@@ -543,6 +544,12 @@ public class Beta {
 		while (moreCharsAvil) {
 
 			try {
+				
+				String internalAAname= tabAAname(rowNum);
+				String internalAAhref=tabAAhref(rowNum);
+				String internalAAclass=tabAAclass(rowNum);
+				tabLocation(rowNum);
+				
 				String nameOfCharacter = new String(driver.findElement(By.xpath(tabLocation(rowNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacter);
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacter));
@@ -555,7 +562,8 @@ public class Beta {
 
 				bestLog.log("lets submit!");
 String clickPath = tabLocation(rowNum);
-				//div[@id='mainContent']/table[2]/tbody/tr/td/a
+  //*[@id="mainContent"]/table[2]/tbody/tr/td/a
+  //div[@id='mainContent']/table[2]/tbody/tr/td/a
 				driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
 			//	driver.findElement(By.xpath(tabLocation(rowNum))).click();
 				Breath.deepBreath();
@@ -593,17 +601,54 @@ String clickPath = tabLocation(rowNum);
 		return totalNumOfOffersInProduction;
 	}
 
-	private String tabLocation(int row) {
+	private String tabCharNameAndDetails(int row) {
 		// /html/body/div[2]/table[2]/tbody/tr/td/p[ (2 * (X)) ]/a
-
+		int twiceRow = row *2;
 		if (row == 0) {
-			return (new String("//div[@id='mainContent']/table[2]/tbody/tr/td"));
+			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td"));
 		}
-		String leftPart = "//div[@id='mainContent']/table[2]/tbody/tr/td[";
-		String rightPart = "]/a";
-		return ((new String(leftPart)).concat(String.valueOf(row)).concat(rightPart));
+		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
+		String rightPart = "]";
+		return ((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
 	}
 
+	
+	private String betaCharacterName(int row) {
+		if (row == 0) {
+			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']"));
+		}
+		int twiceRow = row *2;
+		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
+		String rightPart = "]/a[@class='breakdown-open-add-role']";
+		return ((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
+	}
+	
+	private String tabAAname(int row) {
+		if (row == 0) {
+			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@name"));
+		}
+		int twiceRow = row *2;
+		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
+		String rightPart = "]/a[@class='breakdown-open-add-role']/@name";
+		return ((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
+	}
+	
+	private String internalAAhref(int row) {
+		if (row == 0) {
+			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@href"));
+		}
+		int twiceRow = row *2;
+		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
+		String rightPart = "]/a[@class='breakdown-open-add-role']/@name";
+		return ((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
+	}
+	
+	
+	  
+	String internalAAclass=tabAAclass(rowNum);
+	tabLocation(rowNum);
+	
+	
 	/*
 	 * try { String tag11 = new String(
 	 * 
@@ -866,7 +911,7 @@ String clickPath = tabLocation(rowNum);
 						"I: Begin submittion for top offer id " + offer.getOfferId() + " : " + offer.getOfferRole());
 				break;
 			case 'j':
-				bestLog.log("J: Making sure there is no GREEN STAR");
+				bestLog.log("J: Making sure there is no GREEN STAR/red check");
 				break;
 
 			case 'l':
