@@ -31,7 +31,10 @@ has structure of:
 
 
 
+THE LAST OFFER ON THE LIST WILL RETURN SOMETHING TO THIS ELEMENT:
+.//*[@id='mainContent']/div[5]/table/tbody/tr[ROW+2]/td[1][@class='submitted']
 
+BUT NOTHING TO THE NEXT ROW.
 
 
 
@@ -50,6 +53,11 @@ has structure of:
 
 .//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']
 
+
+LINK FOR EACH PRODUCTION TO CLICK:
+-------------------------------------
+.//*[@id='mainContent']/div[5]/table/tbody/tr[(ROW+2)]/td[3]/a[starts-with(@href, '/projects/')]
+ 
 
 
 TOP CHARACTER:
