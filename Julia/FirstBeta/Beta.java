@@ -64,7 +64,7 @@ public class Beta {
 			// initialize log
 			bestLog = new Logging(new String(fileOut).concat(appendixFileName));
 			Breath.init(bestLog);
-  
+
 		} catch (Exception e) {
 
 			bestLog.log("File Appender error. Farewell");
@@ -73,10 +73,11 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-		//	dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+			// dan = new Actor("10001", "guykapulnik", "cPassword",
+			// "guykapulnik", "aPassword");
 			dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
-		//	mara = new Actor("10003", "mara", "abcd", "mara", "password");
-			 
+			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
+
 		} catch (Exception e) {
 
 		}
@@ -168,11 +169,11 @@ public class Beta {
 		parentWindowHandler = driver.getWindowHandle();
 		bestLog.log("LOGIN-AA");
 		Breath.makeZeroSilentCounter();
-//		bestLog.log('a');
+		// bestLog.log('a');
 		bestLog.log(new String("Logining in username: ").concat(dan.getAaUsername()));
 		driver.get(aaBaseUrl + "/");
 		Breath.deepBreath();
-		
+
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(dan.getAaUsername());
 		driver.findElement(By.id("password")).clear();
@@ -201,87 +202,62 @@ public class Beta {
 			throw new Exception();
 		}
 		Breath.breath();
-		
-		//check that in this region there is at least one production
-		
-			 
-		 
-		
-	//	for (int rowNum = 8; rowNum < 10; rowNum++) {
-			int rowNum = 0;
-			boolean nextRowHasAnotherProd = true;
-			while(nextRowHasAnotherProd){
-		
-		//String srcOfImg = "";
-		//	log('j');
+		int rowNum = 0;
+		boolean nextRowHasAnotherProd = true;
+
+		while (nextRowHasAnotherProd) {
+
 			bestLog.log("Checking for red check at row number: " + rowNum);
-			//String checkPos = redcheckboxLocation(rowNum);
-			 
-			// verify that there is no red check on left of offer row
-			
-		//	avaiableProductionAtRow(row);
-			//returns truw only if the production at Row is existing but not yet submitted
+			// today
 			try {
-				
-				try{assertFalse(isElementPresent(By.xpath(XpathBuilder.tabProductionInRow(rowNum))));
-				}catch (Exception e){
-					//there is no more productions here
-					nextRowHasAnotherProd = false;
-					break;
-				}
-				//so there is some production here. Lets see if there is a check box red 
-				
-				assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(rowNum))));
-				
-				//assertFalse(isElementPresent(By.xpath(checkPos)));
-				// true if the element is present, false otherwise
-				rowNum++;
-				continue;
-			} catch (Error e) {
-				bestLog.log("offer not submitted - lets try it.");
+				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabProductionInRow(rowNum))));
+				bestLog.log((new String("Found a production at row: ").concat(String.valueOf(rowNum))));
+				bestLog.log((new String("Check for red check on left of row: ").concat(String.valueOf(rowNum))));
+			} catch (Exception e) {
+				bestLog.log((new String("No production on row ").concat(String.valueOf(rowNum))));
+				nextRowHasAnotherProd = false;
+				break;
 			}
 
+			try {
+				assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(rowNum))));
+			} catch (Exception e) {
+				bestLog.log((new String("Found a red check on left of row: ").concat(String.valueOf(rowNum))));
+				continue;
+			}
+			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(rowNum))));
+			// ***** submit
 			offer = new Job(dan.getActorId());
 			handleAAOffer(rowNum);
 			if (offerHasBeenConsideredBeforeAA(offer)) {
 				rowNum++;
-
 				continue;
 			}
 
-			// in this production there might be several roles ( offers) - so we
-			// will open the page and read those character roles
-			// click the link
-			
-
-			
 			try {
 				driver.findElement(By.xpath(XpathBuilder.linkCharactersInProduction(rowNum))).click();
 			} catch (Exception e) {
-				// link hasn't opened.
+				bestLog.log((new String("Error: the link hasn't opened on row: ").concat(String.valueOf(rowNum))));
 				continue;
 			}
- 
 			Breath.deepBreath();
-			//?? HERE  verify that there is at least ONE character in a chart of characters
-			try{
-			String nameOfCharacterandDetails = new String(driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
-			bestLog.log("found at least one character in this production. Lets try submitting");
-			}catch(Exception e){
+			 
+			try {
+				String nameOfCharacterandDetails = new String(
+						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
+				bestLog.log("found at least one character in this production. Lets try submitting");
+			} catch (Exception e) {
 				bestLog.log("Error. We are not in the characters chars now. Lets return");
 				driver.navigate().back();
 			}
-			
-			
-		
 			totalOffersInThisProd(offer);
 			bestLog.log((new String("Number of Characters found in this production"))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
-
 			// debug
 			Breath.silentCount();
 			rowNum++;
-		}
+			continue;
+		} // end of while loop
 	}
 
 	public void coreActorsAccess() throws Throwable {
@@ -479,7 +455,7 @@ public class Beta {
 	private void handleAAOffer(int rowNum) {
 
 		String leftPart = (new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
-				.concat(String.valueOf(rowNum+2));
+				.concat(String.valueOf(rowNum + 2));
 		String path;
 		try {
 			path = (new String(leftPart)).concat("]/td[2]");
@@ -526,25 +502,23 @@ public class Beta {
 			offer.setOfferUnionStatus(new String(""));
 		}
 	}
-	
-	
-	private String clickCharacterName(String charInternalNameRole, String bid,int regionNum){
-		/* THIS IS THE JAVASCRIPT VERSION
-		 * to create:
-		 * http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=3&iid=3328530&bid=531436
-		function selectPhoto(iid, bid, el) {
-			var editcart = "";
-			var winl = (screen.width - 800) / 2;
-			var wint = (screen.height - 600) / 2;
-			winprops = 'top='+wint+',left='+winl;
-			if (typeof el !== 'undefined' && el.tagName == 'A' && el.text.indexOf('CHANGE PHOTO') > -1){
-			editcart = "&editcart=1";
-			}
-			window.open('/projects/?view=selectphoto&from=breakdowns&region=3&iid=' + iid + '&bid=' + bid + editcart, 'select_photo', 'scrollbars,resizable,width=800,height=600,' + winprops);
-			}
-		*/
-		
-		String url="";
+
+	private String clickCharacterName(String charInternalNameRole, String bid, int regionNum) {
+		/*
+		 * THIS IS THE JAVASCRIPT VERSION to create:
+		 * http://www.actorsaccess.com/projects/?view=selectphoto&from=
+		 * breakdowns&region=3&iid=3328530&bid=531436 function selectPhoto(iid,
+		 * bid, el) { var editcart = ""; var winl = (screen.width - 800) / 2;
+		 * var wint = (screen.height - 600) / 2; winprops =
+		 * 'top='+wint+',left='+winl; if (typeof el !== 'undefined' &&
+		 * el.tagName == 'A' && el.text.indexOf('CHANGE PHOTO') > -1){ editcart
+		 * = "&editcart=1"; }
+		 * window.open('/projects/?view=selectphoto&from=breakdowns&region=3&iid
+		 * =' + iid + '&bid=' + bid + editcart, 'select_photo',
+		 * 'scrollbars,resizable,width=800,height=600,' + winprops); }
+		 */
+
+		String url = "";
 		url += new String("/projects/?view=selectphoto&from=breakdowns&region=");
 		url += new String(intToRegion(regionNum));
 		url += new String("&iid=");
@@ -553,7 +527,7 @@ public class Beta {
 		url += new String(bid);
 		url += new String(", 'select_photo', 'scrollbars,resizable,width=800,height=600,' + winprops");
 		return new String(url);
-		
+
 	}
 
 	private int totalOffersInThisProd(Job parentOffer) {
@@ -601,36 +575,34 @@ public class Beta {
 				String internalAAname;
 				String internalAAhref;
 				String internalAAclass;
-				//tabLocation(rowNum);
+				// tabLocation(rowNum);
 				/*
-				Once clicked on the name of char.class the jacascript does:
-					function selectPhoto(iid, bid, el) {
-					var editcart = "";
-					var winl = (screen.width - 800) / 2;
-					var wint = (screen.height - 600) / 2;
-					winprops = 'top='+wint+',left='+winl;
-					if (typeof el !== 'undefined' && el.tagName == 'A' && el.text.indexOf('CHANGE PHOTO') > -1){
-					editcart = "&editcart=1";
-					}
-					window.open('/projects/?view=selectphoto&from=breakdowns&region=3&iid=' + iid + '&bid=' + bid + editcart, 'select_photo', 'scrollbars,resizable,width=800,height=600,' + winprops);
-					}
-				*/
-				
-				String nameOfCharacterandDetails = new String(driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
+				 * Once clicked on the name of char.class the jacascript does:
+				 * function selectPhoto(iid, bid, el) { var editcart = ""; var
+				 * winl = (screen.width - 800) / 2; var wint = (screen.height -
+				 * 600) / 2; winprops = 'top='+wint+',left='+winl; if (typeof el
+				 * !== 'undefined' && el.tagName == 'A' &&
+				 * el.text.indexOf('CHANGE PHOTO') > -1){ editcart =
+				 * "&editcart=1"; }
+				 * window.open('/projects/?view=selectphoto&from=breakdowns&
+				 * region=3&iid=' + iid + '&bid=' + bid + editcart,
+				 * 'select_photo', 'scrollbars,resizable,width=800,height=600,'
+				 * + winprops); }
+				 */
+
+				String nameOfCharacterandDetails = new String(
+						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
-				internalAAname= XpathBuilder.tabAAname(rowNum);
-					currentOffer.setInternalAAname(internalAAname);
-				internalAAhref=XpathBuilder.internalAAhref(rowNum);
-					currentOffer.setInternalAAhref(internalAAhref);
-				internalAAclass=XpathBuilder.tabAAclass(rowNum);
-					if(internalAAclass!="breakdown-open-add-role"){
-						bestLog.log("For Some erroer - this role isn't open for submittion");
-						continue;
-					}
-					
-				
-				
-				
+				internalAAname = XpathBuilder.tabAAname(rowNum);
+				currentOffer.setInternalAAname(internalAAname);
+				internalAAhref = XpathBuilder.internalAAhref(rowNum);
+				currentOffer.setInternalAAhref(internalAAhref);
+				internalAAclass = XpathBuilder.tabAAclass(rowNum);
+				if (internalAAclass != "breakdown-open-add-role") {
+					bestLog.log("For Some erroer - this role isn't open for submittion");
+					continue;
+				}
+
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
 				offer.readNoticeAA();
 				offer.makeDecision();
@@ -640,14 +612,14 @@ public class Beta {
 				}
 
 				bestLog.log("lets submit!");
-				driver.findElement(By.xpath(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]")).click();
-				
+				driver.findElement(
+						By.xpath(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]"))
+						.click();
 
-
-  //*[@id="mainContent"]/table[2]/tbody/tr/td/a
-  //div[@id='mainContent']/table[2]/tbody/tr/td/a
+				// *[@id="mainContent"]/table[2]/tbody/tr/td/a
+				// div[@id='mainContent']/table[2]/tbody/tr/td/a
 				driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
-			//	driver.findElement(By.xpath(tabLocation(rowNum))).click();
+				// driver.findElement(By.xpath(tabLocation(rowNum))).click();
 				Breath.deepBreath();
 				driver.switchTo().window(getSonWindowHandler());
 				windowStatus();
@@ -659,8 +631,9 @@ public class Beta {
 
 				// HIT SUBMIT
 
-				// check if there is another character to be considered in the next row
-				if (verifyLocation( XpathBuilder.betaCharacterName(rowNum+1), "")) {
+				// check if there is another character to be considered in the
+				// next row
+				if (verifyLocation(XpathBuilder.betaCharacterName(rowNum + 1), "")) {
 					rowNum++;
 					moreCharsAvil = true;
 					totalNumOfOffersInProduction++;
@@ -682,15 +655,12 @@ public class Beta {
 		}
 		return totalNumOfOffersInProduction;
 	}
-	
-	
-	
+
 	/*
-	  
-	String internalAAclass=tabAAclass(rowNum);
-	tabLocation(rowNum);
-	*/
- 
+	 * 
+	 * String internalAAclass=tabAAclass(rowNum); tabLocation(rowNum);
+	 */
+
 	/*
 	 * try { String tag11 = new String(
 	 * 
@@ -1109,9 +1079,10 @@ public class Beta {
 				return true;
 			}
 		} catch (Exception e) {
-			if(verifyText.length()>1){
-				//this is an acutal text to be found. more than ""
-			bestLog.log("Verify text " + verifyText + " Does NOT appear.");}
+			if (verifyText.length() > 1) {
+				// this is an acutal text to be found. more than ""
+				bestLog.log("Verify text " + verifyText + " Does NOT appear.");
+			}
 			return false;
 		}
 		return false;
