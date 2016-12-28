@@ -654,4 +654,40 @@ public class Job {
 			
 		return false;
 	}
+	
+
+	public boolean offerHasBeenConsideredBeforeCN(List<Job> allJobs) {
+		// checkcing in the list of Jobs for another offer with the same ROLE
+		// and same PROJECT NAME values.
+	
+		for (Job offer : allJobs) {
+			
+			if (((this.getOfferProjectName()).equals(offer.getOfferProjectName()))
+					&& ((this.getOfferRole()).equals(offer.getOfferRole()))
+					&& (!offer.getHasBeenSubmitted())) {
+				Logging.slog(
+						"Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
+				Logging.sprintDecisionMakingVars(this);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	 public boolean offerHasBeenConsideredBeforeAA(List<Job> allJobs) {
+		// checkcing in the list of Jobs for another offer with the same ROLE
+		// and same PROJECT NAME values.
+		for (Job offer : allJobs) {
+			if (((this.getOfferProjectName()).equals(offer.getOfferProjectName()))
+					&& (!offer.getHasBeenSubmitted())) {
+				Logging.slog(
+						"Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
+				Logging.sprintDecisionMakingVars(this);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	
 }

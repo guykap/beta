@@ -31,10 +31,10 @@ public class Beta {
 	static Iterator<Job> jobIterator = Jobs.iterator();
 	private Job offer;
 
-	String parentWindowHandler;
+	 String parentWindowHandler;
 	String newWindowHandler;
-	Iterator<String> windowHandlesIterator;
-	Set<String> handles;
+	static Iterator<String> windowHandlesIterator;
+	static public Set<String> handles;
 	public static boolean isCastingNetworks = false;
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
@@ -143,7 +143,7 @@ public class Beta {
 
 			if ((loginCounter % 7) == 0) {
 				bestLog.log("THIS IS a 7th LOGIN - kill gecko and close window as well ");
-				if (manageGecko.killGecko()) {
+				if (ManageDriver.killGecko()) {
 					System.setProperty("webdriver.gecko.driver",
 							(new String(gecko_driver_path)).concat("geckodriver.exe"));
 					killFirefoxAndOpenNew();
@@ -186,7 +186,8 @@ public class Beta {
 		parentWindowHandler = driver.getWindowHandle();
 		bestLog.log("LOGIN-AA");
 		Breath.makeZeroSilentCounter();
-		// bestLog.log('a');
+		// bestLog.Logging.log('a');
+		Logging.slog("Window handle Parent " + parentWindowHandler);
 		bestLog.log(new String("Logining in username: ").concat(dan.getAaUsername()));
 		driver.get(aaBaseUrl + "/");
 		Breath.deepBreath();
@@ -204,7 +205,7 @@ public class Beta {
 			bestLog.log("Can't login.");
 			throw new Exception();
 		}
-		log('c');
+		Logging.log('c');
 	}
 
 	public void handleRegion(int region) throws Throwable {
@@ -248,7 +249,7 @@ public class Beta {
 			// ***** submit
 			offer = new Job(dan.getActorId());
 			Scapper.handleAAOffer(offer, rowNum);
-			if (offerHasBeenConsideredBeforeAA(offer)) {
+			if (offer.offerHasBeenConsideredBeforeAA(Jobs)) {
 				rowNum++;
 				continue;
 			}
@@ -298,7 +299,7 @@ public class Beta {
 		Breath.makeZeroSilentCounter();
 		bestLog.log("LOGIN-CN");
 		seekBackgroundWork = true;
-		log('a');
+		Logging.slog("A: Window handle Parent " + parentWindowHandler);
 		driver.get(cnBaseUrl + "/");
 		Breath.deepBreath();
 		driver.findElement(By.id("login")).click();
@@ -314,7 +315,7 @@ public class Beta {
 			bestLog.log("Can't find Welcome ");
 			throw new Exception();
 		}
-		log('c');
+		Logging.log('c');
 		Breath.breath();
 	}
 
@@ -340,6 +341,7 @@ public class Beta {
 	}
 
 	public void heartLoop() throws Throwable {
+		String originWindow= driver.getWindowHandle();
 
 		if (seekBackgroundWork) {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
@@ -368,7 +370,7 @@ public class Beta {
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		Breath.deepBreath();
 		for (int rowNum = 0; rowNum < 10; rowNum++) {
-			log('j');
+			Logging.log('j');
 			bestLog.log("Checking for green star at row number: " + rowNum);
 			int trStarRow = (3 * rowNum);
 			trStarRow += 4;
@@ -380,13 +382,13 @@ public class Beta {
 			} catch (Error e) {
 				bestLog.log(e.getMessage());
 				verificationErrors.append(e.toString());
-			} 
+			}
 			if (srcOfImg.contains("spacer.gif")) {
 				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
 				offer = new Job(dan.getActorId());
 
 				Scapper.handleBackgroundWorkOffer(offer, seekBackgroundWork, (trStarRow - 1));
-				if (offerHasBeenConsideredBeforeCN(offer)) {
+				if (offer.offerHasBeenConsideredBeforeCN(Jobs)) {
 					continue;
 				}
 				Jobs.add(offer);
@@ -401,14 +403,13 @@ public class Beta {
 					continue;
 				}
 
-				log('h');
+				Logging.log('h');
 				int trLinkToOfferRow = -1;
 				trLinkToOfferRow = trStarRow - 1;
 				String linkOfferPos = ((new String("//tr[")).concat(String.valueOf(trLinkToOfferRow))).concat("]/td/a");
 				driver.findElement(By.xpath(linkOfferPos)).click();
 				Breath.deepBreath();
-				driver.switchTo().window(getSonWindowHandler());
-				windowStatus();
+				driver.switchTo().window(ManageDriver.getSonWindowHandler(originWindow));
 				// add time of apperance to offer
 				try {
 					Breath.breath();
@@ -422,10 +423,10 @@ public class Beta {
 				Breath.breathToMissleadThem();
 				if (!verifyLocation("//span", "Customize your submission")) {
 					bestLog.log("Error: You are on wrong window");
-					windowStatus();
+					ManageDriver.windowStatus(originWindow);
 					throw new Exception();
 				}
-				log('l');
+				Logging.log('l');
 				driver.findElement(By.id("TALENTNOTE")).clear();
 				choosePhoto();
 
@@ -435,16 +436,16 @@ public class Beta {
 				Breath.deepBreath();
 				if (!verifyLocation("//span", "Submission Successful")) {
 					bestLog.log("Did NOT recieve final submittion successful");
-					windowStatus();
+					ManageDriver.windowStatus(originWindow);
 					throw new Exception();
 				}
-				if (!killSubWindowAndMoveToParentWindow()) {
+				if (!ManageDriver.killSubWindowAndMoveToParentWindow(parentWindowHandler)) {
 					bestLog.log("Memory leak error: failed killing child window");
 					throw new Exception();
 				}
 				offer.setHasBeenSubmitted(true);
 				Breath.makeZeroSilentCounter();
-				log('m');
+				Logging.log('m');
 				bestLog.printSubmittions(Jobs);
 			} else {
 				bestLog.log("Found star on the offer " + rowNum + " from top");
@@ -470,33 +471,6 @@ public class Beta {
 	}
 
 	public void aaDecideToSubmit() {
-
-	}
-
-	private String clickCharacterName(String charInternalNameRole, String bid, int regionNum) {
-		/*
-		 * THIS IS THE JAVASCRIPT VERSION to create:
-		 * http://www.actorsaccess.com/projects/?view=selectphoto&from=
-		 * breakdowns&region=3&iid=3328530&bid=531436 function selectPhoto(iid,
-		 * bid, el) { var editcart = ""; var winl = (screen.width - 800) / 2;
-		 * var wint = (screen.height - 600) / 2; winprops =
-		 * 'top='+wint+',left='+winl; if (typeof el !== 'undefined' &&
-		 * el.tagName == 'A' && el.text.indexOf('CHANGE PHOTO') > -1){ editcart
-		 * = "&editcart=1"; }
-		 * window.open('/projects/?view=selectphoto&from=breakdowns&region=3&iid
-		 * =' + iid + '&bid=' + bid + editcart, 'select_photo',
-		 * 'scrollbars,resizable,width=800,height=600,' + winprops); }
-		 */
-
-		String url = "";
-		url += new String("/projects/?view=selectphoto&from=breakdowns&region=");
-		url += new String(intToRegion(regionNum));
-		url += new String("&iid=");
-		url += new String(charInternalNameRole);
-		url += new String("&bid=");
-		url += new String(bid);
-		url += new String(", 'select_photo', 'scrollbars,resizable,width=800,height=600,' + winprops");
-		return new String(url);
 
 	}
 
@@ -572,8 +546,8 @@ public class Beta {
 				driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
 				// driver.findElement(By.xpath(tabLocation(rowNum))).click();
 				Breath.deepBreath();
-				driver.switchTo().window(getSonWindowHandler());
-				windowStatus();
+				driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
+				 
 				// choose photo
 
 				// chose videos
@@ -623,9 +597,6 @@ public class Beta {
 		// the DB all the production info as one long String
 		bestLog.log("parse it");
 		char_offer.addToProductionDetails(data);
-	}
-
-	private void nameOfCharacter() {
 	}
 
 	private void parseNameOfCharacterAndDetailsUnder(Job char_offer, String data) {
@@ -686,177 +657,9 @@ public class Beta {
 		}
 	}
 
-	public void log(char stage) {
-		// state - Full log - outputs the whole string
-		// state - min log - outputs only the letter representing the stage
-		if (!(bestLog.getLogState())) {
-			bestLog.log(Character.toString(stage));
-		} else {
-			switch (stage) {
-			case 'a':
-				bestLog.log("A: Window handle Parent " + parentWindowHandler);
-				break;
-			case 'c':
-				bestLog.log("C: Location->Home Page");
-				break;
-			case 'e':
-				bestLog.log("E: Location->Casting Billboard");
-				break;
-			case 'f':
-				bestLog.log("F: Succ opening Casing Billboards and Extras link");
-				break;
-			case 'h':
-				bestLog.log("H: Succ adding offer to Jobs list");
-				break;
-			case 'i':
-				bestLog.log(
-						"I: Begin submittion for top offer id " + offer.getOfferId() + " : " + offer.getOfferRole());
-				break;
-			case 'j':
-				bestLog.log("J: Making sure there is no GREEN STAR/red check");
-				break;
+	
+	
 
-			case 'l':
-				bestLog.log("L: Succ on openning window to choose photo and fill talent notes.");
-				break;
-			case 'm':
-				bestLog.log("*******SUBMITTED:");
-				bestLog.log("M: Succ Submitted: " + offer.getOfferProjectName() + " | "
-						+ offer.getOfferSubmittionDateTime() + " | " + offer.getOffertRate() + " | "
-						+ offer.getOfferTypeProject() + " | " + offer.getHasBeenSubmitted() + " | "
-						+ offer.getOfferListing() + "Talent Notes :" + offer.getMessage());
-				break;
-			case 'y':
-				bestLog.log("Parent: " + getParentWindowHandler() + " Son: " + getSonWindowHandler());
-				break;
-			case 'z':
-				bestLog.log("Z: Stopping");
-				break;
-			}
-		}
-	}
-
-	private boolean moveToOtherWindow() {
-		windowStatus();
-		String currentWindowHandler = driver.getWindowHandle();
-		handles = driver.getWindowHandles(); // get all window handles
-		if (handles.size() < 2) {
-			bestLog.log("Error: there is only one window : " + currentWindowHandler);
-			return false;
-		}
-		windowHandlesIterator = handles.iterator();
-		if (windowHandlesIterator.hasNext()) {
-			newWindowHandler = windowHandlesIterator.next();
-			if (!newWindowHandler.equals(currentWindowHandler)) {
-				driver.switchTo().window(newWindowHandler); // switch to popup
-															// window
-				windowStatus();
-				return true;
-			} else {
-				// fell on the same window - so move again
-				if (windowHandlesIterator.hasNext()) {
-					newWindowHandler = windowHandlesIterator.next();
-					if (!newWindowHandler.equals(currentWindowHandler)) {
-						driver.switchTo().window(newWindowHandler); // switching
-																	// to
-																	// popup
-																	// window
-						windowStatus();
-						return true;
-					}
-				}
-			}
-		}
-		return false;
-	}
-
-	private boolean killSubWindowAndMoveToParentWindow() {
-		// returns true onlyon a succesfull kill the sub window and return back
-		// to parent window.
-		driver.close();
-		driver.switchTo().window(parentWindowHandler);
-		String newWindowHandler = driver.getWindowHandle();
-		bestLog.log("killed window and returned to  " + newWindowHandler);
-		windowStatus();
-		return true;
-	}
-
-	private void windowStatus() {
-		String currentWindowHandler = driver.getWindowHandle();
-		String sonWindow = getSonWindowHandler();
-		String pointing;
-		if (getParentWindowHandler().equals(currentWindowHandler)) {
-			log('y');
-			bestLog.log("Now on PARENT");
-		} else {
-			log('y');
-			bestLog.log("Now on SON");
-		}
-		driver.getWindowHandle();
-		log('y');
-		return;
-	}
-
-	private void windowStatus2() {
-		handles = driver.getWindowHandles(); // get all window handles
-		StringBuilder builder = new StringBuilder();
-		for (String s : handles) {
-			builder.append(s + ",");
-		}
-		String allHandles = new String("[");
-		allHandles += new String(builder.toString());
-		allHandles += new String("] ");
-		String currentWindowHandler = driver.getWindowHandle();
-		bestLog.log(allHandles + " on: " + currentWindowHandler);
-	}
-
-	private String getParentWindowHandler() {
-		if (parentWindowHandler.length() > 1) {
-			return parentWindowHandler;
-		}
-		bestLog.log("Error finding Parent holder");
-		return ("");
-	}
-
-	private String getSonWindowHandler() {
-		String currentWindowHandler = driver.getWindowHandle();
-		handles = driver.getWindowHandles(); // get all window handles
-		windowHandlesIterator = handles.iterator();
-
-		switch (handles.size()) {
-		case 1:
-			windowStatus2();
-			return ("");
-		case 2: {
-			if (!currentWindowHandler.equals(getParentWindowHandler())) {
-				return currentWindowHandler;
-			} else {
-				// finding out what the other window handler is
-				if (windowHandlesIterator.hasNext()) {
-					newWindowHandler = windowHandlesIterator.next();
-					if (!newWindowHandler.equals(getParentWindowHandler())) {
-						return newWindowHandler;
-					} else {
-						//
-						if (windowHandlesIterator.hasNext()) {
-							newWindowHandler = windowHandlesIterator.next();
-							if (!newWindowHandler.equals(currentWindowHandler)) {
-								return newWindowHandler;
-							}
-						}
-					}
-				}
-			}
-		}
-		case 3:
-			bestLog.log("Error there are 3 windows!");
-			windowStatus2();
-			return ("");
-		}
-
-		bestLog.log("Error finding SON");
-		return ("");
-	}
 
 	private boolean verifyLocation(String xpathTab, String verifyText) {
 		// returns true only if the location of the xpath contains the
@@ -880,37 +683,6 @@ public class Beta {
 		// returns true if there is a network connection
 
 		return true;
-	}
-
-	static public boolean offerHasBeenConsideredBeforeCN(Job consideredOffer) {
-		// checkcing in the list of Jobs for another offer with the same ROLE
-		// and same PROJECT NAME values.
-		for (Job offer : Jobs) {
-			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
-					&& ((consideredOffer.getOfferRole()).equals(offer.getOfferRole()))
-					&& (!offer.getHasBeenSubmitted())) {
-				bestLog.log(
-						"Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
-				bestLog.printDecisionMakingVars(offer);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	static public boolean offerHasBeenConsideredBeforeAA(Job consideredOffer) {
-		// checkcing in the list of Jobs for another offer with the same ROLE
-		// and same PROJECT NAME values.
-		for (Job offer : Jobs) {
-			if (((consideredOffer.getOfferProjectName()).equals(offer.getOfferProjectName()))
-					&& (!offer.getHasBeenSubmitted())) {
-				bestLog.log(
-						"Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
-				bestLog.printDecisionMakingVars(offer);
-				return true;
-			}
-		}
-		return false;
 	}
 
 	static public String intToRegion(int intRegion) {

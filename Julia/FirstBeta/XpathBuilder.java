@@ -136,6 +136,35 @@ public class XpathBuilder {
 		return (xPath); 
 	}
 	
+
+	public String clickCharacterName(String charInternalNameRole, String bid, int regionNum) {
+		/*
+		 * THIS IS THE JAVASCRIPT VERSION to create:
+		 * http://www.actorsaccess.com/projects/?view=selectphoto&from=
+		 * breakdowns&region=3&iid=3328530&bid=531436 function selectPhoto(iid,
+		 * bid, el) { var editcart = ""; var winl = (screen.width - 800) / 2;
+		 * var wint = (screen.height - 600) / 2; winprops =
+		 * 'top='+wint+',left='+winl; if (typeof el !== 'undefined' &&
+		 * el.tagName == 'A' && el.text.indexOf('CHANGE PHOTO') > -1){ editcart
+		 * = "&editcart=1"; }
+		 * window.open('/projects/?view=selectphoto&from=breakdowns&region=3&iid
+		 * =' + iid + '&bid=' + bid + editcart, 'select_photo',
+		 * 'scrollbars,resizable,width=800,height=600,' + winprops); }
+		 */
+
+		String url = "";
+		url += new String("/projects/?view=selectphoto&from=breakdowns&region=");
+		url += new String(Beta.intToRegion(regionNum));
+		url += new String("&iid=");
+		url += new String(charInternalNameRole);
+		url += new String("&bid=");
+		url += new String(bid);
+		url += new String(", 'select_photo', 'scrollbars,resizable,width=800,height=600,' + winprops");
+		return new String(url);
+
+	}
+
+	
 	
 }
 //      .//*[@id='mainContent']/table[1]/tbody/tr[1]/td[1]
