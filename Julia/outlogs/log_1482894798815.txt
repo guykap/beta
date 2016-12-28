@@ -1,0 +1,18 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 8
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[10]/td[1][@class='submitted']
+INFO - Found a production at row: 8
+INFO - Check for red check on left of row: 8
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[10]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Program ENDED - THANK YOU!

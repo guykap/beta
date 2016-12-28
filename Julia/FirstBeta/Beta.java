@@ -47,7 +47,7 @@ public class Beta {
 	static Logging bestLog;
 	static Actor dan;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Throwable {
 
 		seekBackgroundWork = true;
 		JUnitCore jCore;
@@ -73,9 +73,8 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			// dan = new Actor("10001", "guykapulnik", "cPassword",
-			// "guykapulnik", "aPassword");
-			dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
+			 dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+			//dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
 		} catch (Exception e) {
@@ -91,8 +90,16 @@ public class Beta {
 		System.setProperty("webdriver.gecko.driver", (new String(gecko_driver_path)).concat("geckodriver.exe"));
 
 		// START
-		jCore = new JUnitCore();
-		jCore.run(Beta.class);
+		//jCore = new JUnitCore();
+	//	jCore.run(Beta.class);
+		try{
+			Beta test = new Beta();
+			test.testBetaAA();
+		}
+		catch (Exception e){
+			Logging.slog(e.getMessage());
+			Logging.slog("Error in programs");
+		}
 		bestLog.log("Program ENDED - THANK YOU!");
 
 	}
@@ -138,13 +145,15 @@ public class Beta {
 				bestLog.log("THIS IS a 7th LOGIN - kill gecko and close window as well ");
 				if(manageGecko.killGecko())
 				{
+					System.setProperty("webdriver.gecko.driver", (new String(gecko_driver_path)).concat("geckodriver.exe"));
 					killFirefoxAndOpenNew();
+					loginCounter++;
+					continue;
 				}
 				
 			}
 			try {
 				if (isCastingNetworks) {
-					loginCN();
 					seekBackgroundWork = true;
 				} else {
 					// Actors access
@@ -211,7 +220,7 @@ public class Beta {
 			throw new Exception();
 		}
 		Breath.breath();
-		int rowNum = 0;
+		int rowNum = 6;
 		boolean nextRowHasAnotherProd = true;
 
 		while (nextRowHasAnotherProd) {
@@ -228,7 +237,7 @@ public class Beta {
 				break;
 			}
 
-			try {
+			try {Breath.breath();
 				assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(rowNum))));
 			} catch (Exception e) {
 				bestLog.log((new String("Found a red check on left of row: ").concat(String.valueOf(rowNum))));

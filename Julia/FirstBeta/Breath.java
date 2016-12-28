@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class Breath {
-	static public int geckoWaitTime = 10;
+	static public int geckoWaitTime = 15;
 	static private boolean useSleep = true;
 	static private boolean logStateFull = true;
 	static private boolean longNaps;
@@ -38,7 +38,7 @@ public class Breath {
 	}
 	static public void breath() throws InterruptedException {
 		// sleeps for the configured time + impro
-		int sleepTime = randInt(4, 5);
+		int sleepTime = randInt(6, 8);
 		if (useSleep) {
 			TimeUnit.SECONDS.sleep(sleepTime);
 			if (logStateFull) {

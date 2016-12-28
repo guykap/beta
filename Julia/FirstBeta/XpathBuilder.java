@@ -125,7 +125,7 @@ public class XpathBuilder {
 	
 	static public String xpProdDetailsLeftWithTimeRoleAdded() {
  
-			String xPath=  "//div[@id='mainContent']/table/tbody/tr/td";
+			String xPath=  "//div[@id='mainContent']/table/tbody/tr/td[1]";
 			Logging.slog(xPath);
 			return (xPath); 
 		}
@@ -146,3 +146,4 @@ public class XpathBuilder {
 	
 	
 }
+//      .//*[@id='mainContent']/table[1]/tbody/tr[1]/td[1]

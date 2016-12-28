@@ -1,0 +1,45 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=6440, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: be982300-6ebb-4787-be4c-a87c15a66cbd
+INFO - Something went during login -> So lets login again
+INFO - Login number 2
+INFO - LOGIN-AA
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=6440, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: be982300-6ebb-4787-be4c-a87c15a66cbd
+INFO - Something went during login -> So lets login again
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 8
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[10]/td[1][@class='submitted']
+INFO - Found a production at row: 8
+INFO - Check for red check on left of row: 8
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[10]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Program ENDED - THANK YOU!

@@ -1,0 +1,84 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=8624, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 0b7bf6d1-c96c-423f-9936-f368000e8707
+INFO - Something went during login -> So lets login again
+INFO - Login number 2
+INFO - LOGIN-AA
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=8624, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 0b7bf6d1-c96c-423f-9936-f368000e8707
+INFO - Something went during login -> So lets login again
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=6652, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: cdd20532-641b-445a-8c54-8bad2897f418
+INFO - Something went during login -> So lets login again
+INFO - Login number 4
+INFO - LOGIN-AA
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=6652, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: cdd20532-641b-445a-8c54-8bad2897f418
+INFO - Something went during login -> So lets login again
+INFO - Login number 5
+INFO - LOGIN-AA
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=6652, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: cdd20532-641b-445a-8c54-8bad2897f418
+INFO - Something went during login -> So lets login again
+INFO - Login number 6
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=7812, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 49eb4914-e3b6-4760-a8d0-7f17034bfe2e
+INFO - Something went during login -> So lets login again
+INFO - Login number 7
+INFO - THIS IS a 7th LOGIN - kill gecko and close window as well 
+INFO - Program ENDED - THANK YOU!
