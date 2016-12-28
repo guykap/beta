@@ -657,10 +657,6 @@ public class Beta {
 		}
 	}
 
-	
-	
-
-
 	private boolean verifyLocation(String xpathTab, String verifyText) {
 		// returns true only if the location of the xpath contains the
 		// verifyText
