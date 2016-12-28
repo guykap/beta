@@ -22,7 +22,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
 	// THIS IS BETA2.0a
-	private static WebDriver driver;
+	public static WebDriver driver;
 	static public String cnBaseUrl;
 	static public String aaBaseUrl;
 	private boolean acceptNextAlert = true;
@@ -73,8 +73,9 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			 dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
-			//dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
+			dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
+			// "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
 		} catch (Exception e) {
@@ -90,13 +91,12 @@ public class Beta {
 		System.setProperty("webdriver.gecko.driver", (new String(gecko_driver_path)).concat("geckodriver.exe"));
 
 		// START
-		//jCore = new JUnitCore();
-	//	jCore.run(Beta.class);
-		try{
+		// jCore = new JUnitCore();
+		// jCore.run(Beta.class);
+		try {
 			Beta test = new Beta();
 			test.testBetaAA();
-		}
-		catch (Exception e){
+		} catch (Exception e) {
 			Logging.slog(e.getMessage());
 			Logging.slog("Error in programs");
 		}
@@ -143,14 +143,14 @@ public class Beta {
 
 			if ((loginCounter % 7) == 0) {
 				bestLog.log("THIS IS a 7th LOGIN - kill gecko and close window as well ");
-				if(manageGecko.killGecko())
-				{
-					System.setProperty("webdriver.gecko.driver", (new String(gecko_driver_path)).concat("geckodriver.exe"));
+				if (manageGecko.killGecko()) {
+					System.setProperty("webdriver.gecko.driver",
+							(new String(gecko_driver_path)).concat("geckodriver.exe"));
 					killFirefoxAndOpenNew();
 					loginCounter++;
 					continue;
 				}
-				
+
 			}
 			try {
 				if (isCastingNetworks) {
@@ -237,7 +237,8 @@ public class Beta {
 				break;
 			}
 
-			try {Breath.breath();
+			try {
+				Breath.breath();
 				assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(rowNum))));
 			} catch (Exception e) {
 				bestLog.log((new String("Found a red check on left of row: ").concat(String.valueOf(rowNum))));
@@ -246,7 +247,7 @@ public class Beta {
 			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(rowNum))));
 			// ***** submit
 			offer = new Job(dan.getActorId());
-			handleAAOffer(rowNum);
+			Scapper.handleAAOffer(offer, rowNum);
 			if (offerHasBeenConsideredBeforeAA(offer)) {
 				rowNum++;
 				continue;
@@ -259,9 +260,10 @@ public class Beta {
 				continue;
 			}
 			Breath.deepBreath();
-			 
+
 			try {
-				//debug  - change this to assertTrue for the element of first char
+				// debug - change this to assertTrue for the element of first
+				// char
 				String nameOfCharacterandDetails = new String(
 						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
 				bestLog.log("found at least one character in this production. Lets try submitting");
@@ -275,7 +277,7 @@ public class Beta {
 			// debug
 			Breath.silentCount();
 			rowNum++;
-			driver.navigate().back(); 
+			driver.navigate().back();
 		} // end of while loop
 	}
 
@@ -338,7 +340,7 @@ public class Beta {
 	}
 
 	public void heartLoop() throws Throwable {
-		Breath.breath();
+
 		if (seekBackgroundWork) {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
 				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
@@ -378,12 +380,12 @@ public class Beta {
 			} catch (Error e) {
 				bestLog.log(e.getMessage());
 				verificationErrors.append(e.toString());
-			}
-
+			} 
 			if (srcOfImg.contains("spacer.gif")) {
 				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
 				offer = new Job(dan.getActorId());
-				handleBackgroundWorkOffer(seekBackgroundWork, (trStarRow - 1));
+
+				Scapper.handleBackgroundWorkOffer(offer, seekBackgroundWork, (trStarRow - 1));
 				if (offerHasBeenConsideredBeforeCN(offer)) {
 					continue;
 				}
@@ -471,57 +473,6 @@ public class Beta {
 
 	}
 
-	private void handleAAOffer(int rowNum) {
-
-		String leftPart = (new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
-				.concat(String.valueOf(rowNum + 2));
-		String path;
-		try {
-			path = (new String(leftPart)).concat("]/td[2]");
-			Logging.slog(path);
-			offer.setOfferPostedTime(new String(driver.findElement(By.xpath(path)).getText()));
-		} catch (Exception e) {
-			offer.setOfferPostedTime(new String(""));
-		}
-
-		try {
-			path = (new String(leftPart)).concat("]/td[3]/a[starts-with(@href,'/projects/')]");
-			Logging.slog(path);
-			offer.setOfferProjectName(new String(driver.findElement(By.xpath(path)).getText()));
-		} catch (Exception e) {
-			offer.setOfferProjectName(new String(""));
-		}
-
-		try {
-			path = (new String(leftPart)).concat("]/td[4]");
-			Logging.slog(path);
-			offer.setOfferTypeProject(new String(driver.findElement(By.xpath(path)).getText()));
-		} catch (Exception e) {
-			offer.setOfferTypeProject(new String(""));
-		}
-
-		try {
-			path = (new String(leftPart)).concat("]/td[5]");
-			offer.setOfferCastingDirector(new String(driver.findElement(By.xpath(path)).getText()));
-		} catch (Exception e) {
-			offer.setOfferCastingDirector(new String(""));
-		}
-
-		try {
-			path = (new String(leftPart)).concat("]/td[6]");
-			offer.setOfferShootDate(new String(driver.findElement(By.xpath(path)).getText()));
-		} catch (Exception e) {
-			offer.setOfferShootDate(new String(""));
-		}
-
-		try {
-			path = (new String(leftPart)).concat("]/td[7]");
-			offer.setOfferUnionStatus(new String(driver.findElement(By.xpath(path)).getText()));
-		} catch (Exception e) {
-			offer.setOfferUnionStatus(new String(""));
-		}
-	}
-
 	private String clickCharacterName(String charInternalNameRole, String bid, int regionNum) {
 		/*
 		 * THIS IS THE JAVASCRIPT VERSION to create:
@@ -591,7 +542,7 @@ public class Beta {
 				String internalAAname;
 				String internalAAhref;
 				String internalAAclass;
-		 
+
 				String nameOfCharacterandDetails = new String(
 						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
@@ -614,9 +565,7 @@ public class Beta {
 				}
 
 				bestLog.log("lets submit!");
-				driver.findElement(
-						By.xpath( XpathBuilder.xpCharacterLink()))
-						.click();
+				driver.findElement(By.xpath(XpathBuilder.xpCharacterLink())).click();
 
 				// *[@id="mainContent"]/table[2]/tbody/tr/td/a
 				// div[@id='mainContent']/table[2]/tbody/tr/td/a
@@ -658,24 +607,6 @@ public class Beta {
 		return totalNumOfOffersInProduction;
 	}
 
-	/*
-	 * 
-	 * String internalAAclass=tabAAclass(rowNum); tabLocation(rowNum);
-	 */
-
-	/*
-	 * try { String tag11 = new String(
-	 * 
-	 * driver.findElement(By.xpath(
-	 * "//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a"))
-	 * .getAttribute("class")); bestLog.log("11 - breakdown-open-add-role:");
-	 * bestLog.log(tag11); } catch (Exception e) { } try { String tag12 = new
-	 * String( driver.findElement(By.xpath(
-	 * "//div[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a"))
-	 * .getAttribute("name")); bestLog.log("12 - AA_ROLE_NUMBER:");
-	 * bestLog.log(tag12); } catch (Exception e) { }
-	 */
-
 	private void parseProdDetailsLeftWithTimeRoleAdded(Job char_offer, String data) {
 		bestLog.log("parse it");
 		char_offer.addToProductionDetails(data);
@@ -692,23 +623,7 @@ public class Beta {
 		// the DB all the production info as one long String
 		bestLog.log("parse it");
 		char_offer.addToProductionDetails(data);
-		/*
-		 * String delims = "[[,],\n]"; String[] tokens = data.split(delims);
-		 * String name= tokens[0]; String details = tokens[1]; String startDate
-		 * = String location = tokens[5]; offer.setProductionDetails(data);
-		 */
 	}
-
-	/*
-	 * private void parseprodDetailsLeft(Job char_offer, String data) {
-	 * bestLog.log("parse it"); char_offer.addToProductionDetails(data);
-	 */
-	// Here we should parse the director name, casting dir, assistant and so on
-	/*
-	 * 
-	 * String delims = "[[,],\n]"; String[] tokens = data.split(delims); String
-	 * name = tokens[0]; String details = tokens[1]; }
-	 */
 
 	private void nameOfCharacter() {
 	}
@@ -721,133 +636,6 @@ public class Beta {
 		char_offer.setOfferCharacterName(name.trim());
 		String details = new String(tokens[2]);
 		char_offer.setOfferCharacterDetails(details.trim());
-	}
-
-	private void handleBackgroundWorkOffer(boolean isBackgroundWork, int row) {
-
-		offer.setIsBackgroundWork(isBackgroundWork);
-		// the EXTRA table has the shooting date .
-		// the PRINCIPLE table does not
-
-		String leftPart = (new String("//tr[")).concat(String.valueOf(row));
-		try {
-
-			try {
-				String path = new String(leftPart.concat("]/td/a"));
-				offer.setOfferRole((new String(driver.findElement(By.xpath(path)).getText())).toLowerCase());
-			} catch (Exception e) {
-				offer.setOfferRole(new String(""));
-			}
-
-			if (isBackgroundWork) {
-				// BACKGROUND WORK
-				try {
-					String path = new String(leftPart.concat("]/td[2]/a"));
-					offer.setOfferProjectName((new String(driver.findElement(By.xpath(path)).getText())).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferProjectName(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[3]/a"));
-					offer.setOfferShootDate(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferShootDate(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[4]/a"));
-					offer.setOfferTypeProject(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferTypeProject(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[5]/a"));
-					offer.setOffertRate(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOffertRate(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[6]/a"));
-					offer.setOfferPaying(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferPaying(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[7]/a"));
-					offer.setOfferUnionStatus(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferUnionStatus(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[8]/a"));
-					offer.setOfferPostedTime(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferPostedTime(new String(""));
-				}
-
-			} else {
-				// PRINCIPLE WORK
-				try {
-					String path = new String(leftPart.concat("]/td[2]/a"));
-					offer.setOfferProjectName((new String(driver.findElement(By.xpath(path)).getText())).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferProjectName(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[3]/a"));
-					offer.setOfferTypeProject(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferTypeProject(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[4]/a"));
-					offer.setOffertRate(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOffertRate(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[5]/a"));
-					offer.setOfferPaying(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferPaying(new String(""));
-				}
-				try {
-					String path = new String(leftPart.concat("]/td[6]/a"));
-					offer.setOfferUnionStatus(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferUnionStatus(new String(""));
-				}
-
-				try {
-					String path = new String(leftPart.concat("]/td[7]/a"));
-					offer.setOfferPostedTime(new String(driver.findElement(By.xpath(path)).getText()).toLowerCase());
-				} catch (Exception e) {
-					offer.setOfferPostedTime(new String(""));
-				}
-
-			}
-			try {
-				String pathOfferListing = new String(
-						((new String("//tr[")).concat(String.valueOf(row + 1))).concat("]/td"));
-				offer.setOfferListing(
-						new String(driver.findElement(By.xpath(pathOfferListing)).getText()).toLowerCase());
-			} catch (Exception e) {
-				offer.setOfferListing(new String(""));
-			}
-			return;
-
-		} catch (Exception e) {
-			bestLog.log("Error parsing the current offer data into the Strings");
-			// go back to login page
-		}
 	}
 
 	@After
@@ -1011,8 +799,6 @@ public class Beta {
 
 	private void windowStatus2() {
 		handles = driver.getWindowHandles(); // get all window handles
-		// String allHandles = new String(Arrays.toString(handles));
-
 		StringBuilder builder = new StringBuilder();
 		for (String s : handles) {
 			builder.append(s + ",");
