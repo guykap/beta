@@ -134,6 +134,14 @@ public class Beta {
 				killFirefoxAndOpenNew();
 			}
 
+			if ((loginCounter % 7) == 0) {
+				bestLog.log("THIS IS a 7th LOGIN - kill gecko and close window as well ");
+				if(manageGecko.killGecko())
+				{
+					killFirefoxAndOpenNew();
+				}
+				
+			}
 			try {
 				if (isCastingNetworks) {
 					loginCN();
@@ -165,7 +173,7 @@ public class Beta {
 
 	public void loginAA() throws Throwable {
 		aaBaseUrl = "http://actorsaccess.com";
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Breath.geckoWaitTime, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
 		bestLog.log("LOGIN-AA");
 		Breath.makeZeroSilentCounter();
@@ -178,6 +186,7 @@ public class Beta {
 		driver.findElement(By.id("username")).sendKeys(dan.getAaUsername());
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys(dan.getAaPassword());
+		Breath.breath();
 		driver.findElement(By.id("login-btn")).click();
 
 		// Breath.deepBreath();
@@ -235,7 +244,7 @@ public class Beta {
 			}
 
 			try {
-				driver.findElement(By.xpath(XpathBuilder.linkCharactersInProduction(rowNum))).click();
+				driver.findElement(By.xpath(XpathBuilder.xpLinkCharactersInProduction(rowNum))).click();
 			} catch (Exception e) {
 				bestLog.log((new String("Error: the link hasn't opened on row: ").concat(String.valueOf(rowNum))));
 				continue;
@@ -243,6 +252,7 @@ public class Beta {
 			Breath.deepBreath();
 			 
 			try {
+				//debug  - change this to assertTrue for the element of first char
 				String nameOfCharacterandDetails = new String(
 						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
 				bestLog.log("found at least one character in this production. Lets try submitting");
@@ -256,7 +266,7 @@ public class Beta {
 			// debug
 			Breath.silentCount();
 			rowNum++;
-			continue;
+			driver.navigate().back(); 
 		} // end of while loop
 	}
 
@@ -535,16 +545,13 @@ public class Beta {
 		// found characters on the production
 		bestLog.log("Entered character breakdown");
 		// for each character - we open a new offer
-		// CHARACTER #1
-		// timeDate
-
 		String nameOfCharacterAndDetailsUnder;
 		String detailsOfCharacter;
 		int totalNumOfOffersInProduction = 1;
 
 		try {
 			String prodDetailsLeftWithTimeRoleAdded = new String(
-					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td")).getText());
+					driver.findElement(By.xpath(XpathBuilder.xpProdDetailsLeftWithTimeRoleAdded())).getText());
 			bestLog.log((new String("prodDetailsLeftWithTimeRoleAdded=")).concat(prodDetailsLeftWithTimeRoleAdded));
 			parseProdDetailsLeftWithTimeRoleAdded(parentOffer, prodDetailsLeftWithTimeRoleAdded);
 		} catch (Exception e) {
@@ -554,7 +561,7 @@ public class Beta {
 
 		try {
 			String prodDetialsRight = new String(
-					driver.findElement(By.xpath("//div[@id='mainContent']/table/tbody/tr/td[3]/p")).getText());
+					driver.findElement(By.xpath(XpathBuilder.xpProdDetialsRight())).getText());
 			parseProdDetialsRight(parentOffer, prodDetialsRight);
 
 			bestLog.log((new String("prodDetailsRight = ")).concat(prodDetialsRight));
@@ -575,27 +582,13 @@ public class Beta {
 				String internalAAname;
 				String internalAAhref;
 				String internalAAclass;
-				// tabLocation(rowNum);
-				/*
-				 * Once clicked on the name of char.class the jacascript does:
-				 * function selectPhoto(iid, bid, el) { var editcart = ""; var
-				 * winl = (screen.width - 800) / 2; var wint = (screen.height -
-				 * 600) / 2; winprops = 'top='+wint+',left='+winl; if (typeof el
-				 * !== 'undefined' && el.tagName == 'A' &&
-				 * el.text.indexOf('CHANGE PHOTO') > -1){ editcart =
-				 * "&editcart=1"; }
-				 * window.open('/projects/?view=selectphoto&from=breakdowns&
-				 * region=3&iid=' + iid + '&bid=' + bid + editcart,
-				 * 'select_photo', 'scrollbars,resizable,width=800,height=600,'
-				 * + winprops); }
-				 */
-
+		 
 				String nameOfCharacterandDetails = new String(
 						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
 				internalAAname = XpathBuilder.tabAAname(rowNum);
 				currentOffer.setInternalAAname(internalAAname);
-				internalAAhref = XpathBuilder.internalAAhref(rowNum);
+				internalAAhref = XpathBuilder.xpInternalAAhref(rowNum);
 				currentOffer.setInternalAAhref(internalAAhref);
 				internalAAclass = XpathBuilder.tabAAclass(rowNum);
 				if (internalAAclass != "breakdown-open-add-role") {
@@ -613,7 +606,7 @@ public class Beta {
 
 				bestLog.log("lets submit!");
 				driver.findElement(
-						By.xpath(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]"))
+						By.xpath( XpathBuilder.xpCharacterLink()))
 						.click();
 
 				// *[@id="mainContent"]/table[2]/tbody/tr/td/a
@@ -633,7 +626,7 @@ public class Beta {
 
 				// check if there is another character to be considered in the
 				// next row
-				if (verifyLocation(XpathBuilder.betaCharacterName(rowNum + 1), "")) {
+				if (verifyLocation(XpathBuilder.xpBetaCharacterName(rowNum + 1), "")) {
 					rowNum++;
 					moreCharsAvil = true;
 					totalNumOfOffersInProduction++;

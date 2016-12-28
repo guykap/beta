@@ -1,0 +1,48 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - Found a production at row: 0
+INFO - Check for red check on left of row: 0
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 0
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[2]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[2]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - found at least one character in this production. Lets try submitting
+INFO - Entered character breakdown
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 23, 2016, 4:30 PM Pacific
+This week's CASTING DIRECTOR UPDATE (NY) - 12/23/16
+.
+CastingAbout
+
+Powered by BREAKDOWN SERVICES, LTD.
+
+AABP
+
+Not Applicable
+INFO - parse it
+INFO - Unable to locate element: //div[@id='mainContent']/table/tbody/tr/td[3]/p
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9868, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: b129c7a3-929c-485a-b9a4-dd1f37b72bd3
+*** Element info: {Using=xpath, value=//div[@id='mainContent']/table/tbody/tr/td[3]/p}
+INFO - Number of Characters found in this production0
+INFO - Checking for red check at row number: 1

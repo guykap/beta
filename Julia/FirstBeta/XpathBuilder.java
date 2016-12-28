@@ -1,7 +1,7 @@
 package FirstBeta;
 
 public class XpathBuilder {
-	static public String redcheckboxLocation(int rowNum){
+	static public String xpRedcheckboxLocation(int rowNum){
 		if (rowNum == 0) {
 			return (new String(".//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']"));
 		
@@ -37,7 +37,7 @@ public class XpathBuilder {
 	}
 
 	
-	static public String betaCharacterName(int row) {
+	static public String xpBetaCharacterName(int row) {
 		if (row == 0) {
 			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']"));
 		}
@@ -64,7 +64,7 @@ public class XpathBuilder {
 		 
 	}
 	
-	static public String internalAAhref(int row) {
+	static public String xpInternalAAhref(int row) {
 		if (row == 0) {
 			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@href"));
 		}
@@ -110,7 +110,7 @@ public class XpathBuilder {
 			return (xPath);
 		}
 	
-	static public String linkCharactersInProduction(int row) {
+	static public String xpLinkCharactersInProduction(int row) {
 		//    	.//*[@id='mainContent']/div[5]/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
 			int rowPlusTwo = row + 2;
 			//String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
@@ -121,4 +121,28 @@ public class XpathBuilder {
 			Logging.slog(xPath);
 			return (xPath); 
 		}
+	
+	
+	static public String xpProdDetailsLeftWithTimeRoleAdded() {
+ 
+			String xPath=  "//div[@id='mainContent']/table/tbody/tr/td";
+			Logging.slog(xPath);
+			return (xPath); 
+		}
+	
+	static public String xpProdDetialsRight() {
+		 
+		String xPath=  "//div[@id='mainContent']/table/tbody/tr/td[3]/p";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
+	static public String xpCharacterLink() {
+		 
+		String xPath=  ".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
+	
 }

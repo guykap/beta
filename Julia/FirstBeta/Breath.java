@@ -4,11 +4,13 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class Breath {
+	static public int geckoWaitTime = 10;
 	static private boolean useSleep = true;
 	static private boolean logStateFull = true;
 	static private boolean longNaps;
 	static private int silentCounter=0;
 	static private Logging ourLogging;
+	
 	
 	Breath() {
 		 
