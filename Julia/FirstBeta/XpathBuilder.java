@@ -4,21 +4,13 @@ public class XpathBuilder {
 	static public String xpRedcheckboxLocation(int rowNum){
 		if (rowNum == 0) {
 			return (new String(".//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']"));
-		
-	//		return (new String(".//*[@id='mainContent']/div[5]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']"));
 			}
 		
-//		.//*[@id='mainContent']/div[5]/table/tbody/tr[3]/td[1][@class='submitted']/img[@src='/gui/check.gif']
 		String leftPart = ".//*[@id='mainContent']/div[3]/table/tbody/tr[";
 		String rightPart = "]/td[1][@class='submitted']/img[@src='/gui/check.gif']";
 		String xPath= new String((new String(leftPart)).concat(String.valueOf(rowNum)).concat(rightPart));
 		Logging.slog(xPath);
 		return (xPath);
-		
-		
-		/*
-	((new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
-	.concat(String.valueOf(trCheckRow))).concat("]/td/img");*/
 	}
 	
 	static public String tabCharNameAndDetails(int row) {
