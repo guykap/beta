@@ -18,6 +18,7 @@ public class XpathBuilder {
 		// /html/body/div[2]/table[2]/tbody/tr/td/p[ (2 * (X)) ]/a
 		int twiceRow = row *2;
 		if (row == 0) {
+		  		Logging.slog(".//*[@id='mainContent']/table[2]/tbody/tr/td");
 			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td"));
 		}
 		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
@@ -31,6 +32,7 @@ public class XpathBuilder {
 	
 	static public String xpBetaCharacterName(int row) {
 		if (row == 0) {
+			Logging.slog(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']");
 			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']"));
 		}
 		int twiceRow = row *2;
@@ -45,11 +47,11 @@ public class XpathBuilder {
 	static public String tabAAname(int row) {
 	//returns the internal int key value assigned to the role in Actors Access.	
 		if (row == 0) {
-			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@name"));
+			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']"));
 		}
 		int twiceRow = row *2;
 		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
-		String rightPart = "]/a[@class='breakdown-open-add-role']/@name";
+		String rightPart = "]/a[@class='breakdown-open-add-role']";
 		String xPath= new String(((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart)));
 		Logging.slog(xPath);
 		return (xPath);
@@ -58,11 +60,13 @@ public class XpathBuilder {
 	
 	static public String xpInternalAAhref(int row) {
 		if (row == 0) {
-			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@href"));
+			//return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@href"));
+			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']"));
 		}
 		int twiceRow = row *2;
 		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
-		String rightPart = "]/a[@class='breakdown-open-add-role']/@href";
+		//String rightPart = "]/a[@class='breakdown-open-add-role']/@href";
+		String rightPart = "]/a[@class='breakdown-open-add-role']";
 		String xPath= new String(((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart)));
 		Logging.slog(xPath);
 		return (xPath);
@@ -71,9 +75,15 @@ public class XpathBuilder {
 	
 	
 	static public String tabAAclass(int row) {
+		if (row == 0) {
+			return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a"));
+		}
+		
+		//The second character would have the class attribute at:
+		//    .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
 		int twiceRow = row *2;
 		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
-		String rightPart = "]/a/@class";
+		String rightPart = "]/a";
 		String xPath= new String((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
 		Logging.slog(xPath);
 		return (xPath);
@@ -104,7 +114,12 @@ public class XpathBuilder {
 	
 	static public String xpLinkCharactersInProduction(int row) {
 		//    	.//*[@id='mainContent']/div[5]/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
-			int rowPlusTwo = row + 2;
+		//      .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]	
+		
+		if (row ==0){
+			return new String(".//*[@id='mainContent']/div[3]/table/tbody/tr/td[3]/a[starts-with(@href,'/projects/')]");
+		}
+		int rowPlusTwo = row + 2;
 			//String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
 			String leftPart = ".//*[@id='mainContent']/div[3]/table/tbody/tr[";
 			String rightPart = "]/td[3]/a[starts-with(@href,'/projects/')]";
@@ -129,9 +144,14 @@ public class XpathBuilder {
 		return (xPath); 
 	}
 	
-	static public String xpCharacterLink() {
+	static public String xpCharacterLinkInCharactersPage(int row) {
+		String xPath; 
+		if(row == 0){
+		 xPath= new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]");
+		 }else{
+			 xPath = 
+		 }
 		 
-		String xPath=  ".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]";
 		Logging.slog(xPath);
 		return (xPath); 
 	}

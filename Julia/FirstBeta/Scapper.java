@@ -187,5 +187,37 @@ public class Scapper {
 			// go back to login page
 		}
 	}
+	
+	static public String scrapTextAtXpath(String xpath){
+		//returns the text at the xPath tab 
+		String foundText=new String ("");
+		try {
+			foundText = new String(new String(Beta.driver.findElement(By.xpath(xpath)).getText()));
+		} catch (Exception e) {
+			 Logging.slog((new String("No text found at: ")).concat(xpath));
+			 
+		}
+		
+		return foundText;
+	}
+	
+	static public String scrapAttributeAtXpath(String xpath, String attribute){
+		if((xpath.length()<1)||(attribute.length()<1)){
+			 Logging.slog((new String("Wrong values passed to scrapper: ")).concat(xpath).concat(attribute));
+			 
+			return new String("");
+		}
+		//returns the text at the xPath tab 
+		String foundText=new String ("");
+		try {
+			 foundText =  Beta.driver.findElement(By.xpath(xpath)).getAttribute(attribute);
+			//foundText = new String(new String(Beta.driver.findElement(By.xpath(xpath)).get));
+		} catch (Exception e) {
+			 Logging.slog((new String("No attribute found at: ")).concat(xpath));
+			 
+		}
+		
+		return foundText;
+	}
 
 }

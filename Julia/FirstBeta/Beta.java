@@ -73,9 +73,8 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
-			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
-			// "password");
+			//dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+			dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi","password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
 		} catch (Exception e) {
@@ -266,14 +265,14 @@ public class Beta {
 				// debug - change this to assertTrue for the element of first
 				// char
 				String nameOfCharacterandDetails = new String(
-						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
+						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(0))).getText());
 				bestLog.log("found at least one character in this production. Lets try submitting");
 			} catch (Exception e) {
 				bestLog.log("Error. We are not in the characters chars now. Lets return");
 				driver.navigate().back();
 			}
 			totalOffersInThisProd(offer);
-			bestLog.log((new String("Number of Characters found in this production"))
+			bestLog.log((new String("Number of Characters found in this production: "))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
 			// debug
 			Breath.silentCount();
@@ -481,7 +480,7 @@ public class Beta {
 		// for each character - we open a new offer
 		String nameOfCharacterAndDetailsUnder;
 		String detailsOfCharacter;
-		int totalNumOfOffersInProduction = 1;
+	//	int totalNumOfOffersInProduction = 1;
 
 		try {
 			String prodDetailsLeftWithTimeRoleAdded = new String(
@@ -490,7 +489,7 @@ public class Beta {
 			parseProdDetailsLeftWithTimeRoleAdded(parentOffer, prodDetailsLeftWithTimeRoleAdded);
 		} catch (Exception e) {
 			bestLog.log(e.getMessage());
-			return totalNumOfOffersInProduction;
+			return 0;
 		}
 
 		try {
@@ -502,31 +501,35 @@ public class Beta {
 
 		} catch (Exception e) {
 			bestLog.log(e.getMessage());
-			return totalNumOfOffersInProduction;
+			return 0;
 		}
 
 		// begin adding the characters
 		Job currentOffer = parentOffer;
-		int rowNum = 0;
+		int charNum = 0;
 		boolean moreCharsAvil = true;
 
 		while (moreCharsAvil) {
-
+//today gym
 			try {
 				String internalAAname;
 				String internalAAhref;
 				String internalAAclass;
 
 				String nameOfCharacterandDetails = new String(
-						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(rowNum))).getText());
+						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(charNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
-				internalAAname = XpathBuilder.tabAAname(rowNum);
+				//internalAAname = Scapper.scrapAtXpath(XpathBuilder.tabAAname(charNum));
+				internalAAname = Scapper.scrapAttributeAtXpath(XpathBuilder.tabAAname(charNum),"name");
+			
+				
 				currentOffer.setInternalAAname(internalAAname);
-				internalAAhref = XpathBuilder.xpInternalAAhref(rowNum);
+				internalAAhref = Scapper.scrapAttributeAtXpath((XpathBuilder.xpInternalAAhref(charNum)),"href");
 				currentOffer.setInternalAAhref(internalAAhref);
-				internalAAclass = XpathBuilder.tabAAclass(rowNum);
-				if (internalAAclass != "breakdown-open-add-role") {
+				internalAAclass = Scapper.scrapAttributeAtXpath(XpathBuilder.tabAAclass(charNum),"class");
+				if (!internalAAclass.contains("breakdown-open-add-role")) {
 					bestLog.log("For Some erroer - this role isn't open for submittion");
+					charNum++;
 					continue;
 				}
 
@@ -537,7 +540,7 @@ public class Beta {
 					bestLog.printDecisionMakingVars(offer);
 					continue;
 				}
-
+//today
 				bestLog.log("lets submit!");
 				driver.findElement(By.xpath(XpathBuilder.xpCharacterLink())).click();
 
@@ -558,10 +561,10 @@ public class Beta {
 
 				// check if there is another character to be considered in the
 				// next row
-				if (verifyLocation(XpathBuilder.xpBetaCharacterName(rowNum + 1), "")) {
-					rowNum++;
+				if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
+					charNum++;
 					moreCharsAvil = true;
-					totalNumOfOffersInProduction++;
+					//totalNumOfOffersInProduction++;
 					// create another offer with the that will only differ in
 					// the name of character and character details.
 					Jobs.add(currentOffer);
@@ -578,7 +581,7 @@ public class Beta {
 				break;
 			}
 		}
-		return totalNumOfOffersInProduction;
+		return (1+charNum);
 	}
 
 	private void parseProdDetailsLeftWithTimeRoleAdded(Job char_offer, String data) {
