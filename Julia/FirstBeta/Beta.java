@@ -279,7 +279,12 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 			Breath.silentCount();
 			if(offer.getTotalAddedToCart() > 0 ){
 				//go and sumit cart
-				
+				if(submitCart()){
+					bestLog.log((new String("Submitted Cart Succesfully")));
+					
+				}else{
+					bestLog.log((new String("Error submittion cart")));
+				}
 				//***
 			}
 			rowNum++;
@@ -459,10 +464,21 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 		}
 	}
 
-	public void submitCart(){
+	public boolean submitCart(){
 		//goes to cart page and clicks submit
-		
-		
+		//verify current page 
+		try{
+			Breath.deepBreath();
+		driver.findElement(By.xpath(XpathBuilder.xpCartLogo())).click();
+		Breath.deepBreath();
+		driver.findElement(By.xpath(XpathBuilder.xpSubmitCart())).click();
+		//verify successful submition
+		//??
+		return true;
+		}catch(Exception e){
+			Logging.slog("Failed submitting cart");
+			return false;
+		}
 	}
 	public void choosePhoto() {
 		if (offer.getNeedTuxedo()) {
@@ -555,31 +571,37 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 				//driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
 				// driver.findElement(By.xpath(tabLocation(rowNum))).click();
 				Breath.deepBreath();
-				driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
+			//	driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
 
 				//verify
-				String url = driver.getCurrentUrl();
-				if (!url.contains(currentOffer.getInternalAAname())){
+				String ChoosingPhotoUrl = driver.getCurrentUrl();
+				if (!ChoosingPhotoUrl.contains(currentOffer.getInternalAAname())){
 					Logging.slog(new String (("Error: the choosing window didn't open for AA internal role number:" )).concat(currentOffer.getInternalAAname()));
+					driver.navigate().back();
+					charNum++;
+					continue;
 				}
 				// choose photo
-				 driver.findElement(By.xpath("//td[@id='photo_5002739']/table/tbody/tr/td/a[2]")).click();
-				 driver.findElement(By.xpath("xpath=(//input[@name='video_to_use'])[2]")).click();
-			 
-				 driver.findElement(By.xpath("//input[@id='include_sc_checkbox_id']")).click();
-
+				//  .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
+				 driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
+				 driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+				 driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+				 driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
+				  
 					// write talent notes with currentOffer.getMessage()
-
-				    driver.findElement(By.xpath("//a[@id='add_to_cart']")).click();
-				//    driver.findElement(By.xpath("//div[4]/input")).click();
 				 
-				// write talent notes with currentOffer.getMessage()
-
-				// HIT SUBMIT
+				 // check if a talent notes area exists. If it does
+				 if(true){
+				 driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).clear();
+				 driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).sendKeys(currentOffer.getMessage());
+				 }   
+				 driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
+			 
 
 				// check if there is another character to be considered in the
 				// next row
-				if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
+				 currentOffer.setTotalAddedToCart(1);
+if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
 					charNum++;
 					moreCharsAvil = true;
 					// create another offer with the that will only differ in

@@ -1,0 +1,8 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .

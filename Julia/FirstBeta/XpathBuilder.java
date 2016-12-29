@@ -131,8 +131,57 @@ public class XpathBuilder {
 	
 	
 	
+	
+	static public String xpChooseMySmilePhoto() {
+		String xPath=  ".//*[@id='photo_5002739']/table/tbody/tr/td/span[1]";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
+	static public String xpChooseBookstoreVideo1() {
+		String xPath=  "//tbody/tr/td[1]/input[@value='2629412']";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
+	static public String xpChooseCommercialVideo2() {
+		// video num 2584865
+		String xPath=  "//tbody/tr/td[1]/input[@value='2584865']";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
+	static public String xpIncludeSizes() {
+		String xPath=".//*[@id='include_sc_checkbox_id']";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
+	static public String xpTalentNotesAA() {
+		String xPath="html/body/form/div[6]/textarea";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
 
-	 
+	static public String xpAddToCartAA() {
+		String xPath=	"//a[@id='add_to_cart']";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
+	static public String xpCartLogo() {
+		String xPath="//ul[@id='greeting']/li[3]/a";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	static public String xpSubmitCart() {
+		String xPath=	"//a[@id='cartsubmit']";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
+	
 	
 	static public String xpProdDetailsLeftWithTimeRoleAdded() {
  
