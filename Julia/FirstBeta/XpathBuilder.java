@@ -133,7 +133,8 @@ public class XpathBuilder {
 	
 	
 	static public String xpChooseMySmilePhoto() {
-		String xPath=  ".//*[@id='photo_5002739']/table/tbody/tr/td/span[1]";
+		//String xPath=  ".//*[@id='photo_5002739']/table/tbody/tr/td/span[1]";
+		String xPath=  ".//*[@id='photo_5002739']/table/tbody/tr/td/a[2]";
 		Logging.slog(xPath);
 		return (xPath); 
 	}

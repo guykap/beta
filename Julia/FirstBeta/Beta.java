@@ -73,8 +73,9 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
-			//dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
+			dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
+			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
+			// "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
 		} catch (Exception e) {
@@ -263,8 +264,8 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 				// debug - change this to assertTrue for the element of first
 				// char
 				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabCharNameAndDetails(0))));
-				//String nameOfCharacterandDetails = new String(
-				//		driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(0))).getText());
+				// String nameOfCharacterandDetails = new String(
+				// driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(0))).getText());
 				bestLog.log("Success on assert True");
 			} catch (Exception e) {
 				bestLog.log("Error. We are not in the characters chars now. Lets return");
@@ -273,18 +274,19 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 			totalOffersInThisProd(offer);
 			bestLog.log((new String("Number of Characters found in this production: "))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
-			bestLog.log((new String("Number of characters added to the cart").concat(String.valueOf(offer.getTotalAddedToCart()))));
+			bestLog.log((new String("Number of characters added to the cart")
+					.concat(String.valueOf(offer.getTotalAddedToCart()))));
 			// debug
 			Breath.silentCount();
-			if(offer.getTotalAddedToCart() > 0 ){
-				//go and sumit cart
-				if(submitCart()){
+			if (offer.getTotalAddedToCart() > 0) {
+				// go and sumit cart
+				if (submitCart()) {
 					bestLog.log((new String("Submitted Cart Succesfully")));
-					
-				}else{
+
+				} else {
 					bestLog.log((new String("Error submittion cart")));
 				}
-				//***
+				// ***
 			}
 			rowNum++;
 			driver.navigate().back();
@@ -404,7 +406,7 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 				// debug
 				Breath.silentCount();
 
-				offer.readNotice();
+				Esl.readNotice(offer);
 				offer.makeDecision();
 
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
@@ -463,22 +465,23 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 		}
 	}
 
-	public boolean submitCart(){
-		//goes to cart page and clicks submit
-		//verify current page 
-		try{
+	public boolean submitCart() {
+		// goes to cart page and clicks submit
+		// verify current page
+		try {
 			Breath.deepBreath();
-		driver.findElement(By.xpath(XpathBuilder.xpCartLogo())).click();
-		Breath.deepBreath();
-		driver.findElement(By.xpath(XpathBuilder.xpSubmitCart())).click();
-		//verify successful submition
-		//??
-		return true;
-		}catch(Exception e){
+			driver.findElement(By.xpath(XpathBuilder.xpCartLogo())).click();
+			Breath.deepBreath();
+			driver.findElement(By.xpath(XpathBuilder.xpSubmitCart())).click();
+			// verify successful submition
+			// ??
+			return true;
+		} catch (Exception e) {
 			Logging.slog("Failed submitting cart");
 			return false;
 		}
 	}
+
 	public void choosePhoto() {
 		if (offer.getNeedTuxedo()) {
 			// choose tuxedo photo
@@ -512,16 +515,17 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 			String prodDetailsLeftWithTimeRoleAdded = new String(
 					driver.findElement(By.xpath(XpathBuilder.xpProdDetailsLeftWithTimeRoleAdded())).getText());
 			bestLog.log((new String("prodDetailsLeftWithTimeRoleAdded=")).concat(prodDetailsLeftWithTimeRoleAdded));
-			parseProdDetailsLeftWithTimeRoleAdded(parentOffer, prodDetailsLeftWithTimeRoleAdded);
+			Esl.parseProdDetailsLeftWithTimeRoleAdded(parentOffer, prodDetailsLeftWithTimeRoleAdded);
 		} catch (Exception e) {
 			bestLog.log(e.getMessage());
 			return 0;
+
 		}
 
 		try {
 			String prodDetialsRight = new String(
 					driver.findElement(By.xpath(XpathBuilder.xpProdDetialsRight())).getText());
-			parseProdDetialsRight(parentOffer, prodDetialsRight);
+			Esl.parseProdDetialsRight(parentOffer, prodDetialsRight);
 
 			bestLog.log((new String("prodDetailsRight = ")).concat(prodDetialsRight));
 
@@ -543,7 +547,7 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 				String internalAAclass = "";
 				String nameOfCharacterandDetails = new String(
 						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(charNum))).getText());
-				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
+				Esl.parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
 				// internalAAname =
 				// Scapper.scrapAtXpath(XpathBuilder.tabAAname(charNum));
 				internalAAname = Scapper.scrapAttributeAtXpath(XpathBuilder.tabAAname(charNum), "name");
@@ -558,7 +562,7 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 				}
 
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
-				offer.readNoticeAA();
+				Esl.readNoticeAA(offer);
 				offer.makeDecision();
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
 					bestLog.printDecisionMakingVars(offer);
@@ -567,40 +571,42 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 				// today
 				bestLog.log("lets submit!");
 				driver.findElement(By.xpath(XpathBuilder.xpCharacterLinkInCharactersPage(charNum))).click();
-				//driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
+				// driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
 				// driver.findElement(By.xpath(tabLocation(rowNum))).click();
 				Breath.deepBreath();
-			//	driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
-
-				//verify
+				bestLog.log(driver.getCurrentUrl());
+				driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
+				bestLog.log(driver.getCurrentUrl());
+				
+				// verify
 				String ChoosingPhotoUrl = driver.getCurrentUrl();
-				if (!ChoosingPhotoUrl.contains(currentOffer.getInternalAAname())){
-					Logging.slog(new String (("Error: the choosing window didn't open for AA internal role number:" )).concat(currentOffer.getInternalAAname()));
+				if (!ChoosingPhotoUrl.contains(currentOffer.getInternalAAname())) {
+					Logging.slog(new String(("Error: the choosing window didn't open for AA internal role number:"))
+							.concat(currentOffer.getInternalAAname()));
 					driver.navigate().back();
 					charNum++;
 					continue;
 				}
 				// choose photo
-				//  .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
-				 driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
-				 driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
-				 driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
-				 driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
-				  
-					// write talent notes with currentOffer.getMessage()
-				 
-				 // check if a talent notes area exists. If it does
-				 if(true){
-				 driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).clear();
-				 driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).sendKeys(currentOffer.getMessage());
-				 }   
-				 driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
-			 
+				// .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
+				driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
+				driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+				driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+				driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
+
+				// write talent notes with currentOffer.getMessage()
+
+				// check if a talent notes area exists. If it does
+				if (true) {
+					driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).clear();
+					driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).sendKeys(currentOffer.getMessage());
+				}
+				driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
 
 				// check if there is another character to be considered in the
 				// next row
-				 currentOffer.setTotalAddedToCart(1);
-if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
+				currentOffer.setTotalAddedToCart(1);
+				if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
 					charNum++;
 					moreCharsAvil = true;
 					// create another offer with the that will only differ in
@@ -620,34 +626,6 @@ if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
 			}
 		}
 		return (1 + charNum);
-	}
-
-	private void parseProdDetailsLeftWithTimeRoleAdded(Job char_offer, String data) {
-		bestLog.log("parse it");
-		char_offer.addToProductionDetails(data);
-		String delims = "['\n']";
-		String[] tokens = data.split(delims);
-		char_offer.setOfferTimeRoleAdded(tokens[0]);
-		char_offer.setOfferTypeProject(tokens[2]);
-		char_offer.setOfferUnionStatus(tokens[3]);
-		// String details = tokens[1];
-	}
-
-	private void parseProdDetialsRight(Job char_offer, String data) {
-		// ALL parsing should be done with REGEX , but right now only store in
-		// the DB all the production info as one long String
-		bestLog.log("parse it");
-		char_offer.addToProductionDetails(data);
-	}
-
-	private void parseNameOfCharacterAndDetailsUnder(Job char_offer, String data) {
-		bestLog.log("parse it");
-		String delims = "\\[|\\]";
-		String[] tokens = data.split(delims);
-		String name = new String(tokens[1]);
-		char_offer.setOfferCharacterName(name.trim());
-		String details = new String(tokens[2]);
-		char_offer.setOfferCharacterDetails(details.trim());
 	}
 
 	@After
