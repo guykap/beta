@@ -1,0 +1,134 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - Found a production at row: 6
+INFO - Check for red check on left of row: 6
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 6
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - found at least one character in this production. Lets try submitting
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Monday, Dec. 5, 2016, 2:01 PM Pacific
+WHAT WOULD CRAZY HORSE DO?
+Theatre
+V/T: The Copaken Stage
+Kansas City, MO
+LORT D, minimum $637
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Producer:   Kansas City Repertory Theatre
+Artistic Director: Eric Rosen
+Director: Sam Pinkleton– What Would Crazy Horse Do?
+Written by: Larissa FastHorse – What Would Crazy Horse Do?
+LA Casting: Tara Mazzucca – Casting Director
+Elise Buedel – Casting Assistant
+First Rehearsal:  Tuesday, April 4th, 2017
+Preview: Friday, April 28, 2017
+Open: Friday, May 5, 2017
+Close: Sunday, May 28, 2017
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - No attribute found at: .//*[@id='mainContent']/table[2]/tbody/tr/td/a[@class='breakdown-open-add-role']/@href
+INFO - No attribute found at: .//*[@id='mainContent']/table[2]/tbody/tr/td/a/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']/@name
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']/@href
+INFO - No attribute found at: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']/@href
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a/@class
+INFO - No attribute found at: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a/@class
+INFO - For Some erroer - this role isn't open for submittion
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - Failed to submit it.
+INFO - Number of Characters found in this production: 0
+INFO - Checking for red check at row number: 7
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[9]/td[1][@class='submitted']
+INFO - Found a production at row: 7
+INFO - Check for red check on left of row: 7
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[9]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 7
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[9]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[9]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[9]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[9]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - found at least one character in this production. Lets try submitting
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Tuesday, Nov. 29, 2016, 3:01 PM Pacific
+UNTITLED MARVEL FEATURE FILM (2 Roles)
+Feature Film
+SAG-AFTRA
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Casting Director: Sarah Finn
+Associate Casting Director: Nicholas A. Mudd
+Casting Assistant: Molly Doyle
+Start Date: Jan - May 2017
+Rate of Pay: SAG-AFTRA Theatrical
+Location: Atlanta
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ FEMALE ELDER ]
+Female, looks 70s-80s, Eritrean. An elder of her tribe and their representative to the government. (NOTE: Eritrea is a country in northeast Africa)
+[ MALE ELDER ]
+Male, looks 70s-80s, African. An elder statesman, he is the leader of his people and their representative to the government.
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - Found a production at row: 6
+INFO - Check for red check on left of row: 6
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 6
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - found at least one character in this production. Lets try submitting

@@ -118,3 +118,10 @@ http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=3&
 CLICK THE LINK
 ------------------
 .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, "javascript:")]
+
+
+///CHOOSE PHOTO PAGE:
+xpath=(//a[contains(text(),'Use This Photo')])[4]
+//td[@id='photo_5002739']/table/tbody/tr/td/a[2]
+xpath=(//a[contains(@href, 'javascript: highlightPhoto(5002739, 0);')])[2]
+//table[2]/tbody/tr/td/table/tbody/tr/td/a[2]

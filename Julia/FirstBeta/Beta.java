@@ -31,7 +31,7 @@ public class Beta {
 	static Iterator<Job> jobIterator = Jobs.iterator();
 	private Job offer;
 
-	 String parentWindowHandler;
+	String parentWindowHandler;
 	String newWindowHandler;
 	static Iterator<String> windowHandlesIterator;
 	static public Set<String> handles;
@@ -73,8 +73,8 @@ public class Beta {
 
 		try {
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			//dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
-			dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi","password");
+dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
+			//dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
 		} catch (Exception e) {
@@ -97,7 +97,7 @@ public class Beta {
 			test.testBetaAA();
 		} catch (Exception e) {
 			Logging.slog(e.getMessage());
-			Logging.slog("Error in programs");
+			Logging.slog("Error in program");
 		}
 		bestLog.log("Program ENDED - THANK YOU!");
 
@@ -274,8 +274,14 @@ public class Beta {
 			totalOffersInThisProd(offer);
 			bestLog.log((new String("Number of Characters found in this production: "))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
+			bestLog.log((new String("Number of characters added to the cart").concat(String.valueOf(offer.getTotalAddedToCart()))));
 			// debug
 			Breath.silentCount();
+			if(offer.getTotalAddedToCart() > 0 ){
+				//go and sumit cart
+				
+				//***
+			}
 			rowNum++;
 			driver.navigate().back();
 		} // end of while loop
@@ -340,7 +346,7 @@ public class Beta {
 	}
 
 	public void heartLoop() throws Throwable {
-		String originWindow= driver.getWindowHandle();
+		String originWindow = driver.getWindowHandle();
 
 		if (seekBackgroundWork) {
 			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
@@ -453,6 +459,11 @@ public class Beta {
 		}
 	}
 
+	public void submitCart(){
+		//goes to cart page and clicks submit
+		
+		
+	}
 	public void choosePhoto() {
 		if (offer.getNeedTuxedo()) {
 			// choose tuxedo photo
@@ -480,7 +491,7 @@ public class Beta {
 		// for each character - we open a new offer
 		String nameOfCharacterAndDetailsUnder;
 		String detailsOfCharacter;
-	//	int totalNumOfOffersInProduction = 1;
+		// int totalNumOfOffersInProduction = 1;
 
 		try {
 			String prodDetailsLeftWithTimeRoleAdded = new String(
@@ -508,27 +519,25 @@ public class Beta {
 		Job currentOffer = parentOffer;
 		int charNum = 0;
 		boolean moreCharsAvil = true;
-
+		// today gym
 		while (moreCharsAvil) {
-//today gym
-			try {
-				String internalAAname;
-				String internalAAhref;
-				String internalAAclass;
 
+			try {
+				String internalAAname = "";
+				String internalAAhref = "";
+				String internalAAclass = "";
 				String nameOfCharacterandDetails = new String(
 						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(charNum))).getText());
 				parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
-				//internalAAname = Scapper.scrapAtXpath(XpathBuilder.tabAAname(charNum));
-				internalAAname = Scapper.scrapAttributeAtXpath(XpathBuilder.tabAAname(charNum),"name");
-			
-				
-				currentOffer.setInternalAAname(internalAAname);
-				internalAAhref = Scapper.scrapAttributeAtXpath((XpathBuilder.xpInternalAAhref(charNum)),"href");
+				// internalAAname =
+				// Scapper.scrapAtXpath(XpathBuilder.tabAAname(charNum));
+				internalAAname = Scapper.scrapAttributeAtXpath(XpathBuilder.tabAAname(charNum), "name");
+				currentOffer.setInternalAAname(internalAAname.substring(5));
+				internalAAhref = Scapper.scrapAttributeAtXpath((XpathBuilder.xpInternalAAhref(charNum)), "href");
 				currentOffer.setInternalAAhref(internalAAhref);
-				internalAAclass = Scapper.scrapAttributeAtXpath(XpathBuilder.tabAAclass(charNum),"class");
+				internalAAclass = Scapper.scrapAttributeAtXpath(XpathBuilder.tabAAclass(charNum), "class");
 				if (!internalAAclass.contains("breakdown-open-add-role")) {
-					bestLog.log("For Some erroer - this role isn't open for submittion");
+					bestLog.log("Some error - this role isn't open for submittion");
 					charNum++;
 					continue;
 				}
@@ -540,21 +549,30 @@ public class Beta {
 					bestLog.printDecisionMakingVars(offer);
 					continue;
 				}
-//today
+				// today
 				bestLog.log("lets submit!");
-				driver.findElement(By.xpath(XpathBuilder.xpCharacterLink())).click();
-
-				// *[@id="mainContent"]/table[2]/tbody/tr/td/a
-				// div[@id='mainContent']/table[2]/tbody/tr/td/a
-				driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
+				driver.findElement(By.xpath(XpathBuilder.xpCharacterLinkInCharactersPage(charNum))).click();
+				//driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
 				// driver.findElement(By.xpath(tabLocation(rowNum))).click();
 				Breath.deepBreath();
 				driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
-				 
+
+				//verify
+				String url = driver.getCurrentUrl();
+				if (!url.contains(currentOffer.getInternalAAname())){
+					Logging.slog(new String (("Error: the choosing window didn't open for AA internal role number:" )).concat(currentOffer.getInternalAAname()));
+				}
 				// choose photo
+				 driver.findElement(By.xpath("//td[@id='photo_5002739']/table/tbody/tr/td/a[2]")).click();
+				 driver.findElement(By.xpath("xpath=(//input[@name='video_to_use'])[2]")).click();
+			 
+				 driver.findElement(By.xpath("//input[@id='include_sc_checkbox_id']")).click();
 
-				// chose videos
+					// write talent notes with currentOffer.getMessage()
 
+				    driver.findElement(By.xpath("//a[@id='add_to_cart']")).click();
+				//    driver.findElement(By.xpath("//div[4]/input")).click();
+				 
 				// write talent notes with currentOffer.getMessage()
 
 				// HIT SUBMIT
@@ -564,7 +582,6 @@ public class Beta {
 				if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
 					charNum++;
 					moreCharsAvil = true;
-					//totalNumOfOffersInProduction++;
 					// create another offer with the that will only differ in
 					// the name of character and character details.
 					Jobs.add(currentOffer);
@@ -581,7 +598,7 @@ public class Beta {
 				break;
 			}
 		}
-		return (1+charNum);
+		return (1 + charNum);
 	}
 
 	private void parseProdDetailsLeftWithTimeRoleAdded(Job char_offer, String data) {

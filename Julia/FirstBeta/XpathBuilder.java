@@ -28,7 +28,7 @@ public class XpathBuilder {
 				return (xPath);
 		 
 	}
-
+	
 	
 	static public String xpBetaCharacterName(int row) {
 		if (row == 0) {
@@ -117,7 +117,7 @@ public class XpathBuilder {
 		//      .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]	
 		
 		if (row ==0){
-			return new String(".//*[@id='mainContent']/div[3]/table/tbody/tr/td[3]/a[starts-with(@href,'/projects/')]");
+//			return new String(".//*[@id='mainContent']/div[3]/table/tbody/tr/td[3]/a[starts-with(@href,'/projects/')]");
 		}
 		int rowPlusTwo = row + 2;
 			//String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
@@ -129,6 +129,10 @@ public class XpathBuilder {
 			return (xPath); 
 		}
 	
+	
+	
+
+	 
 	
 	static public String xpProdDetailsLeftWithTimeRoleAdded() {
  
@@ -145,17 +149,19 @@ public class XpathBuilder {
 	}
 	
 	static public String xpCharacterLinkInCharactersPage(int row) {
-		String xPath; 
-		if(row == 0){
-		 xPath= new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]");
-		 }else{
-			 xPath = 
-		 }
-		 
-		Logging.slog(xPath);
-		return (xPath); 
-	}
-	
+			if (row == 0) {
+				Logging.slog(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]");
+				return (new String(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]"));
+			}
+			//The second character would have the class attribute at:
+			//    .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+			int twiceRow = row *2;
+			String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
+			String rightPart = "]/a[starts-with(@href, 'javascript:')]";
+			String xPath= new String((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart));
+			Logging.slog(xPath);
+			return (xPath);
+		}
 
 	public String clickCharacterName(String charInternalNameRole, String bid, int regionNum) {
 		/*

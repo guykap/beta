@@ -70,6 +70,7 @@ public class Job {
 	boolean needPoliceUniform;
  	boolean decisionSubmit;
   	int numberOfCharactersOnThisProduction;
+  	int totalAddedToCart;
  	
 	public Job() {
 		// String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
@@ -390,10 +391,18 @@ public class Job {
 		numberOfCharactersOnThisProduction = newBit;
 	};
 
-	
-	
-	
+	public int getTotalAddedToCart() {
+		return totalAddedToCart;
+	};
 
+	public void setTotalAddedToCart(int newBit) {
+		totalAddedToCart = newBit;
+	};
+
+	
+	
+	
+	
 	public void readNoticeAA() {
 		// this reads the notice and sets all the Job params accordingly.
 		String allData = new String(this.offerProductionDetails);
