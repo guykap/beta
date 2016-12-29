@@ -226,7 +226,6 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 		while (nextRowHasAnotherProd) {
 
 			bestLog.log("Checking for red check at row number: " + rowNum);
-			// today
 			try {
 				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabProductionInRow(rowNum))));
 				bestLog.log((new String("Found a production at row: ").concat(String.valueOf(rowNum))));
@@ -245,7 +244,6 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 				continue;
 			}
 			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(rowNum))));
-			// ***** submit
 			offer = new Job(dan.getActorId());
 			Scapper.handleAAOffer(offer, rowNum);
 			if (offer.offerHasBeenConsideredBeforeAA(Jobs)) {
@@ -264,9 +262,10 @@ dan = new Actor("10001", "guykapulnik", "cPassword","guykapulnik", "aPassword");
 			try {
 				// debug - change this to assertTrue for the element of first
 				// char
-				String nameOfCharacterandDetails = new String(
-						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(0))).getText());
-				bestLog.log("found at least one character in this production. Lets try submitting");
+				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabCharNameAndDetails(0))));
+				//String nameOfCharacterandDetails = new String(
+				//		driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(0))).getText());
+				bestLog.log("Success on assert True");
 			} catch (Exception e) {
 				bestLog.log("Error. We are not in the characters chars now. Lets return");
 				driver.navigate().back();
