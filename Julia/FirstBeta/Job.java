@@ -71,6 +71,7 @@ public class Job {
  	boolean decisionSubmit;
   	int numberOfCharactersOnThisProduction;
   	int totalAddedToCart;
+  	boolean putInCart;
  	
 	public Job() {
 		// String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
@@ -374,6 +375,20 @@ public class Job {
 	public void setDecisionSubmit(boolean newBit) {
 		decisionSubmit = newBit;
 	};
+	
+	public boolean getPutInCart() {
+		return putInCart;
+	};
+
+	public void setPutInCart() {
+		putInCart = true;
+	};
+	
+	public void takeOutOfCart() {
+		putInCart = false;
+	};
+	
+	
 
 	public boolean getHasBeenSubmitted() {
 		return offerHasBeenSubmitted;
@@ -411,48 +426,6 @@ public class Job {
 		}
 	}
   
-	public void fillTalentNote() {
-		
-		String allData = (this.getOfferRole()).concat(" ").concat(offerListingNotes.toLowerCase());
-
-		// last time worked
-		if ((allData.contains(" note last ")) || (allData.contains("please note if you have worked"))
-				|| (allData.contains("worked on the"))
-				|| (allData.contains("must not have worked on this project"))
-				|| (allData.contains("last time that you worked"))
-				|| (allData.contains("do not submit if you have worked on this show"))) {
-			this.addToMessage("I've never worked on the production.");
-		}
-
-		if ((allData.contains("note your sizes")) || (allData.contains("note all sizes"))
-				|| (allData.contains("note neck"))) {
-			this.addToMessage("height: 6'2\n weight:200\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11 ");
-		}
-
-		if ((allData.contains(" Please note if you can provide")) || (allData.contains("must own"))
-				|| (allData.contains("own the wardrobe"))) {
-			this.addToMessage("I own the wardrobe.");
-		}
-
-		// tuxedo
-		if (this.needTuxedo){
-			this.addToMessage("I own the tuxedo.");
-		}
-
-		this.improveMessage();
-	}
-
-	public void improveMessage() {
-		// checks the length and if empty - then add the basic message
-		if (getMessage().length() < 5) {
-			setMessage("I would like to be considered for this production.\nThank you,\nGuy Kapulnik");
-		}
-		// add the Thanks! Guy ending
-		if (!(getMessage().contains("Guy"))) {
-			addToMessage("Thanks,\nGuy");
-		}
-	}
-
 	public void loadNoticesFromFile() {
 		// read file
 
@@ -523,14 +496,13 @@ public class Job {
 	}
 
 	 public boolean offerHasBeenConsideredBeforeAA(List<Job> allJobs) {
-		// checkcing in the list of Jobs for another offer with the same ROLE
-		// and same PROJECT NAME values.
+		// checkcing in the list of Jobs for another offer with the PROJECT NAME values.
 		for (Job offer : allJobs) {
 			if (((this.getOfferProjectName()).equals(offer.getOfferProjectName()))
 					&& (!offer.getHasBeenSubmitted())) {
 				Logging.slog(
-						"Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
-				Logging.sprintDecisionMakingVars(this);
+						"Found that this Project has already been considered and decided NOT to submit. This is Why: ");
+				Logging.sprintDecisionMakingVars(offer);
 				return true;
 			}
 		}

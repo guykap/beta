@@ -47,6 +47,7 @@ public class Beta {
 	static Breath takeBreath;
 	static Logging bestLog;
 	static Actor dan;
+	boolean isTargetRegion[];
 
 	public static void main(String[] args) throws Throwable {
 
@@ -222,90 +223,102 @@ public class Beta {
 			throw new Exception();
 		}
 		Breath.breath();
-		int rowNum = 4;
+		int productionRow = 4;
 		boolean nextRowHasAnotherProd = true;
 
 		while (nextRowHasAnotherProd) {
-
-			bestLog.log("Checking for red check at row number: " + rowNum);
+			bestLog.log("Checking for red check at row number: " + productionRow);
 			try {
-				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabProductionInRow(rowNum))));
-				bestLog.log((new String("Found a production at row: ").concat(String.valueOf(rowNum))));
-				bestLog.log((new String("Check for red check on left of row: ").concat(String.valueOf(rowNum))));
+				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabProductionInRow(productionRow))));
+				bestLog.log((new String("Found a production at row. So looking for red check on row: ")
+						.concat(String.valueOf(productionRow))));
 			} catch (Exception e) {
-				bestLog.log((new String("No production on row ").concat(String.valueOf(rowNum))));
+				bestLog.log((new String("No production on row ").concat(String.valueOf(productionRow))));
 				nextRowHasAnotherProd = false;
 				break;
 			}
-
 			try {
 				Breath.breath();
-				assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(rowNum))));
+				assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(productionRow))));
 			} catch (Exception e) {
-				bestLog.log((new String("Found a red check on left of row: ").concat(String.valueOf(rowNum))));
+				bestLog.log((new String("Found a red check on left of row: ").concat(String.valueOf(productionRow))));
 				continue;
 			}
-			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(rowNum))));
+			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(productionRow))));
 			offer = new Job(dan.getActorId());
-			Scapper.handleAAOffer(offer, rowNum);
+			Scapper.handleAAOffer(offer, productionRow);
 			if (offer.offerHasBeenConsideredBeforeAA(Jobs)) {
-				rowNum++;
+				productionRow++;
 				continue;
 			}
 
 			try {
-				driver.findElement(By.xpath(XpathBuilder.xpLinkCharactersInProduction(rowNum))).click();
+				driver.findElement(By.xpath(XpathBuilder.xpLinkCharactersInProduction(productionRow))).click();
 			} catch (Exception e) {
-				bestLog.log((new String("Error: the link hasn't opened on row: ").concat(String.valueOf(rowNum))));
+				bestLog.log(
+						(new String("Error: the link hasn't opened on row: ").concat(String.valueOf(productionRow))));
 				continue;
 			}
 			Breath.deepBreath();
 
 			try {
-				// debug - change this to assertTrue for the element of first
-				// char
 				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabCharNameAndDetails(0))));
-				// String nameOfCharacterandDetails = new String(
-				// driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(0))).getText());
-				bestLog.log("Success on assert True");
+				bestLog.log("Success. We are now in characters table.");
 			} catch (Exception e) {
-				bestLog.log("Error. We are not in the characters chars now. Lets return");
+				bestLog.log("Error. We are not in the characters chart now. Lets return");
 				driver.navigate().back();
 			}
-			int submittedOffers = totalOffersInThisProd(offer);
+			totalOffersInThisProd(offer);
 			
-			//should move back to window with char of productions
-			
-			//driver.switch.window()
+			// should move back to window with char of productions
+
+			// driver.switch.window()
 			bestLog.log((new String("Number of Characters found in this production: "))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
-			bestLog.log((new String("Number of characters added to the cart: ")
-					.concat(String.valueOf(submittedOffers))));
-			// debug
+			bestLog.log(
+					(new String("Number of characters added to the cart: ").concat(String.valueOf( countOffersInCart(Jobs);))));
 			Breath.silentCount();
 			if (offer.getTotalAddedToCart() > 0) {
-				// go and sumit cart
 				if (submitCart()) {
 					bestLog.log((new String("Submitted Cart Succesfully")));
-					//go back to production chart
+					emptyCart(Jobs);
+					// go back to production chart
 
-					//driver.switch.window()
+					// driver.switch.window()
 				} else {
 					bestLog.log((new String("Error submittion cart")));
+					//go back and make in each of the offers that it was NOT submitted ( although the decision was YES to submit)
+					emptyCart(Jobs);
+					
 				}
-				// ***
 			}
-			rowNum++;
+			productionRow++;
 			driver.navigate().back();
 		} // end of while loop
 	}
 
+	public void setTargetRegions() {
+		isTargetRegion = new boolean[15];
+		for (int i = 0; i < 15; ++i) {
+			isTargetRegion[i] = false;
+		}
+		
+		//take target regions from DB
+		isTargetRegion[8] = true;
+		isTargetRegion[9] = true;
+		
+	}
+
 	public void coreActorsAccess() throws Throwable {
 		// go over the chosen regions and submit to each region
+		Breath.makeZeroSilentCounter();
+		setTargetRegions();
 		while (true) {
-			for (int regionNum = 8; regionNum < 10; regionNum++) {
-				handleRegion(regionNum);
-				Breath.nap();
+			for (int regionNum = 0; regionNum < 15; regionNum++) {
+				if (isTargetRegion[regionNum]) {
+					handleRegion(regionNum);
+					Breath.nap();
+				}
 			}
 		}
 	}
@@ -481,7 +494,7 @@ public class Beta {
 			Breath.deepBreath();
 			driver.findElement(By.xpath(XpathBuilder.xpSubmitCart())).click();
 			// verify successful submition
-			// ??
+			// Notify User/ DB about the submittion.
 			return true;
 		} catch (Exception e) {
 			Logging.slog("Failed submitting cart");
@@ -535,7 +548,7 @@ public class Beta {
 			Esl.parseProdDetialsRight(parentOffer, prodDetialsRight);
 
 			bestLog.log((new String("prodDetailsRight = ")).concat(prodDetialsRight));
-
+			Breath.silentCount();
 		} catch (Exception e) {
 			bestLog.log(e.getMessage());
 			return 0;
@@ -545,6 +558,7 @@ public class Beta {
 		Job currentOffer = parentOffer;
 		int charNum = 0;
 		boolean moreCharsAvil = true;
+
 		// today gym
 		while (moreCharsAvil) {
 
@@ -576,20 +590,13 @@ public class Beta {
 					charNum++;
 					continue;
 				}
-				// today
-
-				ManageDriver.windowStatus(parentWindowHandler);
+				Esl.fillTalentNote(currentOffer);
 				ManageDriver.windowStatus2();
 				bestLog.log("lets submit!");
-				bestLog.log("Still in OLD window click");
 				driver.findElement(By.xpath(XpathBuilder.xpCharacterLinkInCharactersPage(charNum))).click();
-				// driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
-				// driver.findElement(By.xpath(tabLocation(rowNum))).click();
 				Breath.deepBreath();
-
-				ManageDriver.windowStatus(parentWindowHandler);
 				ManageDriver.windowStatus2();
-				 
+
 				bestLog.log(driver.getCurrentUrl());
 				driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
 				bestLog.log(driver.getCurrentUrl());
@@ -604,14 +611,13 @@ public class Beta {
 					continue;
 				}
 
-				
 				choosePhotosAndSubmit(offer);
 				driver.switchTo().window(parentWindowHandler);
-				
+
 				// check if there is another character to be considered in the
 				// next row
-				//currentOffer.setTotalAddedToCart(1);
-		
+				// currentOffer.setTotalAddedToCart(1);
+
 				if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
 					charNum++;
 					moreCharsAvil = true;
@@ -665,118 +671,28 @@ public class Beta {
 	public void choosePhotosAndSubmit(Job currentOffer) {
 		try {
 
-			 
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame("main_window");
 			driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
 			driver.findElement(By.xpath(XpathBuilder.xpChooseCommercialVideo2())).click();
 			// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
 			driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
-			 if (true) {
-				  driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
-				  clear();
-				  driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
-				  sendKeys(currentOffer.getMessage()); }
+			if (true) {
+				driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).clear();
+				driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).sendKeys(currentOffer.getMessage());
+			}
 
-			
-			//  need to swich iFrame for the fianl submit button
-
-			//driver.switchTo().frame("buttons");
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame("buttons");
 			driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
-			currentOffer.setHasBeenSubmitted(true);
-			currentOffer.setTotalAddedToCart(1);
-			
-		//	ManageDriver.windowStatus(parentWindowHandler);
-		//	ManageDriver.windowStatus2();
-			
-			
-			
-			/*
-			String submitxpath[] = { "/a[contains(text(),'Add to Cart')]", "//a[@id='add_to_cart']", ".//a[contains(@href, '#bottom')]", "" };
-			assertiveClicking(submitxpath);
-			// driver.findElement(By.xpath("/a[contains(text(),'Add to
-			// Cart')]")).click();
-*/
-			//ManageDriver.windowStatus(parentWindowHandler);
-		//	ManageDriver.windowStatus2();
-			
-			
-			//driver.switchTo().frame(1);
-			
-			
-			
-			
-			/*
-			//*************
-			String options[] = { ".//*[@id='photo_5002739']/table/tbody/tr/td/span[1]",
-					".//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]",
-					".//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')]",
-					".//*[@id='photo_5002739']/table/tbody/tr/td/a[2]",
-					"//td[@id='photo_5002739']/table/tbody/tr/td/a[2]",
-					"//a[contains(@href, 'javascript: highlightPhoto(5002739, 0);')])[2]",
-					"//table[2]/tbody/tr/td/table/tbody/tr/td/a[2]", "//input[@name='video_to_use'])[2]",
-					"//input[@name='video_to_use']", "//input[@id='include_sc_checkbox_id']", "//div[4]/input" };
-
-			ManageDriver.windowStatus(parentWindowHandler);
-			ManageDriver.windowStatus2();
-
-			// WebElement iFrame1= driver.findElement(By.tagName("buttons"));
-
-			// WebElement iFrame2=
-			// driver.findElement(By.tagName("main_window"));
-
-			// driver.switchTo().parentFrame();
-			// assertiveClicking(options);
-
-			// driver.switchTo().frame("buttons");
-			// assertiveClicking(options);
-			driver.switchTo().frame("main_window");
-			assertiveClicking(options);
-
-			driver.switchTo().defaultContent();
-			assertiveClicking(options);
-*/
-			// debug
-			// read all html from driver
-
-			/// Logging.slog(driver.getPageSource());
-
-			// Logging.slog(new String(new
-			// String(Beta.driver.findElement(By.xpath("html/body/form/div[3]")).getText())));
-
-			// rain // choose photo
-			// .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
-			// bestLog.log(driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).getText());
-			// driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
-			// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
-			// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
-			// driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
-
-			// write talent notes with currentOffer.getMessage()
-
-			// check if a talent notes area exists. If it does
-
-			// driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).clear();
-			// driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).sendKeys(currentOffer.getMessage());
-
-			// driver.findElement(By.xpath("//table[2]/tbody/tr/td/table/tbody/tr/td/a[2]")).click();
-
-			// String stam = driver.findElement(By.id(id='photo_5002739'));
-			// driver.findElement(By.id("photo_5002739")).click();
-
-			// driver.findElement(By.cssSelector(".submission_popup_header>strong")).click();
-			// bestLog.log(driver.findElement(By.xpath("html/body/form/div[1]/strong")).getText());
-
-			// bestLog.log("It Worked!");
+			currentOffer.setPutInCart();
+			//currentOffer.setHasBeenSubmitted(true);
+			//currentOffer.setTotalAddedToCart(1);
 
 		} catch (Exception e) {
 			bestLog.log("Failed to submit it.");
 			bestLog.log(e.getMessage());
-
 		}
-
 	}
 
 	public static int randInt(int min, int max) {
@@ -865,4 +781,23 @@ public class Beta {
 		// default
 		return new String("");
 	}
+	
+	 public int countOffersInCart(List<Job> allJobs){
+		 int inCart =0;
+		 	for (Job offer : allJobs) {
+			 if(offer.getPutInCart()){
+				 inCart++;
+			 }
+		 }
+	 return inCart;
+	 }
+	 
+	 public void emptyCart(List<Job> allJobs){
+		 
+		 	for (Job offer : allJobs) {
+			 offer.takeOutOfCart();
+			 }
+		 
+	 
+	 }
 }

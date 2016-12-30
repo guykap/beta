@@ -191,4 +191,48 @@ public class Esl {
 		}
 		
 	}
+
+	static public void fillTalentNote(Job offer) {
+		
+		String allData = (offer.getOfferRole()).concat(" ").concat((offer.getOfferListing()).toLowerCase());
+
+		// last time worked
+		if ((allData.contains(" note last ")) || (allData.contains("please note if you have worked"))
+				|| (allData.contains("worked on the"))
+				|| (allData.contains("must not have worked on this project"))
+				|| (allData.contains("last time that you worked"))
+				|| (allData.contains("do not submit if you have worked on this show"))) {
+			offer.addToMessage("I've never worked on the production.");
+		}
+
+		if ((allData.contains("note your sizes")) || (allData.contains("note all sizes"))
+				|| (allData.contains("note neck"))) {
+			offer.addToMessage("height: 6'2\n weight:190lb\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11 ");
+		}
+
+		if ((allData.contains(" Please note if you can provide")) || (allData.contains("must own"))
+				|| (allData.contains("own the wardrobe"))) {
+			offer.addToMessage("I own the wardrobe.");
+		}
+
+		// tuxedo
+		if (offer.getNeedTuxedo()){
+			offer.addToMessage("I own the tuxedo.");
+		}
+
+		improveMessage(offer);
+	}
+
+	static public void improveMessage(Job offer) {
+		// checks the length and if message is empty, then add the basic message
+		if (offer.getMessage().length() < 5) {
+			offer.setMessage("I would like to be considered for this production.\nThank you,\nGuy Kapulnik");
+		}
+		// add the Thanks! Guy ending
+		if (!(offer.getMessage().contains("Guy"))) {
+			offer.addToMessage("Thanks,\nGuy");
+		}
+	}
+
+
 }
