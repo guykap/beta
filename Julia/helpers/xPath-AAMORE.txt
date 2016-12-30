@@ -135,11 +135,14 @@ xpath=(//a[contains(@href, 'javascript: highlightPhoto(5002739, 0);')])[2]
 
 //CHOOSE THE VIDEO:
 xpath=(//input[@name='video_to_use'])[2]
-
+//input[@name='video_to_use']
 
 sizes box:
 //input[@id='include_sc_checkbox_id']
 //div[4]/input
+
+
+
 
 
 SUBMIT BUTTON:
@@ -161,3 +164,20 @@ THE RED SUBMIT BUTTON
 
 
 
+
+driver.switchTo().frame(driver.findElement(By.id(“frameId”)));
+//do your stuff
+driver.switchTo().defaultContent();
+
+
+driver.switchTo().frame(driver.findElement(By.id(“frameId”)));
+//do your stuff
+driver.switchTo().defaultContent();
+
+
+
+	 * if (false) {
+				 * driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
+				 * clear();
+				 * driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
+				 * sendKeys(currentOffer.getMessage()); }

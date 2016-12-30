@@ -276,7 +276,7 @@ public class Beta {
 			bestLog.log((new String("Number of Characters found in this production: "))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
 			bestLog.log(
-					(new String("Number of characters added to the cart: ").concat(String.valueOf( countOffersInCart(Jobs);))));
+					(new String("Number of characters added to the cart: ").concat(String.valueOf( countOffersInCart(Jobs)))));
 			Breath.silentCount();
 			if (offer.getTotalAddedToCart() > 0) {
 				if (submitCart()) {

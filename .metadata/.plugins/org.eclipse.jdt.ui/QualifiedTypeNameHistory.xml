@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="FirstBeta.manageGecko"/>
 <fullyQualifiedTypeName name="FirstBeta.Logging"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="FirstBeta.ManageDriver"/>
 </qualifiedTypeNameHistroy>
