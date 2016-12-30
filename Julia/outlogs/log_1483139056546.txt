@@ -1,0 +1,174 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 0
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found on row:0
+INFO - Checking for red check at row number: 1
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[3]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 1
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[3]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 1
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[3]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[3]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[3]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[3]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Monday, Dec. 12, 2016, 3:11 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 2
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[4]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 2
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[4]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found on row:2
+INFO - Checking for red check at row number: 3
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[5]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 3
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[5]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found on row:3
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 8, 2016, 6:30 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 5
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[7]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 5
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[7]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found on row:5
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - No production on row 6
+INFO - Zzz
+INFO - Region southeast
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - No production on row 0
+INFO - Zzz
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 0
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found on row:0
+INFO - Checking for red check at row number: 1
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[3]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 1
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[3]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 1
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[3]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[3]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[3]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[3]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Monday, Dec. 12, 2016, 3:11 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 2
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[4]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 2
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[4]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found on row:2
+INFO - Checking for red check at row number: 3
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[5]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 3
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[5]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found on row:3
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 8, 2016, 6:30 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 5
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[7]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 5
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[7]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found on row:5
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - No production on row 6
+INFO - Zzz
+INFO - Region southeast
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - No production on row 0

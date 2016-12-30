@@ -121,8 +121,10 @@ public class Esl {
 			
 
 		} catch (Exception e) {
-			System.err.format("Age range - faliure in reading or calculating age");
-			offer.setIsAge(false);
+			//System.err.format("Age range - faliure in reading or calculating age. Lets submit anyway.");
+			Logging.slog(e.getMessage());
+			Logging.slog("Age range - faliure in reading or calculating age. Lets submit anyway.");
+			offer.setIsAge(true);
 		}
 	}
 

@@ -163,7 +163,20 @@ THE RED SUBMIT BUTTON
 //div[@id='mainContent']/a[2]
 
 
+ 
+FOR HAWAII - THE TOP ROW OF PRODUCTION IS:
+.//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[1][@class='submitted']
+.//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']
 
+FOR SOUTHEAST - THE TOP ROW OF PRODUCTION IS :
+.//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[3]/a
+.//*[@id='mainContent']/div[5]/table/tbody/tr[2]/td[1]
+
+
+
+SOUTHEAST TITLE IS AT:
+.//*[@id='mainContent']/div[5]/table/tbody/tr[1]/th[3]/a
+.//*[@id='mainContent']/div[5]/table/tbody/tr[1]/th[3]/a[@href='#']
 
 driver.switchTo().frame(driver.findElement(By.id(“frameId”)));
 //do your stuff
@@ -175,9 +188,4 @@ driver.switchTo().frame(driver.findElement(By.id(“frameId”)));
 driver.switchTo().defaultContent();
 
 
-
-	 * if (false) {
-				 * driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
-				 * clear();
-				 * driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
-				 * sendKeys(currentOffer.getMessage()); }
+ 

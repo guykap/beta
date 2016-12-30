@@ -8,8 +8,8 @@ public class Scapper {
 
 
 	static public void handleAAOffer(Job offer, int rowNum) {
-
-		String leftPart = (new String("//div[@id='mainContent']/div[3]/table/tbody/tr["))
+	 
+		String leftPart = (new String("//div[@id='mainContent']/div[@class='list']/table/tbody/tr["))
 				.concat(String.valueOf(rowNum + 2));
 		String path;
 		try {

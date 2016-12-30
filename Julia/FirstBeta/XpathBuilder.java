@@ -3,10 +3,10 @@ package FirstBeta;
 public class XpathBuilder {
 	static public String xpRedcheckboxLocation(int rowNum){
 		if (rowNum == 0) {
-			return (new String(".//*[@id='mainContent']/div[3]/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']"));
+			return (new String(".//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']"));
 			}
 		
-		String leftPart = ".//*[@id='mainContent']/div[3]/table/tbody/tr[";
+		String leftPart = ".//*[@id='mainContent']/div[@class='list']/table/tbody/tr[";
 		String rightPart = "]/td[1][@class='submitted']/img[@src='/gui/check.gif']";
 		String xPath= new String((new String(leftPart)).concat(String.valueOf(rowNum)).concat(rightPart));
 		Logging.slog(xPath);
@@ -92,7 +92,7 @@ public class XpathBuilder {
 	static public String tabProductionInRow(int row) {
 	//    	ROW+2
 		int rowPlusTwo = row + 2;
-		String leftPart = ".//*[@id='mainContent']/div[3]/table/tbody/tr[";
+		String leftPart = ".//*[@id='mainContent']/div[@class='list']/table/tbody/tr[";
 		// 	String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
 		String rightPart = "]/td[1][@class='submitted']";
 		String xPath= new String( ((new String(leftPart)).concat(String.valueOf(rowPlusTwo)).concat(rightPart)));
@@ -105,7 +105,7 @@ public class XpathBuilder {
 		//    	ROW+2
 			int rowPlusTwo = row + 2;
 			//String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
-			String leftPart = ".//*[@id='mainContent']/div[3]/table/tbody/tr[";
+			String leftPart = ".//*[@id='mainContent']/div[@class='list']/table/tbody/tr[";
 			String rightPart = "]/td[1][@class='submitted']/img[@src='/gui/check.gif']";
 			Logging.slog((new String(leftPart)).concat(String.valueOf(rowPlusTwo)).concat(rightPart));		 
 			String xPath= new String((new String(leftPart)).concat(String.valueOf(rowPlusTwo)).concat(rightPart));
@@ -121,7 +121,7 @@ public class XpathBuilder {
 		}
 		int rowPlusTwo = row + 2;
 			//String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
-			String leftPart = ".//*[@id='mainContent']/div[3]/table/tbody/tr[";
+			String leftPart = ".//*[@id='mainContent']/div[@class='list']/table/tbody/tr[";
 			String rightPart = "]/td[3]/a[starts-with(@href,'/projects/')]";
 			 
 			String xPath= new String((new String(leftPart)).concat(String.valueOf(rowPlusTwo)).concat(rightPart));

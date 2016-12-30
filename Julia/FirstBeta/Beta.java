@@ -214,14 +214,16 @@ public class Beta {
 		String regionUrl = (new String("http://www.actorsaccess.com/projects/?view=breakdowns&region="))
 				.concat(String.valueOf(region));
 		driver.get(regionUrl);
-		bestLog.log((new String("Region ").concat(intToRegion(region))));
+		// verifgy
 		String tag = new String(driver.findElement(By.xpath("//p[@id='breadcrumb']")).getText());
 
 		if (!verifyLocation("//p[@id='breadcrumb']",
 				(new String("home / breakdowns / ").concat(intToRegion(region))))) {
 			bestLog.log("Can't find region ");
-			throw new Exception();
+			return;
 		}
+		bestLog.log((new String("Region ").concat(intToRegion(region))));
+
 		Breath.breath();
 		int productionRow = 0;
 		boolean nextRowHasAnotherProd = true;
@@ -283,13 +285,14 @@ public class Beta {
 
 			try {
 				if (isElementPresent(driver, By.xpath(XpathBuilder.tabCharNameAndDetails(0)))) {
-				//assertTrue(isElementPresent(By.xpath(XpathBuilder.tabCharNameAndDetails(0))));
-				
-				bestLog.log("Success. We are now in characters table.");}else{
+					// assertTrue(isElementPresent(By.xpath(XpathBuilder.tabCharNameAndDetails(0))));
+
+					bestLog.log("Success. We are now in characters table.");
+				} else {
 					bestLog.log("Error. We are not in the characters chart now. Lets return");
 					driver.navigate().back();
 				}
-				
+
 			} catch (Exception e) {
 				bestLog.log("Error. shouldnlt reach this line. DEBUG");
 				driver.navigate().back();
