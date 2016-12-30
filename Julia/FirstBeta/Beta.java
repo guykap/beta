@@ -222,7 +222,7 @@ public class Beta {
 			throw new Exception();
 		}
 		Breath.breath();
-		int rowNum = 6;
+		int rowNum = 4;
 		boolean nextRowHasAnotherProd = true;
 
 		while (nextRowHasAnotherProd) {
@@ -272,18 +272,24 @@ public class Beta {
 				bestLog.log("Error. We are not in the characters chars now. Lets return");
 				driver.navigate().back();
 			}
-			totalOffersInThisProd(offer);
+			int submittedOffers = totalOffersInThisProd(offer);
+			
+			//should move back to window with char of productions
+			
+			//driver.switch.window()
 			bestLog.log((new String("Number of Characters found in this production: "))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
-			bestLog.log((new String("Number of characters added to the cart")
-					.concat(String.valueOf(offer.getTotalAddedToCart()))));
+			bestLog.log((new String("Number of characters added to the cart: ")
+					.concat(String.valueOf(submittedOffers))));
 			// debug
 			Breath.silentCount();
 			if (offer.getTotalAddedToCart() > 0) {
 				// go and sumit cart
 				if (submitCart()) {
 					bestLog.log((new String("Submitted Cart Succesfully")));
+					//go back to production chart
 
+					//driver.switch.window()
 				} else {
 					bestLog.log((new String("Error submittion cart")));
 				}
@@ -563,10 +569,11 @@ public class Beta {
 				}
 
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
-				Esl.readNoticeAA(offer);
-				offer.makeDecision();
-				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
-					bestLog.printDecisionMakingVars(offer);
+				Esl.readNoticeAA(currentOffer);
+				currentOffer.makeDecision();
+				if ((currentOffer.getHasBeenSubmitted()) || (!currentOffer.getDecisionSubmit())) {
+					bestLog.printDecisionMakingVars(currentOffer);
+					charNum++;
 					continue;
 				}
 				// today
@@ -582,7 +589,7 @@ public class Beta {
 
 				ManageDriver.windowStatus(parentWindowHandler);
 				ManageDriver.windowStatus2();
-				bestLog.log("Now in new window");
+				 
 				bestLog.log(driver.getCurrentUrl());
 				driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
 				bestLog.log(driver.getCurrentUrl());
@@ -598,42 +605,13 @@ public class Beta {
 				}
 
 				
-				choosePhotosAndSubmit();
+				choosePhotosAndSubmit(offer);
+				driver.switchTo().window(parentWindowHandler);
 				
-				
-				
-				// debug
-				// read all html from driver
-
-				/// Logging.slog(driver.getPageSource());
-
-				// Logging.slog(new String(new
-				// String(Beta.driver.findElement(By.xpath("html/body/form/div[3]")).getText())));
-
-				// rain // choose photo
-				// .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
-				// bestLog.log(driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).getText());
-				// driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
-				// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
-				// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
-				// driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
-
-				// write talent notes with currentOffer.getMessage()
-
-				// check if a talent notes area exists. If it does
-				/*
-				 * if (false) {
-				 * driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
-				 * clear();
-				 * driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
-				 * sendKeys(currentOffer.getMessage()); }
-				 * 
-				 */
-				//driver.findElement(By.xpath(".//a[contains(@href, '#bottom')]")).click();
-
 				// check if there is another character to be considered in the
 				// next row
-				currentOffer.setTotalAddedToCart(1);
+				//currentOffer.setTotalAddedToCart(1);
+		
 				if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
 					charNum++;
 					moreCharsAvil = true;
@@ -684,7 +662,7 @@ public class Beta {
 		driver.switchTo().parentFrame();
 	}
 
-	public void choosePhotosAndSubmit() {
+	public void choosePhotosAndSubmit(Job currentOffer) {
 		try {
 
 			 
@@ -698,7 +676,7 @@ public class Beta {
 				  driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
 				  clear();
 				  driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
-				  sendKeys(offer.getMessage()); }
+				  sendKeys(currentOffer.getMessage()); }
 
 			
 			//  need to swich iFrame for the fianl submit button
@@ -707,8 +685,8 @@ public class Beta {
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame("buttons");
 			driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
-			
-			
+			currentOffer.setHasBeenSubmitted(true);
+			currentOffer.setTotalAddedToCart(1);
 			
 		//	ManageDriver.windowStatus(parentWindowHandler);
 		//	ManageDriver.windowStatus2();

@@ -6,35 +6,6 @@ INFO - Logining in username: guykapulnik
 INFO - .
 INFO - .
 INFO - .
-INFO - Element is not currently interactable and may not be manipulated
-Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
-System info: host: 'DESKTOP-D10CFOH', ip: '10.192.252.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12396, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
-Session ID: b034c6dd-5417-45b8-88cb-fd7383a2c911
-INFO - Something went during login -> So lets login again
-INFO - Login number 2
-INFO - LOGIN-AA
-INFO - Window handle Parent 2147483651
-INFO - Logining in username: guykapulnik
-INFO - .
-INFO - .
-INFO - .
-INFO - Element is not currently interactable and may not be manipulated
-Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
-System info: host: 'DESKTOP-D10CFOH', ip: '10.192.252.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12396, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
-Session ID: b034c6dd-5417-45b8-88cb-fd7383a2c911
-INFO - Something went during login -> So lets login again
-INFO - Login number 3
-INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
-INFO - LOGIN-AA
-INFO - Window handle Parent 2147483651
-INFO - Logining in username: guykapulnik
-INFO - .
-INFO - .
-INFO - .
 INFO - .
 INFO - .
 INFO - C: Location->Home Page
@@ -96,11 +67,10 @@ INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javasc
 INFO - .
 INFO - .
 INFO - .
-INFO - Parent: 2147483651 Son: 2147483719
+INFO - Parent: 2147483651 Son: 2147483703
 INFO - Now on PARENT
-INFO - Parent: 2147483651 Son: 2147483719
-INFO - [2147483651,2147483719,]  on: 2147483651
-INFO - Now in new window
+INFO - Parent: 2147483651 Son: 2147483703
+INFO - [2147483651,2147483703,]  on: 2147483651
 INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=530864&region=8
 INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=8&iid=3324784&bid=530864
 INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
@@ -109,4 +79,3 @@ INFO - //input[@id='include_sc_checkbox_id']
 INFO - html/body/form/div[6]/textarea
 INFO - html/body/form/div[6]/textarea
 INFO - //a[@id='add_to_cart']
-INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']
