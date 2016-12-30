@@ -44,6 +44,7 @@ The smart thing would be to look in our Jobs list if we already considered that 
 -Add findMyIp at the top of the log. So each process of browswer logs the ip used.
 -add class notifications.  This will send emails / SMS to user with updates.
 -if login doesn't work after 6 times - Kill the gecko driver process and restart login
+-have a seperate proccess run as a spider on AA and only update the DB about characters already submitted.
 -------------
 TODO -SQL DB on cloud.
 -Clean Code - functions , clear working 
@@ -53,3 +54,5 @@ TODO -SQL DB on cloud.
 	 - what happened if network falls, 
 	 -what happens when role disappease from site
 	  - what happens in the prog gets stuck - after 2 min. of stuck - how to rebot itself
+
+9173510200

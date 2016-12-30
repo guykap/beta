@@ -223,26 +223,46 @@ public class Beta {
 			throw new Exception();
 		}
 		Breath.breath();
-		int productionRow = 4;
+		int productionRow = 0;
 		boolean nextRowHasAnotherProd = true;
 
 		while (nextRowHasAnotherProd) {
 			bestLog.log("Checking for red check at row number: " + productionRow);
 			try {
-				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabProductionInRow(productionRow))));
-				bestLog.log((new String("Found a production at row. So looking for red check on row: ")
-						.concat(String.valueOf(productionRow))));
+				if (isElementPresent(driver, By.xpath(XpathBuilder.tabProductionInRow(productionRow)))) {
+					// assertTrue(isElementPresent(By.xpath(XpathBuilder.tabProductionInRow(productionRow))));
+					bestLog.log((new String("Found a production at row. So looking for red check on row: ")
+							.concat(String.valueOf(productionRow))));
+				} else {
+					bestLog.log((new String("No production on row ").concat(String.valueOf(productionRow))));
+					nextRowHasAnotherProd = false;
+					break;
+				}
 			} catch (Exception e) {
 				bestLog.log((new String("No production on row ").concat(String.valueOf(productionRow))));
 				nextRowHasAnotherProd = false;
+				bestLog.log("Error. shouldnlt reach this line. DEBUG");
 				break;
 			}
+
 			try {
 				Breath.breath();
-				assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(productionRow))));
-			} catch (Exception e) {
-				bestLog.log((new String("Found a red check on left of row: ").concat(String.valueOf(productionRow))));
+				// make sure that there is another production at productionRow
+				if (isElementPresent(driver, By.xpath(XpathBuilder.tabRedCheckBoxPos(productionRow)))) {
+					bestLog.log((new String("Red check found on row:").concat(String.valueOf(productionRow))));
+					productionRow++;
+					continue;
+				}
+
+				// street //
+				// assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(productionRow))));
+			} catch (NoSuchElementException e) {
+				bestLog.log((new String("Red check found.").concat(String.valueOf(productionRow))));
+				productionRow++;
 				continue;
+			} catch (Exception e) {
+				bestLog.log((new String("Element not found.This is wrong ").concat(String.valueOf(productionRow))));
+				break;
 			}
 			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(productionRow))));
 			offer = new Job(dan.getActorId());
@@ -262,21 +282,27 @@ public class Beta {
 			Breath.deepBreath();
 
 			try {
-				assertTrue(isElementPresent(By.xpath(XpathBuilder.tabCharNameAndDetails(0))));
-				bestLog.log("Success. We are now in characters table.");
+				if (isElementPresent(driver, By.xpath(XpathBuilder.tabCharNameAndDetails(0)))) {
+				//assertTrue(isElementPresent(By.xpath(XpathBuilder.tabCharNameAndDetails(0))));
+				
+				bestLog.log("Success. We are now in characters table.");}else{
+					bestLog.log("Error. We are not in the characters chart now. Lets return");
+					driver.navigate().back();
+				}
+				
 			} catch (Exception e) {
-				bestLog.log("Error. We are not in the characters chart now. Lets return");
+				bestLog.log("Error. shouldnlt reach this line. DEBUG");
 				driver.navigate().back();
 			}
 			totalOffersInThisProd(offer);
-			
+
 			// should move back to window with char of productions
 
 			// driver.switch.window()
 			bestLog.log((new String("Number of Characters found in this production: "))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
-			bestLog.log(
-					(new String("Number of characters added to the cart: ").concat(String.valueOf( countOffersInCart(Jobs)))));
+			bestLog.log((new String("Number of characters added to the cart: ")
+					.concat(String.valueOf(countOffersInCart(Jobs)))));
 			Breath.silentCount();
 			if (offer.getTotalAddedToCart() > 0) {
 				if (submitCart()) {
@@ -287,9 +313,10 @@ public class Beta {
 					// driver.switch.window()
 				} else {
 					bestLog.log((new String("Error submittion cart")));
-					//go back and make in each of the offers that it was NOT submitted ( although the decision was YES to submit)
+					// go back and make in each of the offers that it was NOT
+					// submitted ( although the decision was YES to submit)
 					emptyCart(Jobs);
-					
+
 				}
 			}
 			productionRow++;
@@ -302,11 +329,11 @@ public class Beta {
 		for (int i = 0; i < 15; ++i) {
 			isTargetRegion[i] = false;
 		}
-		
-		//take target regions from DB
+
+		// take target regions from DB
 		isTargetRegion[8] = true;
 		isTargetRegion[9] = true;
-		
+
 	}
 
 	public void coreActorsAccess() throws Throwable {
@@ -686,8 +713,8 @@ public class Beta {
 			driver.switchTo().frame("buttons");
 			driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
 			currentOffer.setPutInCart();
-			//currentOffer.setHasBeenSubmitted(true);
-			//currentOffer.setTotalAddedToCart(1);
+			// currentOffer.setHasBeenSubmitted(true);
+			// currentOffer.setTotalAddedToCart(1);
 
 		} catch (Exception e) {
 			bestLog.log("Failed to submit it.");
@@ -781,23 +808,33 @@ public class Beta {
 		// default
 		return new String("");
 	}
-	
-	 public int countOffersInCart(List<Job> allJobs){
-		 int inCart =0;
-		 	for (Job offer : allJobs) {
-			 if(offer.getPutInCart()){
-				 inCart++;
-			 }
-		 }
-	 return inCart;
-	 }
-	 
-	 public void emptyCart(List<Job> allJobs){
-		 
-		 	for (Job offer : allJobs) {
-			 offer.takeOutOfCart();
-			 }
-		 
-	 
-	 }
+
+	public int countOffersInCart(List<Job> allJobs) {
+		int inCart = 0;
+		for (Job offer : allJobs) {
+			if (offer.getPutInCart()) {
+				inCart++;
+			}
+		}
+		return inCart;
+	}
+
+	public void emptyCart(List<Job> allJobs) {
+
+		for (Job offer : allJobs) {
+			offer.takeOutOfCart();
+		}
+
+	}
+
+	public boolean isElementPresent(WebDriver driver, By by) {
+
+		try {
+			driver.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+
+	}
 }

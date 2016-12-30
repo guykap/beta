@@ -1,0 +1,41 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483652
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[6]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 8, 2016, 6:30 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 5
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[7]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 5
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[7]/td[1][@class='submitted']/img[@src='/gui/check.gif']

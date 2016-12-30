@@ -1,0 +1,21 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 5
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[7]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 5
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[7]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Red check found.5
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']
