@@ -1,0 +1,160 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - Found a production at row: 6
+INFO - Check for red check on left of row: 6
+INFO - .
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 6
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[2]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[3]/table/tbody/tr[8]/td[4]
+INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[8]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success on assert True
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Monday, Dec. 5, 2016, 2:01 PM Pacific
+WHAT WOULD CRAZY HORSE DO?
+Theatre
+V/T: The Copaken Stage
+Kansas City, MO
+LORT D, minimum $637
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Producer:   Kansas City Repertory Theatre
+Artistic Director: Eric Rosen
+Director: Sam Pinkleton– What Would Crazy Horse Do?
+Written by: Larissa FastHorse – What Would Crazy Horse Do?
+LA Casting: Tara Mazzucca – Casting Director
+Elise Buedel – Casting Assistant
+First Rehearsal:  Tuesday, April 4th, 2017
+Preview: Friday, April 28, 2017
+Open: Friday, May 5, 2017
+Close: Sunday, May 28, 2017
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ JOURNEY GOOD EAGLE ]
+26, female, Indigenous - Calvin's twin sister. Usually a bit erratic, going off the deep end since the death of their Grandfather. Reservation accent.
+[ CALVIN GOOD EAGLE ]
+26, male, Indigenous - Journey's twin brother. Educated at Yale.  Devoted to his sister but she makes it hard.
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=530864&region=8
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=8&iid=3324784&bid=530864
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/span[1]}
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')]
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')]}
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[2]
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[2]}
+INFO - //td[@id='photo_5002739']/table/tbody/tr/td/a[2]
+INFO - Unable to locate element: //td[@id='photo_5002739']/table/tbody/tr/td/a[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=//td[@id='photo_5002739']/table/tbody/tr/td/a[2]}
+INFO - //a[contains(@href, 'javascript: highlightPhoto(5002739, 0);')])[2]
+INFO - Error communicating with the remote browser. It may have died.
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+INFO - //table[2]/tbody/tr/td/table/tbody/tr/td/a[2]
+INFO - Unable to locate element: //table[2]/tbody/tr/td/table/tbody/tr/td/a[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=//table[2]/tbody/tr/td/table/tbody/tr/td/a[2]}
+INFO - //input[@name='video_to_use'])[2]
+INFO - Error communicating with the remote browser. It may have died.
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+INFO - //input[@name='video_to_use']
+INFO - Unable to locate element: //input[@name='video_to_use']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=//input[@name='video_to_use']}
+INFO - //input[@id='include_sc_checkbox_id']
+INFO - Unable to locate element: //input[@id='include_sc_checkbox_id']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=//input[@id='include_sc_checkbox_id']}
+INFO - //div[4]/input
+INFO - Unable to locate element: //div[4]/input
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=12320, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 58bbfaf5-054f-4ec9-8ced-35421dea8650
+*** Element info: {Using=xpath, value=//div[4]/input}
+INFO - It Worked!
+INFO - Failed to submit it.

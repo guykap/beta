@@ -17,6 +17,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -569,15 +570,23 @@ public class Beta {
 					continue;
 				}
 				// today
+
+				ManageDriver.windowStatus(parentWindowHandler);
+				ManageDriver.windowStatus2();
 				bestLog.log("lets submit!");
+				bestLog.log("Still in OLD window click");
 				driver.findElement(By.xpath(XpathBuilder.xpCharacterLinkInCharactersPage(charNum))).click();
 				// driver.findElement(By.xpath("//div[@id='mainContent']/table[2]/tbody/tr/td/a")).click();
 				// driver.findElement(By.xpath(tabLocation(rowNum))).click();
 				Breath.deepBreath();
+
+				ManageDriver.windowStatus(parentWindowHandler);
+				ManageDriver.windowStatus2();
+				bestLog.log("Now in new window");
 				bestLog.log(driver.getCurrentUrl());
 				driver.switchTo().window(ManageDriver.getSonWindowHandler(driver.getWindowHandle()));
 				bestLog.log(driver.getCurrentUrl());
-				
+
 				// verify
 				String ChoosingPhotoUrl = driver.getCurrentUrl();
 				if (!ChoosingPhotoUrl.contains(currentOffer.getInternalAAname())) {
@@ -587,21 +596,40 @@ public class Beta {
 					charNum++;
 					continue;
 				}
-				// choose photo
+
+				
+				choosePhotosAndSubmit();
+				
+				
+				
+				// debug
+				// read all html from driver
+
+				/// Logging.slog(driver.getPageSource());
+
+				// Logging.slog(new String(new
+				// String(Beta.driver.findElement(By.xpath("html/body/form/div[3]")).getText())));
+
+				// rain // choose photo
 				// .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
-				driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
-				driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
-				driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
-				driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
+				// bestLog.log(driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).getText());
+				// driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
+				// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+				// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+				// driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
 
 				// write talent notes with currentOffer.getMessage()
 
 				// check if a talent notes area exists. If it does
-				if (true) {
-					driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).clear();
-					driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).sendKeys(currentOffer.getMessage());
-				}
-				driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
+				/*
+				 * if (false) {
+				 * driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
+				 * clear();
+				 * driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
+				 * sendKeys(currentOffer.getMessage()); }
+				 * 
+				 */
+				//driver.findElement(By.xpath(".//a[contains(@href, '#bottom')]")).click();
 
 				// check if there is another character to be considered in the
 				// next row
@@ -622,6 +650,7 @@ public class Beta {
 
 			} catch (Exception e) {
 				bestLog.log("Failed to submit it.");
+				bestLog.log(e.getMessage());
 				break;
 			}
 		}
@@ -635,6 +664,141 @@ public class Beta {
 		if (!"".equals(verificationErrorString)) {
 			fail(verificationErrorString);
 		}
+	}
+
+	private void assertiveClicking(String[] optionStrings) {
+		// works only with xPath links - sorry!
+
+		for (int i = 0; i < optionStrings.length; ++i) {
+			try {
+				driver.findElement(By.xpath(optionStrings[i])).click();
+				Logging.slog("This Worked!!");
+				Logging.slog(optionStrings[i]);
+
+			} catch (Exception e) {
+				Logging.slog(optionStrings[i]);
+				Logging.slog(e.getMessage());
+
+			}
+		}
+		driver.switchTo().parentFrame();
+	}
+
+	public void choosePhotosAndSubmit() {
+		try {
+
+			 
+			driver.switchTo().defaultContent();
+			driver.switchTo().frame("main_window");
+			driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
+			driver.findElement(By.xpath(XpathBuilder.xpChooseCommercialVideo2())).click();
+			// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+			driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
+			 if (true) {
+				  driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
+				  clear();
+				  driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).
+				  sendKeys(offer.getMessage()); }
+
+			
+			//  need to swich iFrame for the fianl submit button
+
+			//driver.switchTo().frame("buttons");
+			driver.switchTo().defaultContent();
+			driver.switchTo().frame("buttons");
+			driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
+			
+			
+			
+		//	ManageDriver.windowStatus(parentWindowHandler);
+		//	ManageDriver.windowStatus2();
+			
+			
+			
+			/*
+			String submitxpath[] = { "/a[contains(text(),'Add to Cart')]", "//a[@id='add_to_cart']", ".//a[contains(@href, '#bottom')]", "" };
+			assertiveClicking(submitxpath);
+			// driver.findElement(By.xpath("/a[contains(text(),'Add to
+			// Cart')]")).click();
+*/
+			//ManageDriver.windowStatus(parentWindowHandler);
+		//	ManageDriver.windowStatus2();
+			
+			
+			//driver.switchTo().frame(1);
+			
+			
+			
+			
+			/*
+			//*************
+			String options[] = { ".//*[@id='photo_5002739']/table/tbody/tr/td/span[1]",
+					".//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]",
+					".//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')]",
+					".//*[@id='photo_5002739']/table/tbody/tr/td/a[2]",
+					"//td[@id='photo_5002739']/table/tbody/tr/td/a[2]",
+					"//a[contains(@href, 'javascript: highlightPhoto(5002739, 0);')])[2]",
+					"//table[2]/tbody/tr/td/table/tbody/tr/td/a[2]", "//input[@name='video_to_use'])[2]",
+					"//input[@name='video_to_use']", "//input[@id='include_sc_checkbox_id']", "//div[4]/input" };
+
+			ManageDriver.windowStatus(parentWindowHandler);
+			ManageDriver.windowStatus2();
+
+			// WebElement iFrame1= driver.findElement(By.tagName("buttons"));
+
+			// WebElement iFrame2=
+			// driver.findElement(By.tagName("main_window"));
+
+			// driver.switchTo().parentFrame();
+			// assertiveClicking(options);
+
+			// driver.switchTo().frame("buttons");
+			// assertiveClicking(options);
+			driver.switchTo().frame("main_window");
+			assertiveClicking(options);
+
+			driver.switchTo().defaultContent();
+			assertiveClicking(options);
+*/
+			// debug
+			// read all html from driver
+
+			/// Logging.slog(driver.getPageSource());
+
+			// Logging.slog(new String(new
+			// String(Beta.driver.findElement(By.xpath("html/body/form/div[3]")).getText())));
+
+			// rain // choose photo
+			// .//*[@id='photo_5002739']/table/tbody/tr/td/span[1]
+			// bestLog.log(driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).getText());
+			// driver.findElement(By.xpath(XpathBuilder.xpChooseMySmilePhoto())).click();
+			// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+			// driver.findElement(By.xpath(XpathBuilder.xpChooseBookstoreVideo1())).click();
+			// driver.findElement(By.xpath(XpathBuilder.xpIncludeSizes())).click();
+
+			// write talent notes with currentOffer.getMessage()
+
+			// check if a talent notes area exists. If it does
+
+			// driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).clear();
+			// driver.findElement(By.xpath(XpathBuilder.xpTalentNotesAA())).sendKeys(currentOffer.getMessage());
+
+			// driver.findElement(By.xpath("//table[2]/tbody/tr/td/table/tbody/tr/td/a[2]")).click();
+
+			// String stam = driver.findElement(By.id(id='photo_5002739'));
+			// driver.findElement(By.id("photo_5002739")).click();
+
+			// driver.findElement(By.cssSelector(".submission_popup_header>strong")).click();
+			// bestLog.log(driver.findElement(By.xpath("html/body/form/div[1]/strong")).getText());
+
+			// bestLog.log("It Worked!");
+
+		} catch (Exception e) {
+			bestLog.log("Failed to submit it.");
+			bestLog.log(e.getMessage());
+
+		}
+
 	}
 
 	public static int randInt(int min, int max) {

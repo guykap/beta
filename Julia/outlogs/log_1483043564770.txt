@@ -61,8 +61,16 @@ INFO - .
 INFO - .
 INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=530864&region=8
 INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=8&iid=3324784&bid=530864
-INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[2]
+INFO - .//*[@id='include_sc_checkbox_id']
 INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='include_sc_checkbox_id']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=7096, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 159b6710-5950-4381-9f92-b41d6d473e0c
+*** Element info: {Using=xpath, value=.//*[@id='include_sc_checkbox_id']}
 INFO - Number of Characters found in this production: 0
 INFO - Number of characters added to the cart0
 INFO - Checking for red check at row number: 7

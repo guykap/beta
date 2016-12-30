@@ -61,9 +61,13 @@ INFO - .
 INFO - .
 INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=530864&region=8
 INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=8&iid=3324784&bid=530864
-INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[2]
-INFO - Failed to submit it.
-INFO - Number of Characters found in this production: 0
-INFO - Number of characters added to the cart0
-INFO - Checking for red check at row number: 7
-INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[9]/td[1][@class='submitted']
+INFO - <html><head>
+<title>Add Role to Cart</title>
+</head>
+<frameset rows="*,75">
+<frame name="main_window" src="/projects/?view=selectphotomain&amp;bid=530864&amp;iid=3324784&amp;region=8&amp;from=breakdowns" marginwidth="10" marginheight="10" scrolling="auto" frameborder="0" noresize="noresize">
+<frame id="buttons" name="buttons" src="/projects/?view=selectphoto_buttons&amp;bid=530864&amp;iid=3324784&amp;region=8" marginwidth="10" marginheight="10" scrolling="auto" frameborder="0" noresize="noresize">
+</frameset>
+
+</html>
+INFO - //a[@id='add_to_cart']

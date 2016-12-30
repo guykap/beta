@@ -54,16 +54,37 @@ INFO - NameOfCharacterAndDetailsUnder = [ JOURNEY GOOD EAGLE ]
 26, female, Indigenous - Calvin's twin sister. Usually a bit erratic, going off the deep end since the death of their Grandfather. Reservation accent.
 [ CALVIN GOOD EAGLE ]
 26, male, Indigenous - Journey's twin brother. Educated at Yale.  Devoted to his sister but she makes it hard.
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - [2147483651,]  on: 2147483651
 INFO - lets submit!
+INFO - Still in OLD window click
 INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]
 INFO - .
 INFO - .
 INFO - .
+INFO - Parent: 2147483651 Son: 2147483714
+INFO - Now on PARENT
+INFO - Parent: 2147483651 Son: 2147483714
+INFO - [2147483651,2147483714,]  on: 2147483651
+INFO - Now in new window
 INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=530864&region=8
 INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=8&iid=3324784&bid=530864
-INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[2]
-INFO - Failed to submit it.
-INFO - Number of Characters found in this production: 0
-INFO - Number of characters added to the cart0
-INFO - Checking for red check at row number: 7
-INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[9]/td[1][@class='submitted']
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - //input[@name='video_to_use']
+INFO - //input[@id='include_sc_checkbox_id']
+INFO - /a[contains(text(),'Add to Cart')]
+INFO - Unable to locate element: /a[contains(text(),'Add to Cart')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.192.252.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=13336, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 775bf6ac-1092-4f64-a29d-96c36b5bcc01
+*** Element info: {Using=xpath, value=/a[contains(text(),'Add to Cart')]}
+INFO - This Worked!!
+INFO - //a[@id='add_to_cart']

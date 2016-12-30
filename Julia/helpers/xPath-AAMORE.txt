@@ -121,7 +121,14 @@ CLICK THE LINK
 
 
 ///CHOOSE PHOTO PAGE:
-xpath=(//a[contains(text(),'Use This Photo')])[4]
+Use This Photo
+.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')]
+.//*[@id='photo_5002739']/table/tbody/tr/td/a[2]
+xpath=(<frameset rows="*,75">
+<frame name="main_window" src="/projects/?view=selectphotomain&amp;bid=530864&amp;iid=3324784&amp;region=8&amp;from=breakdowns" marginwidth="10" marginheight="10" scrolling="auto" frameborder="0" noresize="noresize">
+<frame id="buttons" name="buttons" src="/projects/?view=selectphoto_buttons&amp;bid=530864&amp;iid=3324784&amp;region=8" marginwidth="10" marginheight="10" scrolling="auto" frameborder="0" noresize="noresize">
+</frameset>
 //td[@id='photo_5002739']/table/tbody/tr/td/a[2]
 xpath=(//a[contains(@href, 'javascript: highlightPhoto(5002739, 0);')])[2]
 //table[2]/tbody/tr/td/table/tbody/tr/td/a[2]

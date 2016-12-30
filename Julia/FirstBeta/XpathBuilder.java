@@ -134,26 +134,30 @@ public class XpathBuilder {
 	
 	static public String xpChooseMySmilePhoto() {
 		//String xPath=  ".//*[@id='photo_5002739']/table/tbody/tr/td/span[1]";
-		String xPath=  ".//*[@id='photo_5002739']/table/tbody/tr/td/a[2]";
+	 
+		String xPath=  ".//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]";
+	//	String xPath=  " //a[contains(text(),'Use This Photo')])[4]";
+		
 		Logging.slog(xPath);
 		return (xPath); 
 	}
 	
 	static public String xpChooseBookstoreVideo1() {
-		String xPath=  "//tbody/tr/td[1]/input[@value='2629412']";
-		Logging.slog(xPath);
-		return (xPath); 
+	//	String xPath=  "//tbody/tr/td[1]/input[@value='2629412']";
+		Logging.slog("don't hve it ye");
+		return (""); 
 	}
 	
 	static public String xpChooseCommercialVideo2() {
 		// video num 2584865
-		String xPath=  "//tbody/tr/td[1]/input[@value='2584865']";
+		String xPath=  "//input[@name='video_to_use']";
+		//String xPath=  "//tbody/tr/td[1]/input[@value='2584865']";
 		Logging.slog(xPath);
 		return (xPath); 
 	}
 	
 	static public String xpIncludeSizes() {
-		String xPath=".//*[@id='include_sc_checkbox_id']";
+		String xPath="//input[@id='include_sc_checkbox_id']";
 		Logging.slog(xPath);
 		return (xPath); 
 	}

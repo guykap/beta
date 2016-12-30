@@ -6,6 +6,35 @@ INFO - Logining in username: guykapulnik
 INFO - .
 INFO - .
 INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=10896, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: ab687776-e02b-4e6a-ac24-1b5397001c5e
+INFO - Something went during login -> So lets login again
+INFO - Login number 2
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=10896, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: ab687776-e02b-4e6a-ac24-1b5397001c5e
+INFO - Something went during login -> So lets login again
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483652
+INFO - Logining in username: guykapulnik
+INFO - .
+INFO - .
+INFO - .
 INFO - .
 INFO - .
 INFO - C: Location->Home Page
@@ -61,9 +90,3 @@ INFO - .
 INFO - .
 INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=530864&region=8
 INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=8&iid=3324784&bid=530864
-INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[2]
-INFO - Failed to submit it.
-INFO - Number of Characters found in this production: 0
-INFO - Number of characters added to the cart0
-INFO - Checking for red check at row number: 7
-INFO - .//*[@id='mainContent']/div[3]/table/tbody/tr[9]/td[1][@class='submitted']
