@@ -237,12 +237,12 @@ public class Beta {
 					bestLog.log((new String("Found a production at row. So looking for red check on row: ")
 							.concat(String.valueOf(productionRow))));
 				} else {
-					bestLog.log((new String("No production on row ").concat(String.valueOf(productionRow))));
+					bestLog.log((new String("No production on row: ").concat(String.valueOf(productionRow))));
 					nextRowHasAnotherProd = false;
 					break;
 				}
 			} catch (Exception e) {
-				bestLog.log((new String("No production on row ").concat(String.valueOf(productionRow))));
+				bestLog.log((new String("No production on row: ").concat(String.valueOf(productionRow))));
 				nextRowHasAnotherProd = false;
 				bestLog.log("Error. shouldnlt reach this line. DEBUG");
 				break;
