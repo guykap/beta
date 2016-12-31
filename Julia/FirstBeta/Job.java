@@ -70,8 +70,10 @@ public class Job {
 	boolean needPoliceUniform;
  	boolean decisionSubmit;
   	int numberOfCharactersOnThisProduction;
+  	int region;
   	int totalAddedToCart;
   	boolean putInCart;
+  	
  	
 	public Job() {
 		// String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
@@ -96,6 +98,7 @@ public class Job {
 		this.setOfferTimeRoleAdded(sameProductionOffer.getOfferTimeRoleAdded());
 		this.setOfferPostedTime(sameProductionOffer.getOfferPostedTime());
 		this.setOfferCastingDirector(sameProductionOffer.getOfferCastingDirector());
+		this.setRegion(sameProductionOffer.getRegion());
 		
 	}
 
@@ -406,6 +409,14 @@ public class Job {
 		numberOfCharactersOnThisProduction = newBit;
 	};
 
+	public int getRegion() {
+		return region;
+	};
+
+	public void setRegion(int newBit) {
+		region = newBit;
+	};
+
 	public int getTotalAddedToCart() {
 		return totalAddedToCart;
 	};
@@ -485,9 +496,9 @@ public class Job {
 			
 			if (((this.getOfferProjectName()).equals(offer.getOfferProjectName()))
 					&& ((this.getOfferRole()).equals(offer.getOfferRole()))
-					&& (!offer.getHasBeenSubmitted())) {
+					&& (!offer.getHasBeenSubmitted())&&((this.getActorIDSubmitted()).contains(offer.getActorIDSubmitted()))) {
 				Logging.slog(
-						"Found that this Project and role has already been considered and decided NOT to submit. This is Why: ");
+						"Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: ");
 				Logging.sprintDecisionMakingVars(this);
 				return true;
 			}
@@ -496,10 +507,10 @@ public class Job {
 	}
 
 	 public boolean offerHasBeenConsideredBeforeAA(List<Job> allJobs) {
-		// checkcing in the list of Jobs for another offer with the PROJECT NAME values.
+		// checkcing in the list of Jobs for another offer with the PROJECT NAME values and same ACTOR ID values.
 		for (Job offer : allJobs) {
 			if (((this.getOfferProjectName()).equals(offer.getOfferProjectName()))
-					&& (!offer.getHasBeenSubmitted())) {
+					&& (!offer.getHasBeenSubmitted())&&((this.getActorIDSubmitted()).contains(offer.getActorIDSubmitted()))) {
 				Logging.slog(
 						"Found that this Project has already been considered and decided NOT to submit. This is Why: ");
 				Logging.sprintDecisionMakingVars(offer);

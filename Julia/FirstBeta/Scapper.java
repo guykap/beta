@@ -3,12 +3,10 @@ package FirstBeta;
 import org.openqa.selenium.By;
 
 public class Scapper {
-	//This class scaps data via the driver
-	
+	// This class scaps data via the driver
 
+	static public void parseRowOfferAA(Job offer, int rowNum) {
 
-	static public void handleAAOffer(Job offer, int rowNum) {
-	 
 		String leftPart = (new String("//div[@id='mainContent']/div[@class='list']/table/tbody/tr["))
 				.concat(String.valueOf(rowNum + 2));
 		String path;
@@ -57,11 +55,8 @@ public class Scapper {
 			offer.setOfferUnionStatus(new String(""));
 		}
 	}
+
 	static public void handleBackgroundWorkOffer(Job offer, boolean isBackgroundWork, int row) {
-
-
-		  
-		  
 		offer.setIsBackgroundWork(isBackgroundWork);
 		// the EXTRA table has the shooting date .
 		// the PRINCIPLE table does not
@@ -70,7 +65,7 @@ public class Scapper {
 		try {
 
 			try {
-				
+
 				String path = new String(leftPart.concat("]/td/a"));
 				offer.setOfferRole((new String(Beta.driver.findElement(By.xpath(path)).getText())).toLowerCase());
 			} catch (Exception e) {
@@ -81,21 +76,24 @@ public class Scapper {
 				// BACKGROUND WORK
 				try {
 					String path = new String(leftPart.concat("]/td[2]/a"));
-					offer.setOfferProjectName((new String(Beta.driver.findElement(By.xpath(path)).getText())).toLowerCase());
+					offer.setOfferProjectName(
+							(new String(Beta.driver.findElement(By.xpath(path)).getText())).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferProjectName(new String(""));
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[3]/a"));
-					offer.setOfferShootDate(new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
+					offer.setOfferShootDate(
+							new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferShootDate(new String(""));
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[4]/a"));
-					offer.setOfferTypeProject(new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
+					offer.setOfferTypeProject(
+							new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferTypeProject(new String(""));
 				}
@@ -116,14 +114,16 @@ public class Scapper {
 
 				try {
 					String path = new String(leftPart.concat("]/td[7]/a"));
-					offer.setOfferUnionStatus(new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
+					offer.setOfferUnionStatus(
+							new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferUnionStatus(new String(""));
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[8]/a"));
-					offer.setOfferPostedTime(new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
+					offer.setOfferPostedTime(
+							new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferPostedTime(new String(""));
 				}
@@ -132,14 +132,16 @@ public class Scapper {
 				// PRINCIPLE WORK
 				try {
 					String path = new String(leftPart.concat("]/td[2]/a"));
-					offer.setOfferProjectName((new String(Beta.driver.findElement(By.xpath(path)).getText())).toLowerCase());
+					offer.setOfferProjectName(
+							(new String(Beta.driver.findElement(By.xpath(path)).getText())).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferProjectName(new String(""));
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[3]/a"));
-					offer.setOfferTypeProject(new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
+					offer.setOfferTypeProject(
+							new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferTypeProject(new String(""));
 				}
@@ -159,14 +161,16 @@ public class Scapper {
 				}
 				try {
 					String path = new String(leftPart.concat("]/td[6]/a"));
-					offer.setOfferUnionStatus(new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
+					offer.setOfferUnionStatus(
+							new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferUnionStatus(new String(""));
 				}
 
 				try {
 					String path = new String(leftPart.concat("]/td[7]/a"));
-					offer.setOfferPostedTime(new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
+					offer.setOfferPostedTime(
+							new String(Beta.driver.findElement(By.xpath(path)).getText()).toLowerCase());
 				} catch (Exception e) {
 					offer.setOfferPostedTime(new String(""));
 				}
@@ -187,36 +191,37 @@ public class Scapper {
 			// go back to login page
 		}
 	}
-	
-	static public String scrapTextAtXpath(String xpath){
-		//returns the text at the xPath tab 
-		String foundText=new String ("");
+
+	static public String scrapTextAtXpath(String xpath) {
+		// returns the text at the xPath tab
+		String foundText = new String("");
 		try {
 			foundText = new String(new String(Beta.driver.findElement(By.xpath(xpath)).getText()));
 		} catch (Exception e) {
-			 Logging.slog((new String("No text found at: ")).concat(xpath));
-			 
+			Logging.slog((new String("No text found at: ")).concat(xpath));
+
 		}
-		
+
 		return foundText;
 	}
-	
-	static public String scrapAttributeAtXpath(String xpath, String attribute){
-		if((xpath.length()<1)||(attribute.length()<1)){
-			 Logging.slog((new String("Wrong values passed to scrapper: ")).concat(xpath).concat(attribute));
-			 
+
+	static public String scrapAttributeAtXpath(String xpath, String attribute) {
+		if ((xpath.length() < 1) || (attribute.length() < 1)) {
+			Logging.slog((new String("Wrong values passed to scrapper: ")).concat(xpath).concat(attribute));
+
 			return new String("");
 		}
-		//returns the text at the xPath tab 
-		String foundText=new String ("");
+		// returns the text at the xPath tab
+		String foundText = new String("");
 		try {
-			 foundText =  Beta.driver.findElement(By.xpath(xpath)).getAttribute(attribute);
-			//foundText = new String(new String(Beta.driver.findElement(By.xpath(xpath)).get));
+			foundText = Beta.driver.findElement(By.xpath(xpath)).getAttribute(attribute);
+			// foundText = new String(new
+			// String(Beta.driver.findElement(By.xpath(xpath)).get));
 		} catch (Exception e) {
-			 Logging.slog((new String("No attribute found at: ")).concat(xpath));
-			 
+			Logging.slog((new String("No attribute found at: ")).concat(xpath));
+
 		}
-		
+
 		return foundText;
 	}
 

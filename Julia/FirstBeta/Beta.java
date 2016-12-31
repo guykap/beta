@@ -228,6 +228,7 @@ public class Beta {
 		int productionRow = 0;
 		boolean nextRowHasAnotherProd = true;
 
+		//we only consider here the first page of productions. So in the future add an option to nagivate to page 2 and 3
 		while (nextRowHasAnotherProd) {
 			bestLog.log("Checking for red check at row number: " + productionRow);
 			try {
@@ -255,8 +256,6 @@ public class Beta {
 					productionRow++;
 					continue;
 				}
-
-				// street //
 				// assertFalse(isElementPresent(By.xpath(XpathBuilder.tabRedCheckBoxPos(productionRow))));
 			} catch (NoSuchElementException e) {
 				bestLog.log((new String("Red check found.").concat(String.valueOf(productionRow))));
@@ -268,7 +267,8 @@ public class Beta {
 			}
 			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(productionRow))));
 			offer = new Job(dan.getActorId());
-			Scapper.handleAAOffer(offer, productionRow);
+			offer.setRegion(region);
+			Scapper.parseRowOfferAA(offer, productionRow);
 			if (offer.offerHasBeenConsideredBeforeAA(Jobs)) {
 				productionRow++;
 				continue;
@@ -373,8 +373,8 @@ public class Beta {
 		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
 		// check for welcome window:
 		if (!verifyLocation("//div[@id='maininfo']/h2", "Welcome")) {
-			bestLog.log("Can't find Welcome ");
-			throw new Exception();
+			bestLog.log("Can't find Welcome Page");
+			return;
 		}
 		Logging.log('c');
 		Breath.breath();
@@ -716,6 +716,7 @@ public class Beta {
 			driver.switchTo().frame("buttons");
 			driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
 			currentOffer.setPutInCart();
+			 
 			// currentOffer.setHasBeenSubmitted(true);
 			// currentOffer.setTotalAddedToCart(1);
 

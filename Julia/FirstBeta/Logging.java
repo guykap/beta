@@ -91,7 +91,7 @@ public class Logging {
 	public void printOffer(Job offer) {
 		if (offer == null)
 			return;
-		this.log("Offer " + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
+		this.log("\n* Actor:" + offer.getActorIDSubmitted() +"|Region:" + offer.getRegion() + "|Offer:" + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
 				+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
 				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
 				+ "|Eth:" + offer.getIsEthnicity() + "|Male:" + offer.getIsMale() + "|SAG:" + offer.getIsSag()
