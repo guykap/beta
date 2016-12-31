@@ -9,29 +9,47 @@ public class Actor {
 	private String aaPassword;
 	private Logging actorsLog;
 	
-	private String firstName;
-	private String LastName;
-	private String DateOfBirth;
-	private int minActingAge;
-	private int maxActingAge;
-	private boolean hasCar;
-	private String carModel;
-	private String carYear;
-	private String standardTalentNote;
-	private String Ethnicity;
-	private int paymentMin;
-	private boolean GenderIsMale;
-	private boolean confirmedBilling;
+	public boolean isNightShift;
+	private String firstName="";
+	private String LastName="";
+	public String dateOfBirth="";
+	public int minActingAge=0;
+	public int maxActingAge=0;
+	public boolean hasCar=false;
+	public String carModel="";
+	public String carYear="";
+	public String standardTalentNote="";
+	public String ethnicity="";
+	public int paymentMin=0;
+	public boolean GenderIsMale;
+	public boolean confirmedBilling;
 
 	
-	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword){
+	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword,boolean isNightShift){
 		this.actorId = actorId;
 		this.setCnUsername(cnUsername);
 		this.setCnPassword(cnPassword);
 		this.setAaUsername(aaUserName);
 		this.setAaPassword(aaPassword);
+		this.setIsNightShift(isNightShift);
 		 }
 
+	public Actor(Actor realActor){
+		//this copy C'tor is used to create a nightShift actor with the same profile as the read actor
+		this.isNightShift = true;
+		this.dateOfBirth = realActor.dateOfBirth;
+		this.minActingAge = realActor.minActingAge;
+		this.maxActingAge = realActor.maxActingAge;
+		this.hasCar = realActor.hasCar;
+		this.carModel = realActor.carModel;
+		this.carYear = realActor.carYear;
+		this.standardTalentNote = realActor.standardTalentNote;
+		this.ethnicity  = realActor.ethnicity;
+		this.paymentMin = realActor.paymentMin;
+		this.GenderIsMale  = realActor.GenderIsMale;
+		this.confirmedBilling  = realActor.confirmedBilling;
+	}
+	
 	public String getCnUsername() {
 		return cnUsername;
 	}
@@ -59,6 +77,14 @@ public class Actor {
 		this.aaUsername = aaUsername;
 	}
 
+	public String getActorId() {
+		return actorId;
+	}
+
+	public void setActorId(String id) {
+		this.actorId = id;
+	}
+	
 	public String getAaPassword() {
 		return aaPassword;
 	}
@@ -67,13 +93,11 @@ public class Actor {
 		this.aaPassword = aaPassword;
 	}
 
-
-	public String getActorId() {
-		return actorId;
+	public boolean getIsNightShift() {
+		return isNightShift;
 	}
 
-
-	public void setActorId(String actorId) {
-		this.actorId = actorId;
+	public void setIsNightShift(boolean bitData) {
+		this.isNightShift = bitData;
 	}
 }

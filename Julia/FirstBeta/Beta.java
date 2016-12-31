@@ -46,8 +46,10 @@ public class Beta {
 	static int loginCounter;
 	static Breath takeBreath;
 	static Logging bestLog;
-	static Actor dan;
+	static Actor[] cast;
+	static Actor danCN;
 	boolean isTargetRegion[];
+	static int currentShift = 0;
 
 	public static void main(String[] args) throws Throwable {
 
@@ -74,10 +76,12 @@ public class Beta {
 		}
 
 		try {
+			cast = new Actor[2];
+			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true);
+			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false);
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			dan = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword");
-			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
-			// "password");
+			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword",false);
+			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
 		} catch (Exception e) {
@@ -159,7 +163,7 @@ public class Beta {
 					seekBackgroundWork = true;
 				} else {
 					// Actors access
-					loginAA();
+					loginAA(currentShift);
 				}
 			} catch (Exception e) {
 				bestLog.log(e.getMessage());
@@ -172,7 +176,8 @@ public class Beta {
 				if (isCastingNetworks) {
 					coreCastingNetworks();
 				} else {
-					coreActorsAccess();
+					coreActorsAccess(currentShift);
+					logutAA(currentShift);
 				}
 			} catch (Exception e) {
 				bestLog.log(e.getMessage());
@@ -182,7 +187,12 @@ public class Beta {
 		}
 	}
 
-	public void loginAA() throws Throwable {
+		public void logutAA(int shift) throws Throwable{
+			
+			Logging.slog((new String("Logging out shift: ")).concat(String.valueOf(shift)));
+			return;
+		}
+	public void loginAA(int shift) throws Throwable {
 		aaBaseUrl = "http://actorsaccess.com";
 		driver.manage().timeouts().implicitlyWait(Breath.geckoWaitTime, TimeUnit.SECONDS);
 		parentWindowHandler = driver.getWindowHandle();
@@ -190,14 +200,14 @@ public class Beta {
 		Breath.makeZeroSilentCounter();
 		// bestLog.Logging.log('a');
 		Logging.slog("Window handle Parent " + parentWindowHandler);
-		bestLog.log(new String("Logining in username: ").concat(dan.getAaUsername()));
+		bestLog.log(new String("Logining in username: ").concat(cast[shift].getAaUsername()));
 		driver.get(aaBaseUrl + "/");
 		Breath.deepBreath();
 
 		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(dan.getAaUsername());
+		driver.findElement(By.id("username")).sendKeys(cast[shift].getAaUsername());
 		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(dan.getAaPassword());
+		driver.findElement(By.id("password")).sendKeys(cast[shift].getAaPassword());
 		Breath.breath();
 		driver.findElement(By.id("login-btn")).click();
 
@@ -210,7 +220,7 @@ public class Beta {
 		Logging.log('c');
 	}
 
-	public void handleRegion(int region) throws Throwable {
+	public void handleRegion(int region,int shift) throws Throwable {
 		String regionUrl = (new String("http://www.actorsaccess.com/projects/?view=breakdowns&region="))
 				.concat(String.valueOf(region));
 		driver.get(regionUrl);
@@ -266,7 +276,7 @@ public class Beta {
 				break;
 			}
 			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(productionRow))));
-			offer = new Job(dan.getActorId());
+			offer = new Job(cast[shift].getActorId());
 			offer.setRegion(region);
 			Scapper.parseRowOfferAA(offer, productionRow);
 			if (offer.offerHasBeenConsideredBeforeAA(Jobs)) {
@@ -339,14 +349,14 @@ public class Beta {
 
 	}
 
-	public void coreActorsAccess() throws Throwable {
+	public void coreActorsAccess(int shift) throws Throwable {
 		// go over the chosen regions and submit to each region
 		Breath.makeZeroSilentCounter();
 		setTargetRegions();
 		while (true) {
 			for (int regionNum = 0; regionNum < 15; regionNum++) {
 				if (isTargetRegion[regionNum]) {
-					handleRegion(regionNum);
+					handleRegion(regionNum, shift);
 					Breath.nap();
 				}
 			}
@@ -365,9 +375,9 @@ public class Beta {
 		Breath.deepBreath();
 		driver.findElement(By.id("login")).click();
 		driver.findElement(By.id("login")).clear();
-		driver.findElement(By.id("login")).sendKeys(dan.getCnUsername());
+		driver.findElement(By.id("login")).sendKeys(danCN.getCnUsername());
 		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(dan.getCnPassword());
+		driver.findElement(By.id("password")).sendKeys(danCN.getCnPassword());
 		driver.findElement(By.xpath("//input[@id='submit']")).click();
 		Breath.breath();
 		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
@@ -446,7 +456,8 @@ public class Beta {
 			}
 			if (srcOfImg.contains("spacer.gif")) {
 				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
-				offer = new Job(dan.getActorId());
+				offer = new Job(danCN
+						.getActorId());
 
 				Scapper.handleBackgroundWorkOffer(offer, seekBackgroundWork, (trStarRow - 1));
 				if (offer.offerHasBeenConsideredBeforeCN(Jobs)) {
