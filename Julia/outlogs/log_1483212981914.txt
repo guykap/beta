@@ -1,0 +1,2 @@
+INFO - Characterdude:male
+INFO - Character:dude : male

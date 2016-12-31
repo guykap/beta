@@ -1,10 +1,17 @@
 package FirstBeta;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.Inet4Address;
+import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 public class ManageDriver {
 
@@ -168,15 +175,41 @@ public class ManageDriver {
 		return false;
 	}
 
-	static public void logMyIP(){
+	static public void logMyIP() {
 		String myIp;
-		try{
-	myIp = new String (Inet4Address.getLocalHost().getHostAddress());
-		}catch(Exception e){
-			myIp = new String ("IP -not found");
+		try {
+			myIp = new String(Inet4Address.getLocalHost().getHostAddress());
+		} catch (Exception e) {
+			myIp = new String("IP -not found");
 			Logging.slog(e.getMessage());
 		}
-		
-		Logging.slog((new String("IP:").concat(myIp)));
+
+		Logging.slog((new String("Internal IP: ").concat(myIp)));
+
+		try {
+
+			URL url = new URL("https://api.ipify.org?format=json");
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+			if (conn.getResponseCode() != 200) {
+				throw new RuntimeException("Error: " + conn.getResponseCode());
+
+			}
+
+			InputStreamReader input = new InputStreamReader(conn.getInputStream());
+			BufferedReader reader = new BufferedReader(input);
+
+			Gson gson = new Gson();
+			JsonObject json = gson.fromJson(reader, JsonObject.class);
+			String ExternalIP = json.get("ip").getAsString();
+			Logging.slog(new String("External IP: ").concat(ExternalIP));  
+																			 
+			conn.disconnect();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+
 	}
 }

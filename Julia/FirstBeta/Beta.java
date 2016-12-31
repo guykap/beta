@@ -78,6 +78,7 @@ public class Beta {
 		try {
 			//debug
 			//Esl.parseAgeRange(" 45  to  55 Indigenous - Calvin's twin sister. Usually a bit erratic, going off the deep end since the death of their Grandfather.");
+		//	Esl.isStatisticallyMaleName("MARIEA");
 			
 			cast = new Actor[2];
 			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true);

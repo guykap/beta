@@ -10,8 +10,6 @@ import java.net.URL;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-
-
 public class Esl {
 
 	static public void readNoticeAA(Job offer) {
@@ -35,9 +33,9 @@ public class Esl {
 		}
 
 		// MALE
-		 if(isStatisticallyMaleName(offer.getOfferCharacterName())){
-			 offer.setIsMale(true);
-		 }
+		if (isStatisticallyMaleName(offer.getOfferCharacterName())) {
+			offer.setIsMale(true);
+		}
 
 		if ((allCharacterDataLowerCase).contains(" male") || (allCharacterDataLowerCase.startsWith("male"))) {
 			offer.setIsMale(true);
@@ -89,8 +87,8 @@ public class Esl {
 	}
 
 	static public String parseAgeRange(String data) {
-		String firstNum="";
-		String secondNum="";
+		String firstNum = "";
+		String secondNum = "";
 		String mydata = new String(data);
 		if (mydata.length() < 0) {
 			return new String("");
@@ -109,14 +107,14 @@ public class Esl {
 			firstNum = matcher.group(0);
 			if (matcher.find()) {
 				secondNum = matcher.group(0);
-			}else{
-				return(firstNum);
+			} else {
+				return (firstNum);
 			}
-			 
+
 			return ((new String(firstNum).concat("-")).concat(secondNum));
 		}
-		
-	return ("");
+
+		return ("");
 	}
 
 	static private void calcAgeRange(Job offer, String ageData) {
@@ -141,16 +139,16 @@ public class Esl {
 		Double maybeAgeMax = new Double(0);
 		Double maybeAgeAverageTwice = new Double(0);
 		Double avgCharacterAgeTwice = new Double(0);
-		
+
 		try {
 			regexResult = new String(parseAgeRange(ageData));
 			if (regexResult.length() > 3) {
 				tokens = regexResult.split(delims);
 			}
-			if ((regexResult.length()>1)&&(regexResult.length() <=3)){
-				//Only one number found .
+			if ((regexResult.length() > 1) && (regexResult.length() <= 3)) {
+				// Only one number found .
 				checkForSpecificActor(offer, Double.valueOf(regexResult.trim()), Double.valueOf(regexResult.trim()));
- 
+
 			}
 
 			ageMin = new String(tokens[0]);
@@ -158,20 +156,19 @@ public class Esl {
 			if ((ageMin.length() < 1) && (ageMax.length() < 1)) {
 				return;
 			}
-			
+
 			try {
 
 				maybeAgeMin = new Double(Double.parseDouble(ageMin.trim()));
 				maybeAgeMax = new Double(Double.parseDouble(ageMax.trim()));
-				
-				
+
 			} catch (Exception e) {
 				Logging.slog(e.getMessage());
 				Logging.slog("Math failure in reading the age values. Lets submit anyway. We are artists.");
 				offer.setIsAge(true);
 			}
 
-				checkForSpecificActor(offer,maybeAgeMin,maybeAgeMax);
+			checkForSpecificActor(offer, maybeAgeMin, maybeAgeMax);
 
 		} catch (Exception e) {
 			// System.err.format("Age range - faliure in reading or calculating
@@ -182,37 +179,35 @@ public class Esl {
 		}
 	}
 
-	
-	
-	static void checkForSpecificActor(Job offer,Double maybeAgeMin, Double maybeAgeMax){
-		
-		try{
-	 	Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
-		Double avgCharacterAgeTwice = new Double(Job.avgCharacterAge * 2);
-		Double ageRange = new Double(10);
-		Double ageLookLike = new Double(5);
-		Double actorRealAge = new Double(36);
- 
-	// check if actor's age is in the range asked for:
+	static void checkForSpecificActor(Job offer, Double maybeAgeMin, Double maybeAgeMax) {
 
-	if ((actorRealAge >= maybeAgeMin) && (actorRealAge <= maybeAgeMax)) {
-		offer.setIsAge(true);
-	}
-	// check if actor's age is near the average
-	if ((Math.abs(maybeAgeAverageTwice - avgCharacterAgeTwice)) <= ageRange) {
-		// the actor is in the age range
-		offer.setIsAge(true);
-	}
+		try {
+			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
+			Double avgCharacterAgeTwice = new Double(Job.avgCharacterAge * 2);
+			Double ageRange = new Double(10);
+			Double ageLookLike = new Double(5);
+			Double actorRealAge = new Double(36);
 
-	if ((Math.abs(actorRealAge - maybeAgeMin) <= ageLookLike)
-			|| (Math.abs(actorRealAge - maybeAgeMax) <= ageLookLike)) {
-		offer.setIsAge(true);
-	}
-		}catch(Exception e){
+			// check if actor's age is in the range asked for:
+
+			if ((actorRealAge >= maybeAgeMin) && (actorRealAge <= maybeAgeMax)) {
+				offer.setIsAge(true);
+			}
+			// check if actor's age is near the average
+			if ((Math.abs(maybeAgeAverageTwice - avgCharacterAgeTwice)) <= ageRange) {
+				// the actor is in the age range
+				offer.setIsAge(true);
+			}
+
+			if ((Math.abs(actorRealAge - maybeAgeMin) <= ageLookLike)
+					|| (Math.abs(actorRealAge - maybeAgeMax) <= ageLookLike)) {
+				offer.setIsAge(true);
+			}
+		} catch (Exception e) {
 			Logging.slog(e.getMessage());
 		}
-}
-	
+	}
+
 	static public void readNotice(Job offer) {
 		// this reads the notice and sets all the Job params accordingly.
 
@@ -322,54 +317,33 @@ public class Esl {
 		}
 	}
 
-	static public boolean isStatisticallyMaleName(String name){
-		  
- 
-		  try {
+	static public boolean isStatisticallyMaleName(String charName) {
 
-		    String myKey = "insert your server key here";
+		try {
 
-		    URL url = new URL("https://gender-api.com/get?key=" + myKey + "&name=markus");
+			String myKey =""; //  "insert your server key here";
 
-		    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			URL url = new URL("https://gender-api.com/get?key=" + myKey + "&name="+charName);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
+			if (conn.getResponseCode() != 200) {
+				throw new RuntimeException("Error: " + conn.getResponseCode());
 
+			}
 
-		    if (conn.getResponseCode() != 200) {
+			InputStreamReader input = new InputStreamReader(conn.getInputStream());
+			BufferedReader reader = new BufferedReader(input);
 
-		      throw new RuntimeException("Error: " + conn.getResponseCode());
+			Gson gson = new Gson();
+			JsonObject json = gson.fromJson(reader, JsonObject.class);
+			String gender = json.get("gender").getAsString();
+			Logging.slog(new String("Character:").concat(charName).concat(" : ").concat(gender)); // Gender: male
+			conn.disconnect();
+				return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
 
-		    }
-
-
-
-		    InputStreamReader input = new InputStreamReader(conn.getInputStream());
-
-		    BufferedReader reader = new BufferedReader(input);
-
-
-
-		    Gson gson = new Gson();
-
-		    JsonObject json = gson.fromJson(reader, JsonObject.class);
-
-		    String gender = json.get("gender").getAsString();
-
-		    System.out.println("Gender: " + gender); // Gender: male
-
-		    conn.disconnect();
-
-
-
-		    } catch (IOException e) {
-
-		      e.printStackTrace();
-
-		    }
-
-		  }
-
-		
-		
+		}
 	}
 }
