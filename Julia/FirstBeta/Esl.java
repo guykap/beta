@@ -34,19 +34,23 @@ public class Esl {
 
 		// MALE
 		if (isStatisticallyMaleName(offer.getOfferCharacterName())) {
-			offer.setIsMale(true);
+			offer.setIsMaleCharacter(true);
 		}
 
 		if ((allCharacterDataLowerCase).contains(" male") || (allCharacterDataLowerCase.startsWith("male"))) {
-			offer.setIsMale(true);
+			offer.setIsMaleCharacter(true);
 		}
 		if ((allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("male"))
 				|| (allCharacterDataLowerCase.contains(" men")) || (allCharacterDataLowerCase.contains(" man "))
 				|| (allCharacterDataLowerCase.contains("actor ")) || (allCharacterDataLowerCase.startsWith("men"))
 				|| (allCharacterDataLowerCase.toLowerCase().contains(" male"))) {
-			offer.setIsMale(true);
+			offer.setIsMaleCharacter(true);
 		}
-
+		
+		
+	
+		
+		
 		// ETHNICITY
 		if ((allCharacterDataLowerCase.contains("all ethnicities"))
 				|| (allCharacterDataLowerCase.contains("caucasian"))) {
@@ -229,12 +233,12 @@ public class Esl {
 		// MALE
 
 		if ((offer.offerListingSex).contains(" male") || (allData.startsWith("male"))) {
-			offer.setIsMale(true);
+			offer.setIsMaleCharacter(true);
 		}
 		if ((allData.contains(" male")) || (allData.startsWith("male")) || (allData.contains(" men"))
 				|| (allData.contains(" man ")) || (allData.contains("actor ")) || (allData.startsWith("men"))
 				|| (allData.toLowerCase().contains(" male"))) {
-			offer.setIsMale(true);
+			offer.setIsMaleCharacter(true);
 		}
 
 		// There is a male name here for the character

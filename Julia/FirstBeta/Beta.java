@@ -473,7 +473,7 @@ public class Beta {
 				Breath.silentCount();
 
 				Esl.readNotice(offer);
-				offer.makeDecision();
+				offer.makeDecisionCN();
 
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
 					bestLog.printDecisionMakingVars(offer);
@@ -630,7 +630,7 @@ public class Beta {
 
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
 				Esl.readNoticeAA(currentOffer);
-				currentOffer.makeDecision();
+				currentOffer.makeDecisionAA();
 				if ((currentOffer.getHasBeenSubmitted()) || (!currentOffer.getDecisionSubmit())) {
 					bestLog.printDecisionMakingVars(currentOffer);
 					charNum++;

@@ -26,7 +26,7 @@ public class Job {
 	String currentOffer;
 
 	String offerRole;
-	String offerCharacterName="";
+	String offerCharacterName = "";
 	String offerCharacterDetails = "";
 	String offerProjectName;
 	String offerShootDate;
@@ -53,28 +53,26 @@ public class Job {
 	String offerProductionDetails = "";
 	String internalAAname;
 	String internalAAhref;
-	
-	 
+
 	boolean isSag;
 	boolean isEthnicity;
 	boolean isAge;
-	boolean isMale;
+	boolean isGenderMatch;
 	boolean isBackgroundWork;
 	boolean isPayingEnough;
-	boolean isMaleName;
+	boolean isMaleCharacter;
 	boolean isCar;
 	boolean isGuard;
 	boolean isStandIn;
 	boolean reqSizes;
 	boolean needTuxedo;
 	boolean needPoliceUniform;
- 	boolean decisionSubmit;
-  	int numberOfCharactersOnThisProduction;
-  	int region;
-  	int totalAddedToCart;
-  	boolean putInCart;
-  	
- 	
+	boolean decisionSubmit;
+	int numberOfCharactersOnThisProduction;
+	int region;
+	int totalAddedToCart;
+	boolean putInCart;
+
 	public Job() {
 		// String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
 		// this.offerId = new String (Timestamp(System.currentTimeMillis()));
@@ -85,9 +83,10 @@ public class Job {
 		this.actorIDSubmitted = new String(actorIdSubmitted);
 		// this age temp for this test version
 	}
-	
-	public Job(Job sameProductionOffer){
-		//Copy Constructor .  That returns a Job with the same Production details left , Production Details right , and actor_Id
+
+	public Job(Job sameProductionOffer) {
+		// Copy Constructor . That returns a Job with the same Production
+		// details left , Production Details right , and actor_Id
 		this.setActorIDSubmitted(sameProductionOffer.getActorIDSubmitted());
 		this.setOfferPostedTime(sameProductionOffer.getOfferPostedTime());
 		this.addToProductionDetails(sameProductionOffer.getProductionDetails());
@@ -99,7 +98,7 @@ public class Job {
 		this.setOfferPostedTime(sameProductionOffer.getOfferPostedTime());
 		this.setOfferCastingDirector(sameProductionOffer.getOfferCastingDirector());
 		this.setRegion(sameProductionOffer.getRegion());
-		
+
 	}
 
 	public String getOfferId() {
@@ -223,8 +222,6 @@ public class Job {
 		}
 	};
 
-	
-
 	public String getOfferCharacterName() {
 		return offerCharacterName;
 	};
@@ -232,7 +229,6 @@ public class Job {
 	public void setOfferCharacterName(String data) {
 		offerCharacterName = data;
 	};
- 
 
 	public String getOfferCharacterDetails() {
 		return offerCharacterDetails;
@@ -241,8 +237,7 @@ public class Job {
 	public void setOfferCharacterDetails(String data) {
 		offerCharacterDetails = data;
 	};
- 
-	
+
 	public String getNotice() {
 		return notice;
 	};
@@ -250,7 +245,7 @@ public class Job {
 	public void setNotice(String newNotice) {
 		notice = newNotice;
 	};
- 
+
 	public boolean getIsSag() {
 		return isSag;
 	};
@@ -275,12 +270,12 @@ public class Job {
 		isAge = newBit;
 	};
 
-	public boolean getIsMale() {
-		return isMale;
+	public boolean getIsGenderMatch() {
+		return isGenderMatch;
 	};
 
-	public void setIsMale(boolean newBit) {
-		isMale = newBit;
+	public void setIsGenderMatch(boolean newBit) {
+		isGenderMatch = newBit;
 	};
 
 	public boolean getIsBackgroundWork() {
@@ -331,7 +326,6 @@ public class Job {
 		needPoliceUniform = newBit;
 	};
 
- 
 	public String getMessage() {
 		return message;
 	};
@@ -340,17 +334,14 @@ public class Job {
 		message = newMessage;
 	};
 
-	
 	public String getProductionDetails() {
 		return offerProductionDetails;
 	};
 
- 
 	public void addToProductionDetails(String data) {
-		offerProductionDetails += (new String (data)).concat(" ");
+		offerProductionDetails += (new String(data)).concat(" ");
 	}
-	
-	
+
 	public String getInternalAAhref() {
 		return message;
 	};
@@ -358,7 +349,7 @@ public class Job {
 	public void setInternalAAhref(String newMessage) {
 		internalAAhref = newMessage;
 	};
-	
+
 	public String getInternalAAname() {
 		return internalAAname;
 	};
@@ -366,7 +357,7 @@ public class Job {
 	public void setInternalAAname(String newMessage) {
 		internalAAname = newMessage;
 	};
- 
+
 	public void addToMessage(String newMessage) {
 		message += new String(message.concat(" ").concat(newMessage));
 	};
@@ -378,7 +369,7 @@ public class Job {
 	public void setDecisionSubmit(boolean newBit) {
 		decisionSubmit = newBit;
 	};
-	
+
 	public boolean getPutInCart() {
 		return putInCart;
 	};
@@ -386,12 +377,18 @@ public class Job {
 	public void setPutInCart() {
 		putInCart = true;
 	};
-	
+
 	public void takeOutOfCart() {
 		putInCart = false;
 	};
-	
-	
+
+	public boolean getIsMaleCharacter() {
+		return isMaleCharacter;
+	};
+
+	public void setIsMaleCharacter(boolean newBit) {
+		isMaleCharacter = newBit;
+	}
 
 	public boolean getHasBeenSubmitted() {
 		return offerHasBeenSubmitted;
@@ -425,18 +422,33 @@ public class Job {
 		totalAddedToCart = newBit;
 	};
 
-	
-	
-	
-	
-
-	public void makeDecision() {
-		this.setDecisionSubmit(true);
-		if ((isMale) && (!isCar) && (isEthnicity)&& (isAge)) {
+	public void makeDecisionAA(Actor human) {
+	//	this.setDecisionSubmit(true);
+		//make sure that the actor is the same gender as the character offered.
+		this.setIsGenderMatch(false);
+		if((human.GenderIsMale)&&(this.isMaleCharacter)){
+			this.setIsGenderMatch(true);
+		}
+		if((!human.GenderIsMale)&&(!this.isMaleCharacter)){
+			this.setIsGenderMatch(true);
+		}
+		
+		// DECISION PARAMS
+		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicity()) && (this.getIsAge())) {
 			this.setDecisionSubmit(true);
 		}
 	}
-  
+
+	
+	public void makeDecisionCN() {
+	//	this.setDecisionSubmit(true);
+
+		// DECISION PARAMS
+		if ((this.isMaleCharacter) && (!this.getIsCar()) && (this.getIsEthnicity()) && (this.getIsAge())) {
+			this.setDecisionSubmit(true);
+		}
+	}
+
 	public void loadNoticesFromFile() {
 		// read file
 
@@ -469,34 +481,33 @@ public class Job {
 		}
 		return false;
 	}
-	
-	public boolean isSameOfferCN(Job otherJob){
+
+	public boolean isSameOfferCN(Job otherJob) {
 		if (((this.getOfferProjectName()).equals(otherJob.getOfferProjectName()))
-				&& ((this.getOfferRole()).equals(otherJob.getOfferRole()))){
+				&& ((this.getOfferRole()).equals(otherJob.getOfferRole()))) {
 			return true;
-		} 
+		}
 		return false;
 	}
-	
-	public boolean isSameOfferAA(Job otherJob){
+
+	public boolean isSameOfferAA(Job otherJob) {
 		if (((this.getOfferPostedTime()).equals(otherJob.getOfferProjectName()))
-				&& ((this.getOfferPostedTime()).equals(otherJob.getOfferRole()))){
-			return true;	
-			} 
-			
+				&& ((this.getOfferPostedTime()).equals(otherJob.getOfferRole()))) {
+			return true;
+		}
+
 		return false;
 	}
-	
 
 	public boolean offerHasBeenConsideredBeforeCN(List<Job> allJobs) {
 		// checkcing in the list of Jobs for another offer with the same ROLE
 		// and same PROJECT NAME values.
-	
+
 		for (Job offer : allJobs) {
-			
+
 			if (((this.getOfferProjectName()).equals(offer.getOfferProjectName()))
-					&& ((this.getOfferRole()).equals(offer.getOfferRole()))
-					&& (!offer.getHasBeenSubmitted())&&((this.getActorIDSubmitted()).contains(offer.getActorIDSubmitted()))) {
+					&& ((this.getOfferRole()).equals(offer.getOfferRole())) && (!offer.getHasBeenSubmitted())
+					&& ((this.getActorIDSubmitted()).contains(offer.getActorIDSubmitted()))) {
 				Logging.slog(
 						"Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: ");
 				Logging.sprintDecisionMakingVars(this);
@@ -506,11 +517,12 @@ public class Job {
 		return false;
 	}
 
-	 public boolean offerHasBeenConsideredBeforeAA(List<Job> allJobs) {
-		// checkcing in the list of Jobs for another offer with the PROJECT NAME values and same ACTOR ID values.
+	public boolean offerHasBeenConsideredBeforeAA(List<Job> allJobs) {
+		// checkcing in the list of Jobs for another offer with the PROJECT NAME
+		// values and same ACTOR ID values.
 		for (Job offer : allJobs) {
-			if (((this.getOfferProjectName()).equals(offer.getOfferProjectName()))
-					&& (!offer.getHasBeenSubmitted())&&((this.getActorIDSubmitted()).contains(offer.getActorIDSubmitted()))) {
+			if (((this.getOfferProjectName()).equals(offer.getOfferProjectName())) && (!offer.getHasBeenSubmitted())
+					&& ((this.getActorIDSubmitted()).contains(offer.getActorIDSubmitted()))) {
 				Logging.slog(
 						"Found that this Project has already been considered and decided NOT to submit. This is Why: ");
 				Logging.sprintDecisionMakingVars(offer);
@@ -520,5 +532,4 @@ public class Job {
 		return false;
 	}
 
-	
 }

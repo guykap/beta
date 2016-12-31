@@ -64,7 +64,7 @@ public class Logging {
 
 	public void printDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
-		this.log("Decision: " + offer.getHasBeenSubmitted() + "|isMale: " + offer.getIsMale() + "|isCar: "
+		this.log("Decision: " + offer.getHasBeenSubmitted() + "|isActorsGender: " + offer.getIsActorsGender() + "|isCar: "
 				+ offer.getIsCar() + "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()
 				+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
