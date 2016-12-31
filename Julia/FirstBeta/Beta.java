@@ -231,7 +231,7 @@ public class Beta {
 		while (nextRowHasAnotherProd) {
 			bestLog.log("Checking for red check at row number: " + productionRow);
 			try {
-				if (isElementPresent(driver, By.xpath(XpathBuilder.tabProductionInRow(productionRow)))) {
+				if (ManageDriver.isElementPresent(driver, By.xpath(XpathBuilder.tabProductionInRow(productionRow)))) {
 					// assertTrue(isElementPresent(By.xpath(XpathBuilder.tabProductionInRow(productionRow))));
 					bestLog.log((new String("Found a production at row. So looking for red check on row: ")
 							.concat(String.valueOf(productionRow))));
@@ -250,7 +250,7 @@ public class Beta {
 			try {
 				Breath.breath();
 				// make sure that there is another production at productionRow
-				if (isElementPresent(driver, By.xpath(XpathBuilder.tabRedCheckBoxPos(productionRow)))) {
+				if (ManageDriver.isElementPresent(driver, By.xpath(XpathBuilder.tabRedCheckBoxPos(productionRow)))) {
 					bestLog.log((new String("Red check found on row:").concat(String.valueOf(productionRow))));
 					productionRow++;
 					continue;
@@ -284,7 +284,7 @@ public class Beta {
 			Breath.deepBreath();
 
 			try {
-				if (isElementPresent(driver, By.xpath(XpathBuilder.tabCharNameAndDetails(0)))) {
+				if (ManageDriver.isElementPresent(driver, By.xpath(XpathBuilder.tabCharNameAndDetails(0)))) {
 					// assertTrue(isElementPresent(By.xpath(XpathBuilder.tabCharNameAndDetails(0))));
 
 					bestLog.log("Success. We are now in characters table.");
@@ -830,14 +830,4 @@ public class Beta {
 
 	}
 
-	public boolean isElementPresent(WebDriver driver, By by) {
-
-		try {
-			driver.findElement(by);
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-
-	}
 }

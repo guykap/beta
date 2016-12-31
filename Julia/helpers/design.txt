@@ -54,5 +54,13 @@ TODO -SQL DB on cloud.
 	 - what happened if network falls, 
 	 -what happens when role disappease from site
 	  - what happens in the prog gets stuck - after 2 min. of stuck - how to rebot itself
-
-9173510200
+Goals:
+-----------
+Sat:
+-send Mara a link wot the profile setup 
+-prepare a machine only for Extra work for Mara.
+-Add a function that send Emails
+Sun:
+Launch a server for AA
+Mon:
+use SQL SB to collect all the submittions.

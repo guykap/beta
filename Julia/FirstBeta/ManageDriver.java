@@ -1,5 +1,9 @@
 package FirstBeta;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+
 public class ManageDriver {
 
 	private static final String processname = "geckodriver.exe";
@@ -141,5 +145,24 @@ public class ManageDriver {
 
 		Logging.slog("Error finding SON");
 		return ("");
+	}
+	
+	static public boolean isElementPresent(WebDriver driver, By by) {
+
+		try {
+			driver.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+
+	}
+
+	static public boolean verifyTitle(WebDriver driver, String wantedTitle) {
+		String pageTitle = new String(driver.getTitle());
+		if (pageTitle.contains(wantedTitle)) {
+			return true;
+		}
+		return false;
 	}
 }
