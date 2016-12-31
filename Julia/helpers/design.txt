@@ -45,6 +45,8 @@ The smart thing would be to look in our Jobs list if we already considered that 
 -add class notifications.  This will send emails / SMS to user with updates.
 -if login doesn't work after 6 times - Kill the gecko driver process and restart login
 -have a seperate proccess run as a spider on AA and only update the DB about characters already submitted.
+-The night watch principle with a robot account SAM who only once a desirable offer is found - logs out, and logs in my accoutn to submit it.
+
 -------------
 TODO -SQL DB on cloud.
 -Clean Code - functions , clear working 

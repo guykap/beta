@@ -188,4 +188,8 @@ driver.switchTo().frame(driver.findElement(By.id(“frameId”)));
 driver.switchTo().defaultContent();
 
 
+AGE regex
+\b\d{2}\b[-. ]?[-. ]?[-. ]?\d{2}
+
+I added a slash before the 'd so the JAVA would accept it.. 
  

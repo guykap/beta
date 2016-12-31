@@ -1,5 +1,7 @@
 package FirstBeta;
 
+import java.net.Inet4Address;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -70,16 +72,18 @@ public class ManageDriver {
 	static public void windowStatus(String parentWindow) {
 		String currentWindowHandler = Beta.driver.getWindowHandle();
 		String sonWindow = getSonWindowHandler(parentWindow);
-		Logging.slog("Parent: " + ManageDriver.getParentWindowHandler(parentWindow) + " Son: " + getSonWindowHandler(parentWindow));
-		
+		Logging.slog("Parent: " + ManageDriver.getParentWindowHandler(parentWindow) + " Son: "
+				+ getSonWindowHandler(parentWindow));
+
 		if (getParentWindowHandler(parentWindow).equals(currentWindowHandler)) {
-		 	Logging.slog("Now on PARENT");
+			Logging.slog("Now on PARENT");
 		} else {
-		 	
+
 			Logging.slog("Now on SON");
 		}
-	//	Beta.driver.getWindowHandle();
-		Logging.slog("Parent: " + ManageDriver.getParentWindowHandler(parentWindow) + " Son: " + getSonWindowHandler(parentWindow));
+		// Beta.driver.getWindowHandle();
+		Logging.slog("Parent: " + ManageDriver.getParentWindowHandler(parentWindow) + " Son: "
+				+ getSonWindowHandler(parentWindow));
 		return;
 	}
 
@@ -96,8 +100,6 @@ public class ManageDriver {
 		Logging.slog(allHandles + " on: " + currentWindowHandler);
 	}
 
-	
-	
 	static public String getParentWindowHandler(String parentWindow) {
 		if (parentWindow.length() > 1) {
 			return parentWindow;
@@ -146,7 +148,7 @@ public class ManageDriver {
 		Logging.slog("Error finding SON");
 		return ("");
 	}
-	
+
 	static public boolean isElementPresent(WebDriver driver, By by) {
 
 		try {
@@ -164,5 +166,17 @@ public class ManageDriver {
 			return true;
 		}
 		return false;
+	}
+
+	static public void logMyIP(){
+		String myIp;
+		try{
+	myIp = new String (Inet4Address.getLocalHost().getHostAddress());
+		}catch(Exception e){
+			myIp = new String ("IP -not found");
+			Logging.slog(e.getMessage());
+		}
+		
+		Logging.slog((new String("IP:").concat(myIp)));
 	}
 }

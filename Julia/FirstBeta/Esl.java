@@ -1,5 +1,17 @@
 package FirstBeta;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
+
+
 public class Esl {
 
 	static public void readNoticeAA(Job offer) {
@@ -23,7 +35,9 @@ public class Esl {
 		}
 
 		// MALE
-		// check if first name of character is a male name - API using
+		 if(isStatisticallyMaleName(offer.getOfferCharacterName())){
+			 offer.setIsMale(true);
+		 }
 
 		if ((allCharacterDataLowerCase).contains(" male") || (allCharacterDataLowerCase.startsWith("male"))) {
 			offer.setIsMale(true);
@@ -74,6 +88,37 @@ public class Esl {
 		char_offer.setOfferCharacterDetails(details.trim());
 	}
 
+	static public String parseAgeRange(String data) {
+		String firstNum="";
+		String secondNum="";
+		String mydata = new String(data);
+		if (mydata.length() < 0) {
+			return new String("");
+		}
+		Pattern pattern2 = Pattern.compile("\\b\\d{2}\\b[-. ]?[-. ]?[-. ]?\\d{2}");
+		Matcher matcher = pattern2.matcher(mydata);
+
+		if (matcher.find()) {
+			String foundRegex = matcher.group(0);
+			return (new String(foundRegex));
+		}
+		Pattern pattern1 = Pattern.compile("\\b\\d{2}\\b");
+
+		matcher = pattern1.matcher(mydata);
+		if (matcher.find()) {
+			firstNum = matcher.group(0);
+			if (matcher.find()) {
+				secondNum = matcher.group(0);
+			}else{
+				return(firstNum);
+			}
+			 
+			return ((new String(firstNum).concat("-")).concat(secondNum));
+		}
+		
+	return ("");
+	}
+
 	static private void calcAgeRange(Job offer, String ageData) {
 		// read the AGE from data
 		if (ageData.length() < 1) {
@@ -86,41 +131,47 @@ public class Esl {
 			offer.setIsAge(true);
 		}
 
-		// case the data has the format : " 20 - 30"
+		// case the data has the format : " %d - %d"
 		String ageMin;
 		String ageMax;
 		String delims = "[-,'to']";
 		String[] tokens = offer.offerListingAgesHint.split(delims);
+		String regexResult;
+		Double maybeAgeMin = new Double(0);
+		Double maybeAgeMax = new Double(0);
+		Double maybeAgeAverageTwice = new Double(0);
+		Double avgCharacterAgeTwice = new Double(0);
+		
 		try {
+			regexResult = new String(parseAgeRange(ageData));
+			if (regexResult.length() > 3) {
+				tokens = regexResult.split(delims);
+			}
+			if ((regexResult.length()>1)&&(regexResult.length() <=3)){
+				//Only one number found .
+				checkForSpecificActor(offer, Double.valueOf(regexResult.trim()), Double.valueOf(regexResult.trim()));
+ 
+			}
 
 			ageMin = new String(tokens[0]);
 			ageMax = new String(tokens[1]);
 			if ((ageMin.length() < 1) && (ageMax.length() < 1)) {
 				return;
 			}
-			Double maybeAgeMin = new Double(Double.parseDouble(ageMin.trim()));
-			Double maybeAgeMax = new Double(Double.parseDouble(ageMax.trim()));
-			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
-			Double avgCharacterAgeTwice = new Double(Job.avgCharacterAge * 2);
-			Double ageRange = new Double(10);
-			Double ageLookLike = new Double(5);
-			Double actorRealAge = new Double(36);
+			
+			try {
 
-			// check if actor's age is in the range asked for:
-
-			if ((actorRealAge >= maybeAgeMin) && (actorRealAge <= maybeAgeMax)) {
-				offer.setIsAge(true);
-			}
-			// check if actor's age is near the average
-			if ((Math.abs(maybeAgeAverageTwice - avgCharacterAgeTwice)) <= ageRange) {
-				// the actor is in the age range
+				maybeAgeMin = new Double(Double.parseDouble(ageMin.trim()));
+				maybeAgeMax = new Double(Double.parseDouble(ageMax.trim()));
+				
+				
+			} catch (Exception e) {
+				Logging.slog(e.getMessage());
+				Logging.slog("Math failure in reading the age values. Lets submit anyway. We are artists.");
 				offer.setIsAge(true);
 			}
 
-			if ((Math.abs(actorRealAge - maybeAgeMin) <= ageLookLike)
-					|| (Math.abs(actorRealAge - maybeAgeMax) <= ageLookLike)) {
-				offer.setIsAge(true);
-			}
+				checkForSpecificActor(offer,maybeAgeMin,maybeAgeMax);
 
 		} catch (Exception e) {
 			// System.err.format("Age range - faliure in reading or calculating
@@ -131,6 +182,37 @@ public class Esl {
 		}
 	}
 
+	
+	
+	static void checkForSpecificActor(Job offer,Double maybeAgeMin, Double maybeAgeMax){
+		
+		try{
+	 	Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
+		Double avgCharacterAgeTwice = new Double(Job.avgCharacterAge * 2);
+		Double ageRange = new Double(10);
+		Double ageLookLike = new Double(5);
+		Double actorRealAge = new Double(36);
+ 
+	// check if actor's age is in the range asked for:
+
+	if ((actorRealAge >= maybeAgeMin) && (actorRealAge <= maybeAgeMax)) {
+		offer.setIsAge(true);
+	}
+	// check if actor's age is near the average
+	if ((Math.abs(maybeAgeAverageTwice - avgCharacterAgeTwice)) <= ageRange) {
+		// the actor is in the age range
+		offer.setIsAge(true);
+	}
+
+	if ((Math.abs(actorRealAge - maybeAgeMin) <= ageLookLike)
+			|| (Math.abs(actorRealAge - maybeAgeMax) <= ageLookLike)) {
+		offer.setIsAge(true);
+	}
+		}catch(Exception e){
+			Logging.slog(e.getMessage());
+		}
+}
+	
 	static public void readNotice(Job offer) {
 		// this reads the notice and sets all the Job params accordingly.
 
@@ -240,4 +322,54 @@ public class Esl {
 		}
 	}
 
+	static public boolean isStatisticallyMaleName(String name){
+		  
+ 
+		  try {
+
+		    String myKey = "insert your server key here";
+
+		    URL url = new URL("https://gender-api.com/get?key=" + myKey + "&name=markus");
+
+		    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+
+
+		    if (conn.getResponseCode() != 200) {
+
+		      throw new RuntimeException("Error: " + conn.getResponseCode());
+
+		    }
+
+
+
+		    InputStreamReader input = new InputStreamReader(conn.getInputStream());
+
+		    BufferedReader reader = new BufferedReader(input);
+
+
+
+		    Gson gson = new Gson();
+
+		    JsonObject json = gson.fromJson(reader, JsonObject.class);
+
+		    String gender = json.get("gender").getAsString();
+
+		    System.out.println("Gender: " + gender); // Gender: male
+
+		    conn.disconnect();
+
+
+
+		    } catch (IOException e) {
+
+		      e.printStackTrace();
+
+		    }
+
+		  }
+
+		
+		
+	}
 }

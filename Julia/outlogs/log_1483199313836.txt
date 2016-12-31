@@ -1,0 +1,71 @@
+INFO - Actors Access
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.160.104.25', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9628, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 30917ddf-d026-4882-9993-18066fcf40fe
+INFO - Something went during login -> So lets login again
+INFO - Login number 2
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.160.104.25', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9628, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 30917ddf-d026-4882-9993-18066fcf40fe
+INFO - Something went during login -> So lets login again
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 0
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 0
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 30, 2016, 4:30 PM Pacific
+This week's CASTING DIRECTOR UPDATE (NY) - 12/30/16
+.
+CastingAbout
+
+Powered by BREAKDOWN SERVICES, LTD.
+
+AABP
+
+Not Applicable
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p

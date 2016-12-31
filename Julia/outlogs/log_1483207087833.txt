@@ -1,0 +1,9 @@
+INFO - Actors Access
+INFO - IP:10.160.104.25
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .

@@ -76,6 +76,9 @@ public class Beta {
 		}
 
 		try {
+			//debug
+			//Esl.parseAgeRange(" 45  to  55 Indigenous - Calvin's twin sister. Usually a bit erratic, going off the deep end since the death of their Grandfather.");
+			
 			cast = new Actor[2];
 			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true);
 			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false);
@@ -118,6 +121,7 @@ public class Beta {
 	@Test
 	public void testBetaAA() throws Throwable {
 		bestLog.log("Actors Access");
+		ManageDriver.logMyIP();
 		testBetaB();
 	}
 

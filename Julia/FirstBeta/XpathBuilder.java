@@ -202,6 +202,13 @@ public class XpathBuilder {
 		return (xPath); 
 	}
 	
+	static public String xpLogout() {
+		 
+		String xPath=  "//div[@id='mainContent']/table/tbody/tr/td[3]/p";
+		Logging.slog(xPath);
+		return (xPath); 
+	}
+	
 	static public String xpCharacterLinkInCharactersPage(int row) {
 			if (row == 0) {
 				Logging.slog(".//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]");
