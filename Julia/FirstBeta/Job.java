@@ -422,7 +422,7 @@ public class Job {
 		totalAddedToCart = newBit;
 	};
 
-	public void makeDecisionAA() {
+	public void makeDecisionAA(Actor human) {
 	//	this.setDecisionSubmit(true);
 	
 		// DECISION PARAMS
@@ -525,29 +525,8 @@ public class Job {
 	}
 
 	public void genderUpdate(Actor human){
-		//make sure that the actor is the same gender as the character offered.
-		
 		this.setIsGenderMatch(false);
-		
-		//FOR A MALE CHARACTER
-		switch (human.getGender()){
-		case 'm':
-			if(this.isMaleCharacter){
-				this.setIsGenderMatch(true);
-			}
-			
-			
-		}
-		
-		
-		if(this.isMaleCharacter){
-			if(human.getGender())
-		}
-		
-		
-		human.getGender()
-		
-		if(()&&(this.isMaleCharacter)){
+		if((human.GenderIsMale)&&(this.isMaleCharacter)){
 			this.setIsGenderMatch(true);
 		}
 		if((!human.GenderIsMale)&&(!this.isMaleCharacter)){
