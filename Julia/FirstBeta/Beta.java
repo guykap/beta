@@ -49,7 +49,7 @@ public class Beta {
 	static Actor[] cast;
 	static Actor danCN;
 	boolean isTargetRegion[];
-	static int currentShift = 0;
+	static public int currentShift = 0;
 
 	public static void main(String[] args) throws Throwable {
 
@@ -630,6 +630,7 @@ public class Beta {
 
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
 				Esl.readNoticeAA(currentOffer);
+				currentOffer.genderUpdate(cast[currentShift]);
 				currentOffer.makeDecisionAA();
 				if ((currentOffer.getHasBeenSubmitted()) || (!currentOffer.getDecisionSubmit())) {
 					bestLog.printDecisionMakingVars(currentOffer);

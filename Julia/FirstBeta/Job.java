@@ -422,17 +422,9 @@ public class Job {
 		totalAddedToCart = newBit;
 	};
 
-	public void makeDecisionAA(Actor human) {
+	public void makeDecisionAA() {
 	//	this.setDecisionSubmit(true);
-		//make sure that the actor is the same gender as the character offered.
-		this.setIsGenderMatch(false);
-		if((human.GenderIsMale)&&(this.isMaleCharacter)){
-			this.setIsGenderMatch(true);
-		}
-		if((!human.GenderIsMale)&&(!this.isMaleCharacter)){
-			this.setIsGenderMatch(true);
-		}
-		
+	
 		// DECISION PARAMS
 		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicity()) && (this.getIsAge())) {
 			this.setDecisionSubmit(true);
@@ -532,4 +524,36 @@ public class Job {
 		return false;
 	}
 
+	public void genderUpdate(Actor human){
+		//make sure that the actor is the same gender as the character offered.
+		
+		this.setIsGenderMatch(false);
+		
+		//FOR A MALE CHARACTER
+		switch (human.getGender()){
+		case 'm':
+			if(this.isMaleCharacter){
+				this.setIsGenderMatch(true);
+			}
+			
+			
+		}
+		
+		
+		if(this.isMaleCharacter){
+			if(human.getGender())
+		}
+		
+		
+		human.getGender()
+		
+		if(()&&(this.isMaleCharacter)){
+			this.setIsGenderMatch(true);
+		}
+		if((!human.GenderIsMale)&&(!this.isMaleCharacter)){
+			this.setIsGenderMatch(true);
+		}
+		
+	}
+	
 }

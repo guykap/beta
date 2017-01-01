@@ -341,7 +341,7 @@ public class Esl {
 			Gson gson = new Gson();
 			JsonObject json = gson.fromJson(reader, JsonObject.class);
 			String gender = json.get("gender").getAsString();
-			Logging.slog(new String("Character:").concat(charName).concat(" : ").concat(gender)); // Gender: male
+			Logging.slog(new String("Character:").concat(charName).concat(" : gender : ").concat(gender)); // Gender: male
 			conn.disconnect();
 				return true;
 		} catch (Exception e) {

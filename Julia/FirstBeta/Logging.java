@@ -64,7 +64,7 @@ public class Logging {
 
 	public void printDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
-		this.log("Decision: " + offer.getHasBeenSubmitted() + "|isActorsGender: " + offer.getIsActorsGender() + "|isCar: "
+		this.log("Decision: " + offer.getHasBeenSubmitted() + "|isMaleCharacter: " + offer.getIsMaleCharacter() + "|isGenderMatch: " + offer.getIsGenderMatch()+ "|isCar: "
 				+ offer.getIsCar() + "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()
 				+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
@@ -72,7 +72,7 @@ public class Logging {
 
 	static public void sprintDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
-		slog("Decision: " + offer.getHasBeenSubmitted() + "|isMale: " + offer.getIsMale() + "|isCar: "
+		slog("Decision: " + offer.getHasBeenSubmitted() + "|isMGenderMatch: " + offer.getIsGenderMatch() + "|isCar: "
 				+ offer.getIsCar() + "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()
 				+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
@@ -94,7 +94,7 @@ public class Logging {
 		this.log("\n* Actor:" + offer.getActorIDSubmitted() +"|Region:" + offer.getRegion() + "|Offer:" + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
 				+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
 				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
-				+ "|Eth:" + offer.getIsEthnicity() + "|Male:" + offer.getIsMale() + "|SAG:" + offer.getIsSag()
+				+ "|Eth:" + offer.getIsEthnicity() + "|MaleCharacter:" + offer.getIsMaleCharacter() + "|GenderMatch:" + offer.getIsGenderMatch() + "|SAG:" + offer.getIsSag()
 				+ "|Guard:" + offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:"
 				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
 				+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
