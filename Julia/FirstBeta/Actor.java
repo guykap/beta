@@ -25,27 +25,28 @@ public class Actor {
 	public boolean confirmedBilling;
 
 	
-	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword,boolean isNightShift, boolean humanIsMale){
+	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword,boolean isNightShift, boolean humanIsMale,String humanEthnicity){
 		this.actorId = actorId;
-		this.setCnUsername(cnUsername);
-		this.setCnPassword(cnPassword);
-		this.setAaUsername(aaUserName);
-		this.setAaPassword(aaPassword);
+		this.setCnUsername( new String(cnUsername));
+		this.setCnPassword( new String(cnPassword));
+		this.setAaUsername( new String(aaUserName));
+		this.setAaPassword( new String(aaPassword));
 		this.setIsNightShift(isNightShift);
 		this.genderIsMale =humanIsMale;
+		this.ethnicity = new String(humanEthnicity);
 		 }
 
 	public Actor(Actor realActor){
 		//this copy C'tor is used to create a nightShift actor with the same profile as the read actor
 		this.isNightShift = true;
-		this.dateOfBirth = realActor.dateOfBirth;
+		this.dateOfBirth =  new String(realActor.dateOfBirth);
 		this.minActingAge = realActor.minActingAge;
 		this.maxActingAge = realActor.maxActingAge;
 		this.hasCar = realActor.hasCar;
-		this.carModel = realActor.carModel;
-		this.carYear = realActor.carYear;
-		this.standardTalentNote = realActor.standardTalentNote;
-		this.ethnicity  = realActor.ethnicity;
+		this.carModel =  new String(realActor.carModel);
+		this.carYear =  new String(realActor.carYear);
+		this.standardTalentNote =  new String(realActor.standardTalentNote);
+		this.ethnicity  = new String(realActor.ethnicity);
 		this.paymentMin = realActor.paymentMin;
 		this.genderIsMale  = realActor.genderIsMale;
 		this.confirmedBilling  = realActor.confirmedBilling;
@@ -92,6 +93,14 @@ public class Actor {
 
 	public void setAaPassword(String aaPassword) {
 		this.aaPassword = aaPassword;
+	}
+
+	public String getEthinicity() {
+		return new String(this.ethnicity);
+	}
+
+	public void setEthinicity(String humanEthnicity) {
+		this.ethnicity = new String(humanEthnicity);
 	}
 
 	public boolean getIsNightShift() {

@@ -33,45 +33,67 @@ public class Esl {
 		}
 
 		// ETHNICITY
-		//if the notice says a specific ethicity that isn't the actor's then mark FALSE. otherwise mark TRUE
-		 Esl.calcEthnicity(offer,allDataLowerCase);
-		
-		
-		
+		// if the notice says a specific ethicity that isn't the actor's then
+		// mark FALSE. otherwise mark TRUE
+		Esl.calcEthnicity(offer, allDataLowerCase);
 
 		// AGE
 
 		Esl.calcAgeRange(offer, allCharacterData);
 
 		// GENDER
-		checkGenderOfName(offer);
 		
-		if ((offer.getCharacterGender()=='m')||(offer.getCharacterGender()=='f')) {
-			// the NAME API was successful and determined the gender m or f
-			// Unknown
-			return;
-		} else {
-			// HINT FOR A MALE CHARACTER IN DESCRIPTION
+		
+	 
+		// HINT FOR BOTH MALE OR FEMALE CHARACTER IN DESCRIPTION
 
-			if ((allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("male"))
-					|| (allCharacterDataLowerCase.contains(" men")) || (allCharacterDataLowerCase.contains(" man "))
-					|| (allCharacterDataLowerCase.contains("actor ")) || (allCharacterDataLowerCase.startsWith("men"))
-					|| (allCharacterDataLowerCase.toLowerCase().contains(" male"))) {
-				offer.setCharacterGender('m');
-				return;
-			}
-
-			// HINT FOR A FEMALE CHARACTER IN DESCRIPTION
-
-		}
-		if ((allCharacterDataLowerCase.contains(" female")) || (allCharacterDataLowerCase.contains(" women"))
-				|| (allCharacterDataLowerCase.contains(" woman ")) || (allCharacterDataLowerCase.contains("actress "))
-				|| (allCharacterDataLowerCase.startsWith("women"))
-				|| (allCharacterDataLowerCase.toLowerCase().contains(" female"))) {
-			offer.setCharacterGender('m');
+		if ((allCharacterDataLowerCase.contains("male or female")) 
+				|| (allCharacterDataLowerCase.contains("female or male"))
+				 || (allCharacterDataLowerCase.toLowerCase().contains("both genders"))) {
+			offer.setCharacterGender('b');
 			return;
 		}
 
+		if (((allCharacterDataLowerCase.contains(" he ")) || (allCharacterDataLowerCase.startsWith("he")))
+			&&	((allCharacterDataLowerCase.contains(" she ")) || (allCharacterDataLowerCase.startsWith("she")))) {
+		//this notice cointains also He and she so this is confusing. Lets check gender only by name		
+			checkGenderOfName(offer);
+			return;
+		}
+		
+		// HINT FOR A MALE CHARACTER IN DESCRIPTION
+
+					if ((allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("male"))
+							|| (allCharacterDataLowerCase.contains(" men")) || (allCharacterDataLowerCase.contains(" man "))|| (allCharacterDataLowerCase.contains(" male"))
+				  || (allCharacterDataLowerCase.startsWith("men"))
+							|| (allCharacterDataLowerCase.toLowerCase().contains(" he ")))  {
+						offer.setCharacterGender('m');
+						return;
+					}
+
+					// HINT FOR A FEMALE CHARACTER IN DESCRIPTION
+					if ((allCharacterDataLowerCase.contains(" female")) || (allCharacterDataLowerCase.contains(" women"))
+							|| (allCharacterDataLowerCase.startsWith("female"))
+							|| (allCharacterDataLowerCase.contains(" woman "))
+							|| (allCharacterDataLowerCase.contains("actress "))
+							|| (allCharacterDataLowerCase.startsWith("women"))
+							|| (allCharacterDataLowerCase.startsWith(" she "))
+							|| (allCharacterDataLowerCase.toLowerCase().contains(" she "))) {
+						offer.setCharacterGender('f');
+						return;
+					}
+		
+					if ((offer.getCharacterGender() == 'm') || (offer.getCharacterGender() == 'f')) {
+						// found the hint for male or female. and determined the gender m or f
+						// Unknown
+						return;
+					} else {
+						//Hint not found so lets use the API using the character name
+						checkGenderOfName(offer);
+					}
+	
+
+		
 	}
 
 	static public void parseProdDetailsLeftWithTimeRoleAdded(Job char_offer, String data) {
@@ -141,7 +163,8 @@ public class Esl {
 		}
 		if ((ageData.contains("20 - 30")) || (ageData.contains("20-30")) || (ageData.contains("20 - 40"))
 				|| (ageData.contains("20-40")) || (ageData.contains("20s to 30s")) || (ageData.contains("20s-30s"))
-				|| (ageData.contains("early 30s")) || (ageData.contains("30 something "))) {
+				|| (ageData.contains("early 40s"))|| (ageData.contains("early 30s")) || (ageData.contains("30 something "))) {
+			
 			offer.setIsAge(true);
 		}
 
@@ -188,7 +211,8 @@ public class Esl {
 						|| (maybeAgeMax.equals(new Double(20))) || (maybeAgeMax.equals(new Double(15)))) {
 
 					// we cannot trust the age Max so we will now return
-					Logging.slog("Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol");
+					Logging.slog(
+							"Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol");
 					// for debug reasons at this point we will say that the age
 					// is NOT appropriate
 					offer.setIsAge(false);
@@ -199,7 +223,7 @@ public class Esl {
 				Logging.slog(e.getMessage());
 				Logging.slog("Math failure in reading the age values. Lets submit anyway. We are artists.");
 				offer.setIsAge(true);
-				
+
 			}
 
 			checkForSpecificActor(offer, maybeAgeMin, maybeAgeMax);
@@ -216,12 +240,20 @@ public class Esl {
 	static void checkForSpecificActor(Job offer, Double maybeAgeMin, Double maybeAgeMax) {
 
 		try {
-			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
-			Double avgCharacterAgeTwice = new Double(Job.avgCharacterAge * 2);
-			Double ageRange = new Double(10);
-			Double ageLookLike = new Double(5);
+			Double ageRange = new Double(6);
+			Double ageLookLike = new Double(6);
 			Double actorRealAge = new Double(36);
 
+			if(maybeAgeMin.equals(new Double(maybeAgeMax))){
+				//there was probably only one age number found by the regex
+				if ((Math.abs(actorRealAge - maybeAgeMin) <= ageLookLike)) {
+					offer.setIsAge(true);
+					return;
+				}
+			}
+			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
+			Double avgCharacterAgeTwice = new Double(Job.avgCharacterAge * 2);
+			
 			// check if actor's age is in the range asked for:
 
 			if ((actorRealAge >= maybeAgeMin) && (actorRealAge <= maybeAgeMax)) {
@@ -237,6 +269,7 @@ public class Esl {
 					|| (Math.abs(actorRealAge - maybeAgeMax) <= ageLookLike)) {
 				offer.setIsAge(true);
 			}
+		 
 		} catch (Exception e) {
 			Logging.slog(e.getMessage());
 		}
@@ -310,34 +343,40 @@ public class Esl {
 	}
 
 	static public void fillTalentNote(Job offer) {
+		try {
+			String allData = (offer.getOfferRole()).concat(" ").concat((offer.getOfferListing()).toLowerCase());
 
-		String allData = (offer.getOfferRole()).concat(" ").concat((offer.getOfferListing()).toLowerCase());
+			// last time worked
+			if ((allData.contains(" note last ")) || (allData.contains("please note if you have worked"))
+					|| (allData.contains("worked on the")) || (allData.contains("must not have worked on this project"))
+					|| (allData.contains("last time that you worked"))
+					|| (allData.contains("do not submit if you have worked on this show"))) {
+				offer.addToMessage("I've never worked on the production.");
+			}
 
-		// last time worked
-		if ((allData.contains(" note last ")) || (allData.contains("please note if you have worked"))
-				|| (allData.contains("worked on the")) || (allData.contains("must not have worked on this project"))
-				|| (allData.contains("last time that you worked"))
-				|| (allData.contains("do not submit if you have worked on this show"))) {
-			offer.addToMessage("I've never worked on the production.");
+			if ((allData.contains("note your sizes")) || (allData.contains("note all sizes"))
+					|| (allData.contains("note neck"))) {
+				offer.addToMessage(
+						"height: 6'2\n weight:190lb\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11 ");
+			}
+
+			if ((allData.contains(" Please note if you can provide")) || (allData.contains("must own"))
+					|| (allData.contains("own the wardrobe"))) {
+				offer.addToMessage("I own the wardrobe.");
+			}
+
+			// tuxedo
+			if (offer.getNeedTuxedo()) {
+				offer.addToMessage("I own the tuxedo.");
+			}
+
+			improveMessage(offer);
+
+		} catch (Exception e) {
+			Logging.slog("Failed to fill talent note");
+			offer.setMessage("");
+
 		}
-
-		if ((allData.contains("note your sizes")) || (allData.contains("note all sizes"))
-				|| (allData.contains("note neck"))) {
-			offer.addToMessage(
-					"height: 6'2\n weight:190lb\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11 ");
-		}
-
-		if ((allData.contains(" Please note if you can provide")) || (allData.contains("must own"))
-				|| (allData.contains("own the wardrobe"))) {
-			offer.addToMessage("I own the wardrobe.");
-		}
-
-		// tuxedo
-		if (offer.getNeedTuxedo()) {
-			offer.addToMessage("I own the tuxedo.");
-		}
-
-		improveMessage(offer);
 	}
 
 	static public void improveMessage(Job offer) {
@@ -389,12 +428,23 @@ public class Esl {
 
 		}
 	}
-	
-	static public void calcEthnicity(Job currentOffer, String data){
 
-		if ((data.contains("all ethnicities"))
-				|| (data.contains("caucasian"))) {
+	static public void calcEthnicity(Job currentOffer, String data) {
+
+		if ((data.contains("all ethnicities")) || (data.contains("caucasian"))) {
 			currentOffer.setIsEthnicity(true);
+			return;
 		}
+		if (data.contains("African American")) {
+			currentOffer.setIsEthnicity(false);
+			return;
+		}
+		if (data.contains("Easian")) {
+			currentOffer.setIsEthnicity(false);
+			return;
+		}
+
+		// If the notice does not mention Ethinicity at all - then:
+		currentOffer.setIsEthnicity(true);
 	}
 }

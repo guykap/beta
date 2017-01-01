@@ -53,7 +53,7 @@ public class XpathBuilder {
 		String leftPart = ".//*[@id='mainContent']/table[2]/tbody/tr/td/p[";
 		String rightPart = "]/a[@class='breakdown-open-add-role']";
 		String xPath= new String(((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart)));
-		Logging.slog(xPath);
+//		Logging.slog(xPath);
 		return (xPath);
 		 
 	}
@@ -68,7 +68,7 @@ public class XpathBuilder {
 		//String rightPart = "]/a[@class='breakdown-open-add-role']/@href";
 		String rightPart = "]/a[@class='breakdown-open-add-role']";
 		String xPath= new String(((new String(leftPart)).concat(String.valueOf(twiceRow)).concat(rightPart)));
-		Logging.slog(xPath);
+//		Logging.slog(xPath);
 		return (xPath);
 		 
 	}

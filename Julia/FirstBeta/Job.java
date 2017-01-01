@@ -434,6 +434,9 @@ public class Job {
 		case 'f':
 			this.characterGender = 'f';
 			return;
+		case 'b':
+			this.characterGender = 'b';
+			return;
 
 		}
 		characterGender = 'u';
@@ -553,12 +556,15 @@ public class Job {
 				this.setIsGenderMatch(true);
 			}
 			return;
+		case 'b':
+			this.setIsGenderMatch(true);
+			return;
 		case 'u':
 			// HERE we must decide upon the user profile settings. Should we
 			// submit anyway?
 			// For debug reasons : now we will say that Unknown gender IS a
 			// match
-			this.setIsGenderMatch(true);
+			this.setIsGenderMatch(false);
 		}
 	}
 }

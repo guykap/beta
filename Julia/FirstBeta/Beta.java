@@ -81,10 +81,10 @@ public class Beta {
 		//	Esl.isStatisticallyMaleName("MARIEA");
 			
 			cast = new Actor[2];
-			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true,true);
-			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false,true);
+			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true,true,"caucasian");
+			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false,true,"caucasian");
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword",false,true);
+			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword",false,true,"caucasian");
 			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
@@ -605,8 +605,7 @@ public class Beta {
 		Job currentOffer = parentOffer;
 		int charNum = 0;
 		boolean moreCharsAvil = true;
-
-		// today gym
+ 
 		while (moreCharsAvil) {
 
 			try {
