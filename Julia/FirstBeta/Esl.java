@@ -32,34 +32,46 @@ public class Esl {
 			offer.setIsSag(true);
 		}
 
-		// MALE
-		if (isStatisticallyMaleName(offer.getOfferCharacterName())) {
-			offer.setIsMaleCharacter(true);
-		}
-
-		if ((allCharacterDataLowerCase).contains(" male") || (allCharacterDataLowerCase.startsWith("male"))) {
-			offer.setIsMaleCharacter(true);
-		}
-		if ((allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("male"))
-				|| (allCharacterDataLowerCase.contains(" men")) || (allCharacterDataLowerCase.contains(" man "))
-				|| (allCharacterDataLowerCase.contains("actor ")) || (allCharacterDataLowerCase.startsWith("men"))
-				|| (allCharacterDataLowerCase.toLowerCase().contains(" male"))) {
-			offer.setIsMaleCharacter(true);
-		}
-		
-		
-	
-		
-		
 		// ETHNICITY
-		if ((allCharacterDataLowerCase.contains("all ethnicities"))
-				|| (allCharacterDataLowerCase.contains("caucasian"))) {
-			offer.setIsEthnicity(true);
-		}
+		//if the notice says a specific ethicity that isn't the actor's then mark FALSE. otherwise mark TRUE
+		 Esl.calcEthnicity(offer,allDataLowerCase);
+		
+		
+		
 
 		// AGE
 
 		Esl.calcAgeRange(offer, allCharacterData);
+
+		// GENDER
+		checkGenderOfName(offer);
+		
+		if ((offer.getCharacterGender()=='m')||(offer.getCharacterGender()=='f')) {
+			// the NAME API was successful and determined the gender m or f
+			// Unknown
+			return;
+		} else {
+			// HINT FOR A MALE CHARACTER IN DESCRIPTION
+
+			if ((allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("male"))
+					|| (allCharacterDataLowerCase.contains(" men")) || (allCharacterDataLowerCase.contains(" man "))
+					|| (allCharacterDataLowerCase.contains("actor ")) || (allCharacterDataLowerCase.startsWith("men"))
+					|| (allCharacterDataLowerCase.toLowerCase().contains(" male"))) {
+				offer.setCharacterGender('m');
+				return;
+			}
+
+			// HINT FOR A FEMALE CHARACTER IN DESCRIPTION
+
+		}
+		if ((allCharacterDataLowerCase.contains(" female")) || (allCharacterDataLowerCase.contains(" women"))
+				|| (allCharacterDataLowerCase.contains(" woman ")) || (allCharacterDataLowerCase.contains("actress "))
+				|| (allCharacterDataLowerCase.startsWith("women"))
+				|| (allCharacterDataLowerCase.toLowerCase().contains(" female"))) {
+			offer.setCharacterGender('m');
+			return;
+		}
+
 	}
 
 	static public void parseProdDetailsLeftWithTimeRoleAdded(Job char_offer, String data) {
@@ -157,6 +169,10 @@ public class Esl {
 
 			ageMin = new String(tokens[0]);
 			ageMax = new String(tokens[1]);
+
+			// Weed out the agent fee percetage. usually 10%, 15%, 20% and is at
+			// the end of the String
+
 			if ((ageMin.length() < 1) && (ageMax.length() < 1)) {
 				return;
 			}
@@ -165,11 +181,25 @@ public class Esl {
 
 				maybeAgeMin = new Double(Double.parseDouble(ageMin.trim()));
 				maybeAgeMax = new Double(Double.parseDouble(ageMax.trim()));
+				// Weed out the agent fee percetage. usually 10%, 15%, 20% and
+				// is at the end of the String
+
+				if ((maybeAgeMin > maybeAgeMax) || (maybeAgeMax.equals(new Double(10)))
+						|| (maybeAgeMax.equals(new Double(20))) || (maybeAgeMax.equals(new Double(15)))) {
+
+					// we cannot trust the age Max so we will now return
+					Logging.slog("Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol");
+					// for debug reasons at this point we will say that the age
+					// is NOT appropriate
+					offer.setIsAge(false);
+					return;
+				}
 
 			} catch (Exception e) {
 				Logging.slog(e.getMessage());
 				Logging.slog("Math failure in reading the age values. Lets submit anyway. We are artists.");
 				offer.setIsAge(true);
+				
 			}
 
 			checkForSpecificActor(offer, maybeAgeMin, maybeAgeMax);
@@ -233,12 +263,12 @@ public class Esl {
 		// MALE
 
 		if ((offer.offerListingSex).contains(" male") || (allData.startsWith("male"))) {
-			offer.setIsMaleCharacter(true);
+			offer.setCharacterGender('m');
 		}
 		if ((allData.contains(" male")) || (allData.startsWith("male")) || (allData.contains(" men"))
 				|| (allData.contains(" man ")) || (allData.contains("actor ")) || (allData.startsWith("men"))
 				|| (allData.toLowerCase().contains(" male"))) {
-			offer.setIsMaleCharacter(true);
+			offer.setCharacterGender('m');
 		}
 
 		// There is a male name here for the character
@@ -321,13 +351,13 @@ public class Esl {
 		}
 	}
 
-	static public boolean isStatisticallyMaleName(String charName) {
+	static public boolean checkGenderOfName(Job currentOffer) {
 
 		try {
+			String characterName = currentOffer.getOfferCharacterName();
+			String myKey = ""; // "insert your server key here";
 
-			String myKey =""; //  "insert your server key here";
-
-			URL url = new URL("https://gender-api.com/get?key=" + myKey + "&name="+charName);
+			URL url = new URL("https://gender-api.com/get?key=" + myKey + "&name=" + characterName);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
 			if (conn.getResponseCode() != 200) {
@@ -341,13 +371,30 @@ public class Esl {
 			Gson gson = new Gson();
 			JsonObject json = gson.fromJson(reader, JsonObject.class);
 			String gender = json.get("gender").getAsString();
-			Logging.slog(new String("Character:").concat(charName).concat(" : gender : ").concat(gender)); // Gender: male
+			if ((gender).contains("male")) {
+				currentOffer.setCharacterGender('m');
+			} else if ((gender).contains("female")) {
+				currentOffer.setCharacterGender('f');
+			} else {
+				currentOffer.setCharacterGender('u');
+			}
+
+			Logging.slog(new String("Character:").concat(characterName).concat(" : gender : ").concat(gender)); // Gender:
+																												// male
 			conn.disconnect();
-				return true;
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
 
+		}
+	}
+	
+	static public void calcEthnicity(Job currentOffer, String data){
+
+		if ((data.contains("all ethnicities"))
+				|| (data.contains("caucasian"))) {
+			currentOffer.setIsEthnicity(true);
 		}
 	}
 }

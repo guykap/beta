@@ -21,17 +21,18 @@ public class Actor {
 	public String standardTalentNote="";
 	public String ethnicity="";
 	public int paymentMin=0;
-	public boolean GenderIsMale;
+	public boolean genderIsMale;
 	public boolean confirmedBilling;
 
 	
-	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword,boolean isNightShift){
+	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword,boolean isNightShift, boolean humanIsMale){
 		this.actorId = actorId;
 		this.setCnUsername(cnUsername);
 		this.setCnPassword(cnPassword);
 		this.setAaUsername(aaUserName);
 		this.setAaPassword(aaPassword);
 		this.setIsNightShift(isNightShift);
+		this.genderIsMale =humanIsMale;
 		 }
 
 	public Actor(Actor realActor){
@@ -46,7 +47,7 @@ public class Actor {
 		this.standardTalentNote = realActor.standardTalentNote;
 		this.ethnicity  = realActor.ethnicity;
 		this.paymentMin = realActor.paymentMin;
-		this.GenderIsMale  = realActor.GenderIsMale;
+		this.genderIsMale  = realActor.genderIsMale;
 		this.confirmedBilling  = realActor.confirmedBilling;
 	}
 	

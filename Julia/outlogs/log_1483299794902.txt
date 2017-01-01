@@ -1,0 +1,95 @@
+INFO - Actors Access
+INFO - Internal IP: 192.168.0.7
+INFO - External IP: 69.123.186.116
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 3
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 3
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 3
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 9, 2016, 7:44 PM Pacific
+PUBERTY (NATIONWIDE SEARCH)
+Feature Film
+Union Status: SAG-AFTRA
+
+THIS IS A SAG/AFTRA ULB PROJECT. PLEASE NOTE PRIOR TO SUBMITTING.
+
+Rate of Pay / SAG SCALE
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Production Company: BRAINFEEDER FILMS
+Producer: Javier Lovato
+Writer / Director: Eddie Alcazar
+Writer: Ted Kupper
+Casting Director: Anissa Williams, Zora DeHorter
+Audition Date(s): 12/13/2016
+Callback Date(s): 12/13/2016
+Start Date: 01/10/2017 TBA
+Rate of Pay: $300 OR $500.00 + 10% FOR TWINS (SEE ROLES)
+Location: Los Angeles, CA
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ ALYSSA AND CINDY ]
+ALYSSA AND CINDY
+TWINS - 20 to early twenties. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NUDITY REQUIRED. $500 + 10% EACH
+[ TWINS (NO NUDITY) ]
+ALYSSA AND CINDY - REAL TWINS - 20 to early 30'S. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NO NUDITY REQUIRED FOR THIS ROLE. $300 + 10% EACH
+INFO - Failure in reading the age values. Might be confused with the agent fee.
+INFO - Character:ALYSSA AND CINDY : gender : unknown
+INFO - Decision: false|CharacterGender: u|isGenderMatch: true|isCar: false|isEthnicity: false|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ TWINS (NO NUDITY) ]
+ALYSSA AND CINDY - REAL TWINS - 20 to early 30'S. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NO NUDITY REQUIRED FOR THIS ROLE. $300 + 10% EACH
+INFO - Character:TWINS (NO NUDITY) : gender : unknown
+INFO - Decision: false|CharacterGender: u|isGenderMatch: true|isCar: false|isEthnicity: false|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=6260, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: a33433f7-0e90-4453-a9be-c0cb61f2d1da
+*** Element info: {Using=xpath, value=.//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .

@@ -57,10 +57,8 @@ public class Job {
 	boolean isSag;
 	boolean isEthnicity;
 	boolean isAge;
-	boolean isGenderMatch;
 	boolean isBackgroundWork;
 	boolean isPayingEnough;
-	boolean isMaleCharacter;
 	boolean isCar;
 	boolean isGuard;
 	boolean isStandIn;
@@ -72,6 +70,8 @@ public class Job {
 	int region;
 	int totalAddedToCart;
 	boolean putInCart;
+	boolean isGenderMatch;
+	private char characterGender;
 
 	public Job() {
 		// String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
@@ -81,6 +81,8 @@ public class Job {
 
 	public Job(String actorIdSubmitted) {
 		this.actorIDSubmitted = new String(actorIdSubmitted);
+		this.offerId = new String((new Long(System.currentTimeMillis())).toString());
+		this.setCharacterGender('u');
 		// this age temp for this test version
 	}
 
@@ -382,14 +384,12 @@ public class Job {
 		putInCart = false;
 	};
 
-	public boolean getIsMaleCharacter() {
-		return isMaleCharacter;
-	};
-
-	public void setIsMaleCharacter(boolean newBit) {
-		isMaleCharacter = newBit;
-	}
-
+	/*
+	 * public boolean getIsMaleCharacter() { return isMaleCharacter; };
+	 * 
+	 * public void setIsMaleCharacter(boolean newBit) { isMaleCharacter =
+	 * newBit; }
+	 */
 	public boolean getHasBeenSubmitted() {
 		return offerHasBeenSubmitted;
 	};
@@ -422,21 +422,37 @@ public class Job {
 		totalAddedToCart = newBit;
 	};
 
-	public void makeDecisionAA(Actor human) {
-	//	this.setDecisionSubmit(true);
-	
+	public char getCharacterGender() {
+		return characterGender;
+	};
+
+	public void setCharacterGender(char gender) {
+		switch (gender) {
+		case 'm':
+			this.characterGender = 'm';
+			return;
+		case 'f':
+			this.characterGender = 'f';
+			return;
+
+		}
+		characterGender = 'u';
+	};
+
+	public void makeDecisionAA() {
+		// this.setDecisionSubmit(true);
+
 		// DECISION PARAMS
 		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicity()) && (this.getIsAge())) {
 			this.setDecisionSubmit(true);
 		}
 	}
 
-	
 	public void makeDecisionCN() {
-	//	this.setDecisionSubmit(true);
+		// this.setDecisionSubmit(true);
 
 		// DECISION PARAMS
-		if ((this.isMaleCharacter) && (!this.getIsCar()) && (this.getIsEthnicity()) && (this.getIsAge())) {
+		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicity()) && (this.getIsAge())) {
 			this.setDecisionSubmit(true);
 		}
 	}
@@ -524,15 +540,25 @@ public class Job {
 		return false;
 	}
 
-	public void genderUpdate(Actor human){
+	public void genderMatchingUpdate(Actor human) {
 		this.setIsGenderMatch(false);
-		if((human.GenderIsMale)&&(this.isMaleCharacter)){
+		switch (this.getCharacterGender()) {
+		case 'm':
+			if (human.genderIsMale) {
+				this.setIsGenderMatch(true);
+			}
+			return;
+		case 'f':
+			if (!human.genderIsMale) {
+				this.setIsGenderMatch(true);
+			}
+			return;
+		case 'u':
+			// HERE we must decide upon the user profile settings. Should we
+			// submit anyway?
+			// For debug reasons : now we will say that Unknown gender IS a
+			// match
 			this.setIsGenderMatch(true);
 		}
-		if((!human.GenderIsMale)&&(!this.isMaleCharacter)){
-			this.setIsGenderMatch(true);
-		}
-		
 	}
-	
 }

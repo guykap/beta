@@ -64,7 +64,7 @@ public class Logging {
 
 	public void printDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
-		this.log("Decision: " + offer.getHasBeenSubmitted() + "|isMaleCharacter: " + offer.getIsMaleCharacter() + "|isGenderMatch: " + offer.getIsGenderMatch()+ "|isCar: "
+		this.log("Decision: " + offer.getHasBeenSubmitted() + "|CharacterGender: " + offer.getCharacterGender() + "|isGenderMatch: " + offer.getIsGenderMatch()+ "|isCar: "
 				+ offer.getIsCar() + "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()
 				+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
@@ -91,15 +91,17 @@ public class Logging {
 	public void printOffer(Job offer) {
 		if (offer == null)
 			return;
-		this.log("\n* Actor:" + offer.getActorIDSubmitted() +"|Region:" + offer.getRegion() + "|Offer:" + offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
+		this.log("\n* Actor:" + offer.getActorIDSubmitted() + "|Region:" + offer.getRegion() + "|Offer:"
+				+ offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
 				+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
 				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
-				+ "|Eth:" + offer.getIsEthnicity() + "|MaleCharacter:" + offer.getIsMaleCharacter() + "|GenderMatch:" + offer.getIsGenderMatch() + "|SAG:" + offer.getIsSag()
-				+ "|Guard:" + offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:"
-				+ offer.getNeedPoiceUniform() + "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:"
-				+ offer.getReqSizes() + "|Paying:" + offer.getOfferPaying() + "|Rate:" + offer.getOffertRate()
-				+ "|Name:" + offer.getOfferProjectName() + "|Role:" + offer.getOfferRole() + "|Offer Listing:"
-				+ offer.getOfferListing() + " |  Talent Notes filled with:" + offer.getMessage());
+				+ "|Eth:" + offer.getIsEthnicity() + "|GenderOfCharacter:" + offer.getCharacterGender()
+				+ "|GenderMatch:" + offer.getIsGenderMatch() + "|SAG:" + offer.getIsSag() + "|Guard:"
+				+ offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:" + offer.getNeedPoiceUniform()
+				+ "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:" + offer.getReqSizes() + "|Paying:"
+				+ offer.getOfferPaying() + "|Rate:" + offer.getOffertRate() + "|Name:" + offer.getOfferProjectName()
+				+ "|Role:" + offer.getOfferRole() + "|Offer Listing:" + offer.getOfferListing()
+				+ " |  Talent Notes filled with:" + offer.getMessage());
 
 	}
 
@@ -110,9 +112,9 @@ public class Logging {
 			slog(Character.toString(stage));
 		} else {
 			switch (stage) {
-			//case 'a':
-			//	this.log("A: Window handle Parent " + parentWindowHandler);
-			//	break;
+			// case 'a':
+			// this.log("A: Window handle Parent " + parentWindowHandler);
+			// break;
 			case 'c':
 				slog("C: Location->Home Page");
 				break;
@@ -140,9 +142,8 @@ public class Logging {
 			case 'm':
 				slog("*******SUBMITTED:");
 				/*
-				 * slog("M: Succ Submitted: " +
-				 * offer.getOfferProjectName() + " | " +
-				 * offer.getOfferSubmittionDateTime() + " | " +
+				 * slog("M: Succ Submitted: " + offer.getOfferProjectName() +
+				 * " | " + offer.getOfferSubmittionDateTime() + " | " +
 				 * offer.getOffertRate() + " | " + offer.getOfferTypeProject() +
 				 * " | " + offer.getHasBeenSubmitted() + " | " +
 				 * offer.getOfferListing() + "Talent Notes :" +

@@ -81,10 +81,10 @@ public class Beta {
 		//	Esl.isStatisticallyMaleName("MARIEA");
 			
 			cast = new Actor[2];
-			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true);
-			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false);
+			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true,true);
+			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false,true);
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword",false);
+			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword",false,true);
 			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
@@ -240,7 +240,7 @@ public class Beta {
 		bestLog.log((new String("Region ").concat(intToRegion(region))));
 
 		Breath.breath();
-		int productionRow = 0;
+		int productionRow = 3;
 		boolean nextRowHasAnotherProd = true;
 
 		//we only consider here the first page of productions. So in the future add an option to nagivate to page 2 and 3
@@ -282,6 +282,7 @@ public class Beta {
 			}
 			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(productionRow))));
 			offer = new Job(cast[shift].getActorId());
+			//some offers appear in several different regions but reffer to the same role
 			offer.setRegion(region);
 			Scapper.parseRowOfferAA(offer, productionRow);
 			if (offer.offerHasBeenConsideredBeforeAA(Jobs)) {
@@ -630,7 +631,7 @@ public class Beta {
 
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
 				Esl.readNoticeAA(currentOffer);
-				currentOffer.genderUpdate(cast[currentShift]);
+				currentOffer.genderMatchingUpdate(cast[currentShift]);
 				currentOffer.makeDecisionAA();
 				if ((currentOffer.getHasBeenSubmitted()) || (!currentOffer.getDecisionSubmit())) {
 					bestLog.printDecisionMakingVars(currentOffer);
