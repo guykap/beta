@@ -58,3 +58,529 @@ INFO - .
 INFO - .
 INFO - .
 INFO - .
+INFO - Ha Ha 51
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10001|Region:0|Offer:1483368018313|Background:true|Role added:|Submittion time:|Shoot date:1/3/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:true|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:union to portray male court officer, avail tues 1/3 ** note last date worked|Offer Listing:background / male / caucasian, hispanic / 35 - 50
+union to portray court officer, avail tues 1/3 ** note last date worked |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368224770|Background:true|Role added:|Submittion time:|Shoot date:1/23/2017|age:true|car:false|EthMatch:false|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:print|ReqSizes:false|Paying:yes|Rate:$1,000/10|Name:african american male age 30-50|Role:african american male age 30-50|Offer Listing:background / male / africanam / 30 - 59
+looking for african american male age 30-50 for print shoot. rate is approx $1,000 for the day. |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 37
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10001|Region:0|Offer:1483368018313|Background:true|Role added:|Submittion time:|Shoot date:1/3/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:true|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:union to portray male court officer, avail tues 1/3 ** note last date worked|Offer Listing:background / male / caucasian, hispanic / 35 - 50
+union to portray court officer, avail tues 1/3 ** note last date worked |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368224770|Background:true|Role added:|Submittion time:|Shoot date:1/23/2017|age:true|car:false|EthMatch:false|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:print|ReqSizes:false|Paying:yes|Rate:$1,000/10|Name:african american male age 30-50|Role:african american male age 30-50|Offer Listing:background / male / africanam / 30 - 59
+looking for african american male age 30-50 for print shoot. rate is approx $1,000 for the day. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368402453|Background:true|Role added:Role Added 12/30/2016 11:58 AM
+ |Submittion time:|Shoot date:|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:other|ReqSizes:false|Paying:yes|Rate:$75/day|Name:the perfect murder - season 4 (ny)|Role:medical examiner *shoots january 7th|Offer Listing:featured / male or female / all ethnicities /25 - 50
+medical examiner works on a homicide case with detectives. *featured with an on-screen lines* shoots 1/7 in nyc. |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 37
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10001|Region:0|Offer:1483368018313|Background:true|Role added:|Submittion time:|Shoot date:1/3/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:true|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:union to portray male court officer, avail tues 1/3 ** note last date worked|Offer Listing:background / male / caucasian, hispanic / 35 - 50
+union to portray court officer, avail tues 1/3 ** note last date worked |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368224770|Background:true|Role added:|Submittion time:|Shoot date:1/23/2017|age:true|car:false|EthMatch:false|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:print|ReqSizes:false|Paying:yes|Rate:$1,000/10|Name:african american male age 30-50|Role:african american male age 30-50|Offer Listing:background / male / africanam / 30 - 59
+looking for african american male age 30-50 for print shoot. rate is approx $1,000 for the day. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368402453|Background:true|Role added:Role Added 12/30/2016 11:58 AM
+ |Submittion time:|Shoot date:|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:other|ReqSizes:false|Paying:yes|Rate:$75/day|Name:the perfect murder - season 4 (ny)|Role:medical examiner *shoots january 7th|Offer Listing:featured / male or female / all ethnicities /25 - 50
+medical examiner works on a homicide case with detectives. *featured with an on-screen lines* shoots 1/7 in nyc. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368541462|Background:true|Role added:Role Added 12/30/2016 11:47 AM
+ |Submittion time:|Shoot date:|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:other|ReqSizes:false|Paying:yes|Rate:$75/day|Name:the perfect murder - season 4 (ny)|Role:police sketch artist *shoots january 7th in nyc*|Offer Listing:featured / male or female / all ethnicities /30 - 55
+police sketch artist works with an eyewitness to make a rendition of the man they suspect to be a murderer. *featured with an on-screen line* shoots 1/7 in nyc. |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: true|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - 1
+INFO - Age range - faliure in reading or calculating age. Lets submit anyway.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 31
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10001|Region:0|Offer:1483368018313|Background:true|Role added:|Submittion time:|Shoot date:1/3/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:true|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:union to portray male court officer, avail tues 1/3 ** note last date worked|Offer Listing:background / male / caucasian, hispanic / 35 - 50
+union to portray court officer, avail tues 1/3 ** note last date worked |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368224770|Background:true|Role added:|Submittion time:|Shoot date:1/23/2017|age:true|car:false|EthMatch:false|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:print|ReqSizes:false|Paying:yes|Rate:$1,000/10|Name:african american male age 30-50|Role:african american male age 30-50|Offer Listing:background / male / africanam / 30 - 59
+looking for african american male age 30-50 for print shoot. rate is approx $1,000 for the day. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368402453|Background:true|Role added:Role Added 12/30/2016 11:58 AM
+ |Submittion time:|Shoot date:|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:other|ReqSizes:false|Paying:yes|Rate:$75/day|Name:the perfect murder - season 4 (ny)|Role:medical examiner *shoots january 7th|Offer Listing:featured / male or female / all ethnicities /25 - 50
+medical examiner works on a homicide case with detectives. *featured with an on-screen lines* shoots 1/7 in nyc. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368541462|Background:true|Role added:Role Added 12/30/2016 11:47 AM
+ |Submittion time:|Shoot date:|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:other|ReqSizes:false|Paying:yes|Rate:$75/day|Name:the perfect murder - season 4 (ny)|Role:police sketch artist *shoots january 7th in nyc*|Offer Listing:featured / male or female / all ethnicities /30 - 55
+police sketch artist works with an eyewitness to make a rendition of the man they suspect to be a murderer. *featured with an on-screen line* shoots 1/7 in nyc. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368786274|Background:false|Role added:Role Added 12/16/2016 12:00 PM
+ |Submittion time:|Shoot date:null|age:true|car:false|EthMatch:false|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:psa|ReqSizes:false|Paying:yes|Rate:200/flat|Name:relationships first - family video (dallas, tx)|Role:frank|Offer Listing:lead / male / african american, asian, east indian, hispanic, middle eastern, ethnically ambiguous, native american, pacific islander / 30 - 40
+rick is a police officer, the stress of his work he takes home and is emotionally withdrawn from his family. through new tools, he learns how to open up and be a better father |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - 1
+INFO - Age range - faliure in reading or calculating age. Lets submit anyway.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 35
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10001|Region:0|Offer:1483368018313|Background:true|Role added:|Submittion time:|Shoot date:1/3/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:true|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:union to portray male court officer, avail tues 1/3 ** note last date worked|Offer Listing:background / male / caucasian, hispanic / 35 - 50
+union to portray court officer, avail tues 1/3 ** note last date worked |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368224770|Background:true|Role added:|Submittion time:|Shoot date:1/23/2017|age:true|car:false|EthMatch:false|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:print|ReqSizes:false|Paying:yes|Rate:$1,000/10|Name:african american male age 30-50|Role:african american male age 30-50|Offer Listing:background / male / africanam / 30 - 59
+looking for african american male age 30-50 for print shoot. rate is approx $1,000 for the day. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368402453|Background:true|Role added:Role Added 12/30/2016 11:58 AM
+ |Submittion time:|Shoot date:|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:other|ReqSizes:false|Paying:yes|Rate:$75/day|Name:the perfect murder - season 4 (ny)|Role:medical examiner *shoots january 7th|Offer Listing:featured / male or female / all ethnicities /25 - 50
+medical examiner works on a homicide case with detectives. *featured with an on-screen lines* shoots 1/7 in nyc. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368541462|Background:true|Role added:Role Added 12/30/2016 11:47 AM
+ |Submittion time:|Shoot date:|age:true|car:false|EthMatch:true|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:other|ReqSizes:false|Paying:yes|Rate:$75/day|Name:the perfect murder - season 4 (ny)|Role:police sketch artist *shoots january 7th in nyc*|Offer Listing:featured / male or female / all ethnicities /30 - 55
+police sketch artist works with an eyewitness to make a rendition of the man they suspect to be a murderer. *featured with an on-screen line* shoots 1/7 in nyc. |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368786274|Background:false|Role added:Role Added 12/16/2016 12:00 PM
+ |Submittion time:|Shoot date:null|age:true|car:false|EthMatch:false|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:psa|ReqSizes:false|Paying:yes|Rate:200/flat|Name:relationships first - family video (dallas, tx)|Role:frank|Offer Listing:lead / male / african american, asian, east indian, hispanic, middle eastern, ethnically ambiguous, native american, pacific islander / 30 - 40
+rick is a police officer, the stress of his work he takes home and is emotionally withdrawn from his family. through new tools, he learns how to open up and be a better father |  Talent Notes filled with:
+INFO - 
+* Actor:10001|Region:0|Offer:1483368891153|Background:false|Role added:Role Added 12/22/2016 7:24 PM
+ |Submittion time:|Shoot date:null|age:true|car:false|EthMatch:false|GenderOfCharacter:m|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:short film|ReqSizes:false|Paying:no|Rate:none|Name:petite blanche (ny)|Role:frank (the assistant director)|Offer Listing:supporting / male / asian, caucasian, east indian, middle eastern, native american, pacific islander / 23 - 35
+frank is a british assistant director and, specifically, the hilarious, excessively authoritative projection of the director’s cynicism and hyper-rationality. his snob, bourgeois, manners make him look like a crossbreed between a parrot and a watchdog. with his funny manners, he has the key role of the "mediator" between drama and comedy, as he accomplishes to temper the sense of melancholy that pervades the entire story. important: british accent is a must for this role |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 0
+INFO - Found star on the offer 0 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 1
+INFO - Found star on the offer 1 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 2
+INFO - Found star on the offer 2 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 3
+INFO - Found star on the offer 3 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 4
+INFO - Found star on the offer 4 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 5
+INFO - Found star on the offer 5 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - J: Making sure there is no GREEN STAR/red check
+INFO - Checking for green star at row number: 9
+INFO - Found star on the offer 9 from top
+INFO - ALTERNATE to PRINCIPLE work
+INFO - Zzz
