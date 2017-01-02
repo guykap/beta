@@ -81,10 +81,10 @@ public class Beta {
 		//	Esl.isStatisticallyMaleName("MARIEA");
 			
 			cast = new Actor[2];
-			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true,true,"caucasian");
-			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false,true,"caucasian");
+			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true,true,'c');
+			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false,true,'c');
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword",false,true,"caucasian");
+			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword",false,true,'c');
 			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
@@ -240,7 +240,7 @@ public class Beta {
 		bestLog.log((new String("Region ").concat(intToRegion(region))));
 
 		Breath.breath();
-		int productionRow = 3;
+		int productionRow = 0;
 		boolean nextRowHasAnotherProd = true;
 
 		//we only consider here the first page of productions. So in the future add an option to nagivate to page 2 and 3
@@ -631,6 +631,7 @@ public class Beta {
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
 				Esl.readNoticeAA(currentOffer);
 				currentOffer.genderMatchingUpdate(cast[currentShift]);
+				currentOffer.ethnicityMatchingUpdate(cast[currentShift]);
 				currentOffer.makeDecisionAA();
 				if ((currentOffer.getHasBeenSubmitted()) || (!currentOffer.getDecisionSubmit())) {
 					bestLog.printDecisionMakingVars(currentOffer);

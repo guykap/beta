@@ -1553,3 +1553,1303 @@ CONTENT: SPECULATIVE SUICIDE WITH GUN. Needs to get physically aggressive / viol
 19 to 26 years old, African American male. DESCRIBED AS STOCKY BUILD, TALL. PLEASE INCLUDE A FULL BODY PHOTO. NOTED TO COME ACROSS AS "SKETCHY"
 [ LEROY THOMPSON, VIC'S UNCLE ]
 44 to 48 years old, African American male.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ ERICA CLARK, VICTIM'S AUNT ]
+46 to 48 years old, LIGHT/MEDIUM SKINNED African American female. ANY LOOK STRONG ACTOR. MUST HAVE A DEMO REEL WITH SUBMISSION.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]/a
+INFO - NameOfCharacterAndDetailsUnder = [ ALBERT SMALL, PERP/VICTIM ]
+42 to 46 years old, African American male. MUST BE A STRONG ACTOR. MUST BE COMFORTABLE WITH CONTENT. ALL SUBMISSIONS MUST HAVE A DEMO REEL OR CLIP.
+
+CONTENT: SPECULATIVE SUICIDE WITH GUN. Needs to get physically aggressive / violent with girlfriend, SPECULATIVE RAPE, IS MURDERED BY BEING SHOT IN THE HEAD.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532225&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333097&bid=532225
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]/a
+INFO - NameOfCharacterAndDetailsUnder = [ DETECTIVE MARTIN ]
+50 to 58 years old, African American male. MUSCULAR/FIT MALE, SHOULD OWN CLEAN WELL-FITTING PROFESSIONAL WARDROBE. SHOULD BE A STRONG ACTOR WHO IS WELL-SPOKEN.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[8]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[8]/a
+INFO - NameOfCharacterAndDetailsUnder = [ BILLY WELLS ]
+43 to 47 years old, African American male. ANY LOOK. FRIEND AND NEIGHBOR OF VICTIM.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[10]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[10]/a
+INFO - NameOfCharacterAndDetailsUnder = [ ESTHER FOSTER, VICTIM'S SISTER ]
+37 to 43 years old, African American female. BROTHER IS MURDERED BY A GUNSHOT TO THE HEAD.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]/a
+INFO - NameOfCharacterAndDetailsUnder = [ BOBBY EVANS, VICTIM'S FRIEND ]
+37 to 43 years old, African American male. FRIEND OF THE VICTIM. ANY LOOK.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532225&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333101&bid=532225
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]/a
+INFO - NameOfCharacterAndDetailsUnder = [ BOBBY EVAN'S FRIEND ]
+36 to 44 years old, African American male.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532225&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333102&bid=532225
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[16]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[16]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[16]/a
+INFO - NameOfCharacterAndDetailsUnder = [ VERNON TURNER, VICTIM'S BOYFRIEND ]
+19 to 26 years old, African American male. DESCRIBED AS STOCKY BUILD, TALL. PLEASE INCLUDE A FULL BODY PHOTO. NOTED TO COME ACROSS AS "SKETCHY"
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[18]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[18]/a
+INFO - NameOfCharacterAndDetailsUnder = [ LEROY THOMPSON, VIC'S UNCLE ]
+44 to 48 years old, African American male.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[20]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[20]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='mainContent']/table[2]/tbody/tr/td/p[20]}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 16
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 16
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 16
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Monday, Dec. 19, 2016, 3:28 PM Pacific
+#MURDER EP. 107
+Episodic
+NON-UNION
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Casting Director: Amber Vanderslice-Shelton
+Audition Date: N/A
+Callback Date: N/A
+Start Date: 01/02/2017-01/06/2017 **SHOOTS ON NYE OBSERVED
+Rate of Pay: $125/DAY + $50/GAS + HOTEL
+Location: Knoxville, TN
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ TIARA BROWN, VICTIM ]
+23 to 36 years old, MEDIUM/DARK SKINNED African American female. 5'2, 111LBS. VERY SHORT BROWN HAIR (JUST BELOW EARS- ABLE TO BE TUCKED BEHIND EARS WHEN RELAXED) DARK EYES.
+CONTENT: SHOULD BE COMFORTABLE WITH ON-SCREEN KNIFE VIOLENCE. MAY NEED TO WEAR UNDERWEAR ONLY IN MURDER SCENE. POSSIBLE ON SCRENE KISSING. BI-RACIAL RELATIONSHIPS AND MARRIAGE. Murder - She was cut across her neck, she was stabbed across her back numerous times, and she was left on her bedroom floor naked (TALENT WILL NOT BE NAKED-IMPLIED NUDITY), left to die.
+[ DAVID SPARE, KILLER ]
+22 to 37 years old, Caucasian male. SHORT BROWN HAIR (MILITARY STYLE OR BUZZ CUT) DARK EYES, TALL AND THIN/MUSCULAR BUILD. WAS IN THE MILITARY.
+CONTENT: VIOLENCE WITH A KNIFE. MURDERS AN AFRICAN AMERICAN FEMALE BY SLICING HER THROAT AND STABBING HER MULTIPLE TIMES. POSSIBLE BI-RACIAL ON-SCREEN KISSING OR RELATIONSHIP.
+[ HATTIE ROUCHE, VIC'S GRANDMOTHER ]
+58 to 70 years old, very dark skinned African American female. THIN/AVERAGE BUILD, AVERAGE HEIGHT, SHORT BLACK HAIR (ABOUT LONG ENOUGH TO TOUCH EARS) BLACK EYES.
+[ ROBERT POWELL, VIC'S UNCLE ]
+45 to 60 years old, VERY DARK SKINNED African American male. COMPLETELY SHAVED BALD HEAD, BLACK EYES. THIN/AVERAGE BUILD, AVERAGE HEIGHT.
+[ DARRELL POWELL, VIC'S UNCLE ]
+35 to 45 years old, VERY DARK SKINNED African American male. MUSCULAR BUILD, AVERAGE/TALL, SHORT BLACK/BROWN HAIR, DARK EYES.
+[ DETECTIVE PATRICK BODLINE ]
+38 to 45 years old, Caucasian male. TALL AND THIN, BROWN EYES, VERY SHORT BROWN HAIR- RECEDING HAIR LINE. SHOULD OWN CLEAN, WELL-FITTING PROFESSIONAL WARDROBE. MUST BE WELL-SPOKEN
+[ DETECTIVE SHAWN COARSEY ]
+40 to 48 years old, Caucasian male. FULL/MUSCULAR BUILD, SHAVED BALD HEAD, LIGHT BROWN EYES, SCRUFFY FACIAL HAIR BUT NOT OUT OF CONTROL. SHOULD OWN CLEAN, WELL-FITTING PROFESSIONAL WARDROBE. MUST BE WELL-SPOKEN.
+[ PAULA KILLINGS, VIC'S COUSIN ]
+25 to 32 years old, VERY DARK SKINNED African American female. DARK HAIR, RELAXED AND ABLE TO BE PULLED BACK. DARK EYES. AVERAGE HEIGHT/WEIGHT.
+[ JEREMY, VICTIM'S FRIEND ]
+26 to 35 years old, African American male. ANY LOOK. SCRIPT HASN'T BEEN RELEASED SO THERE AREN'T ANY DETAILS ABOUT THIS ROLE AT THIS TIME.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ DAVID SPARE, KILLER ]
+22 to 37 years old, Caucasian male. SHORT BROWN HAIR (MILITARY STYLE OR BUZZ CUT) DARK EYES, TALL AND THIN/MUSCULAR BUILD. WAS IN THE MILITARY.
+CONTENT: VIOLENCE WITH A KNIFE. MURDERS AN AFRICAN AMERICAN FEMALE BY SLICING HER THROAT AND STABBING HER MULTIPLE TIMES. POSSIBLE BI-RACIAL ON-SCREEN KISSING OR RELATIONSHIP.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532221&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333078&bid=532221
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]/a
+INFO - NameOfCharacterAndDetailsUnder = [ HATTIE ROUCHE, VIC'S GRANDMOTHER ]
+58 to 70 years old, very dark skinned African American female. THIN/AVERAGE BUILD, AVERAGE HEIGHT, SHORT BLACK HAIR (ABOUT LONG ENOUGH TO TOUCH EARS) BLACK EYES.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]/a
+INFO - NameOfCharacterAndDetailsUnder = [ ROBERT POWELL, VIC'S UNCLE ]
+45 to 60 years old, VERY DARK SKINNED African American male. COMPLETELY SHAVED BALD HEAD, BLACK EYES. THIN/AVERAGE BUILD, AVERAGE HEIGHT.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[8]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[8]/a
+INFO - NameOfCharacterAndDetailsUnder = [ DARRELL POWELL, VIC'S UNCLE ]
+35 to 45 years old, VERY DARK SKINNED African American male. MUSCULAR BUILD, AVERAGE/TALL, SHORT BLACK/BROWN HAIR, DARK EYES.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[8]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532221&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333081&bid=532221
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[10]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[10]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[10]/a
+INFO - NameOfCharacterAndDetailsUnder = [ DETECTIVE PATRICK BODLINE ]
+38 to 45 years old, Caucasian male. TALL AND THIN, BROWN EYES, VERY SHORT BROWN HAIR- RECEDING HAIR LINE. SHOULD OWN CLEAN, WELL-FITTING PROFESSIONAL WARDROBE. MUST BE WELL-SPOKEN
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[10]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532221&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333082&bid=532221
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]/a
+INFO - NameOfCharacterAndDetailsUnder = [ DETECTIVE SHAWN COARSEY ]
+40 to 48 years old, Caucasian male. FULL/MUSCULAR BUILD, SHAVED BALD HEAD, LIGHT BROWN EYES, SCRUFFY FACIAL HAIR BUT NOT OUT OF CONTROL. SHOULD OWN CLEAN, WELL-FITTING PROFESSIONAL WARDROBE. MUST BE WELL-SPOKEN.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532221&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333083&bid=532221
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]/a
+INFO - NameOfCharacterAndDetailsUnder = [ PAULA KILLINGS, VIC'S COUSIN ]
+25 to 32 years old, VERY DARK SKINNED African American female. DARK HAIR, RELAXED AND ABLE TO BE PULLED BACK. DARK EYES. AVERAGE HEIGHT/WEIGHT.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[16]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[16]/a
+INFO - NameOfCharacterAndDetailsUnder = [ JEREMY, VICTIM'S FRIEND ]
+26 to 35 years old, African American male. ANY LOOK. SCRIPT HASN'T BEEN RELEASED SO THERE AREN'T ANY DETAILS ABOUT THIS ROLE AT THIS TIME.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[16]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532221&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333085&bid=532221
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[18]/a[@class='breakdown-open-add-role']
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 17
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 17
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 17
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Monday, Dec. 19, 2016, 1:41 PM Pacific
+MS. HERRINGTON
+Student Film
+NON-UNION
+Student Film School: University of New Orleans
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Director/Producer: Patrick Sanderson
+Casting Director: Katie Michael
+Start Date: 02/03/2017, 02/04/2017, 02/05/2017
+Rate of Pay: $100/Day
+Location: Mandeville, LA
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ DONNY/ MS. HERRINGTON ]
+18 to 25 years old, Caucasian male. Donny is an awkward teenager who is discovering that he is very different from all the males that he is surrounded by. LEAD
+[ BRIAN/ MS. HERRINGTON ]
+18 to 25 years old, all ethnicities male. Brian is a bully who pick on the “easy targets” at their all boys high school.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ BRIAN/ MS. HERRINGTON ]
+18 to 25 years old, all ethnicities male. Brian is a bully who pick on the “easy targets” at their all boys high school.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: true|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 18
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[20]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 18
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[20]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 18
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[20]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[20]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[20]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[20]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 16, 2016, 6:12 PM Pacific
+  Addendum to 12/14 6:37 PM 12/9 1:05 PM 12/6 12:26 PM 11/18 2:00 PM
+COME SUNDAY (Revised Role of FLIGHT ATTENDANT)
+Feature Film
+SAG-AFTRA Pending Basic Agreement
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Producers: Alissa Shipp, Julie Goldstein, Lucas Smith
+Director: Joshua Marston
+Writers: Marcus Hinchey/ Revisions By Joshua Marston
+Starring Chiwetel Ejiofor, Danny Glover, Jason Segel
+Atlanta Casting Director: Olubajo Sonubi
+Atlanta Casting Associate: Carole Kaboya
+Casting Director: Billy Hopkins
+Start Date: 01/02/2017
+Rate of Pay: Scale + 10%
+Location: Atlanta, GA
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ FLIGHT ATTENDANT ]
+Male or Female, 30s to 40s, Please submit diverse talent, friendly, courteous. (1 scene, 2 lines)
+INFO - 1
+INFO - Age range - faliure in reading or calculating age. Lets submit anyway.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483728,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532141&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3332547&bid=532141
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 19
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[21]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 19
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[21]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 19
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[21]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[21]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[21]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[21]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Error. shouldnlt reach this line. DEBUG
+INFO - this.browserForTab is undefined
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+INFO - Something went wrong -> Back to Login
+INFO - Login number 2
+INFO - browser is undefined
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=14428, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: de073b9b-e8bd-423d-b062-466b6a89db21
+INFO - Something went during login -> So lets login again
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483652
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=5636, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: b74e233c-6850-49f0-9978-9b7ab51b8e26
+INFO - Something went during login -> So lets login again
+INFO - Login number 4
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483652
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=5636, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: b74e233c-6850-49f0-9978-9b7ab51b8e26
+INFO - Something went during login -> So lets login again
+INFO - Login number 5
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483652
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=5636, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: b74e233c-6850-49f0-9978-9b7ab51b8e26
+INFO - Something went during login -> So lets login again
+INFO - Login number 6
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 3
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 3
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 3
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 9, 2016, 7:44 PM Pacific
+PUBERTY (NATIONWIDE SEARCH)
+Feature Film
+Union Status: SAG-AFTRA
+
+THIS IS A SAG/AFTRA ULB PROJECT. PLEASE NOTE PRIOR TO SUBMITTING.
+
+Rate of Pay / SAG SCALE
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Production Company: BRAINFEEDER FILMS
+Producer: Javier Lovato
+Writer / Director: Eddie Alcazar
+Writer: Ted Kupper
+Casting Director: Anissa Williams, Zora DeHorter
+Audition Date(s): 12/13/2016
+Callback Date(s): 12/13/2016
+Start Date: 01/10/2017 TBA
+Rate of Pay: $300 OR $500.00 + 10% FOR TWINS (SEE ROLES)
+Location: Los Angeles, CA
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ ALYSSA AND CINDY ]
+ALYSSA AND CINDY
+TWINS - 20 to early twenties. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NUDITY REQUIRED. $500 + 10% EACH
+[ TWINS (NO NUDITY) ]
+ALYSSA AND CINDY - REAL TWINS - 20 to early 30'S. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NO NUDITY REQUIRED FOR THIS ROLE. $300 + 10% EACH
+INFO - Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol
+INFO - Character:ALYSSA AND CINDY : gender : unknown
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ TWINS (NO NUDITY) ]
+ALYSSA AND CINDY - REAL TWINS - 20 to early 30'S. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NO NUDITY REQUIRED FOR THIS ROLE. $300 + 10% EACH
+INFO - Character:TWINS (NO NUDITY) : gender : unknown
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=.//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 5
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 5
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 5
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 8, 2016, 6:30 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - No production on row: 6
+INFO - Zzz
+INFO - Region southeast
+INFO - .
+INFO - Checking for red check at row number: 3
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 3
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 3
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Error. We are not in the characters chart now. Lets return
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Browse by page:
+Page 1
+Page 2
+INFO - parse it
+INFO - 3
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 5
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 5
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 5
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 8, 2016, 6:30 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - No production on row: 6
+INFO - Zzz
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 3
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 3
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 3
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 9, 2016, 7:44 PM Pacific
+PUBERTY (NATIONWIDE SEARCH)
+Feature Film
+Union Status: SAG-AFTRA
+
+THIS IS A SAG/AFTRA ULB PROJECT. PLEASE NOTE PRIOR TO SUBMITTING.
+
+Rate of Pay / SAG SCALE
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Production Company: BRAINFEEDER FILMS
+Producer: Javier Lovato
+Writer / Director: Eddie Alcazar
+Writer: Ted Kupper
+Casting Director: Anissa Williams, Zora DeHorter
+Audition Date(s): 12/13/2016
+Callback Date(s): 12/13/2016
+Start Date: 01/10/2017 TBA
+Rate of Pay: $300 OR $500.00 + 10% FOR TWINS (SEE ROLES)
+Location: Los Angeles, CA
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ ALYSSA AND CINDY ]
+ALYSSA AND CINDY
+TWINS - 20 to early twenties. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NUDITY REQUIRED. $500 + 10% EACH
+[ TWINS (NO NUDITY) ]
+ALYSSA AND CINDY - REAL TWINS - 20 to early 30'S. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NO NUDITY REQUIRED FOR THIS ROLE. $300 + 10% EACH
+INFO - Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol
+INFO - Character:ALYSSA AND CINDY : gender : unknown
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ TWINS (NO NUDITY) ]
+ALYSSA AND CINDY - REAL TWINS - 20 to early 30'S. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NO NUDITY REQUIRED FOR THIS ROLE. $300 + 10% EACH
+INFO - Character:TWINS (NO NUDITY) : gender : unknown
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=.//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 5
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 5
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 5
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 8, 2016, 6:30 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - No production on row: 6
+INFO - Zzz
+INFO - Region southeast
+INFO - .
+INFO - Checking for red check at row number: 3
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 3
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 3
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 29, 2016, 1:13 PM Pacific
+BRITISH GIN ANIMATED VIDEOS
+Voice Over
+NON-UNION
+Rate: $1500+10% agency buyout/perp. non-broadcast usage
+Usage: all non radio or TV broadcast usage - ie. web, trade show, corporate video/perpetuity/international
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Casting Director: Katie Griffin
+Audition Date(s): 12/29/2016, 12/30/2016, 12/31/2016, 01/01/2017, 1/2/2017, 1/3/2017
+Start Date: 01/25/2017
+Location: Can do a home record if talent has home studio, US
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ BRITISH VO ]
+Male or Female VO - MUST BE LEGIT BRITISH - No Americans who think they can pull off a "good" British accent. TALENT MUST BE 25+
+
+The tone of the animated videos is whimsical with flowery language, but we'd like talent to start off informative, then dig into the feelings and sound like a whimsical storyteller. Client would like to hear all nuances of the script - slow, dramatic, loud, theatrical, etc.
+INFO - 1
+INFO - Age range - faliure in reading or calculating age. Lets submit anyway.
+INFO - Failed to fill talent note
+INFO - [2147483651,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483853,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532511&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3334689&bid=532511
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 29, 2016, 8:58 AM Pacific
+THE PAYBACK (Revised Role)
+Short Film
+NON-UNION
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Director: Chris Henry
+Casting Director: Ashley Raines
+Audition Date: TBD
+Callback Date: TBD
+Start Date: 01/20/2017
+Rate of Pay: No pay
+Location: New Orleans, LA
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ FRIEND 2 ]
+25 to 35 years old, female or male. any ethnicity to play late 20s
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483853,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483853,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532500&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3334595&bid=532500
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 5
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 5
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 5
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[7]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 6
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[8]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 6
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[8]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 6
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[8]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[8]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[8]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 7
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[9]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 7
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[9]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 7
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[9]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[9]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[9]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[9]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Wednesday, Dec. 28, 2016, 8:55 AM Pacific
+SNAPPED, EP. 2112
+Episodic
+NON-UNION
+Rate of Pay: $125/Day
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Producer: Amy Hubbard
+Director: David McCauley
+Casting Director: Amy Leigh Hubbard
+Start Date: 01/09/2017
+Location: Knoxville TN
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ KIMBERLY ]
+35 to 45 years old, Caucasian female, long blonde hair, size 14/16.
+[ BILL ]
+35 to 45 years old, Caucasian male, short brown hair, round face, average size.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ BILL ]
+35 to 45 years old, Caucasian male, short brown hair, round face, average size.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483853,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483853,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532456&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3334392&bid=532456
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]/a[@class='breakdown-open-add-role']
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 8
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[10]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 8
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[10]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 8
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[10]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[10]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[10]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 9
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[11]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 9
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[11]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 9
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[11]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[11]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[11]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 10
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[12]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 10
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[12]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 10
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[12]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[12]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[12]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[12]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Thursday, Dec. 22, 2016, 12:12 PM Pacific
+INDIAN WARS FRONTIER PROJECT (NATIVE AMERICANS PT 2)
+1 Hr. Episodic
+NON-UNION
+Pay: $125.00 - $250.00 per day
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Prod Co: Warm Springs TV
+Casting Director: Samuel Dolan
+Start Date: 01/16/2017
+Location: Los Angeles/So. California
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ PRETTY NOSE ]
+18 to 35 years old, American Indian female. Actress needed to portray Native American female warrior who fought at the battle of the Little Bighorn in 1876. Some travel expenses to be compensated by production for this role specifically.
+[ CHIEF HIGH BULL ]
+30 to 50 years old, American Indian male. Actor needed to portray Cheyenne leader during the American Indian Wars of the 1860s and 1870s. Some travel expenses to be compensated by production for this role specifically.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ CHIEF HIGH BULL ]
+30 to 50 years old, American Indian male. Actor needed to portray Cheyenne leader during the American Indian Wars of the 1860s and 1870s. Some travel expenses to be compensated by production for this role specifically.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483853,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483853,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532358&region=9
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=9&iid=3333858&bid=532358
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]/a[@class='breakdown-open-add-role']
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 11
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[13]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 11
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[13]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 11
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[13]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[13]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[13]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[13]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Wednesday, Dec. 21, 2016, 2:48 PM Pacific
+AMERICAN HASHTAG (Updated Lynessa Role)
+Feature Film
+NON-UNION
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Writer: JR Butler
+Co-Producer: Blaque Waltz FIlms
+Casting Director: Sara Stalls
+Start Date: 01/09/2017
+Rate of Pay: $3,250/Week
+Location: Midlands, South Carolina
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ LYNESSA (UPDATED ROLE) ]
+21 to 28 years old, African American female. Dexter is awakened in the middle of the night by LYNESSA, a Woman from his past. He blames Lynessa for the fact that he feels like while he was a Grad Student at her School, she mortgaged their friendship so that she could have sex with him before she finished Undergrad. He tells her that while she is not the sole reason he no longer dates Black Women, she was definitely the catalyst for him making the decision to date outside his race. Lynessa resists accepting blame for the way she treated Dexter at first, but ultimately does apologize, giving Dexter much needed closure on the situation. After Dexter receives the closure that he has so desperately wanted since the incident, he recalls the last night that he and Lynessa spent together.
+
+THIS ROLE INVOLVES A SIMULATED SEX SCENE (with a Male Character). The scene involves SOME NUDITY (Brief breast and buttocks exposure).
+
+Talent will be hired for one week. Travel, Hotel and Food will be covered by Production. Compensation is $3,250 for the week.
+INFO - Character:LYNESSA (UPDATED ROLE) : gender : unknown
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=.//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 12
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[14]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 12
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[14]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 12
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[14]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[14]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[14]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[14]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Wednesday, Dec. 21, 2016, 11:02 AM Pacific
+WHITE TRASH FREAKS
+Pilot
+NON-UNION
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Writer: Bernadette Chapman
+Director: Jehosua Peters
+Creator: Kevin Wayne
+Production Company: Kaizen Filmworks LLC
+Casting Director: Ayoka Billions
+Audition Date: From Ecocast.
+Callback Date: TBD
+Start Date: January 14, 22, February 18, 19, 23
+Rate of Pay: Credit, Copy, Meals.
+Location: Birmingham, Alabama
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ VELMA ]
+25 to 45 years old, African American female. Series regular. Plus size, great comedic timing , girlfriend to character Pee-Pee , comfortable kissing on screen, racial tones, she's part of the family, she loves her man.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=.//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 13
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[15]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 13
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[15]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 13
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[15]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[15]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[15]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 14
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[16]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 14
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[16]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 14
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[16]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[16]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[16]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 15
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[17]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 15
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[17]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 15
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[17]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[17]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[17]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 16
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 16
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 16
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[18]/td[4]
+INFO - Found that this Project has already been considered and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: true|isCar: false|isEthnicity: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for red check at row number: 17
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 17
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 17
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[19]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Error. We are not in the characters chart now. Lets return
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Browse by page:
+Page 1
+Page 2
+INFO - parse it
+INFO - 3
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 18
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[20]/td[1][@class='submitted']
+INFO - No production on row: 18
+INFO - Zzz
+INFO - Unable to locate element: //p[@id='breadcrumb']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=9356, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 2934dd45-c158-43a0-bbe0-f79dee621d92
+*** Element info: {Using=xpath, value=//p[@id='breadcrumb']}
+INFO - Something went wrong -> Back to Login
+INFO - Login number 7
+INFO - THIS IS a 7th LOGIN - kill gecko and close window as well 
+INFO - org.apache.http.conn.HttpHostConnectException: Connect to localhost:48243 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '10.215.198.125', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: FirefoxDriver
+INFO - Error in program
+INFO - Program ENDED - THANK YOU!

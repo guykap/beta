@@ -53,9 +53,10 @@ public class Job {
 	String offerProductionDetails = "";
 	String internalAAname;
 	String internalAAhref;
+	boolean[] seekingEthnicities;
 
 	boolean isSag;
-	boolean isEthnicity;
+	boolean isEthnicityMatch;
 	boolean isAge;
 	boolean isBackgroundWork;
 	boolean isPayingEnough;
@@ -83,6 +84,7 @@ public class Job {
 		this.actorIDSubmitted = new String(actorIdSubmitted);
 		this.offerId = new String((new Long(System.currentTimeMillis())).toString());
 		this.setCharacterGender('u');
+		this.seekingEthnicities = new boolean[26];   //each bit in the alphabetical order represents an ethnicity
 		// this age temp for this test version
 	}
 
@@ -256,12 +258,12 @@ public class Job {
 		isSag = newBit;
 	};
 
-	public boolean getIsEthnicity() {
-		return isEthnicity;
+	public boolean getIsEthnicityMatch() {
+		return isEthnicityMatch;
 	};
 
-	public void setIsEthnicity(boolean newBit) {
-		isEthnicity = newBit;
+	public void setIsEthnicityMatch(boolean newBit) {
+		isEthnicityMatch = newBit;
 	};
 
 	public boolean getIsAge() {
@@ -446,7 +448,7 @@ public class Job {
 		// this.setDecisionSubmit(true);
 
 		// DECISION PARAMS
-		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicity()) && (this.getIsAge())) {
+		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicityMatch()) && (this.getIsAge())) {
 			this.setDecisionSubmit(true);
 		}
 	}
@@ -455,7 +457,7 @@ public class Job {
 		// this.setDecisionSubmit(true);
 
 		// DECISION PARAMS
-		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicity()) && (this.getIsAge())) {
+		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicityMatch()) && (this.getIsAge())) {
 			this.setDecisionSubmit(true);
 		}
 	}
@@ -547,12 +549,12 @@ public class Job {
 		this.setIsGenderMatch(false);
 		switch (this.getCharacterGender()) {
 		case 'm':
-			if (human.genderIsMale) {
+			if (human.getGenderIsMale()) {
 				this.setIsGenderMatch(true);
 			}
 			return;
 		case 'f':
-			if (!human.genderIsMale) {
+			if (!human.getGenderIsMale()) {
 				this.setIsGenderMatch(true);
 			}
 			return;
@@ -566,5 +568,68 @@ public class Job {
 			// match
 			this.setIsGenderMatch(false);
 		}
+	}
+	
+	public void ethnicityMatchingUpdate(Actor human) {
+		this.setIsEthnicityMatch(false);
+		
+		if(((human.getEthinicity()).equals("african american"))&&(this.seekingEthnicities[posOfChar('a')])){
+			this.setIsEthnicityMatch(true);
+		}
+		
+		if(((human.getEthinicity()).equals("caucasian"))&&(this.seekingEthnicities[posOfChar('c')])){
+			this.setIsEthnicityMatch(true);
+		}
+		
+		if(((human.getEthinicity()).equals("easian"))&&(this.seekingEthnicities[posOfChar('e')])){
+			this.setIsEthnicityMatch(true);
+		}
+		
+		if(((human.getEthinicity()).equals("indian"))&&(this.seekingEthnicities[posOfChar('i')])){
+			this.setIsEthnicityMatch(true);
+		}
+		
+		if(((human.getEthinicity()).equals("latin"))&&(this.seekingEthnicities[posOfChar('l')])){
+			this.setIsEthnicityMatch(true);
+		}
+		
+		if(((human.getEthinicity()).equals("middle eastern"))&&(this.seekingEthnicities[posOfChar('m')])){
+			this.setIsEthnicityMatch(true);
+		}
+		
+		if(((human.getEthinicity()).equals("all ethnicities"))&&(this.seekingEthnicities[posOfChar('z')])){
+			this.setIsEthnicityMatch(true);
+		}
+		
+		 
+		
+	}
+	
+	public void setSeekingEthnicities(String data){
+		if(data.contains("african american")){
+			this.seekingEthnicities[posOfChar('a')]=true;
+		}
+		if(data.contains("caucasian")){
+			this.seekingEthnicities[posOfChar('c')]=true;
+		}
+		if(data.contains("easian")){
+			this.seekingEthnicities[posOfChar('e')]=true;
+		}
+		if(data.contains("indian")){
+			this.seekingEthnicities[posOfChar('i')]=true;
+		}
+		if(data.contains("latin")){
+			this.seekingEthnicities[posOfChar('l')]=true;
+		}
+		if(data.contains("middle eastern")){
+			this.seekingEthnicities[posOfChar('m')]=true;
+		}
+		if(data.contains("all ethnicities")){
+			this.seekingEthnicities[posOfChar('z')]=true;
+		}
+	}
+	
+	private int posOfChar(char data){
+		return ((int)data)-((int)'a');
 	}
 }

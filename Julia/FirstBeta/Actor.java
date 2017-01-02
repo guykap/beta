@@ -19,13 +19,13 @@ public class Actor {
 	public String carModel="";
 	public String carYear="";
 	public String standardTalentNote="";
-	public String ethnicity="";
+	private char ethnicity;
 	public int paymentMin=0;
-	public boolean genderIsMale;
-	public boolean confirmedBilling;
+	private boolean genderIsMale;
+	private boolean confirmedBilling;
 
 	
-	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword,boolean isNightShift, boolean humanIsMale,String humanEthnicity){
+	public Actor(String actorId,String cnUsername, String cnPassword, String aaUserName, String aaPassword,boolean isNightShift, boolean humanIsMale,char humanEthnicity){
 		this.actorId = actorId;
 		this.setCnUsername( new String(cnUsername));
 		this.setCnPassword( new String(cnPassword));
@@ -33,7 +33,7 @@ public class Actor {
 		this.setAaPassword( new String(aaPassword));
 		this.setIsNightShift(isNightShift);
 		this.genderIsMale =humanIsMale;
-		this.ethnicity = new String(humanEthnicity);
+		this.ethnicity = humanEthnicity;
 		 }
 
 	public Actor(Actor realActor){
@@ -46,7 +46,7 @@ public class Actor {
 		this.carModel =  new String(realActor.carModel);
 		this.carYear =  new String(realActor.carYear);
 		this.standardTalentNote =  new String(realActor.standardTalentNote);
-		this.ethnicity  = new String(realActor.ethnicity);
+		this.ethnicity  = realActor.ethnicity;
 		this.paymentMin = realActor.paymentMin;
 		this.genderIsMale  = realActor.genderIsMale;
 		this.confirmedBilling  = realActor.confirmedBilling;
@@ -95,12 +95,54 @@ public class Actor {
 		this.aaPassword = aaPassword;
 	}
 
-	public String getEthinicity() {
-		return new String(this.ethnicity);
+	public boolean getGenderIsMale() {
+		return genderIsMale;
 	}
 
+	public void setGenderIsMale(boolean bitData) {
+		this.genderIsMale = bitData;
+	}
+
+	
+	
+	 
+
+	public String getEthinicity() {
+		switch(this.ethnicity){
+		case 'a': return new String("african american");
+		case 'c': return new String("caucasian");
+		case 'e': return new String("easian");
+		case 'i': return new String("indian");
+		
+		case 'l': return new String("latin");
+		case 'm': return new String("middle eastern");
+		case 'z': return new String("all ethnicities");
+		}
+		return "";
+	}
 	public void setEthinicity(String humanEthnicity) {
-		this.ethnicity = new String(humanEthnicity);
+		
+		 if(humanEthnicity.equals(new String("african american"))){
+			 this.ethnicity = 'a';
+		 }
+		 if(humanEthnicity.equals(new String("caucasian"))){
+			 this.ethnicity = 'c';
+		 }
+		 if(humanEthnicity.equals(new String("easian"))){
+			 this.ethnicity = 'e';
+		 }
+		 if(humanEthnicity.equals(new String("indian"))){
+			 this.ethnicity = 'i';
+		 }
+		 if(humanEthnicity.equals(new String("latin"))){
+			 this.ethnicity = 'l';
+		 }
+		 if(humanEthnicity.equals(new String("middle eastern"))){
+			 this.ethnicity = 'm';
+		 }
+		 if(humanEthnicity.equals(new String("all ethnicities"))){
+			 this.ethnicity = 'z';
+		 }
 	}
 
 	public boolean getIsNightShift() {

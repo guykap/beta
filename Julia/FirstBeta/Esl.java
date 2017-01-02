@@ -42,58 +42,54 @@ public class Esl {
 		Esl.calcAgeRange(offer, allCharacterData);
 
 		// GENDER
-		
-		
-	 
+
 		// HINT FOR BOTH MALE OR FEMALE CHARACTER IN DESCRIPTION
 
-		if ((allCharacterDataLowerCase.contains("male or female")) 
+		if ((allCharacterDataLowerCase.contains("male or female"))
 				|| (allCharacterDataLowerCase.contains("female or male"))
-				 || (allCharacterDataLowerCase.toLowerCase().contains("both genders"))) {
+				|| (allCharacterDataLowerCase.toLowerCase().contains("both genders"))) {
 			offer.setCharacterGender('b');
 			return;
 		}
 
 		if (((allCharacterDataLowerCase.contains(" he ")) || (allCharacterDataLowerCase.startsWith("he")))
-			&&	((allCharacterDataLowerCase.contains(" she ")) || (allCharacterDataLowerCase.startsWith("she")))) {
-		//this notice cointains also He and she so this is confusing. Lets check gender only by name		
+				&& ((allCharacterDataLowerCase.contains(" she ")) || (allCharacterDataLowerCase.startsWith("she")))) {
+			// this notice cointains also He and she so this is confusing. Lets
+			// check gender only by name
 			checkGenderOfName(offer);
 			return;
 		}
-		
+
 		// HINT FOR A MALE CHARACTER IN DESCRIPTION
 
-					if ((allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("male"))
-							|| (allCharacterDataLowerCase.contains(" men")) || (allCharacterDataLowerCase.contains(" man "))|| (allCharacterDataLowerCase.contains(" male"))
-				  || (allCharacterDataLowerCase.startsWith("men"))
-							|| (allCharacterDataLowerCase.toLowerCase().contains(" he ")))  {
-						offer.setCharacterGender('m');
-						return;
-					}
+		if ((allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("male"))
+				|| (allCharacterDataLowerCase.contains(" men")) || (allCharacterDataLowerCase.contains(" man "))
+				|| (allCharacterDataLowerCase.contains(" male")) || (allCharacterDataLowerCase.startsWith("men"))
+				|| (allCharacterDataLowerCase.toLowerCase().contains(" he "))) {
+			offer.setCharacterGender('m');
+			return;
+		}
 
-					// HINT FOR A FEMALE CHARACTER IN DESCRIPTION
-					if ((allCharacterDataLowerCase.contains(" female")) || (allCharacterDataLowerCase.contains(" women"))
-							|| (allCharacterDataLowerCase.startsWith("female"))
-							|| (allCharacterDataLowerCase.contains(" woman "))
-							|| (allCharacterDataLowerCase.contains("actress "))
-							|| (allCharacterDataLowerCase.startsWith("women"))
-							|| (allCharacterDataLowerCase.startsWith(" she "))
-							|| (allCharacterDataLowerCase.toLowerCase().contains(" she "))) {
-						offer.setCharacterGender('f');
-						return;
-					}
-		
-					if ((offer.getCharacterGender() == 'm') || (offer.getCharacterGender() == 'f')) {
-						// found the hint for male or female. and determined the gender m or f
-						// Unknown
-						return;
-					} else {
-						//Hint not found so lets use the API using the character name
-						checkGenderOfName(offer);
-					}
-	
+		// HINT FOR A FEMALE CHARACTER IN DESCRIPTION
+		if ((allCharacterDataLowerCase.contains(" female")) || (allCharacterDataLowerCase.contains(" women"))
+				|| (allCharacterDataLowerCase.startsWith("female")) || (allCharacterDataLowerCase.contains(" woman "))
+				|| (allCharacterDataLowerCase.contains("actress ")) || (allCharacterDataLowerCase.startsWith("women"))
+				|| (allCharacterDataLowerCase.startsWith(" she "))
+				|| (allCharacterDataLowerCase.toLowerCase().contains(" she "))) {
+			offer.setCharacterGender('f');
+			return;
+		}
 
-		
+		if ((offer.getCharacterGender() == 'm') || (offer.getCharacterGender() == 'f')) {
+			// found the hint for male or female. and determined the gender m or
+			// f
+			// Unknown
+			return;
+		} else {
+			// Hint not found so lets use the API using the character name
+			checkGenderOfName(offer);
+		}
+
 	}
 
 	static public void parseProdDetailsLeftWithTimeRoleAdded(Job char_offer, String data) {
@@ -163,8 +159,9 @@ public class Esl {
 		}
 		if ((ageData.contains("20 - 30")) || (ageData.contains("20-30")) || (ageData.contains("20 - 40"))
 				|| (ageData.contains("20-40")) || (ageData.contains("20s to 30s")) || (ageData.contains("20s-30s"))
-				|| (ageData.contains("early 40s"))|| (ageData.contains("early 30s")) || (ageData.contains("30 something "))) {
-			
+				|| (ageData.contains("early 40s")) || (ageData.contains("early 30s"))
+				|| (ageData.contains("30 something "))) {
+
 			offer.setIsAge(true);
 		}
 
@@ -244,8 +241,8 @@ public class Esl {
 			Double ageLookLike = new Double(6);
 			Double actorRealAge = new Double(36);
 
-			if(maybeAgeMin.equals(new Double(maybeAgeMax))){
-				//there was probably only one age number found by the regex
+			if (maybeAgeMin.equals(new Double(maybeAgeMax))) {
+				// there was probably only one age number found by the regex
 				if ((Math.abs(actorRealAge - maybeAgeMin) <= ageLookLike)) {
 					offer.setIsAge(true);
 					return;
@@ -253,7 +250,7 @@ public class Esl {
 			}
 			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
 			Double avgCharacterAgeTwice = new Double(Job.avgCharacterAge * 2);
-			
+
 			// check if actor's age is in the range asked for:
 
 			if ((actorRealAge >= maybeAgeMin) && (actorRealAge <= maybeAgeMax)) {
@@ -269,7 +266,7 @@ public class Esl {
 					|| (Math.abs(actorRealAge - maybeAgeMax) <= ageLookLike)) {
 				offer.setIsAge(true);
 			}
-		 
+
 		} catch (Exception e) {
 			Logging.slog(e.getMessage());
 		}
@@ -309,7 +306,7 @@ public class Esl {
 		// ETHNICITY
 		if ((offer.offerListingEthnicity.contains("all ethnicities"))
 				|| (offer.offerListingEthnicity.contains("caucasian"))) {
-			offer.setIsEthnicity(true);
+			offer.setIsEthnicityMatch(true);
 		}
 
 		// CAR
@@ -430,21 +427,39 @@ public class Esl {
 	}
 
 	static public void calcEthnicity(Job currentOffer, String data) {
-
-		if ((data.contains("all ethnicities")) || (data.contains("caucasian"))) {
-			currentOffer.setIsEthnicity(true);
-			return;
+		// lighting up all the bits ethnicity that appear in the data String
+		if (data.contains("african american")) {
+			currentOffer.setSeekingEthnicities("african american");
 		}
-		if (data.contains("African American")) {
-			currentOffer.setIsEthnicity(false);
-			return;
+		if (data.contains("african-american")) {
+			currentOffer.setSeekingEthnicities("african american");
 		}
-		if (data.contains("Easian")) {
-			currentOffer.setIsEthnicity(false);
-			return;
+		if (data.contains("caucasian")) {
+			currentOffer.setSeekingEthnicities("caucasian");
 		}
 
-		// If the notice does not mention Ethinicity at all - then:
-		currentOffer.setIsEthnicity(true);
+		// GROUP EASIANS
+		if (data.contains("easian")) {
+			currentOffer.setSeekingEthnicities("easian");
+		}
+		if (data.contains("korean")) {
+			currentOffer.setSeekingEthnicities("easian");
+		}
+		if (data.contains("latin")) {
+			currentOffer.setSeekingEthnicities("latin");
+		}
+
+		// GROUP MIDDLE EASTERNS
+		if (data.contains("middle eastern")) {
+			currentOffer.setSeekingEthnicities("middle eastern");
+		}
+		if (data.contains("arab")) {
+			currentOffer.setSeekingEthnicities("middle eastern");
+		}
+
+		if (data.contains("all ethnicities")) {
+			currentOffer.setSeekingEthnicities("all ethnicities");
+		}
+
 	}
 }
