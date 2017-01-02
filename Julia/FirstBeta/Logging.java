@@ -65,7 +65,7 @@ public class Logging {
 	public void printDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
 		this.log("Decision: " + offer.getHasBeenSubmitted() + "|CharacterGender: " + offer.getCharacterGender() + "|isGenderMatch: " + offer.getIsGenderMatch()+ "|isCar: "
-				+ offer.getIsCar() + "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()
+				+ offer.getIsCar() + "|isEthnicityMatch: " + offer.getIsEthnicityMatch() + "|isAge: " + offer.getIsAge()
 				+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
 	}
@@ -73,7 +73,7 @@ public class Logging {
 	static public void sprintDecisionMakingVars(Job offer) {
 		// this would print to log why the decision went down as it did
 		slog("Decision: " + offer.getHasBeenSubmitted() + "|isMGenderMatch: " + offer.getIsGenderMatch() + "|isCar: "
-				+ offer.getIsCar() + "|isEthnicity: " + offer.getIsEthnicity() + "|isAge: " + offer.getIsAge()
+				+ offer.getIsCar() + "|isEthnicityMatch: " + offer.getIsEthnicityMatch() + "|isAge: " + offer.getIsAge()
 				+ "|hasBeenSubmitted Before: " + offer.getHasBeenSubmitted());
 
 	}
@@ -95,7 +95,7 @@ public class Logging {
 				+ offer.getOfferId() + "|Background:" + offer.getIsBackgroundWork() + "|Role added:"
 				+ offer.getOfferTimeRoleAdded() + "|Submittion time:" + offer.getOfferSubmittionDateTime()
 				+ "|Shoot date:" + offer.getOfferShootDate() + "|age:" + offer.getIsAge() + "|car:" + offer.getIsCar()
-				+ "|Eth:" + offer.getIsEthnicity() + "|GenderOfCharacter:" + offer.getCharacterGender()
+				+ "|EthMatch:" + offer.getIsEthnicityMatch() + "|GenderOfCharacter:" + offer.getCharacterGender()
 				+ "|GenderMatch:" + offer.getIsGenderMatch() + "|SAG:" + offer.getIsSag() + "|Guard:"
 				+ offer.getIsGuard() + "|Tux:" + offer.getNeedTuxedo() + "|Uni:" + offer.getNeedPoiceUniform()
 				+ "|Type:" + offer.getOfferTypeProject() + "|ReqSizes:" + offer.getReqSizes() + "|Paying:"
