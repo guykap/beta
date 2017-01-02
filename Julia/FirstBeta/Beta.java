@@ -37,9 +37,10 @@ public class Beta {
 	static Iterator<String> windowHandlesIterator;
 	static public Set<String> handles;
 	public static boolean isCastingNetworks = true;
-	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
+	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\Julia\\outlogs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
+	
 	static public boolean seekBackgroundWork;
 	static public boolean longNaps = false;
 	static String gecko_driver_path;
