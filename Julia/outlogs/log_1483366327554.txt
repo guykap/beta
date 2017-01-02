@@ -1,0 +1,3 @@
+INFO - Casting Networks
+INFO - Login number 1
+INFO - coreCastingNetworks

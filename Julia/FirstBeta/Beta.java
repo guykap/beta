@@ -36,7 +36,7 @@ public class Beta {
 	String newWindowHandler;
 	static Iterator<String> windowHandlesIterator;
 	static public Set<String> handles;
-	public static boolean isCastingNetworks = false;
+	public static boolean isCastingNetworks = true;
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
@@ -82,9 +82,11 @@ public class Beta {
 			// their Grandfather.");
 			// Esl.isStatisticallyMaleName("MARIEA");
 
-			cast = new Actor[2];
-			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password", true, true, 'c');
-			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false, true, 'c');
+			// cast = new Actor[2];
+			// cast[0] = new Actor("10002", "daniellevi", "qvzbchsm",
+			// "daniellevi", "password", true, true, 'c');
+			// cast[1] = new Actor("10001", "guykapulnik", "cPassword",
+			// "guykapulnik", "aPassword", false, true, 'c');
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
 			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false, true, 'c');
 			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
@@ -108,7 +110,12 @@ public class Beta {
 		// jCore.run(Beta.class);
 		try {
 			Beta test = new Beta();
-			test.testBetaAA();
+			if (isCastingNetworks) {
+				test.testBetaCN();
+			} else {
+				test.testBetaAA();
+			}
+
 		} catch (Exception e) {
 			Logging.slog(e.getMessage());
 			Logging.slog("Error in program");
@@ -169,6 +176,7 @@ public class Beta {
 			try {
 				if (isCastingNetworks) {
 					seekBackgroundWork = true;
+					loginCN();
 				} else {
 					// Actors access
 					loginAA(currentShift);
@@ -479,6 +487,7 @@ public class Beta {
 				Breath.silentCount();
 
 				Esl.readNotice(offer);
+				offer.genderMatchingUpdate(danCN);
 				offer.makeDecisionCN();
 
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {

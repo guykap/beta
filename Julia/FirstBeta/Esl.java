@@ -302,6 +302,7 @@ public class Esl {
 			offer.setCharacterGender('m');
 		}
 
+		
 		// There is a male name here for the character
 
 		// ETHNICITY

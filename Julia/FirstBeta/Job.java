@@ -466,7 +466,7 @@ public class Job {
 		// this.setDecisionSubmit(true);
 
 		// DECISION PARAMS
-		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicityMatch()) && (this.getIsAge())) {
+		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicityMatchCN()) && (this.getIsAge())) {
 			this.setDecisionSubmit(true);
 		}
 	}
@@ -663,5 +663,9 @@ public class Job {
 
 		return atLeastOneEthinicityChosen;
 
+	}
+	
+	public boolean getIsEthnicityMatchCN(){
+		return true; // this is for debug
 	}
 }
