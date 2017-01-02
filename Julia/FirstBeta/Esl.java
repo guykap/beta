@@ -35,6 +35,7 @@ public class Esl {
 		// ETHNICITY
 		// if the notice says a specific ethicity that isn't the actor's then
 		// mark FALSE. otherwise mark TRUE
+//		offer.setSeekingEthnicities(allDataLowerCase);
 		Esl.calcEthnicity(offer, allDataLowerCase);
 
 		// AGE

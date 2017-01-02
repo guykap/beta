@@ -16,6 +16,7 @@ public class Job {
 	static String filename = "C:\\temp\\code\\castingNetworks\\test_file1";
 	static int dailyMinPay = 30;
 	static int avgCharacterAge = 30;
+	public static int SIZE_OF_ETHINICITIES_BUS =26;
 
 	// PRIVATE:
 	String offerId;
@@ -84,7 +85,7 @@ public class Job {
 		this.actorIDSubmitted = new String(actorIdSubmitted);
 		this.offerId = new String((new Long(System.currentTimeMillis())).toString());
 		this.setCharacterGender('u');
-		this.seekingEthnicities = new boolean[26];   //each bit in the alphabetical order represents an ethnicity
+		this.seekingEthnicities = new boolean[SIZE_OF_ETHINICITIES_BUS];   //each bit in the alphabetical order represents an ethnicity
 		// this age temp for this test version
 	}
 
@@ -571,33 +572,47 @@ public class Job {
 	}
 	
 	public void ethnicityMatchingUpdate(Actor human) {
+		boolean atLeastOneEthinicityChosen= false;
+		for(int i = 0; i < SIZE_OF_ETHINICITIES_BUS ;++i){
+			if((this.seekingEthnicities[i])==true){
+				atLeastOneEthinicityChosen = true;
+			}
+		}
+		if(!atLeastOneEthinicityChosen){
+			Logging.slog("Error - No ethnicity chosen for offer");
+			this.seekingEthnicities[posOfChar('z')] = true;
+			this.setIsEthnicityMatch(true);
+			return;
+		}
+		
+		
 		this.setIsEthnicityMatch(false);
 		
-		if(((human.getEthinicity()).equals("african american"))&&(this.seekingEthnicities[posOfChar('a')])){
+		if(((human.getEthinicity()).contains("african american"))&&(this.seekingEthnicities[posOfChar('a')])){
 			this.setIsEthnicityMatch(true);
 		}
 		
-		if(((human.getEthinicity()).equals("caucasian"))&&(this.seekingEthnicities[posOfChar('c')])){
+		if(((human.getEthinicity()).contains("caucasian"))&&(this.seekingEthnicities[posOfChar('c')])){
 			this.setIsEthnicityMatch(true);
 		}
 		
-		if(((human.getEthinicity()).equals("easian"))&&(this.seekingEthnicities[posOfChar('e')])){
+		if(((human.getEthinicity()).contains("easian"))&&(this.seekingEthnicities[posOfChar('e')])){
 			this.setIsEthnicityMatch(true);
 		}
 		
-		if(((human.getEthinicity()).equals("indian"))&&(this.seekingEthnicities[posOfChar('i')])){
+		if(((human.getEthinicity()).contains("indian"))&&(this.seekingEthnicities[posOfChar('i')])){
 			this.setIsEthnicityMatch(true);
 		}
 		
-		if(((human.getEthinicity()).equals("latin"))&&(this.seekingEthnicities[posOfChar('l')])){
+		if(((human.getEthinicity()).contains("latin"))&&(this.seekingEthnicities[posOfChar('l')])){
 			this.setIsEthnicityMatch(true);
 		}
 		
-		if(((human.getEthinicity()).equals("middle eastern"))&&(this.seekingEthnicities[posOfChar('m')])){
+		if(((human.getEthinicity()).contains("middle eastern"))&&(this.seekingEthnicities[posOfChar('m')])){
 			this.setIsEthnicityMatch(true);
 		}
 		
-		if(((human.getEthinicity()).equals("all ethnicities"))&&(this.seekingEthnicities[posOfChar('z')])){
+		if(((human.getEthinicity()).contains("all ethnicities"))&&(this.seekingEthnicities[posOfChar('z')])){
 			this.setIsEthnicityMatch(true);
 		}
 		

@@ -1,0 +1,7 @@
+INFO - Actors Access
+INFO - Internal IP: 192.168.0.11
+INFO - External IP: 184.75.22.10
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
