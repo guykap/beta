@@ -22,7 +22,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-	// THIS IS BETA2.0a
+	// THIS IS BETA2.1
 	public static WebDriver driver;
 	static public String cnBaseUrl;
 	static public String aaBaseUrl;
@@ -36,7 +36,7 @@ public class Beta {
 	String newWindowHandler;
 	static Iterator<String> windowHandlesIterator;
 	static public Set<String> handles;
-	public static boolean isCastingNetworks = false;
+	public static boolean isCastingNetworks = true;
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\logs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
@@ -119,13 +119,13 @@ public class Beta {
 
 	}
 
-	@Test
+	
 	public void testBetaAA() throws Throwable {
 		bestLog.log("Actors Access");
 		ManageDriver.logMyIP();
 		testBetaB();
 	}
-
+	@Test
 	public void testBetaCN() throws Throwable {
 		bestLog.log("Casting Networks");
 		testBetaB();
