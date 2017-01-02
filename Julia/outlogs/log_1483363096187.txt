@@ -1,0 +1,417 @@
+INFO - Actors Access
+INFO - Internal IP: 192.168.0.11
+INFO - External IP: 184.75.22.10
+INFO - Login number 1
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483652
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=8944, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 7cb0a34e-0b36-4d28-9bae-c11c1c01d9b3
+INFO - Something went during login -> So lets login again
+INFO - Login number 2
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483652
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - Element is not currently interactable and may not be manipulated
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=8944, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 7cb0a34e-0b36-4d28-9bae-c11c1c01d9b3
+INFO - Something went during login -> So lets login again
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-AA
+INFO - Window handle Parent 2147483651
+INFO - Logining in username: daniellevi
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - Region hawaii
+INFO - .
+INFO - Checking for red check at row number: 0
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 0
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 0
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[2]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 30, 2016, 4:30 PM Pacific
+This week's CASTING DIRECTOR UPDATE (NY) - 12/30/16
+.
+CastingAbout
+
+Powered by BREAKDOWN SERVICES, LTD.
+
+AABP
+
+Not Applicable
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - Unable to locate element: //div[@id='mainContent']/table/tbody/tr/td[3]/p
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=4020, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: a0e6524d-954e-4eac-8936-2f03e50714eb
+*** Element info: {Using=xpath, value=//div[@id='mainContent']/table/tbody/tr/td[3]/p}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 1
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[3]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 1
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[3]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 1
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[3]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[3]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[3]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[3]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 16, 2016, 12:59 PM Pacific
+UNTITLED SHELDON PROJECT
+Pilot
+½ Hour Single Cam
+Warner Bros. Television for CBS
+SAG-AFTRA
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Exec. Producers: Chuck Lorre, Steve Molaro, Jim Parsons
+Director: TBD
+Writer: Steve Molaro
+Casting Directors: Nikki Valko / Ken Miller /
+Peter Pappas    
+Start Date: March / April 2017
+Location: Los Angeles    
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ SHELDON COOPER ]
+To play 8-11 years old. A young Sheldon Cooper (Jim Parsons).  Socially awkward.  A once in a generation genius. He lives in East Texas, although he has chosen to have no accent. Short-tempered, outspoken.  Confident in his intelligence to the point of arrogance.  He doesn't make friends easily or at all.  He struggles to read social cues and adhere to social protocols.  Fiercely ritualistic…SERIES REGULAR
+INFO - No Ethinicity hint appears in the notice - so assuming they seek ALL ETHNICITIES
+INFO - 1
+INFO - Age range - faliure in reading or calculating age. Lets submit anyway.
+INFO - Welcoming all ethnicities.
+INFO - Failed to fill talent note
+INFO - [2147483651,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483796,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=532114&region=8
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=8&iid=3332453&bid=532114
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=4020, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: a0e6524d-954e-4eac-8936-2f03e50714eb
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a[@class='breakdown-open-add-role']
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 2
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[4]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 2
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[4]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 2
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[4]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[4]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[4]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[4]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Monday, Dec. 12, 2016, 3:11 PM
+  blog.breakdownservices.com
+INFO - parse it
+INFO - 2
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 3
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 3
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 3
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[5]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 9, 2016, 7:44 PM Pacific
+PUBERTY (NATIONWIDE SEARCH)
+Feature Film
+Union Status: SAG-AFTRA
+
+THIS IS A SAG/AFTRA ULB PROJECT. PLEASE NOTE PRIOR TO SUBMITTING.
+
+Rate of Pay / SAG SCALE
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Production Company: BRAINFEEDER FILMS
+Producer: Javier Lovato
+Writer / Director: Eddie Alcazar
+Writer: Ted Kupper
+Casting Director: Anissa Williams, Zora DeHorter
+Audition Date(s): 12/13/2016
+Callback Date(s): 12/13/2016
+Start Date: 01/10/2017 TBA
+Rate of Pay: $300 OR $500.00 + 10% FOR TWINS (SEE ROLES)
+Location: Los Angeles, CA
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ ALYSSA AND CINDY ]
+ALYSSA AND CINDY
+TWINS - 20 to early twenties. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NUDITY REQUIRED. $500 + 10% EACH
+[ TWINS (NO NUDITY) ]
+ALYSSA AND CINDY - REAL TWINS - 20 to early 30'S. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NO NUDITY REQUIRED FOR THIS ROLE. $300 + 10% EACH
+INFO - No Ethinicity hint appears in the notice - so assuming they seek ALL ETHNICITIES
+INFO - Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol
+INFO - Character:ALYSSA AND CINDY : gender : unknown
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ TWINS (NO NUDITY) ]
+ALYSSA AND CINDY - REAL TWINS - 20 to early 30'S. They are model fitness instructors, so they should be somewhat toned. Special skills: Swimming laps and several other fitness activities. Should be athletic. MUST BE REAL TWINS.. NO NUDITY REQUIRED FOR THIS ROLE. $300 + 10% EACH
+INFO - Character:TWINS (NO NUDITY) : gender : unknown
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=4020, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: a0e6524d-954e-4eac-8936-2f03e50714eb
+*** Element info: {Using=xpath, value=.//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]}
+INFO - Number of Characters found in this production: 0
+INFO - Number of characters added to the cart: 0
+INFO - Checking for red check at row number: 4
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']
+INFO - Found a production at row. So looking for red check on row: 4
+INFO - .
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[1][@class='submitted']/img[@src='/gui/check.gif']
+INFO - Lets submit. Cause NO red check at row: 4
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[2]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - //div[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[4]
+INFO - .//*[@id='mainContent']/div[@class='list']/table/tbody/tr[6]/td[3]/a[starts-with(@href,'/projects/')]
+INFO - .
+INFO - .
+INFO - .
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - Success. We are now in characters table.
+INFO - Entered character breakdown
+INFO - //div[@id='mainContent']/table/tbody/tr/td[1]
+INFO - prodDetailsLeftWithTimeRoleAdded=Friday, Dec. 9, 2016, 9:45 AM Pacific
+KPOP (Updated Pay)
+Theatre
+V/T: ARS NOVA, NYC
+ANTC-Tier 2/Off-Broadway Contract
+Pay: $610/week
+INFO - parse it
+INFO - //div[@id='mainContent']/table/tbody/tr/td[3]/p
+INFO - parse it
+INFO - prodDetailsRight = Producers: ARS NOVA (Jason Eagan, Artistic Director; Renee Blinkwolt, Managing Director) MA-YI THEATER COMPANY (Artistic Director, Ralph B. Peña) WOODSHED COLLECTIVE (Teddy Bergman, Artistic Director)
+Artistic Director: Jason Eagan
+Managing Director: Renee Blinkwolt
+Creator/Director: Teddy Bergman
+Creator/Book By: Jason Kim
+Composers: Max Vernon & Helen Park
+Choreographer: Jennifer Weber
+Casting Director: Henry Russell Bergstein
+Audition Date(s): 12/14/2016, 12/15/2016, 12/16/2016, 01/02/2017
+Callback Date(s): 01/18/2017, 01/19/2017
+Rehearsal Date(s): 08/02/2017
+Preview Date(s): 09/06/2017
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td
+INFO - parse it
+INFO - NameOfCharacterAndDetailsUnder = [ MWE ]
+Female, 26-29 years old. Once a superstar solo artist, she's now beginning her career descent at the ripe age of 28. Ambitious, deeply insecure, defined by fame - she was raised to be a star and is fully a creature of the pop machine. She needs a killer voice, charisma for days, and an ocean of subtext - she's a Wagnerian heroine in a steel box. Looking for actresses with a large vocal range and a range-y chest voice. An amazing belter. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ SONOMA ]
+Female, 16-28 years old. The star. The Beyonce to the D Child. She was raised by two doctor parents who have no qualms about her daughter's specialness. Lessons from the age of 3. Piano, voice, dance. Only child. Duh. And daddy’s little girl. In and out of school, the straight A perfect student. Ruthless. Some might say fake. She prefers ambitious and savvy. Plucked by Moon to be the next solo artist. He rebrands her as SONOMA. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ TINY D ]
+Female, 16-28 years old. Second in command. The smallest. Hence, her name. Also the oldest by 2 years. Used to be a reality TV star. Not a great one because she’s really honest, earnest. Broke into SPECIALK by auditioning six times for Moon and Ruby. Wants everything bad. She is dying to be a breakout solo star, but will never be one. She’s designated to become the new uhn-ni of the group (the leader). OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ MINA ]
+Female, 16-28 years old. Princess. She has what we call gong-ju-byoung (Princess Disease). Convinced parents to give her her first eyelid surgery when she was 13. Spends about $1000 a week on her face. She’s about as smart as plankton. Interests include: shopping, nails, and fur. She can hit it, though. Hits every dance move, every note. She’s not particularly good. But she’s reliable. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ XO ]
+Female, 16-28 years old. The hip-hop girl. The bad girl. The girl who used to be a stripper. The girl whose stripper pictures leak and who now must leave the group. Maybe. Also the only girl who has ever had it hard. An orphan. A former addict. An ex-everything, really. Ex-con, ex-thief, ex-stripper, ex-dealer. She really lives up to her reputation. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ SHEEN ]
+Female, 16-28 years old. The butch one. Sporty Spice, but on steroids. She can’t dance for shit, much less give a good interview. But she’s kind and she’s got a good head on her shoulders and she is often the voice or reason. The reason why she’s kept around is that she is a great songwriter. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ CALLIE ]
+Female, 16-28 years old. The dancer. Sexy sexy sexy. She can move like nobody else’s business. Her behavior, though, has been erratic as of late. She’s showing up late to rehearsals. Faking sicknesses. It’s unclear what’s going on. Callie has a secret. Everyone’s little sis. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ 1-NA (PRONOUNCED HANNAH). ]
+Female, 16-28 years old. The fun one. She’s the one who will have a long career after SPECIALK as a talk show announcer. Bubbly, witty, smart. Used to be an engineering major. Wears around goggles and takes ironic selfies. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ BING BING ]
+Female, 16-28 years old. The Americanized one. Used to live in LA. One of those L.A. Korean girls. Has an ulterior motive: wants to be a big Hollywood star. She thinks breaking into America is going to pave the way for her acting career. Thinks she can be the next big Asian movie star. Except, those don’t exist. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ JIN-HEE ]
+Female, 16-28 years old. Has just returned from nodes surgery. Used to be a vocal force, now can’t really sing. Fragile – both emotionally and physically. She’s broken every bone. Gets ill a lot. Can’t really handle life. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ EPIC ]
+Male, 16-28 years old. Hyung. The leader. He is perfect. Just… perfection. Like, there is nothing else to say except he is perfection. Imagine a perfect human being, and then up the perfection factor by ten. And then imagine if this perfect human made a horrible, horrible mistake. A mistake that might cost the group everything. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ HHH (TRIPLE H) ]
+Male, 16-28 years old. Richie Rich. Comes from an incredible amount of wealth. His father is on the board of Samsung wealth. He is global 1% and has no qualms about it. He tries to distance himself from his upbringing to preserve his image, but has no qualms using his dad’s credit cards. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ TIMMY X ]
+Male, 16-28 years old. The bad boy. He break dances. He raps. He can’t really sing, but it doesn’t matter because he has cool hair and makes panties flutter. He is the Bobby Brown, who is actually a big softie. He comes from no money. His parents disowned him a long time ago, so he has severe attachment issues. As in, he falls in love a lot. He is married to a lovely girl. A nurse. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ BOBO ]
+Male, 16-28 years old. Royalty. Bobo’s dad is The Chief of Staff for the President of Korea. They don’t really like to talk about their son in public. They’re not ashamed, per se, but they would really rather he move on from this and become a doctor, a lawyer, a politician. Really, anything but being in a boy band… OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ JOEY ]
+Male, 16-28 years old. The chubby one. Adorable. Panda cheeks, like Harry Styles. Hardworking, sensitive. He loves to journal. On the internet. He’s an excellent lyricist. Girls love him for all those reasons. He seems genuinely kind and genuinely accessible. He is currently the face of anti-bacterial hand soaps in Korea. He is just oh-so-cute and in love with EPIC. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ K-STYLE ]
+Male, 16-28 years old. The Joey Fatone. He tries really hard. Just look at his name. There is one thing standing in his way, though: genetics. Everyone in the group loves him. He is older – could be anywhere between 28 to 40 – and he advises everyone like a good older brother slash father. Honestly, he could drop dead in the middle of a concert and you wouldn’t even know it. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ 2T-2T (TOOT TOOT) ]
+Male, 16-28 years old. Lance Bass. Except not gay. So, unexceptional in every way, really. He made headlines last year because he started dating a girl named Song-Mee, a big Korean drama star. They plan on breaking up, getting back together, getting engaged, and having a storybook wedding within the next two years. He is Moon’s nephew. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+[ ORACLE ]
+Male, 16-28 years old. The next in line. Platinum blond hair, Rick Owens everything. He’s the JC to EPIC’s Justin. He’s talented. Girls love him second best. He is second best at everything, in fact. And it drives him fucking crazy. He and EPIC are best friends publicly. They go shopping together, they vacation together, they eat together… He hates EPIC. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - No Ethinicity hint appears in the notice - so assuming they seek ALL ETHNICITIES
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[2]/a
+INFO - NameOfCharacterAndDetailsUnder = [ SONOMA ]
+Female, 16-28 years old. The star. The Beyonce to the D Child. She was raised by two doctor parents who have no qualms about her daughter's specialness. Lessons from the age of 3. Piano, voice, dance. Only child. Duh. And daddy’s little girl. In and out of school, the straight A perfect student. Ruthless. Some might say fake. She prefers ambitious and savvy. Plucked by Moon to be the next solo artist. He rebrands her as SONOMA. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Character:SONOMA : gender : unknown
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: u|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[4]/a
+INFO - NameOfCharacterAndDetailsUnder = [ TINY D ]
+Female, 16-28 years old. Second in command. The smallest. Hence, her name. Also the oldest by 2 years. Used to be a reality TV star. Not a great one because she’s really honest, earnest. Broke into SPECIALK by auditioning six times for Moon and Ruby. Wants everything bad. She is dying to be a breakout solo star, but will never be one. She’s designated to become the new uhn-ni of the group (the leader). OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[6]/a
+INFO - NameOfCharacterAndDetailsUnder = [ MINA ]
+Female, 16-28 years old. Princess. She has what we call gong-ju-byoung (Princess Disease). Convinced parents to give her her first eyelid surgery when she was 13. Spends about $1000 a week on her face. She’s about as smart as plankton. Interests include: shopping, nails, and fur. She can hit it, though. Hits every dance move, every note. She’s not particularly good. But she’s reliable. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[8]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[8]/a
+INFO - NameOfCharacterAndDetailsUnder = [ XO ]
+Female, 16-28 years old. The hip-hop girl. The bad girl. The girl who used to be a stripper. The girl whose stripper pictures leak and who now must leave the group. Maybe. Also the only girl who has ever had it hard. An orphan. A former addict. An ex-everything, really. Ex-con, ex-thief, ex-stripper, ex-dealer. She really lives up to her reputation. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[10]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[10]/a
+INFO - NameOfCharacterAndDetailsUnder = [ SHEEN ]
+Female, 16-28 years old. The butch one. Sporty Spice, but on steroids. She can’t dance for shit, much less give a good interview. But she’s kind and she’s got a good head on her shoulders and she is often the voice or reason. The reason why she’s kept around is that she is a great songwriter. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[12]/a
+INFO - NameOfCharacterAndDetailsUnder = [ CALLIE ]
+Female, 16-28 years old. The dancer. Sexy sexy sexy. She can move like nobody else’s business. Her behavior, though, has been erratic as of late. She’s showing up late to rehearsals. Faking sicknesses. It’s unclear what’s going on. Callie has a secret. Everyone’s little sis. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[14]/a
+INFO - NameOfCharacterAndDetailsUnder = [ 1-NA (PRONOUNCED HANNAH). ]
+Female, 16-28 years old. The fun one. She’s the one who will have a long career after SPECIALK as a talk show announcer. Bubbly, witty, smart. Used to be an engineering major. Wears around goggles and takes ironic selfies. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[16]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[16]/a
+INFO - NameOfCharacterAndDetailsUnder = [ BING BING ]
+Female, 16-28 years old. The Americanized one. Used to live in LA. One of those L.A. Korean girls. Has an ulterior motive: wants to be a big Hollywood star. She thinks breaking into America is going to pave the way for her acting career. Thinks she can be the next big Asian movie star. Except, those don’t exist. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[18]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[18]/a
+INFO - NameOfCharacterAndDetailsUnder = [ JIN-HEE ]
+Female, 16-28 years old. Has just returned from nodes surgery. Used to be a vocal force, now can’t really sing. Fragile – both emotionally and physically. She’s broken every bone. Gets ill a lot. Can’t really handle life. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[20]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[20]/a
+INFO - NameOfCharacterAndDetailsUnder = [ EPIC ]
+Male, 16-28 years old. Hyung. The leader. He is perfect. Just… perfection. Like, there is nothing else to say except he is perfection. Imagine a perfect human being, and then up the perfection factor by ten. And then imagine if this perfect human made a horrible, horrible mistake. A mistake that might cost the group everything. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Welcoming all ethnicities.
+INFO - Failed to fill talent note
+INFO - [2147483651,2147483796,]  on: 2147483651
+INFO - lets submit!
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[20]/a[starts-with(@href, 'javascript:')]
+INFO - .
+INFO - .
+INFO - .
+INFO - [2147483651,2147483796,]  on: 2147483651
+INFO - http://www.actorsaccess.com/projects/?view=breakdowns&breakdown=531436&region=8
+INFO - http://www.actorsaccess.com/projects/?view=selectphoto&from=breakdowns&region=8&iid=3328540&bid=531436
+INFO - .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+INFO - Failed to submit it.
+INFO - Unable to locate element: .//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=4020, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: a0e6524d-954e-4eac-8936-2f03e50714eb
+*** Element info: {Using=xpath, value=.//*[@id='photo_5002739']/table/tbody/tr/td/a[starts-with(@href,'javascript: highlightPhoto(500')][2]}
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[22]/a[@class='breakdown-open-add-role']
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[22]
+INFO - parse it
+INFO - .//*[@id='mainContent']/table[2]/tbody/tr/td/p[22]/a
+INFO - NameOfCharacterAndDetailsUnder = [ HHH (TRIPLE H) ]
+Male, 16-28 years old. Richie Rich. Comes from an incredible amount of wealth. His father is on the board of Samsung wealth. He is global 1% and has no qualms about it. He tries to distance himself from his upbringing to preserve his image, but has no qualms using his dad’s credit cards. OF KOREAN, KOREAN-AMERICAN, ASIAN, OR ASIAN-AMERICAN DESCENT.
+INFO - Failed to submit it.

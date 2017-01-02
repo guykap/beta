@@ -111,7 +111,7 @@ public class Actor {
 		switch(this.ethnicity){
 		case 'a': return new String("african american");
 		case 'c': return new String("caucasian");
-		case 'e': return new String("easian");
+		case 's': return new String("asian");
 		case 'i': return new String("indian");
 		
 		case 'l': return new String("latin");
@@ -128,8 +128,8 @@ public class Actor {
 		 if(humanEthnicity.equals(new String("caucasian"))){
 			 this.ethnicity = 'c';
 		 }
-		 if(humanEthnicity.equals(new String("easian"))){
-			 this.ethnicity = 'e';
+		 if(humanEthnicity.equals(new String("asian"))){
+			 this.ethnicity = 's';
 		 }
 		 if(humanEthnicity.equals(new String("indian"))){
 			 this.ethnicity = 'i';

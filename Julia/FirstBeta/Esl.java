@@ -36,11 +36,11 @@ public class Esl {
 		// if the notice says a specific ethicity that isn't the actor's then
 		// mark FALSE. otherwise mark TRUE
 //		offer.setSeekingEthnicities(allDataLowerCase);
-		Esl.calcEthnicity(offer, allDataLowerCase);
+		Esl.calcEthnicity(offer, allCharacterDataLowerCase);
 
 		// AGE
 
-		Esl.calcAgeRange(offer, allCharacterData);
+		Esl.calcAgeRange(offer, allCharacterDataLowerCase);
 
 		// GENDER
 
@@ -440,11 +440,11 @@ public class Esl {
 		}
 
 		// GROUP EASIANS
-		if (data.contains("easian")) {
-			currentOffer.setSeekingEthnicities("easian");
+		if (data.contains("asian")) {
+			currentOffer.setSeekingEthnicities("asian");
 		}
 		if (data.contains("korean")) {
-			currentOffer.setSeekingEthnicities("easian");
+			currentOffer.setSeekingEthnicities("asian");
 		}
 		if (data.contains("latin")) {
 			currentOffer.setSeekingEthnicities("latin");
@@ -459,6 +459,11 @@ public class Esl {
 		}
 
 		if (data.contains("all ethnicities")) {
+			currentOffer.setSeekingEthnicities("all ethnicities");
+		}
+		
+		if(!currentOffer.atLeastOneEthnicityChosen()){
+			Logging.slog("No Ethinicity hint appears in the notice - so assuming they seek ALL ETHNICITIES");
 			currentOffer.setSeekingEthnicities("all ethnicities");
 		}
 

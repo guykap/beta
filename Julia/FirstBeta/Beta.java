@@ -76,16 +76,19 @@ public class Beta {
 		}
 
 		try {
-			//debug
-			//Esl.parseAgeRange(" 45  to  55 Indigenous - Calvin's twin sister. Usually a bit erratic, going off the deep end since the death of their Grandfather.");
-		//	Esl.isStatisticallyMaleName("MARIEA");
-			
+			// debug
+			// Esl.parseAgeRange(" 45 to 55 Indigenous - Calvin's twin sister.
+			// Usually a bit erratic, going off the deep end since the death of
+			// their Grandfather.");
+			// Esl.isStatisticallyMaleName("MARIEA");
+
 			cast = new Actor[2];
-			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password",true,true,'c');
-			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false,true,'c');
+			cast[0] = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password", true, true, 'c');
+			cast[1] = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false, true, 'c');
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword",false,true,'c');
-			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi", "password");
+			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false, true, 'c');
+			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
+			// "password");
 			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
 		} catch (Exception e) {
@@ -119,12 +122,12 @@ public class Beta {
 
 	}
 
-	
 	public void testBetaAA() throws Throwable {
 		bestLog.log("Actors Access");
 		ManageDriver.logMyIP();
 		testBetaB();
 	}
+
 	@Test
 	public void testBetaCN() throws Throwable {
 		bestLog.log("Casting Networks");
@@ -192,11 +195,12 @@ public class Beta {
 		}
 	}
 
-		public void logutAA(int shift) throws Throwable{
-			
-			Logging.slog((new String("Logging out shift: ")).concat(String.valueOf(shift)));
-			return;
-		}
+	public void logutAA(int shift) throws Throwable {
+
+		Logging.slog((new String("Logging out shift: ")).concat(String.valueOf(shift)));
+		return;
+	}
+
 	public void loginAA(int shift) throws Throwable {
 		aaBaseUrl = "http://actorsaccess.com";
 		driver.manage().timeouts().implicitlyWait(Breath.geckoWaitTime, TimeUnit.SECONDS);
@@ -225,7 +229,7 @@ public class Beta {
 		Logging.log('c');
 	}
 
-	public void handleRegion(int region,int shift) throws Throwable {
+	public void handleRegion(int region, int shift) throws Throwable {
 		String regionUrl = (new String("http://www.actorsaccess.com/projects/?view=breakdowns&region="))
 				.concat(String.valueOf(region));
 		driver.get(regionUrl);
@@ -243,7 +247,8 @@ public class Beta {
 		int productionRow = 0;
 		boolean nextRowHasAnotherProd = true;
 
-		//we only consider here the first page of productions. So in the future add an option to nagivate to page 2 and 3
+		// we only consider here the first page of productions. So in the future
+		// add an option to nagivate to page 2 and 3
 		while (nextRowHasAnotherProd) {
 			bestLog.log("Checking for red check at row number: " + productionRow);
 			try {
@@ -282,7 +287,8 @@ public class Beta {
 			}
 			bestLog.log((new String("Lets submit. Cause NO red check at row: ").concat(String.valueOf(productionRow))));
 			offer = new Job(cast[shift].getActorId());
-			//some offers appear in several different regions but reffer to the same role
+			// some offers appear in several different regions but reffer to the
+			// same role
 			offer.setRegion(region);
 			Scapper.parseRowOfferAA(offer, productionRow);
 			if (offer.offerHasBeenConsideredBeforeAA(Jobs)) {
@@ -462,8 +468,7 @@ public class Beta {
 			}
 			if (srcOfImg.contains("spacer.gif")) {
 				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
-				offer = new Job(danCN
-						.getActorId());
+				offer = new Job(danCN.getActorId());
 
 				Scapper.handleBackgroundWorkOffer(offer, seekBackgroundWork, (trStarRow - 1));
 				if (offer.offerHasBeenConsideredBeforeCN(Jobs)) {
@@ -605,7 +610,7 @@ public class Beta {
 		Job currentOffer = parentOffer;
 		int charNum = 0;
 		boolean moreCharsAvil = true;
- 
+
 		while (moreCharsAvil) {
 
 			try {
@@ -734,7 +739,7 @@ public class Beta {
 			driver.switchTo().frame("buttons");
 			driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
 			currentOffer.setPutInCart();
-			 
+
 			// currentOffer.setHasBeenSubmitted(true);
 			// currentOffer.setTotalAddedToCart(1);
 

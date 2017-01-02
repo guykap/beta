@@ -96,7 +96,7 @@ public class XpathBuilder {
 		// 	String leftPart = ".//*[@id='mainContent']/div[5]/table/tbody/tr[";
 		String rightPart = "]/td[1][@class='submitted']";
 		String xPath= new String( ((new String(leftPart)).concat(String.valueOf(rowPlusTwo)).concat(rightPart)));
-		Logging.slog(xPath);
+	//	Logging.slog(xPath);
 		return (xPath);
 		 
 	}
