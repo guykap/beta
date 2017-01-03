@@ -94,8 +94,8 @@ public class Beta {
 			// "guykapulnik", "aPassword", false, true, 'c',"height: 6'2\n
 			// weight:190lb\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11
 			// ","Thanks!",30,40);
-			clientCN = new Actor("10003", "maramccann", "black2act", "", "", false, false, "caucasian","non-union","Size 6", "Thanks!", 35,
-					45);
+			clientCN = new Actor("10003", "maramccann", "black2act", "", "", false, false, "caucasian", "non-union",
+					"Size 6", "Thanks!", 35, 45);
 
 			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
 			// "password");
@@ -246,12 +246,9 @@ public class Beta {
 	}
 
 	public void handleRegion(int region, int shift) throws Throwable {
-		String regionUrl = (new String("http://www.actorsaccess.com/projects/?view=breakdowns&region="))
-				.concat(String.valueOf(region));
+		String regionUrl = (new String(XpathBuilder.urlAABreakdownAndRegion())).concat(String.valueOf(region));
 		driver.get(regionUrl);
-		// verifgy
 		String tag = new String(driver.findElement(By.xpath("//p[@id='breadcrumb']")).getText());
-
 		if (!verifyLocation("//p[@id='breadcrumb']",
 				(new String("home / breakdowns / ").concat(intToRegion(region))))) {
 			bestLog.log("Can't find region ");
@@ -337,9 +334,7 @@ public class Beta {
 			}
 			totalOffersInThisProd(offer);
 
-			// should move back to window with char of productions
-
-			// driver.switch.window()
+			//  move back to window with char of productions
 			bestLog.log((new String("Number of Characters found in this production: "))
 					.concat(String.valueOf(offer.getNumberOfCharactersOnThisProduction())));
 			bestLog.log((new String("Number of characters added to the cart: ")
@@ -350,14 +345,11 @@ public class Beta {
 					bestLog.log((new String("Submitted Cart Succesfully")));
 					emptyCart(Jobs);
 					// go back to production chart
-
-					// driver.switch.window()
 				} else {
 					bestLog.log((new String("Error submittion cart")));
 					// go back and make in each of the offers that it was NOT
 					// submitted ( although the decision was YES to submit)
 					emptyCart(Jobs);
-
 				}
 			}
 			productionRow++;
@@ -397,8 +389,11 @@ public class Beta {
 		parentWindowHandler = driver.getWindowHandle();
 		Breath.makeZeroSilentCounter();
 		bestLog.log("LOGIN-CN");
-	//	bestLog.log(new String("Logining in username: ").concat(clientCN.getAaUsername()));
-		bestLog.log(new String("Logining in username: ").concat(clientCN.getCnUsername()));
+
+		// bestLog.log(new String("Logining in username:
+		// ").concat(clientCN.getAaUsername()));
+		bestLog.log(new String("Logining in username: ").concat(clientCN.getCnUsername()).concat(", ActorID: ")
+				.concat(clientCN.getActorId()));
 		seekBackgroundWork = true;
 		Logging.slog("A: Window handle Parent " + parentWindowHandler);
 		driver.get(cnBaseUrl + "/");
@@ -410,7 +405,8 @@ public class Beta {
 		driver.findElement(By.id("password")).sendKeys(clientCN.getCnPassword());
 		driver.findElement(By.xpath("//input[@id='submit']")).click();
 		Breath.breath();
-	//	driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
+		// debug - this is just for My agent :
+		// driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
 		// check for welcome window:
 		if (!verifyLocation(XpathBuilder.xpCNWelcomeHeader(), "Welcome")) {
 			bestLog.log("Can't find Welcome Page");
@@ -448,23 +444,23 @@ public class Beta {
 		String originWindow = driver.getWindowHandle();
 
 		if (seekBackgroundWork) {
-			if (!verifyLocation( XpathBuilder.xpCNVerifyExtrasPage(), "Extras")) {
+			if (!verifyLocation(XpathBuilder.xpCNVerifyProductionsPage(), "Extras")) {
 				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
 						.click();
 				// debug
 				Breath.deepBreath();
-				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
+				if (!verifyLocation(XpathBuilder.xpCNVerifyProductionsPage(), "Extras")) {
 					bestLog.log("Can't find Extras chart");
 					throw new Exception();
 				}
 			}
 		} else {
 			// We want to be in principle chart
-			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
+			if (!verifyLocation(XpathBuilder.xpCNVerifyProductionsPage(), "Principals")) {
 				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
 						.click();
 				Breath.deepBreath();
-				if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Principals")) {
+				if (!verifyLocation(XpathBuilder.xpCNVerifyProductionsPage(), "Principals")) {
 					bestLog.log("Can't find principle chart");
 					throw new Exception();
 				}
@@ -474,13 +470,10 @@ public class Beta {
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		Breath.deepBreath();
 		for (int rowNum = 0; rowNum < 10; rowNum++) {
-			//Logging.log('j');
 			bestLog.log("Checking for green star at row number: " + rowNum);
 			int trStarRow = (3 * rowNum);
 			trStarRow += 4;
-	//		String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
-	//				.concat(String.valueOf(trStarRow))).concat("]/td/span/img");
-		String starPos = XpathBuilder.xpCNStarPositionBG(trStarRow);
+			String starPos = XpathBuilder.xpCNStarPositionBG(trStarRow);
 			String srcOfImg = "";
 			try {
 				srcOfImg = new String(driver.findElement(By.xpath(starPos)).getAttribute("src"));
@@ -539,7 +532,7 @@ public class Beta {
 
 				driver.findElement(By.id("TALENTNOTE")).sendKeys(offer.getMessage());
 				Breath.deepBreath();
-				driver.findElement(By.cssSelector("div > table > tbody > tr > td > a > img")).click();
+				driver.findElement(By.cssSelector(XpathBuilder.cssCMSubmitButton())).click();
 				Breath.deepBreath();
 				if (!verifyLocation("//span", "Submission Successful")) {
 					bestLog.log("Did NOT recieve final submittion successful");
@@ -605,7 +598,6 @@ public class Beta {
 		// for each character - we open a new offer
 		String nameOfCharacterAndDetailsUnder;
 		String detailsOfCharacter;
-		// int totalNumOfOffersInProduction = 1;
 
 		try {
 			String prodDetailsLeftWithTimeRoleAdded = new String(
@@ -644,8 +636,6 @@ public class Beta {
 				String nameOfCharacterandDetails = new String(
 						driver.findElement(By.xpath(XpathBuilder.tabCharNameAndDetails(charNum))).getText());
 				Esl.parseNameOfCharacterAndDetailsUnder(currentOffer, nameOfCharacterandDetails);
-				// internalAAname =
-				// Scapper.scrapAtXpath(XpathBuilder.tabAAname(charNum));
 				internalAAname = Scapper.scrapAttributeAtXpath(XpathBuilder.tabAAname(charNum), "name");
 				currentOffer.setInternalAAname(internalAAname.substring(5));
 				internalAAhref = Scapper.scrapAttributeAtXpath((XpathBuilder.xpInternalAAhref(charNum)), "href");
@@ -693,8 +683,6 @@ public class Beta {
 
 				// check if there is another character to be considered in the
 				// next row
-				// currentOffer.setTotalAddedToCart(1);
-
 				if (verifyLocation(XpathBuilder.xpBetaCharacterName(charNum + 1), "")) {
 					charNum++;
 					moreCharsAvil = true;
@@ -729,7 +717,6 @@ public class Beta {
 
 	private void assertiveClicking(String[] optionStrings) {
 		// works only with xPath links - sorry!
-
 		for (int i = 0; i < optionStrings.length; ++i) {
 			try {
 				driver.findElement(By.xpath(optionStrings[i])).click();
@@ -763,10 +750,6 @@ public class Beta {
 			driver.switchTo().frame("buttons");
 			driver.findElement(By.xpath(XpathBuilder.xpAddToCartAA())).click();
 			currentOffer.setPutInCart();
-
-			// currentOffer.setHasBeenSubmitted(true);
-			// currentOffer.setTotalAddedToCart(1);
-
 		} catch (Exception e) {
 			bestLog.log("Failed to submit it.");
 			bestLog.log(e.getMessage());

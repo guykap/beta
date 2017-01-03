@@ -166,6 +166,26 @@ public class Actor {
 		return "";
 	}
 
+	public char getEthinicityChar() {
+		switch (this.ethnicity) {
+		case 'a':
+			return this.ethnicity;
+		case 'c':
+			return this.ethnicity;
+		case 's':
+			return this.ethnicity;
+		case 'i':
+			return this.ethnicity;
+
+		case 'l':
+			return this.ethnicity;
+		case 'm':
+			return this.ethnicity;
+		case 'z':
+			return this.ethnicity;
+		}
+		return '_';
+	}
 	public void setEthinicity(String humanEthnicity) {
 
 		if (humanEthnicity.equals(new String("african american"))) {

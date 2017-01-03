@@ -151,9 +151,7 @@ public class Logging {
 				 */
 				break;
 			case 'y':
-				// slog("Parent: " +
-				// ManageDriver.getParentWindowHandler(parentWindowHandler) + "
-				// Son: " + getSonWindowHandler());
+				 
 				break;
 			case 'z':
 				slog("Z: Stopping");

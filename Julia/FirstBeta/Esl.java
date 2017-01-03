@@ -40,7 +40,7 @@ public class Esl {
 
 		// AGE
 
-		Esl.calcAgeRange(offer, allCharacterDataLowerCase, human);
+		Esl.understandingAgeRange(offer, allCharacterDataLowerCase, human);
 
 		// GENDER
 
@@ -152,7 +152,8 @@ public class Esl {
 		return ("");
 	}
 
-	static private void calcAgeRange(Job offer, String ageData, Actor human) {
+	static private void understandingAgeRange(Job offer, String ageData, Actor human) {
+
 		// read the AGE from data
 		if (ageData.length() < 1) {
 			// no age info here
@@ -299,24 +300,45 @@ public class Esl {
 				|| (allData.contains("\tunion")) || (allData.contains(" union")) || (allData.startsWith("union"))) {
 			offer.setCharacterUnionDemand('u');
 		}
-		
-		//checking whether the character is open for both union and non union
-		if ((offer.getOfferUnionStatus()).contains("Union/Non-Union") || (offer.getOfferUnionStatus()).contains("No Union Affiliation")) {
+
+		// checking whether the character is open for both union and non union
+		if ((offer.getOfferUnionStatus()).contains("Union/Non-Union")
+				|| (offer.getOfferUnionStatus()).contains("No Union Affiliation")) {
 			offer.setCharacterUnionDemand('b');
 		}
 
 	}
 
-	static public void readNotice(Actor human, Job offer) {
-		// this reads the notice and sets all the Job params accordingly.
+	static public void understandingEthnicity(Job offer, Actor human) {
+		offer.setIsEthnicityMatch(false);
+		if (offer.offerListingEthnicity.contains("all ethnicities")) {
+			offer.setIsEthnicityMatch(true);
+			return;
+		}
 
-		// String notesLowerCase = (new
-		// String(offerListingNotes.toLowerCase())).concat(" ");
-		// String allData = (this.getOfferRole()).concat(notesLowerCase);
+		switch (human.getEthinicityChar()) {
+		case 'a':
+			if (offer.offerListingEthnicity.contains("african american")) {
+				offer.setIsEthnicityMatch(true);
+				return;
+			}
+		case 'c':
+			if (offer.offerListingEthnicity.contains("caucasian")) {
+				offer.setIsEthnicityMatch(true);
+				return;
+			}
+		case 'l':
+			if (offer.offerListingEthnicity.contains("latino")) {
+				offer.setIsEthnicityMatch(true);
+				return;
+			}
+
+		}
+
+	}
+
+	static public void understandingGender(Job offer) {
 		String allData = (offer.getOfferRole()).concat(" ").concat(offer.offerListingNotes.toLowerCase());
-
-		// SAG
-		understandUnionStatus(offer);
 
 		// MALE
 
@@ -339,13 +361,24 @@ public class Esl {
 			offer.setCharacterGender('f');
 		}
 
-		// There is a male name here for the character
+		// Here is good place to check for a male name here for the character
+	}
+
+	static public void readNotice(Actor human, Job offer) {
+		// this reads the notice and sets all the Job params accordingly.
+		String allData = (offer.getOfferRole()).concat(" ").concat(offer.offerListingNotes.toLowerCase());
+
+		// SAG
+		understandUnionStatus(offer);
+
+		// Gender
+		understandingGender(offer);
+
+		// AGE
+		understandingAgeRange(offer, offer.offerListingAgesHint, human);
 
 		// ETHNICITY
-		if ((offer.offerListingEthnicity.contains("all ethnicities"))
-				|| (offer.offerListingEthnicity.contains("caucasian"))) {
-			offer.setIsEthnicityMatch(true);
-		}
+		understandingEthnicity(offer, human);
 
 		// CAR
 
@@ -354,10 +387,6 @@ public class Esl {
 				|| (allData.startsWith("car ")) || (allData.contains("cars"))) {
 			offer.setIsCar(true);
 		}
-
-		// AGE
-
-		calcAgeRange(offer, offer.offerListingAgesHint, human);
 
 		// tuxedo
 		if ((allData.contains(" tuxido ")) || (allData.contains("own a tux"))) {
