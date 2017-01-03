@@ -73,6 +73,7 @@ public class Job {
 	int totalAddedToCart;
 	boolean putInCart;
 	boolean isGenderMatch;
+	boolean isUnionMatch;
 	private char characterGender;
 
 	public Job() {
@@ -291,6 +292,14 @@ public class Job {
 		isGenderMatch = newBit;
 	};
 
+	public boolean getIsUnionMatch() {
+		return isUnionMatch;
+	};
+
+	public void setIsUnionMatch(boolean newBit) {
+		isUnionMatch = newBit;
+	};
+	
 	public boolean getIsBackgroundWork() {
 		return isBackgroundWork;
 	};
@@ -466,7 +475,7 @@ public class Job {
 		// this.setDecisionSubmit(true);
 
 		// DECISION PARAMS
-		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicityMatchCN()) && (this.getIsAge())) {
+		if ((this.getIsGenderMatch()) && (!this.getIsCar()) && (this.getIsEthnicityMatchCN())&& (this.getIsUnionMatch()) && (this.getIsAge())) {
 			this.setDecisionSubmit(true);
 		}
 	}
@@ -554,6 +563,51 @@ public class Job {
 		return false;
 	}
 
+	public void unionMatchingUpdate(Actor human) {
+		this.setIsUnionMatch(false);
+		switch(human.getUnionStatusChar()){
+		case 'u':
+			if(this.isSag){
+				this.setIsUnionMatch(true);
+			}
+			return;
+		case 'n':
+			if(!this.isSag){
+				this.setIsUnionMatch(true);
+			}
+			return;
+		case 'b':
+			this.setIsUnionMatch(true);
+		}
+		
+		
+		
+		/*
+		switch (this.get) {
+		case 'm':
+			if (human.getGenderIsMale()) {
+				this.setIsGenderMatch(true);
+			}
+			return;
+		case 'f':
+			if (!human.getGenderIsMale()) {
+				this.setIsGenderMatch(true);
+			}
+			return;
+		case 'b':
+			this.setIsGenderMatch(true);
+			return;
+		case 'u':
+			// HERE we must decide upon the user profile settings. Should we
+			// submit anyway?
+			// For debug reasons : now we will say that Unknown gender IS a
+			// match
+			this.setIsGenderMatch(false);
+		}
+		*/
+	}
+	
+	
 	public void genderMatchingUpdate(Actor human) {
 		this.setIsGenderMatch(false);
 		switch (this.getCharacterGender()) {

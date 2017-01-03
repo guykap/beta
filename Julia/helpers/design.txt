@@ -56,6 +56,7 @@ TODO -SQL DB on cloud.
 	 - what happened if network falls, 
 	 -what happens when role disappease from site
 	  - what happens in the prog gets stuck - after 2 min. of stuck - how to rebot itself
+-look at the hair color of the photo and add it myself to the Actor vars
 Goals:
 -----------
 Sat:

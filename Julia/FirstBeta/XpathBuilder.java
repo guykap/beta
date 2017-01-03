@@ -130,7 +130,24 @@ public class XpathBuilder {
 		}
 	
 	
+	static public String xpCNWelcomeHeader() {
+	 
+		String xPath=  "//div[@id='maininfo']/h2";
+ 	
+	//	Logging.slog(xPath);
+		return (xPath); 
+	}
 	
+	static public String xpCNStarPositionBG(int row) {	 
+		String xPath=  ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
+				.concat(String.valueOf(row))).concat("]/td/span/img");
+		return (xPath); 
+	}
+	
+	static public String xpCNVerifyExtrasPage() {	 
+		String xPath=  new String("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3" );
+		return (xPath); 
+	}
 	
 	static public String xpChooseMySmilePhoto() {
 		//String xPath=  ".//*[@id='photo_5002739']/table/tbody/tr/td/span[1]";

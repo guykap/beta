@@ -1,0 +1,48 @@
+INFO - Casting Networks
+INFO - Internal IP: 192.168.150.105
+INFO - External IP: 142.54.86.74
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - Logining in username: maramccann
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - coreCastingNetworks
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 34
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10003|Region:0|Offer:1483412402133|Background:true|Role added:|Submittion time:|Shoot date:1/10/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:true|Guard:false|Tux:false|Uni:false|Type:theatrical|ReqSizes:false|Paying:yes|Rate:|Name:good wife spinoff|Role:union featured blonde/"la lawyer type" 2nd chair - avail for matching shots on tues 1/10th and mon 1/16th|Offer Listing:background / female / caucasian / 29 - 45
+union blonde female "la lawyer type" for matching shots on tues 1/10th and mon 1/16th for featured work. pics will be shown to the director. submit only if you are fully available for both dates. |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.

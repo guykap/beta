@@ -20,6 +20,7 @@ public class Actor {
 	public String carYear = "";
 	public String standardTalentNote = "";
 	private char ethnicity;
+	private char unionStatus;
 	public int paymentMin = 0;
 	private boolean genderIsMale;
 	private boolean confirmedBilling;
@@ -29,7 +30,7 @@ public class Actor {
 	private int humansMaxActingAge = 0;
 
 	public Actor(String actorId, String cnUsername, String cnPassword, String aaUserName, String aaPassword,
-			boolean isNightShift, boolean humanIsMale, char humanEthnicity, String inputhumanSizes,
+			boolean isNightShift, boolean humanIsMale, String humanEthnicity,String unionStatus ,String inputhumanSizes,
 			String inputhumanNotes, int inputhumansMinActingAge, int inputhumansMaxActingAge) {
 		this.actorId = actorId;
 		this.setCnUsername(new String(cnUsername));
@@ -38,7 +39,8 @@ public class Actor {
 		this.setAaPassword(new String(aaPassword));
 		this.setIsNightShift(isNightShift);
 		this.genderIsMale = humanIsMale;
-		this.ethnicity = humanEthnicity;
+		this.setEthinicity(humanEthnicity);
+		this.setUnionStatus(unionStatus);
 		this.humansSizes = new String(inputhumanSizes);
 		this.humansDefaultTalentNote = new String(inputhumanNotes);
 		this.humansMinActingAge = inputhumansMinActingAge;
@@ -186,6 +188,45 @@ public class Actor {
 		}
 		if (humanEthnicity.equals(new String("all ethnicities"))) {
 			this.ethnicity = 'z';
+		}
+	}
+	
+	public String getUnionStatusString() {
+		switch (this.unionStatus) {
+		case 'u':
+			return new String("union");
+		case 'n':
+			return new String("non-union");
+		case 'b':
+			return new String("both");
+		 
+		}
+		return "";
+	}
+	
+	public char getUnionStatusChar() {
+		switch (this.unionStatus) {
+		case 'u':
+			return (this.unionStatus);
+		case 'n':
+			return (this.unionStatus);
+		case 'b':
+			return (this.unionStatus);
+		 
+		}
+		return ' ';
+	}
+
+	public void setUnionStatus(String unionStatus) {
+
+		if (unionStatus.equals(new String("union"))) {
+			this.unionStatus = 'u';
+		}
+		if (unionStatus.equals(new String("non-union"))) {
+			this.unionStatus = 'n';
+		}
+		if (unionStatus.equals(new String("both"))) {
+			this.unionStatus = 'b';
 		}
 	}
 

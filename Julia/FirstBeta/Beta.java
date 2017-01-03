@@ -94,7 +94,7 @@ public class Beta {
 			// "guykapulnik", "aPassword", false, true, 'c',"height: 6'2\n
 			// weight:190lb\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11
 			// ","Thanks!",30,40);
-			clientCN = new Actor("10003", "maramccann", "black2act", "", "", false, false, 'c', "Size 6", "Thanks!", 35,
+			clientCN = new Actor("10003", "maramccann", "black2act", "", "", false, false, "caucasian","non-union","Size 6", "Thanks!", 35,
 					45);
 
 			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
@@ -397,7 +397,8 @@ public class Beta {
 		parentWindowHandler = driver.getWindowHandle();
 		Breath.makeZeroSilentCounter();
 		bestLog.log("LOGIN-CN");
-		bestLog.log(new String("Logining in username: ").concat(clientCN.getAaUsername()));
+	//	bestLog.log(new String("Logining in username: ").concat(clientCN.getAaUsername()));
+		bestLog.log(new String("Logining in username: ").concat(clientCN.getCnUsername()));
 		seekBackgroundWork = true;
 		Logging.slog("A: Window handle Parent " + parentWindowHandler);
 		driver.get(cnBaseUrl + "/");
@@ -409,9 +410,9 @@ public class Beta {
 		driver.findElement(By.id("password")).sendKeys(clientCN.getCnPassword());
 		driver.findElement(By.xpath("//input[@id='submit']")).click();
 		Breath.breath();
-		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
+	//	driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
 		// check for welcome window:
-		if (!verifyLocation("//div[@id='maininfo']/h2", "Welcome")) {
+		if (!verifyLocation(XpathBuilder.xpCNWelcomeHeader(), "Welcome")) {
 			bestLog.log("Can't find Welcome Page");
 			return;
 		}
@@ -447,7 +448,7 @@ public class Beta {
 		String originWindow = driver.getWindowHandle();
 
 		if (seekBackgroundWork) {
-			if (!verifyLocation("//div[@id='DirectCastMainDiv']/table/tbody/tr/td/h3", "Extras")) {
+			if (!verifyLocation( XpathBuilder.xpCNVerifyExtrasPage(), "Extras")) {
 				driver.findElement(By.xpath("//div[@id='DirectCastMainDiv']/table/tbody/tr[2]/td/table/tbody/tr/td/a"))
 						.click();
 				// debug
@@ -473,12 +474,13 @@ public class Beta {
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		Breath.deepBreath();
 		for (int rowNum = 0; rowNum < 10; rowNum++) {
-			Logging.log('j');
+			//Logging.log('j');
 			bestLog.log("Checking for green star at row number: " + rowNum);
 			int trStarRow = (3 * rowNum);
 			trStarRow += 4;
-			String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
-					.concat(String.valueOf(trStarRow))).concat("]/td/span/img");
+	//		String starPos = ((new String("//div[@id='DirectCastMainDiv']/table/tbody/tr["))
+	//				.concat(String.valueOf(trStarRow))).concat("]/td/span/img");
+		String starPos = XpathBuilder.xpCNStarPositionBG(trStarRow);
 			String srcOfImg = "";
 			try {
 				srcOfImg = new String(driver.findElement(By.xpath(starPos)).getAttribute("src"));
@@ -500,6 +502,7 @@ public class Beta {
 
 				Esl.readNotice(clientCN, offer);
 				offer.genderMatchingUpdate(clientCN);
+				offer.unionMatchingUpdate(clientCN);
 				offer.makeDecisionCN();
 
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {

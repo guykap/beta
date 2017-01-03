@@ -312,10 +312,22 @@ public class Esl {
 			offer.setCharacterGender('m');
 		}
 		if ((allData.contains(" male")) || (allData.startsWith("male")) || (allData.contains(" men"))
-				|| (allData.contains(" man ")) || (allData.contains("actor ")) || (allData.startsWith("men"))
+				|| (allData.contains(" man "))   || (allData.startsWith("men"))
 				|| (allData.toLowerCase().contains(" male"))) {
 			offer.setCharacterGender('m');
 		}
+		
+		//FEMALE
+		if ((offer.offerListingSex).contains(" female") || (allData.startsWith("female"))) {
+			offer.setCharacterGender('f');
+		}
+		if ((allData.contains(" female")) || (allData.startsWith("female"))  
+				|| (allData.contains(" female ")) || (allData.contains("actress ")) || (allData.startsWith("women"))
+				|| (allData.toLowerCase().contains(" female"))) {
+			offer.setCharacterGender('f');
+		}
+		
+		
 
 		// There is a male name here for the character
 

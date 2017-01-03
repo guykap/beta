@@ -177,6 +177,7 @@ public class ManageDriver {
 
 	static public void logMyIP() {
 		String myIp;
+		
 		try {
 			myIp = new String(Inet4Address.getLocalHost().getHostAddress());
 		} catch (Exception e) {
