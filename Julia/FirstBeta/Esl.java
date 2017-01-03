@@ -265,7 +265,7 @@ public class Esl {
 				}
 			}
 			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
-			Double avgCharacterAgeTwice = new Double(human.getHumansMinActingAge()+human.getHumansMaxActingAge());
+			Double avgCharacterAgeTwice = new Double(human.getHumansMinActingAge() + human.getHumansMaxActingAge());
 
 			// check if actor's age is in the range asked for:
 
@@ -288,6 +288,25 @@ public class Esl {
 		}
 	}
 
+	static public void understandUnionStatus(Job offer) {
+		String allData = (offer.getOfferRole()).concat(" ").concat(offer.offerListingNotes.toLowerCase());
+
+		if ((offer.getOfferUnionStatus()).contains("sag") || (offer.getOfferUnionStatus()).contains("aftra")) {
+			offer.setCharacterUnionDemand('u');
+		}
+
+		if ((allData.contains("\tsag")) || (allData.contains(" sag")) || (allData.startsWith("sag"))
+				|| (allData.contains("\tunion")) || (allData.contains(" union")) || (allData.startsWith("union"))) {
+			offer.setCharacterUnionDemand('u');
+		}
+		
+		//checking whether the character is open for both union and non union
+		if ((offer.getOfferUnionStatus()).contains("Union/Non-Union") || (offer.getOfferUnionStatus()).contains("No Union Affiliation")) {
+			offer.setCharacterUnionDemand('b');
+		}
+
+	}
+
 	static public void readNotice(Actor human, Job offer) {
 		// this reads the notice and sets all the Job params accordingly.
 
@@ -297,14 +316,7 @@ public class Esl {
 		String allData = (offer.getOfferRole()).concat(" ").concat(offer.offerListingNotes.toLowerCase());
 
 		// SAG
-		if ((offer.getOfferUnionStatus()).contains("sag") || (offer.getOfferUnionStatus()).contains("aftra")) {
-			offer.setIsSag(true);
-		}
-
-		if ((allData.contains("\tsag")) || (allData.contains(" sag")) || (allData.startsWith("sag"))
-				|| (allData.contains("\tunion")) || (allData.contains(" union")) || (allData.startsWith("union"))) {
-			offer.setIsSag(true);
-		}
+		understandUnionStatus(offer);
 
 		// MALE
 
@@ -312,22 +324,20 @@ public class Esl {
 			offer.setCharacterGender('m');
 		}
 		if ((allData.contains(" male")) || (allData.startsWith("male")) || (allData.contains(" men"))
-				|| (allData.contains(" man "))   || (allData.startsWith("men"))
+				|| (allData.contains(" man ")) || (allData.startsWith("men"))
 				|| (allData.toLowerCase().contains(" male"))) {
 			offer.setCharacterGender('m');
 		}
-		
-		//FEMALE
+
+		// FEMALE
 		if ((offer.offerListingSex).contains(" female") || (allData.startsWith("female"))) {
 			offer.setCharacterGender('f');
 		}
-		if ((allData.contains(" female")) || (allData.startsWith("female"))  
-				|| (allData.contains(" female ")) || (allData.contains("actress ")) || (allData.startsWith("women"))
+		if ((allData.contains(" female")) || (allData.startsWith("female")) || (allData.contains(" female "))
+				|| (allData.contains("actress ")) || (allData.startsWith("women"))
 				|| (allData.toLowerCase().contains(" female"))) {
 			offer.setCharacterGender('f');
 		}
-		
-		
 
 		// There is a male name here for the character
 

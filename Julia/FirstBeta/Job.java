@@ -57,7 +57,6 @@ public class Job {
 	boolean[] seekingEthnicities;
 
 	boolean isSag;
-	boolean isEthnicityMatch;
 	boolean isAge;
 	boolean isBackgroundWork;
 	boolean isPayingEnough;
@@ -72,9 +71,11 @@ public class Job {
 	int region;
 	int totalAddedToCart;
 	boolean putInCart;
+	boolean isEthnicityMatch;
 	boolean isGenderMatch;
 	boolean isUnionMatch;
 	private char characterGender;
+	private char characterUnionDemand;
 
 	public Job() {
 		// String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
@@ -86,6 +87,7 @@ public class Job {
 		this.actorIDSubmitted = new String(actorIdSubmitted);
 		this.offerId = new String((new Long(System.currentTimeMillis())).toString());
 		this.setCharacterGender('u');
+		this.setCharacterUnionDemand('n'); // any Job starts as a NON Union status
 		this.seekingEthnicities = new boolean[SIZE_OF_ETHINICITIES_BUS]; // each
 																			// bit
 																			// in
@@ -461,7 +463,31 @@ public class Job {
 		}
 		characterGender = 'u';
 	};
+	
+	public char getCharacterUnionDemand() {
+		return characterUnionDemand;
+	};
 
+	public void setCharacterUnionDemand(char unionDemand) {
+		switch (unionDemand) {
+		case 'u':
+			this.characterUnionDemand = 'u';
+			return;
+		case 'n':
+			this.characterUnionDemand = 'n';
+			return;
+		case 'b':
+			this.characterUnionDemand = 'b';
+			return;
+
+		}
+		this.characterUnionDemand = 'n';
+	};
+	
+	
+	
+	
+	
 	public void makeDecisionAA() {
 		// this.setDecisionSubmit(true);
 
@@ -567,44 +593,18 @@ public class Job {
 		this.setIsUnionMatch(false);
 		switch(human.getUnionStatusChar()){
 		case 'u':
-			if(this.isSag){
+			if(((this.getCharacterUnionDemand()) == 'u')||((this.getCharacterUnionDemand()) == 'b')){
 				this.setIsUnionMatch(true);
 			}
 			return;
 		case 'n':
-			if(!this.isSag){
+			if(((this.getCharacterUnionDemand()) == 'n')||((this.getCharacterUnionDemand()) == 'b')){
 				this.setIsUnionMatch(true);
 			}
 			return;
 		case 'b':
 			this.setIsUnionMatch(true);
-		}
-		
-		
-		
-		/*
-		switch (this.get) {
-		case 'm':
-			if (human.getGenderIsMale()) {
-				this.setIsGenderMatch(true);
-			}
-			return;
-		case 'f':
-			if (!human.getGenderIsMale()) {
-				this.setIsGenderMatch(true);
-			}
-			return;
-		case 'b':
-			this.setIsGenderMatch(true);
-			return;
-		case 'u':
-			// HERE we must decide upon the user profile settings. Should we
-			// submit anyway?
-			// For debug reasons : now we will say that Unknown gender IS a
-			// match
-			this.setIsGenderMatch(false);
-		}
-		*/
+		} 
 	}
 	
 	

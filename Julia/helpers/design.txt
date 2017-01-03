@@ -59,11 +59,19 @@ TODO -SQL DB on cloud.
 -look at the hair color of the photo and add it myself to the Actor vars
 Goals:
 -----------
-Sat:
--send Mara a link wot the profile setup 
--prepare a machine only for Extra work for Mara.
+ 
+ 
 -Add a function that send Emails
-Sun:
-Launch a server for AA
-Mon:
 use SQL SB to collect all the submittions.
+
+-All ethnicities - readNotice and parse out all the diff ethnitcities and then debug the match Ethnicity
+
+ON Boarding of new client:
+-------------
+New Client sends an email to Bookmecom@gmail.com
+receives back ( automatic) an email with a actorId and a unique link. 
+-clicks the link. Fills profile and billing and clicks SUBMIT
+-recieves an automatic response that his request is being taken care of.
+-by one hour: -ask the questions for needed info. take what the client already set up at CN
+-setup Beta for the client and RUN. Cleint recieves BEGINNING TO SUBMIT  email. 
+-if client has questions - sends email to customer service  

@@ -4,11 +4,8 @@ Class Job
 	boolean offerHasBeenSubmitted;
 	String notice = "";
 	String noticeLowerCase;
-	 
-
 	String offerRole;
 	String offerProjectName;
-	String offerShootDate;
 	String offerTypeProject;
 	String offerRate;
 	String offerPaying;
@@ -29,19 +26,20 @@ Class Job
 	boolean isEthnicity;
 	boolean isAge;
 	boolean isMale;
-	boolean isBackgroundWork;
 	boolean isPayingEnough;
 	boolean isMaleName;
-	boolean isCar;
-	boolean isGuard;
-	boolean isStandIn;
-	boolean reqSizes;
-	boolean needTuxedo;
-	boolean needPoliceUniform;
-	int grade;
 	boolean decisionSubmit;
 	
 	
 	
 	
 Class Job::CN_Extra
+boolean isCar;
+	boolean isGuard;
+	boolean isStandIn;
+	boolean reqSizes;
+	boolean needTuxedo;
+	boolean needPoliceUniform;
+	String currentOfferShootDate;
+	
+Class Job::CN_Principle
