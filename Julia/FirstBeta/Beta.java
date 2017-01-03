@@ -22,7 +22,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Beta {
-	// THIS IS BETA2.15
+	// THIS IS BETA2.4
 	public static WebDriver driver;
 	static public String cnBaseUrl;
 	static public String aaBaseUrl;
@@ -40,7 +40,7 @@ public class Beta {
 	private static final String DEFAULT_OUTPUT_FILE_WINDOWS = "C:\\Users\\Administrator\\workspace\\here\\Julia\\outlogs\\log_";
 	private static final String DEFAULT_OUTPUT_FILE_LINUX = "";
 	private static final String DEFAULT_GECKO_DRIVER_LIBRARY = "C:\\Users\\Administrator\\workspace\\here\\Julia\\gecko_driver\\";
-	
+
 	static public boolean seekBackgroundWork;
 	static public boolean longNaps = false;
 	static String gecko_driver_path;
@@ -48,7 +48,8 @@ public class Beta {
 	static Breath takeBreath;
 	static Logging bestLog;
 	static Actor[] cast;
-	static Actor danCN;
+	static Actor clientCN;
+
 	boolean isTargetRegion[];
 	static public int currentShift = 0;
 
@@ -89,10 +90,15 @@ public class Beta {
 			// cast[1] = new Actor("10001", "guykapulnik", "cPassword",
 			// "guykapulnik", "aPassword", false, true, 'c');
 			// initialize Actor Sam - Just here as a debug. Actor ID = "10001"
-			danCN = new Actor("10001", "guykapulnik", "cPassword", "guykapulnik", "aPassword", false, true, 'c');
+			// danCN = new Actor("10001", "guykapulnik", "cPassword",
+			// "guykapulnik", "aPassword", false, true, 'c',"height: 6'2\n
+			// weight:190lb\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11
+			// ","Thanks!",30,40);
+			clientCN = new Actor("10003", "maramccann", "black2act", "", "", false, false, 'c', "Size 6", "Thanks!", 35,
+					45);
+
 			// dan = new Actor("10002", "daniellevi", "qvzbchsm", "daniellevi",
 			// "password");
-			// mara = new Actor("10003", "mara", "abcd", "mara", "password");
 
 		} catch (Exception e) {
 
@@ -139,6 +145,7 @@ public class Beta {
 	@Test
 	public void testBetaCN() throws Throwable {
 		bestLog.log("Casting Networks");
+		ManageDriver.logMyIP();
 		testBetaB();
 	}
 
@@ -390,15 +397,16 @@ public class Beta {
 		parentWindowHandler = driver.getWindowHandle();
 		Breath.makeZeroSilentCounter();
 		bestLog.log("LOGIN-CN");
+		bestLog.log(new String("Logining in username: ").concat(clientCN.getAaUsername()));
 		seekBackgroundWork = true;
 		Logging.slog("A: Window handle Parent " + parentWindowHandler);
 		driver.get(cnBaseUrl + "/");
 		Breath.deepBreath();
 		driver.findElement(By.id("login")).click();
 		driver.findElement(By.id("login")).clear();
-		driver.findElement(By.id("login")).sendKeys(danCN.getCnUsername());
+		driver.findElement(By.id("login")).sendKeys(clientCN.getCnUsername());
 		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(danCN.getCnPassword());
+		driver.findElement(By.id("password")).sendKeys(clientCN.getCnPassword());
 		driver.findElement(By.xpath("//input[@id='submit']")).click();
 		Breath.breath();
 		driver.findElement(By.id("_ctl0_cphBody_rptProfiles__ctl1_lnkViewProfile2")).click();
@@ -422,12 +430,15 @@ public class Beta {
 		bestLog.log("In Extras chart");
 		while (true) {
 			heartLoop();
-			seekBackgroundWork ^= true;
+			// for alternation between principle and BG use : seekBackgroundWork
+			// ^= true;
+			seekBackgroundWork = true;
 			if (seekBackgroundWork) {
 				bestLog.log("ALTERNATE to BACKGROUND work");
 			} else {
 				bestLog.log("ALTERNATE to PRINCIPLE work");
 			}
+
 			Breath.nap();
 		}
 	}
@@ -477,7 +488,7 @@ public class Beta {
 			}
 			if (srcOfImg.contains("spacer.gif")) {
 				bestLog.log("No star on offer " + rowNum + " from top.  Let's try submitting.");
-				offer = new Job(danCN.getActorId());
+				offer = new Job(clientCN.getActorId());
 
 				Scapper.handleBackgroundWorkOffer(offer, seekBackgroundWork, (trStarRow - 1));
 				if (offer.offerHasBeenConsideredBeforeCN(Jobs)) {
@@ -487,8 +498,8 @@ public class Beta {
 				// debug
 				Breath.silentCount();
 
-				Esl.readNotice(offer);
-				offer.genderMatchingUpdate(danCN);
+				Esl.readNotice(clientCN, offer);
+				offer.genderMatchingUpdate(clientCN);
 				offer.makeDecisionCN();
 
 				if ((offer.getHasBeenSubmitted()) || (!offer.getDecisionSubmit())) {
@@ -644,7 +655,7 @@ public class Beta {
 				}
 
 				bestLog.log((new String("NameOfCharacterAndDetailsUnder = ")).concat(nameOfCharacterandDetails));
-				Esl.readNoticeAA(currentOffer);
+				Esl.readNoticeAA(clientCN, currentOffer);
 				currentOffer.genderMatchingUpdate(cast[currentShift]);
 				currentOffer.ethnicityMatchingUpdate(cast[currentShift]);
 				currentOffer.makeDecisionAA();
@@ -653,7 +664,7 @@ public class Beta {
 					charNum++;
 					continue;
 				}
-				Esl.fillTalentNote(currentOffer);
+				Esl.fillTalentNote(clientCN, currentOffer);
 				ManageDriver.windowStatus2();
 				bestLog.log("lets submit!");
 				driver.findElement(By.xpath(XpathBuilder.xpCharacterLinkInCharactersPage(charNum))).click();

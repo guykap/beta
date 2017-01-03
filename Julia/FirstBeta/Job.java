@@ -15,7 +15,7 @@ public class Job {
 
 	static String filename = "C:\\temp\\code\\castingNetworks\\test_file1";
 	static int dailyMinPay = 30;
-	static int avgCharacterAge = 30;
+	// static int savgCharacterAge = 30;
 	public static int SIZE_OF_ETHINICITIES_BUS = 26;
 
 	// PRIVATE:
@@ -580,7 +580,7 @@ public class Job {
 	}
 
 	public void ethnicityMatchingUpdate(Actor human) {
-		
+
 		if (this.seekingEthnicities[posOfChar('z')]) {
 			Logging.slog("Welcoming all ethnicities.");
 			this.setIsEthnicityMatch(true);
@@ -620,8 +620,6 @@ public class Job {
 			this.setIsEthnicityMatch(true);
 		}
 
-		
-
 	}
 
 	public void setSeekingEthnicities(String data) {
@@ -649,7 +647,7 @@ public class Job {
 	}
 
 	private int posOfChar(char data) {
-		int bitPos= (( (int)data)-((int)'a'));
+		int bitPos = (((int) data) - ((int) 'a'));
 		return (bitPos);
 	}
 
@@ -664,8 +662,8 @@ public class Job {
 		return atLeastOneEthinicityChosen;
 
 	}
-	
-	public boolean getIsEthnicityMatchCN(){
+
+	public boolean getIsEthnicityMatchCN() {
 		return true; // this is for debug
 	}
 }

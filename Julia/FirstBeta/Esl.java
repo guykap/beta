@@ -12,7 +12,7 @@ import com.google.gson.JsonObject;
 
 public class Esl {
 
-	static public void readNoticeAA(Job offer) {
+	static public void readNoticeAA(Actor human, Job offer) {
 		// this reads the notice and sets all the Job params accordingly.
 		String allData = new String(offer.offerProductionDetails);
 		String allDataLowerCase = new String(allData).toLowerCase();
@@ -35,12 +35,12 @@ public class Esl {
 		// ETHNICITY
 		// if the notice says a specific ethicity that isn't the actor's then
 		// mark FALSE. otherwise mark TRUE
-//		offer.setSeekingEthnicities(allDataLowerCase);
+		// offer.setSeekingEthnicities(allDataLowerCase);
 		Esl.calcEthnicity(offer, allCharacterDataLowerCase);
 
 		// AGE
 
-		Esl.calcAgeRange(offer, allCharacterDataLowerCase);
+		Esl.calcAgeRange(offer, allCharacterDataLowerCase, human);
 
 		// GENDER
 
@@ -152,7 +152,7 @@ public class Esl {
 		return ("");
 	}
 
-	static private void calcAgeRange(Job offer, String ageData) {
+	static private void calcAgeRange(Job offer, String ageData, Actor human) {
 		// read the AGE from data
 		if (ageData.length() < 1) {
 			// no age info here
@@ -184,7 +184,8 @@ public class Esl {
 			}
 			if ((regexResult.length() > 1) && (regexResult.length() <= 3)) {
 				// Only one number found .
-				checkForSpecificActor(offer, Double.valueOf(regexResult.trim()), Double.valueOf(regexResult.trim()));
+				checkForSpecificActor(human, offer, Double.valueOf(regexResult.trim()),
+						Double.valueOf(regexResult.trim()));
 
 			}
 
@@ -224,7 +225,7 @@ public class Esl {
 
 			}
 
-			checkForSpecificActor(offer, maybeAgeMin, maybeAgeMax);
+			checkForSpecificActor(human, offer, maybeAgeMin, maybeAgeMax);
 
 		} catch (Exception e) {
 			// System.err.format("Age range - faliure in reading or calculating
@@ -235,12 +236,26 @@ public class Esl {
 		}
 	}
 
-	static void checkForSpecificActor(Job offer, Double maybeAgeMin, Double maybeAgeMax) {
+	static Double humanRealAge(int min, int max) {
+		Double avg = new Double((min + max));
+		avg = avg / 2;
+		return avg;
+	}
+
+	static Double ageRange(int min, int max) {
+		Double median = new Double(max - min);
+		median = median / 2;
+		return median;
+	}
+
+	static void checkForSpecificActor(Actor human, Job offer, Double maybeAgeMin, Double maybeAgeMax) {
 
 		try {
-			Double ageRange = new Double(6);
+			Double ageRange = new Double(ageRange(human.getHumansMinActingAge(), human.getHumansMaxActingAge()));
+
 			Double ageLookLike = new Double(6);
-			Double actorRealAge = new Double(36);
+			Double actorRealAge = new Double(
+					humanRealAge(human.getHumansMinActingAge(), human.getHumansMaxActingAge()));
 
 			if (maybeAgeMin.equals(new Double(maybeAgeMax))) {
 				// there was probably only one age number found by the regex
@@ -250,7 +265,7 @@ public class Esl {
 				}
 			}
 			Double maybeAgeAverageTwice = new Double(maybeAgeMin + maybeAgeMax);
-			Double avgCharacterAgeTwice = new Double(Job.avgCharacterAge * 2);
+			Double avgCharacterAgeTwice = new Double(human.getHumansMinActingAge()+human.getHumansMaxActingAge());
 
 			// check if actor's age is in the range asked for:
 
@@ -273,7 +288,7 @@ public class Esl {
 		}
 	}
 
-	static public void readNotice(Job offer) {
+	static public void readNotice(Actor human, Job offer) {
 		// this reads the notice and sets all the Job params accordingly.
 
 		// String notesLowerCase = (new
@@ -302,7 +317,6 @@ public class Esl {
 			offer.setCharacterGender('m');
 		}
 
-		
 		// There is a male name here for the character
 
 		// ETHNICITY
@@ -321,7 +335,7 @@ public class Esl {
 
 		// AGE
 
-		calcAgeRange(offer, offer.offerListingAgesHint);
+		calcAgeRange(offer, offer.offerListingAgesHint, human);
 
 		// tuxedo
 		if ((allData.contains(" tuxido ")) || (allData.contains("own a tux"))) {
@@ -341,7 +355,7 @@ public class Esl {
 
 	}
 
-	static public void fillTalentNote(Job offer) {
+	static public void fillTalentNote(Actor human, Job offer) {
 		try {
 			String allData = (offer.getOfferRole()).concat(" ").concat((offer.getOfferListing()).toLowerCase());
 
@@ -355,8 +369,7 @@ public class Esl {
 
 			if ((allData.contains("note your sizes")) || (allData.contains("note all sizes"))
 					|| (allData.contains("note neck"))) {
-				offer.addToMessage(
-						"height: 6'2\n weight:190lb\njacket:42\nneckXsleeve:16.5x35\nwaistXinseam:34x33\nshoe:11 ");
+				offer.addToMessage(human.getHumansSizes());
 			}
 
 			if ((allData.contains(" Please note if you can provide")) || (allData.contains("must own"))
@@ -369,7 +382,10 @@ public class Esl {
 				offer.addToMessage("I own the tuxedo.");
 			}
 
-			improveMessage(offer);
+			// improveMessage(offer);
+			if (!(offer.getMessage().length() < 5)) {
+				offer.addToMessage(human.getDefaultTalentNote());
+			}
 
 		} catch (Exception e) {
 			Logging.slog("Failed to fill talent note");
@@ -380,12 +396,13 @@ public class Esl {
 
 	static public void improveMessage(Job offer) {
 		// checks the length and if message is empty, then add the basic message
-		if (offer.getMessage().length() < 5) {
-			offer.setMessage("I would like to be considered for this production.\nThank you,\nGuy Kapulnik");
-		}
-		// add the Thanks! Guy ending
-		if (!(offer.getMessage().contains("Guy"))) {
-			offer.addToMessage("Thanks,\nGuy");
+		/*
+		 * if (offer.getMessage().length() < 5) { offer.
+		 * setMessage("I would like to be considered for this production.\nThank you,\nGuy Kapulnik"
+		 * ); }
+		 */
+		if (!(offer.getMessage().length() < 5)) {
+			offer.addToMessage("Thanks");
 		}
 	}
 
@@ -462,8 +479,8 @@ public class Esl {
 		if (data.contains("all ethnicities")) {
 			currentOffer.setSeekingEthnicities("all ethnicities");
 		}
-		
-		if(!currentOffer.atLeastOneEthnicityChosen()){
+
+		if (!currentOffer.atLeastOneEthnicityChosen()) {
 			Logging.slog("No Ethinicity hint appears in the notice - so assuming they seek ALL ETHNICITIES");
 			currentOffer.setSeekingEthnicities("all ethnicities");
 		}
