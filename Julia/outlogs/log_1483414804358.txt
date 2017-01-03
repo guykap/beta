@@ -1,0 +1,20 @@
+INFO - Casting Networks
+INFO - Internal IP: 192.168.150.105
+INFO - External IP: 142.54.86.74
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - Logining in username: maramccann
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - coreCastingNetworks
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
