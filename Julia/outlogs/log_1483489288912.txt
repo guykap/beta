@@ -1,0 +1,386 @@
+INFO - Casting Networks
+INFO - Internal IP: 10.3.214.210
+INFO - External IP: 64.20.10.221
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - Logining in username: maramccann, ActorID: 10003
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - coreCastingNetworks
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 10
+INFO - No star on offer 10 from top.  Let's try submitting.
+INFO - Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 11
+INFO - No star on offer 11 from top.  Let's try submitting.
+INFO - Failure in reading the age values. Might be confused with the agent fee. Should improve regex to find The percentage symbol
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 12
+INFO - No star on offer 12 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 13
+INFO - No star on offer 13 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 38
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10003|Region:0|Offer:1483489518725|Background:true|Role added:|Submittion time:|Shoot date:1/10/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:non-union to portray lawyers. avail tue 1/10.|Offer Listing:background / male or female / all ethnicities /30 - 55
+non-union to portray lawyers. avail tue 1/10. do not submit if you have worked on this show since mid december. |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 10
+INFO - No star on offer 10 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 11
+INFO - No star on offer 11 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 12
+INFO - No star on offer 12 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 13
+INFO - Found star on the offer 13 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 10
+INFO - No star on offer 10 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 11
+INFO - No star on offer 11 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 12
+INFO - No star on offer 12 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 13
+INFO - Found star on the offer 13 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 10
+INFO - No star on offer 10 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 11
+INFO - No star on offer 11 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 12
+INFO - No star on offer 12 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 13
+INFO - Found star on the offer 13 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 10
+INFO - No star on offer 10 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 11
+INFO - No star on offer 11 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 12
+INFO - No star on offer 12 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 13
+INFO - Found star on the offer 13 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 10
+INFO - No star on offer 10 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 11
+INFO - No star on offer 11 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 12
+INFO - No star on offer 12 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 13
+INFO - Found star on the offer 13 from top
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .

@@ -1,0 +1,457 @@
+INFO - Casting Networks
+INFO - Internal IP: 192.168.0.70
+INFO - Login number 1
+INFO - LOGIN-CN
+INFO - Logining in username: maramccann, ActorID: 10003
+INFO - A: Window handle Parent 2147483652
+INFO - .
+INFO - .
+INFO - .
+INFO - Unable to locate element: #login
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=11004, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 11b4b5e2-9db8-40b3-a73c-b329af83bde6
+*** Element info: {Using=id, value=login}
+INFO - Something went during login -> So lets login again
+INFO - Login number 2
+INFO - LOGIN-CN
+INFO - Logining in username: maramccann, ActorID: 10003
+INFO - A: Window handle Parent 2147483652
+INFO - .
+INFO - .
+INFO - .
+INFO - Unable to locate element: #login
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161208153507, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=11004, browserVersion=50.1.0, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: 11b4b5e2-9db8-40b3-a73c-b329af83bde6
+*** Element info: {Using=id, value=login}
+INFO - Something went during login -> So lets login again
+INFO - Login number 3
+INFO - THIS IS a 3rd LOGIN - THEN CLOSE WINDOW and start new Driver 
+INFO - LOGIN-CN
+INFO - Logining in username: maramccann, ActorID: 10003
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - coreCastingNetworks
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - No star on offer 6 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 55
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10003|Region:0|Offer:1483478125468|Background:true|Role added:|Submittion time:|Shoot date:1/5/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:non-union to portray caucasian female lawyer **avail thurs 1/5**|Offer Listing:background / female / caucasian / 35 - 45
+non-union to portray caucasian female lawyer **avail thurs 1/5** cannot have worked in the past 4 weeks. must be registered w/ central casting ny! |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - Checking for green star at row number: 7
+INFO - No star on offer 7 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 51
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10003|Region:0|Offer:1483478125468|Background:true|Role added:|Submittion time:|Shoot date:1/5/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:non-union to portray caucasian female lawyer **avail thurs 1/5**|Offer Listing:background / female / caucasian / 35 - 45
+non-union to portray caucasian female lawyer **avail thurs 1/5** cannot have worked in the past 4 weeks. must be registered w/ central casting ny! |  Talent Notes filled with:
+INFO - 
+* Actor:10003|Region:0|Offer:1483478286228|Background:true|Role added:Role Added 1/3/2017 11:45 AM
+ |Submittion time:|Shoot date:1/5/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:feature film|ReqSizes:false|Paying:yes|Rate:$100|Name:indi feature film looking for bg extras (ny)|Role:background extra|Offer Listing:background / female / caucasian / 20 - 60
+looking for non-union extras age 20-60 for an independent feature film shooting the first week of 2017 on 1/4 and 1/5 in the hamptons. well known director and star cast. transportation will be provided from the city to location if necessary. $100 per day. thank you! |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - Checking for green star at row number: 8
+INFO - No star on offer 8 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 54
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10003|Region:0|Offer:1483478125468|Background:true|Role added:|Submittion time:|Shoot date:1/5/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:non-union to portray caucasian female lawyer **avail thurs 1/5**|Offer Listing:background / female / caucasian / 35 - 45
+non-union to portray caucasian female lawyer **avail thurs 1/5** cannot have worked in the past 4 weeks. must be registered w/ central casting ny! |  Talent Notes filled with:
+INFO - 
+* Actor:10003|Region:0|Offer:1483478286228|Background:true|Role added:Role Added 1/3/2017 11:45 AM
+ |Submittion time:|Shoot date:1/5/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:feature film|ReqSizes:false|Paying:yes|Rate:$100|Name:indi feature film looking for bg extras (ny)|Role:background extra|Offer Listing:background / female / caucasian / 20 - 60
+looking for non-union extras age 20-60 for an independent feature film shooting the first week of 2017 on 1/4 and 1/5 in the hamptons. well known director and star cast. transportation will be provided from the city to location if necessary. $100 per day. thank you! |  Talent Notes filled with:
+INFO - 
+* Actor:10003|Region:0|Offer:1483478410009|Background:true|Role added:|Submittion time:|Shoot date:1/9/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:non-union to portray csu techs. avail mon 1/9. **read carefully**|Offer Listing:background / male or female / all ethnicities /30 - 50
+non-union to portray csu techs. avail mon 1/9. **read carefully** please do not submit if you have worked on this project in the past month |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: m|isGenderMatch: false|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Error parsing the current offer data into the Strings
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - java.net.SocketException: Permission denied: connect
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'DESKTOP-D10CFOH', ip: '192.168.0.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: RemoteWebDriver
+INFO - Something went wrong -> Back to Login
+INFO - Login number 4
+INFO - LOGIN-CN
+INFO - Logining in username: maramccann, ActorID: 10003
+INFO - A: Window handle Parent 2147483651
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - C: Location->Home Page
+INFO - .
+INFO - coreCastingNetworks
+INFO - In Extras chart
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 10
+INFO - No star on offer 10 from top.  Let's try submitting.
+INFO - 1
+INFO - Age range - faliure in reading or calculating age. Lets submit anyway.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: false|isAge: true|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 11
+INFO - No star on offer 11 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 12
+INFO - No star on offer 12 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 56
+INFO - L: Succ on openning window to choose photo and fill talent notes.
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - killed window and returned to  2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - Now on PARENT
+INFO - [2147483651,]  on: 2147483651
+INFO - Parent: 2147483651 Son: 
+INFO - *******SUBMITTED:
+INFO - ********ALL SUBMITTIONS********
+INFO - 
+* Actor:10003|Region:0|Offer:1483478125468|Background:true|Role added:|Submittion time:|Shoot date:1/5/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:non-union to portray caucasian female lawyer **avail thurs 1/5**|Offer Listing:background / female / caucasian / 35 - 45
+non-union to portray caucasian female lawyer **avail thurs 1/5** cannot have worked in the past 4 weeks. must be registered w/ central casting ny! |  Talent Notes filled with:
+INFO - 
+* Actor:10003|Region:0|Offer:1483478286228|Background:true|Role added:Role Added 1/3/2017 11:45 AM
+ |Submittion time:|Shoot date:1/5/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:feature film|ReqSizes:false|Paying:yes|Rate:$100|Name:indi feature film looking for bg extras (ny)|Role:background extra|Offer Listing:background / female / caucasian / 20 - 60
+looking for non-union extras age 20-60 for an independent feature film shooting the first week of 2017 on 1/4 and 1/5 in the hamptons. well known director and star cast. transportation will be provided from the city to location if necessary. $100 per day. thank you! |  Talent Notes filled with:
+INFO - 
+* Actor:10003|Region:0|Offer:1483478410009|Background:true|Role added:|Submittion time:|Shoot date:1/9/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:/0|Name:law and order: svu- season 18|Role:non-union to portray csu techs. avail mon 1/9. **read carefully**|Offer Listing:background / male or female / all ethnicities /30 - 50
+non-union to portray csu techs. avail mon 1/9. **read carefully** please do not submit if you have worked on this project in the past month |  Talent Notes filled with:
+INFO - 
+* Actor:10003|Region:0|Offer:1483481404747|Background:true|Role added:|Submittion time:|Shoot date:1/5/2017|age:true|car:false|EthMatch:true|GenderOfCharacter:f|GenderMatch:true|SAG:false|Guard:false|Tux:false|Uni:false|Type:television|ReqSizes:false|Paying:yes|Rate:scale /0|Name:time after time season 1|Role:non-union to portray upscale gala attendees work thursday 1/5 **not worked, read closely*|Offer Listing:background / male or female / all ethnicities /20 - 70
+non-union to portray upscale gala attendees work thursday 1/5 **not worked, read closely** must have upscale suits for men and women with cocktail dresses in jewel tones and darker colors. should not have already worked |  Talent Notes filled with:
+INFO - ********END LIST OF SUBMITTIONS********
+INFO - Checking for green star at row number: 13
+INFO - No star on offer 13 from top.  Let's try submitting.
+INFO - Decision: false|CharacterGender: f|isGenderMatch: true|isCar: false|isEthnicityMatch: true|isAge: true|hasBeenSubmitted Before: false
+INFO - ALTERNATE to BACKGROUND work
+INFO - Zzz
+INFO - .
+INFO - .
+INFO - .
+INFO - Checking for green star at row number: 0
+INFO - No star on offer 0 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 1
+INFO - No star on offer 1 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 2
+INFO - No star on offer 2 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 3
+INFO - No star on offer 3 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 4
+INFO - No star on offer 4 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 5
+INFO - No star on offer 5 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 6
+INFO - Found star on the offer 6 from top
+INFO - Checking for green star at row number: 7
+INFO - Found star on the offer 7 from top
+INFO - Checking for green star at row number: 8
+INFO - Found star on the offer 8 from top
+INFO - Checking for green star at row number: 9
+INFO - No star on offer 9 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 10
+INFO - No star on offer 10 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 11
+INFO - No star on offer 11 from top.  Let's try submitting.
+INFO - Found that this Project and role has already been considered for this actor and decided NOT to submit. This is Why: 
+INFO - Decision: false|isMGenderMatch: false|isCar: false|isEthnicityMatch: false|isAge: false|hasBeenSubmitted Before: false
+INFO - Checking for green star at row number: 12
+INFO - No star on offer 12 from top.  Let's try submitting.
+INFO - H: Succ adding offer to Jobs list
+INFO - .
+INFO - .
+INFO - .
+INFO - .
+INFO - Ha Ha 51
+INFO - Verify text Customize your submission Does NOT appear.
+INFO - Error: You are on wrong window
+INFO - Parent: 2147483651 Son: 2147483777
+INFO - Now on SON
+INFO - Parent: 2147483651 Son: 2147483777

@@ -469,7 +469,7 @@ public class Beta {
 		}
 		new Select(driver.findElement(By.name("viewfilter"))).selectByVisibleText("All Roles");
 		Breath.deepBreath();
-		for (int rowNum = 0; rowNum < 10; rowNum++) {
+		for (int rowNum = 0; rowNum < 14; rowNum++) {
 			bestLog.log("Checking for green star at row number: " + rowNum);
 			int trStarRow = (3 * rowNum);
 			trStarRow += 4;

@@ -339,7 +339,13 @@ public class Esl {
 
 	static public void understandingGender(Job offer) {
 		String allData = (offer.getOfferRole()).concat(" ").concat(offer.offerListingNotes.toLowerCase());
-
+//BOTH MALE AND FEMALE
+		if ((offer.offerListingSex).contains(" male or female") || (allData.startsWith("males and females"))) {
+			offer.setCharacterGender('b');
+		}
+		
+		
+		
 		// MALE
 
 		if ((offer.offerListingSex).contains(" male") || (allData.startsWith("male"))) {
@@ -366,7 +372,7 @@ public class Esl {
 
 	static public void readNotice(Actor human, Job offer) {
 		// this reads the notice and sets all the Job params accordingly.
-		String allData = (offer.getOfferRole()).concat(" ").concat(offer.offerListingNotes.toLowerCase());
+		String allData = (new String (offer.getOfferRole())).concat(" ").concat(offer.offerListingNotes.toLowerCase());
 
 		// SAG
 		understandUnionStatus(offer);
@@ -398,8 +404,8 @@ public class Esl {
 		}
 
 		// Stand-in
-		if ((allData.contains(" stand-in ")) || (allData.contains("standing"))
-				|| (allData.contains("stand in experience"))) {
+		if ((offer.getOfferListing().contains("stand-in")) || (allData.contains("standing"))
+				|| (allData.contains("stand-in")) ||(allData.contains("stand in experience"))) {
 			offer.isStandIn = true;
 
 		}
